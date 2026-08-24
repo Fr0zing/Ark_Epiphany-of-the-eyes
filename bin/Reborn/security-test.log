@@ -1,0 +1,5 @@
+2026-08-18 00:13:40.741 [INFO] ARK Tracker read-only diagnostic MVP
+2026-08-18 00:13:40.741 [INFO] Target: ARK: Survival Evolved / ShooterGame.exe / UE4 / x64
+2026-08-18 00:13:40.741 [INFO] Access mask: PROCESS_QUERY_INFORMATION | PROCESS_VM_READ (0x0410). No write/injection APIs are used.
+2026-08-18 00:13:40.743 [INFO] Security context: elevated=False SeDebugPrivilege=unavailable (Win32 error 1300)
+2026-08-18 00:13:40.758 [ERROR] ShooterGame.exe was not found. Start ASE without BattlEye on your local/private environment, or pass --wait.

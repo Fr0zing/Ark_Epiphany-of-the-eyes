@@ -1,0 +1,10 @@
+^C:\USERS\VALER\DESKTOP\ARK-TRACKER-ASE-CAMERA-RADAR\NATIVE\ARKOVERLAYNATIVE\BUILD\CMAKEFILES\F10930B44A775CD2C50976012CCAAEE3\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/Valer/Desktop/ARK-Tracker-ASE-Camera-Radar/native/ArkOverlayNative -BC:/Users/Valer/Desktop/ARK-Tracker-ASE-Camera-Radar/native/ArkOverlayNative/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Valer/Desktop/ARK-Tracker-ASE-Camera-Radar/native/ArkOverlayNative/build/ArkOverlayNative.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

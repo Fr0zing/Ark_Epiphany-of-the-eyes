@@ -1,0 +1,555 @@
+2026-08-18 01:34:49.047 [INFO] ARK Tracker read-only diagnostic MVP
+2026-08-18 01:34:49.047 [INFO] Target: ARK: Survival Evolved / ShooterGame.exe / UE4 / x64
+2026-08-18 01:34:49.047 [INFO] Access mask: PROCESS_QUERY_INFORMATION | PROCESS_VM_READ (0x0410). No write/injection APIs are used.
+2026-08-18 01:34:49.048 [INFO] Security context: elevated=False SeDebugPrivilege=unavailable (Win32 error 1300)
+2026-08-18 01:34:49.075 [INFO] Process: name=ShooterGame.exe pid=11472 parentPid=14392 threads=125
+2026-08-18 01:34:49.075 [INFO] Read-only process handle opened successfully.
+2026-08-18 01:34:49.080 [INFO] Module: XINPUT1_3.dll base=0x0000000000400000 size=0x1E000 path=C:\WINDOWS\SYSTEM32\XINPUT1_3.dll
+2026-08-18 01:34:49.080 [INFO] Module: steam_api64.dll base=0x000000006A150000 size=0x37000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\Engine\Binaries\ThirdParty\Steamworks\Steamv132\Win64\steam_api64.dll
+2026-08-18 01:34:49.081 [INFO] Module: X3DAudio1_7.dll base=0x000000006A190000 size=0x9000 path=C:\WINDOWS\SYSTEM32\X3DAudio1_7.dll
+2026-08-18 01:34:49.081 [INFO] Module: MFCORE.DLL base=0x000001FBC5B50000 size=0x419000 path=C:\WINDOWS\SYSTEM32\MFCORE.DLL
+2026-08-18 01:34:49.081 [INFO] Module: ShooterGame.exe base=0x00007FF7AD1E0000 size=0x4DAB000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\ShooterGame.exe
+2026-08-18 01:34:49.081 [INFO] Module: DiscordHook64.dll base=0x00007FF941F60000 size=0x3D2000 path=C:\Users\Valer\AppData\Local\Discord\app-1.0.9254\modules\discord_hook-1\discord_hook\949e75c87bf688\DiscordHook64.dll
+2026-08-18 01:34:49.081 [INFO] Module: vivoxsdk.dll base=0x00007FF942E50000 size=0xC4A000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\Engine\Binaries\ThirdParty\VivoxCoreLibrary\Windows\Win64\vivoxsdk.dll
+2026-08-18 01:34:49.081 [INFO] Module: wmvdecod.dll base=0x00007FF946D90000 size=0x2A7000 path=C:\Windows\System32\wmvdecod.dll
+2026-08-18 01:34:49.081 [INFO] Module: APEX_Legacy_x64.dll base=0x00007FF95B650000 size=0x36F000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\Engine\Binaries\ThirdParty\PhysX\PhysX-3.4\Win64\VS2013\APEX_Legacy_x64.dll
+2026-08-18 01:34:49.081 [INFO] Module: colorcnv.dll base=0x00007FF95BBF0000 size=0x46000 path=C:\Windows\System32\colorcnv.dll
+2026-08-18 01:34:49.081 [INFO] Module: mfasfsrcsnk.dll base=0x00007FF95E190000 size=0x184000 path=C:\WINDOWS\System32\mfasfsrcsnk.dll
+2026-08-18 01:34:49.081 [INFO] Module: APEX_Destructible_x64.dll base=0x00007FF95E320000 size=0x244000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\Engine\Binaries\ThirdParty\PhysX\PhysX-3.4\Win64\VS2013\APEX_Destructible_x64.dll
+2026-08-18 01:34:49.081 [INFO] Module: APEXFramework_x64.dll base=0x00007FF95E570000 size=0x12D000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\Engine\Binaries\ThirdParty\PhysX\PhysX-3.4\Win64\VS2013\APEXFramework_x64.dll
+2026-08-18 01:34:49.081 [INFO] Module: PhysX3_x64.dll base=0x00007FF95E6A0000 size=0x2B1000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\Engine\Binaries\ThirdParty\PhysX\PhysX-3.4\Win64\VS2013\PhysX3_x64.dll
+2026-08-18 01:34:49.081 [INFO] Module: PhysX3Common_x64.dll base=0x00007FF95E960000 size=0x1E4000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\Engine\Binaries\ThirdParty\PhysX\PhysX-3.4\Win64\VS2013\PhysX3Common_x64.dll
+2026-08-18 01:34:49.081 [INFO] Module: d3dcompiler_47_64.dll base=0x00007FF95EB50000 size=0x48D000 path=C:\WINDOWS\System32\DriverStore\FileRepository\nvrfi.inf_amd64_87b4cb6242e17d7d\NvCamera\d3dcompiler_47_64.dll
+2026-08-18 01:34:49.081 [INFO] Module: NvCamera64.dll base=0x00007FF95EFF0000 size=0x883000 path=C:\WINDOWS\System32\DriverStore\FileRepository\nvrfi.inf_amd64_87b4cb6242e17d7d\NvCamera\NvCamera64.dll
+2026-08-18 01:34:49.081 [INFO] Module: libprotobuf.dll base=0x00007FF95F880000 size=0x276000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\libprotobuf.dll
+2026-08-18 01:34:49.081 [INFO] Module: mfplay.dll base=0x00007FF960D20000 size=0x88000 path=C:\WINDOWS\SYSTEM32\mfplay.dll
+2026-08-18 01:34:49.081 [INFO] Module: PhysX3Cooking_x64.dll base=0x00007FF9610F0000 size=0x4A000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\Engine\Binaries\ThirdParty\PhysX\PhysX-3.4\Win64\VS2013\PhysX3Cooking_x64.dll
+2026-08-18 01:34:49.081 [INFO] Module: PxFoundation_x64.dll base=0x00007FF961470000 size=0x13000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\Engine\Binaries\ThirdParty\PhysX\PhysX-3.4\Win64\VS2013\PxFoundation_x64.dll
+2026-08-18 01:34:49.081 [INFO] Module: gameux.dll base=0x00007FF961490000 size=0xC000 path=C:\Windows\System32\gameux.dll
+2026-08-18 01:34:49.081 [INFO] Module: nvppex.dll base=0x00007FF974EE0000 size=0x727000 path=C:\WINDOWS\System32\DriverStore\FileRepository\nvrfi.inf_amd64_87b4cb6242e17d7d\nvppex.dll
+2026-08-18 01:34:49.081 [INFO] Module: nvspcap64.dll base=0x00007FF975610000 size=0x164000 path=C:\WINDOWS\system32\nvspcap64.dll
+2026-08-18 01:34:49.081 [INFO] Module: mfperfhelper.dll base=0x00007FF979550000 size=0x130000 path=C:\Windows\System32\mfperfhelper.dll
+2026-08-18 01:34:49.081 [INFO] Module: d3d9.dll base=0x00007FF979D20000 size=0x1B2000 path=C:\WINDOWS\SYSTEM32\d3d9.dll
+2026-08-18 01:34:49.081 [INFO] Module: DINPUT8.dll base=0x00007FF97E010000 size=0x4B000 path=C:\WINDOWS\SYSTEM32\DINPUT8.dll
+2026-08-18 01:34:49.081 [INFO] Module: ResampleDmo.DLL base=0x00007FF97E0C0000 size=0xB7000 path=C:\WINDOWS\SYSTEM32\ResampleDmo.DLL
+2026-08-18 01:34:49.081 [INFO] Module: DSOUND.dll base=0x00007FF97E180000 size=0x94000 path=C:\WINDOWS\SYSTEM32\DSOUND.dll
+2026-08-18 01:34:49.081 [INFO] Module: steamclient64.dll base=0x00007FF97FC70000 size=0x1964000 path=C:\Program Files (x86)\Steam\steamclient64.dll
+2026-08-18 01:34:49.081 [INFO] Module: OPENGL32.dll base=0x00007FF9A1EB0000 size=0x10C000 path=C:\WINDOWS\SYSTEM32\OPENGL32.dll
+2026-08-18 01:34:49.081 [INFO] Module: vstdlib_s64.dll base=0x00007FF9A3BC0000 size=0xC3000 path=C:\Program Files (x86)\Steam\vstdlib_s64.dll
+2026-08-18 01:34:49.081 [INFO] Module: tier0_s64.dll base=0x00007FF9A4380000 size=0x30E000 path=C:\Program Files (x86)\Steam\tier0_s64.dll
+2026-08-18 01:34:49.081 [INFO] Module: crashhandler64.dll base=0x00007FF9A6E50000 size=0x1B0000 path=C:\Program Files (x86)\Steam\crashhandler64.dll
+2026-08-18 01:34:49.081 [INFO] Module: GameNetworkingSockets.dll base=0x00007FF9A72A0000 size=0x71000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\GameNetworkingSockets.dll
+2026-08-18 01:34:49.081 [INFO] Module: libvorbis_64.dll base=0x00007FF9AA110000 size=0x1A5000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\Engine\Binaries\ThirdParty\Vorbis\Win64\VS2013\libvorbis_64.dll
+2026-08-18 01:34:49.081 [INFO] Module: XAudio2_7.dll base=0x00007FF9AA300000 size=0x8B000 path=C:\WINDOWS\SYSTEM32\XAudio2_7.dll
+2026-08-18 01:34:49.081 [INFO] Module: gameoverlayrenderer64.dll base=0x00007FF9AA950000 size=0x1B7000 path=C:\Program Files (x86)\Steam\gameoverlayrenderer64.dll
+2026-08-18 01:34:49.081 [INFO] Module: MSVCR120.dll base=0x00007FF9AAB10000 size=0xEF000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\MSVCR120.dll
+2026-08-18 01:34:49.081 [INFO] Module: XAPOFX1_5.dll base=0x00007FF9AAC00000 size=0x15000 path=C:\WINDOWS\SYSTEM32\XAPOFX1_5.dll
+2026-08-18 01:34:49.081 [INFO] Module: MSVCP120.dll base=0x00007FF9AAC20000 size=0xA6000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\MSVCP120.dll
+2026-08-18 01:34:49.081 [INFO] Module: AcGenral.DLL base=0x00007FF9AAD10000 size=0x7D000 path=C:\WINDOWS\SYSTEM32\AcGenral.DLL
+2026-08-18 01:34:49.081 [INFO] Module: Windows.Media.dll base=0x00007FF9B20F0000 size=0x69B000 path=C:\Windows\System32\Windows.Media.dll
+2026-08-18 01:34:49.081 [INFO] Module: SensApi.dll base=0x00007FF9B35F0000 size=0xB000 path=C:\WINDOWS\SYSTEM32\SensApi.dll
+2026-08-18 01:34:49.081 [INFO] Module: XINPUT9_1_0.dll base=0x00007FF9B3AE0000 size=0x9000 path=C:\WINDOWS\SYSTEM32\XINPUT9_1_0.dll
+2026-08-18 01:34:49.081 [INFO] Module: GLU32.dll base=0x00007FF9B4B20000 size=0x2D000 path=C:\WINDOWS\SYSTEM32\GLU32.dll
+2026-08-18 01:34:49.081 [INFO] Module: explorerframe.dll base=0x00007FF9D49E0000 size=0x311000 path=C:\WINDOWS\system32\explorerframe.dll
+2026-08-18 01:34:49.081 [INFO] Module: dataexchange.dll base=0x00007FF9DDE70000 size=0x5C000 path=C:\WINDOWS\system32\dataexchange.dll
+2026-08-18 01:34:49.081 [INFO] Module: libvorbisfile_64.dll base=0x00007FF9E67E0000 size=0xD000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\Engine\Binaries\ThirdParty\Vorbis\Win64\VS2013\libvorbisfile_64.dll
+2026-08-18 01:34:49.081 [INFO] Module: textinputframework.dll base=0x00007FF9E7E90000 size=0x146000 path=C:\WINDOWS\SYSTEM32\textinputframework.dll
+2026-08-18 01:34:49.081 [INFO] Module: inputhost.dll base=0x00007FF9E7FE0000 size=0x1E3000 path=C:\WINDOWS\SYSTEM32\inputhost.dll
+2026-08-18 01:34:49.081 [INFO] Module: libogg_64.dll base=0x00007FF9E8930000 size=0xF000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\Engine\Binaries\ThirdParty\Ogg\Win64\VS2013\libogg_64.dll
+2026-08-18 01:34:49.081 [INFO] Module: ncryptsslp.dll base=0x00007FF9E9470000 size=0x48000 path=C:\WINDOWS\system32\ncryptsslp.dll
+2026-08-18 01:34:49.081 [INFO] Module: Windows.UI.dll base=0x00007FF9EA940000 size=0x159000 path=C:\Windows\System32\Windows.UI.dll
+2026-08-18 01:34:49.081 [INFO] Module: winmmbase.dll base=0x00007FF9EBD00000 size=0x37000 path=C:\WINDOWS\SYSTEM32\winmmbase.dll
+2026-08-18 01:34:49.081 [INFO] Module: Windows.StateRepositoryPS.dll base=0x00007FF9EEA00000 size=0xC4000 path=C:\Windows\System32\Windows.StateRepositoryPS.dll
+2026-08-18 01:34:49.081 [INFO] Module: Windows.ApplicationModel.dll base=0x00007FF9EF010000 size=0xD8000 path=C:\Windows\System32\Windows.ApplicationModel.dll
+2026-08-18 01:34:49.081 [INFO] Module: dbgcore.DLL base=0x00007FF9F0280000 size=0x3B000 path=C:\WINDOWS\SYSTEM32\dbgcore.DLL
+2026-08-18 01:34:49.081 [INFO] Module: windows.staterepositoryclient.dll base=0x00007FF9F1350000 size=0x44000 path=C:\WINDOWS\SYSTEM32\windows.staterepositoryclient.dll
+2026-08-18 01:34:49.081 [INFO] Module: windows.staterepositorycore.dll base=0x00007FF9F16F0000 size=0x1F000 path=C:\WINDOWS\SYSTEM32\windows.staterepositorycore.dll
+2026-08-18 01:34:49.081 [INFO] Module: AUDIOSES.DLL base=0x00007FF9F3E30000 size=0x1B7000 path=C:\WINDOWS\SYSTEM32\AUDIOSES.DLL
+2026-08-18 01:34:49.081 [INFO] Module: srvcli.dll base=0x00007FF9F3FF0000 size=0x29000 path=C:\WINDOWS\SYSTEM32\srvcli.dll
+2026-08-18 01:34:49.081 [INFO] Module: msdmo.dll base=0x00007FF9F4020000 size=0xE000 path=C:\WINDOWS\SYSTEM32\msdmo.dll
+2026-08-18 01:34:49.081 [INFO] Module: iertutil.dll base=0x00007FF9F4170000 size=0x2C4000 path=C:\WINDOWS\SYSTEM32\iertutil.dll
+2026-08-18 01:34:49.081 [INFO] Module: urlmon.dll base=0x00007FF9F4490000 size=0x1DD000 path=C:\WINDOWS\SYSTEM32\urlmon.dll
+2026-08-18 01:34:49.081 [INFO] Module: MPR.dll base=0x00007FF9F4680000 size=0x21000 path=C:\WINDOWS\SYSTEM32\MPR.dll
+2026-08-18 01:34:49.081 [INFO] Module: WININET.dll base=0x00007FF9F52B0000 size=0x295000 path=C:\WINDOWS\SYSTEM32\WININET.dll
+2026-08-18 01:34:49.081 [INFO] Module: NvMessageBus.dll base=0x00007FF9F5F50000 size=0x364000 path=C:\WINDOWS\System32\DriverStore\FileRepository\nvrfi.inf_amd64_87b4cb6242e17d7d\Display.NvContainer\NvMessageBus.dll
+2026-08-18 01:34:49.081 [INFO] Module: nvwgf2umx.dll base=0x00007FF9F6440000 size=0x55A5000 path=C:\WINDOWS\System32\DriverStore\FileRepository\nvrfi.inf_amd64_87b4cb6242e17d7d\nvwgf2umx.dll
+2026-08-18 01:34:49.081 [INFO] Module: nvapi64_impl.dll base=0x00007FF9FBCD0000 size=0x577000 path=C:\WINDOWS\system32\DriverStore\FileRepository\nvrfi.inf_amd64_87b4cb6242e17d7d\nvapi64_impl.dll
+2026-08-18 01:34:49.081 [INFO] Module: nvapi64.dll base=0x00007FF9FC3B0000 size=0x89000 path=C:\WINDOWS\SYSTEM32\nvapi64.dll
+2026-08-18 01:34:49.081 [INFO] Module: NvMemMapStoragex.dll base=0x00007FF9FC9C0000 size=0x13B000 path=C:\WINDOWS\System32\DriverStore\FileRepository\nvrfi.inf_amd64_87b4cb6242e17d7d\NvMemMapStoragex.dll
+2026-08-18 01:34:49.081 [INFO] Module: dbghelp.dll base=0x00007FF9FCB00000 size=0x242000 path=C:\WINDOWS\SYSTEM32\dbghelp.dll
+2026-08-18 01:34:49.081 [INFO] Module: WINMM.dll base=0x00007FF9FD740000 size=0x36000 path=C:\WINDOWS\SYSTEM32\WINMM.dll
+2026-08-18 01:34:49.081 [INFO] Module: CompPkgSup.DLL base=0x00007FF9FEB00000 size=0x32000 path=C:\WINDOWS\SYSTEM32\CompPkgSup.DLL
+2026-08-18 01:34:49.081 [INFO] Module: mf.dll base=0x00007FF9FFC20000 size=0x98000 path=C:\WINDOWS\SYSTEM32\mf.dll
+2026-08-18 01:34:49.081 [INFO] Module: RTWorkQ.DLL base=0x00007FFA00580000 size=0x3B000 path=C:\WINDOWS\SYSTEM32\RTWorkQ.DLL
+2026-08-18 01:34:49.081 [INFO] Module: mfplat.dll base=0x00007FFA005C0000 size=0x224000 path=C:\WINDOWS\SYSTEM32\mfplat.dll
+2026-08-18 01:34:49.081 [INFO] Module: nvgpucomp64.dll base=0x00007FFA01420000 size=0x5E0E000 path=C:\WINDOWS\System32\DriverStore\FileRepository\nvrfi.inf_amd64_87b4cb6242e17d7d\nvgpucomp64.dll
+2026-08-18 01:34:49.081 [INFO] Module: twinapi.appcore.dll base=0x00007FFA07510000 size=0x250000 path=C:\WINDOWS\system32\twinapi.appcore.dll
+2026-08-18 01:34:49.081 [INFO] Module: ondemandconnroutehelper.dll base=0x00007FFA079C0000 size=0x18000 path=C:\WINDOWS\SYSTEM32\ondemandconnroutehelper.dll
+2026-08-18 01:34:49.081 [INFO] Module: drvstore.dll base=0x00007FFA082A0000 size=0x17A000 path=C:\WINDOWS\SYSTEM32\drvstore.dll
+2026-08-18 01:34:49.081 [INFO] Module: cryptnet.dll base=0x00007FFA08420000 size=0x3B000 path=C:\WINDOWS\SYSTEM32\cryptnet.dll
+2026-08-18 01:34:49.081 [INFO] Module: nvldumdx.dll base=0x00007FFA08530000 size=0xCA000 path=C:\WINDOWS\System32\DriverStore\FileRepository\nvrfi.inf_amd64_87b4cb6242e17d7d\nvldumdx.dll
+2026-08-18 01:34:49.081 [INFO] Module: dhcpcsvc.DLL base=0x00007FFA08A30000 size=0x25000 path=C:\WINDOWS\SYSTEM32\dhcpcsvc.DLL
+2026-08-18 01:34:49.081 [INFO] Module: WINHTTP.dll base=0x00007FFA08A60000 size=0x128000 path=C:\WINDOWS\SYSTEM32\WINHTTP.dll
+2026-08-18 01:34:49.081 [INFO] Module: CoreUIComponents.dll base=0x00007FFA08B90000 size=0x2E4000 path=C:\WINDOWS\SYSTEM32\CoreUIComponents.dll
+2026-08-18 01:34:49.081 [INFO] Module: VERSION.dll base=0x00007FFA08E80000 size=0xB000 path=C:\WINDOWS\SYSTEM32\VERSION.dll
+2026-08-18 01:34:49.081 [INFO] Module: directxdatabasehelper.dll base=0x00007FFA09210000 size=0x5F000 path=C:\WINDOWS\SYSTEM32\directxdatabasehelper.dll
+2026-08-18 01:34:49.081 [INFO] Module: AppXDeploymentClient.dll base=0x00007FFA09760000 size=0x171000 path=C:\Windows\System32\AppXDeploymentClient.dll
+2026-08-18 01:34:49.081 [INFO] Module: avrt.dll base=0x00007FFA098E0000 size=0xB000 path=C:\WINDOWS\SYSTEM32\avrt.dll
+2026-08-18 01:34:49.081 [INFO] Module: MMDevApi.dll base=0x00007FFA09950000 size=0xA6000 path=C:\WINDOWS\System32\MMDevApi.dll
+2026-08-18 01:34:49.081 [INFO] Module: wintypes.dll base=0x00007FFA0A2D0000 size=0x16A000 path=C:\WINDOWS\SYSTEM32\wintypes.dll
+2026-08-18 01:34:49.081 [INFO] Module: Microsoft.Internal.WarpPal.dll base=0x00007FFA0A9A0000 size=0x19000 path=C:\WINDOWS\SYSTEM32\Microsoft.Internal.WarpPal.dll
+2026-08-18 01:34:49.081 [INFO] Module: D3DCompiler_47.dll base=0x00007FFA0A9C0000 size=0x47F000 path=C:\WINDOWS\SYSTEM32\D3DCompiler_47.dll
+2026-08-18 01:34:49.081 [INFO] Module: WindowsCodecs.dll base=0x00007FFA0AE50000 size=0x22D000 path=C:\WINDOWS\SYSTEM32\WindowsCodecs.dll
+2026-08-18 01:34:49.081 [INFO] Module: DWrite.dll base=0x00007FFA0B090000 size=0x267000 path=C:\WINDOWS\SYSTEM32\DWrite.dll
+2026-08-18 01:34:49.081 [INFO] Module: d3d11.dll base=0x00007FFA0B940000 size=0x260000 path=C:\WINDOWS\SYSTEM32\d3d11.dll
+2026-08-18 01:34:49.081 [INFO] Module: dcomp.dll base=0x00007FFA0BC60000 size=0x225000 path=C:\WINDOWS\SYSTEM32\dcomp.dll
+2026-08-18 01:34:49.081 [INFO] Module: CoreMessaging.dll base=0x00007FFA0C4C0000 size=0x12B000 path=C:\WINDOWS\SYSTEM32\CoreMessaging.dll
+2026-08-18 01:34:49.081 [INFO] Module: PROPSYS.dll base=0x00007FFA0C7E0000 size=0xF4000 path=C:\WINDOWS\SYSTEM32\PROPSYS.dll
+2026-08-18 01:34:49.081 [INFO] Module: apphelp.dll base=0x00007FFA0D060000 size=0x9F000 path=C:\WINDOWS\SYSTEM32\apphelp.dll
+2026-08-18 01:34:49.081 [INFO] Module: Secur32.dll base=0x00007FFA0D110000 size=0xD000 path=C:\WINDOWS\SYSTEM32\Secur32.dll
+2026-08-18 01:34:49.081 [INFO] Module: WINNSI.DLL base=0x00007FFA0D270000 size=0xE000 path=C:\WINDOWS\SYSTEM32\WINNSI.DLL
+2026-08-18 01:34:49.081 [INFO] Module: uxtheme.dll base=0x00007FFA0D2E0000 size=0xA8000 path=C:\WINDOWS\system32\uxtheme.dll
+2026-08-18 01:34:49.081 [INFO] Module: dxcore.dll base=0x00007FFA0D3E0000 size=0x45000 path=C:\WINDOWS\SYSTEM32\dxcore.dll
+2026-08-18 01:34:49.081 [INFO] Module: dxgi.dll base=0x00007FFA0D430000 size=0x13A000 path=C:\WINDOWS\SYSTEM32\dxgi.dll
+2026-08-18 01:34:49.081 [INFO] Module: dwmapi.dll base=0x00007FFA0D590000 size=0x2F000 path=C:\WINDOWS\SYSTEM32\dwmapi.dll
+2026-08-18 01:34:49.081 [INFO] Module: wer.dll base=0x00007FFA0D5E0000 size=0xF2000 path=C:\WINDOWS\SYSTEM32\wer.dll
+2026-08-18 01:34:49.081 [INFO] Module: resourcepolicyclient.dll base=0x00007FFA0D820000 size=0x14000 path=C:\WINDOWS\SYSTEM32\resourcepolicyclient.dll
+2026-08-18 01:34:49.081 [INFO] Module: windows.storage.dll base=0x00007FFA0DC60000 size=0x89B000 path=C:\WINDOWS\SYSTEM32\windows.storage.dll
+2026-08-18 01:34:49.081 [INFO] Module: HID.DLL base=0x00007FFA0E500000 size=0xF000 path=C:\WINDOWS\SYSTEM32\HID.DLL
+2026-08-18 01:34:49.081 [INFO] Module: netutils.dll base=0x00007FFA0E810000 size=0xD000 path=C:\WINDOWS\SYSTEM32\netutils.dll
+2026-08-18 01:34:49.081 [INFO] Module: IPHLPAPI.DLL base=0x00007FFA0E830000 size=0x33000 path=C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL
+2026-08-18 01:34:49.081 [INFO] Module: schannel.DLL base=0x00007FFA0ECB0000 size=0xC5000 path=C:\WINDOWS\system32\schannel.DLL
+2026-08-18 01:34:49.081 [INFO] Module: rsaenh.dll base=0x00007FFA0EDE0000 size=0x39000 path=C:\WINDOWS\system32\rsaenh.dll
+2026-08-18 01:34:49.081 [INFO] Module: kernel.appcore.dll base=0x00007FFA0EE80000 size=0x1B000 path=C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+2026-08-18 01:34:49.081 [INFO] Module: ntmarta.dll base=0x00007FFA0EFB0000 size=0x36000 path=C:\WINDOWS\SYSTEM32\ntmarta.dll
+2026-08-18 01:34:49.081 [INFO] Module: SspiCli.dll base=0x00007FFA0F130000 size=0x49000 path=C:\WINDOWS\SYSTEM32\SspiCli.dll
+2026-08-18 01:34:49.081 [INFO] Module: MSWSOCK.dll base=0x00007FFA0F410000 size=0x6C000 path=C:\WINDOWS\SYSTEM32\MSWSOCK.dll
+2026-08-18 01:34:49.081 [INFO] Module: gpapi.dll base=0x00007FFA0F490000 size=0x25000 path=C:\WINDOWS\SYSTEM32\gpapi.dll
+2026-08-18 01:34:49.081 [INFO] Module: USERENV.dll base=0x00007FFA0F4C0000 size=0x32000 path=C:\WINDOWS\SYSTEM32\USERENV.dll
+2026-08-18 01:34:49.081 [INFO] Module: CRYPTBASE.DLL base=0x00007FFA0F670000 size=0xC000 path=C:\WINDOWS\SYSTEM32\CRYPTBASE.DLL
+2026-08-18 01:34:49.081 [INFO] Module: wldp.dll base=0x00007FFA0F730000 size=0x6A000 path=C:\WINDOWS\SYSTEM32\wldp.dll
+2026-08-18 01:34:49.081 [INFO] Module: CRYPTSP.dll base=0x00007FFA0F830000 size=0x1B000 path=C:\WINDOWS\System32\CRYPTSP.dll
+2026-08-18 01:34:49.081 [INFO] Module: msasn1.dll base=0x00007FFA0F890000 size=0x13000 path=C:\WINDOWS\SYSTEM32\msasn1.dll
+2026-08-18 01:34:49.081 [INFO] Module: NTASN1.dll base=0x00007FFA0F940000 size=0x3F000 path=C:\WINDOWS\SYSTEM32\NTASN1.dll
+2026-08-18 01:34:49.081 [INFO] Module: ncrypt.dll base=0x00007FFA0F990000 size=0x30000 path=C:\WINDOWS\SYSTEM32\ncrypt.dll
+2026-08-18 01:34:49.081 [INFO] Module: cfgmgr32.dll base=0x00007FFA0FD50000 size=0x52000 path=C:\WINDOWS\SYSTEM32\cfgmgr32.dll
+2026-08-18 01:34:49.081 [INFO] Module: DEVOBJ.dll base=0x00007FFA0FDB0000 size=0x2F000 path=C:\WINDOWS\System32\DEVOBJ.dll
+2026-08-18 01:34:49.081 [INFO] Module: DPAPI.DLL base=0x00007FFA0FE10000 size=0xA000 path=C:\WINDOWS\System32\DPAPI.DLL
+2026-08-18 01:34:49.081 [INFO] Module: UMPDC.dll base=0x00007FFA0FE50000 size=0x15000 path=C:\WINDOWS\SYSTEM32\UMPDC.dll
+2026-08-18 01:34:49.081 [INFO] Module: POWRPROF.dll base=0x00007FFA0FE70000 size=0x5E000 path=C:\WINDOWS\SYSTEM32\POWRPROF.dll
+2026-08-18 01:34:49.081 [INFO] Module: bcrypt.dll base=0x00007FFA100C0000 size=0x2A000 path=C:\WINDOWS\SYSTEM32\bcrypt.dll
+2026-08-18 01:34:49.081 [INFO] Module: profapi.dll base=0x00007FFA100F0000 size=0x29000 path=C:\WINDOWS\SYSTEM32\profapi.dll
+2026-08-18 01:34:49.081 [INFO] Module: KERNELBASE.dll base=0x00007FFA101D0000 size=0x3FF000 path=C:\WINDOWS\System32\KERNELBASE.dll
+2026-08-18 01:34:49.081 [INFO] Module: gdi32full.dll base=0x00007FFA105E0000 size=0x129000 path=C:\WINDOWS\System32\gdi32full.dll
+2026-08-18 01:34:49.081 [INFO] Module: bcryptPrimitives.dll base=0x00007FFA107D0000 size=0xAC000 path=C:\WINDOWS\System32\bcryptPrimitives.dll
+2026-08-18 01:34:49.081 [INFO] Module: CRYPT32.dll base=0x00007FFA10890000 size=0x17E000 path=C:\WINDOWS\System32\CRYPT32.dll
+2026-08-18 01:34:49.081 [INFO] Module: win32u.dll base=0x00007FFA10A20000 size=0x27000 path=C:\WINDOWS\System32\win32u.dll
+2026-08-18 01:34:49.081 [INFO] Module: wintrust.dll base=0x00007FFA10A50000 size=0x83000 path=C:\WINDOWS\System32\wintrust.dll
+2026-08-18 01:34:49.081 [INFO] Module: msvcp_win.dll base=0x00007FFA10AE0000 size=0xA3000 path=C:\WINDOWS\System32\msvcp_win.dll
+2026-08-18 01:34:49.081 [INFO] Module: ucrtbase.dll base=0x00007FFA10B90000 size=0x14C000 path=C:\WINDOWS\System32\ucrtbase.dll
+2026-08-18 01:34:49.081 [INFO] Module: Normaliz.dll base=0x00007FFA10D80000 size=0x8000 path=C:\WINDOWS\System32\Normaliz.dll
+2026-08-18 01:34:49.081 [INFO] Module: SHLWAPI.dll base=0x00007FFA10D90000 size=0x66000 path=C:\WINDOWS\System32\SHLWAPI.dll
+2026-08-18 01:34:49.081 [INFO] Module: shcore.dll base=0x00007FFA10E20000 size=0xF9000 path=C:\WINDOWS\System32\shcore.dll
+2026-08-18 01:34:49.081 [INFO] Module: OLEAUT32.dll base=0x00007FFA10F20000 size=0xD9000 path=C:\WINDOWS\System32\OLEAUT32.dll
+2026-08-18 01:34:49.081 [INFO] Module: IMM32.DLL base=0x00007FFA11000000 size=0x32000 path=C:\WINDOWS\System32\IMM32.DLL
+2026-08-18 01:34:49.081 [INFO] Module: WLDAP32.dll base=0x00007FFA11280000 size=0x73000 path=C:\WINDOWS\System32\WLDAP32.dll
+2026-08-18 01:34:49.081 [INFO] Module: NSI.dll base=0x00007FFA11300000 size=0xA000 path=C:\WINDOWS\System32\NSI.dll
+2026-08-18 01:34:49.081 [INFO] Module: advapi32.dll base=0x00007FFA11310000 size=0xBC000 path=C:\WINDOWS\System32\advapi32.dll
+2026-08-18 01:34:49.081 [INFO] Module: RPCRT4.dll base=0x00007FFA113E0000 size=0x118000 path=C:\WINDOWS\System32\RPCRT4.dll
+2026-08-18 01:34:49.081 [INFO] Module: SETUPAPI.dll base=0x00007FFA11500000 size=0x487000 path=C:\WINDOWS\System32\SETUPAPI.dll
+2026-08-18 01:34:49.081 [INFO] Module: WS2_32.dll base=0x00007FFA11990000 size=0x82000 path=C:\WINDOWS\System32\WS2_32.dll
+2026-08-18 01:34:49.081 [INFO] Module: GDI32.dll base=0x00007FFA11AB0000 size=0x2B000 path=C:\WINDOWS\System32\GDI32.dll
+2026-08-18 01:34:49.081 [INFO] Module: imagehlp.dll base=0x00007FFA11AE0000 size=0x20000 path=C:\WINDOWS\System32\imagehlp.dll
+2026-08-18 01:34:49.081 [INFO] Module: KERNEL32.DLL base=0x00007FFA11C30000 size=0xC9000 path=C:\WINDOWS\System32\KERNEL32.DLL
+2026-08-18 01:34:49.081 [INFO] Module: PSAPI.DLL base=0x00007FFA11D00000 size=0x8000 path=C:\WINDOWS\System32\PSAPI.DLL
+2026-08-18 01:34:49.081 [INFO] Module: USER32.dll base=0x00007FFA11D10000 size=0x1C6000 path=C:\WINDOWS\System32\USER32.dll
+2026-08-18 01:34:49.081 [INFO] Module: sechost.dll base=0x00007FFA11EE0000 size=0xAA000 path=C:\WINDOWS\System32\sechost.dll
+2026-08-18 01:34:49.081 [INFO] Module: ole32.dll base=0x00007FFA11F90000 size=0x199000 path=C:\WINDOWS\System32\ole32.dll
+2026-08-18 01:34:49.081 [INFO] Module: clbcatq.dll base=0x00007FFA12130000 size=0xAE000 path=C:\WINDOWS\System32\clbcatq.dll
+2026-08-18 01:34:49.081 [INFO] Module: combase.dll base=0x00007FFA121F0000 size=0x385000 path=C:\WINDOWS\System32\combase.dll
+2026-08-18 01:34:49.081 [INFO] Module: msctf.dll base=0x00007FFA12580000 size=0x15D000 path=C:\WINDOWS\System32\msctf.dll
+2026-08-18 01:34:49.081 [INFO] Module: SHELL32.dll base=0x00007FFA12740000 size=0x788000 path=C:\WINDOWS\System32\SHELL32.dll
+2026-08-18 01:34:49.081 [INFO] Module: msvcrt.dll base=0x00007FFA12ED0000 size=0xA9000 path=C:\WINDOWS\System32\msvcrt.dll
+2026-08-18 01:34:49.081 [INFO] Module: ntdll.dll base=0x00007FFA12FC0000 size=0x266000 path=C:\WINDOWS\SYSTEM32\ntdll.dll
+2026-08-18 01:34:49.082 [INFO] Build fingerprint: fileLength=80346664 lastWriteUtc=2026-08-17T08:21:59Z
+2026-08-18 01:34:49.162 [INFO] Build fingerprint: SHA256=9BC401417A776C5244A1B0B3255DC3AF4A9D73E3F5C1BA96228FBE3FB1A43477
+2026-08-18 01:34:49.162 [INFO] Build profile fingerprint verified.
+2026-08-18 01:34:49.242 [INFO] GNames global=0x00007FF7B1BEAC78 table=0x000001FBA404FAF0 index0='None'
+2026-08-18 01:34:49.243 [INFO] Scanning readable pages of ShooterGame.exe for the configured GWorld signature...
+2026-08-18 01:34:49.452 [INFO] GWorld signature match: 0x00007FF7AE1AF190 (matches collected: 1)
+2026-08-18 01:34:49.452 [INFO] Resolved GWorld global address: 0x00007FF7B1BBC2A8
+2026-08-18 01:34:49.452 [INFO] UWorld: 0x000001FCA21CA5C0
+2026-08-18 01:34:49.454 [INFO] UWorld Levels: data=0x000001FCDABEFC00, count=18
+2026-08-18 01:34:49.454 [INFO] PersistentLevel: 0x000001FC771E9300
+2026-08-18 01:34:49.456 [INFO] Level 0x000001FC771E9300: Actors data=0x000001FBE93C0000, count=2559
+2026-08-18 01:34:49.457 [ACTOR] index=0 actor=0x000001FCF1275B40 root=0x000001FCD7CE5800 class=PrimalWorldSettings name=PrimalWorldSettings team=0 relative=(0.00, 0.00, 0.00)
+2026-08-18 01:34:49.457 [ACTOR] index=1 actor=0x000001FC73921FF0 root=0x000001FCA8D7C000 class=DirectionalLight name=DirectionalLight team=0 relative=(39845.00, 43790.00, -2241.02)
+2026-08-18 01:34:49.457 [ACTOR] index=2 actor=0x000001FC7392A8D0 root=0x000001FCBDA79000 class=SkyLight name=SkyLight1 team=0 relative=(0.00, 0.00, 7855.31)
+2026-08-18 01:34:49.457 [ACTOR] index=3 actor=0x000001FD038D5220 root=0x000001FBDDF60800 class=Global_PostProcess_Blueprint_C name=Global_PostProcess_Blueprint team=0 relative=(46492.87, 47630.14, -19560.57)
+2026-08-18 01:34:49.457 [ACTOR] index=5 actor=0x000001FBDDF61000 root=0x000001FD01937A30 class=CameraActor name=StartingCamera team=0 relative=(-112729.30, 239368.90, -13349.54)
+2026-08-18 01:34:49.457 [ACTOR] index=6 actor=0x000001FBC20E5B40 root=0x000001FB9020D600 class=WindDirectionalSource name=WindDirectionalSource_0 team=0 relative=(46590.00, 50010.00, -19660.00)
+2026-08-18 01:34:49.457 [ACTOR] index=8 actor=0x000001FC7392E420 root=0x000001FCD4E24000 class=StaticMeshActor name=Dirt_Plane_2700 team=0 relative=(-109730.00, -16014.63, -45977.77)
+2026-08-18 01:34:49.457 [ACTOR] index=9 actor=0x000001FBD536C9E0 root=0x000001FBA83939C0 class=DayCycleAmbientSound name=DayCycleAmbientSound_0 team=0 relative=(68089.28, 267436.60, -6252.46)
+2026-08-18 01:34:49.457 [ACTOR] index=10 actor=0x000001FBD536A4B0 root=0x000001FBA839CE40 class=DayCycleAmbientSound name=DayCycleAmbientSound_1 team=0 relative=(68089.28, 267436.60, -6252.46)
+2026-08-18 01:34:49.457 [ACTOR] index=12 actor=0x000001FC7036F460 root=0x000001FCDA0F4800 class=TileStreamingVolume name=Cave1TileStreamingVolume team=0 relative=(27334.45, 249943.00, -23626.81)
+2026-08-18 01:34:49.457 [ACTOR] index=13 actor=0x000001FC7036DF20 root=0x000001FCDA0F3800 class=TileStreamingVolume name=Cave1TileStreamingVolume_2 team=0 relative=(27334.33, 260574.40, -27220.92)
+2026-08-18 01:34:49.457 [ACTOR] index=14 actor=0x000001FC7036D9D0 root=0x000001FCDA0F3000 class=TileStreamingVolume name=Cave1TileStreamingVolume_3 team=0 relative=(27334.33, 266144.40, -27836.95)
+2026-08-18 01:34:49.457 [ACTOR] index=15 actor=0x000001FC7036CF30 root=0x000001FCDA0F8000 class=TileStreamingVolume name=Cave1TileStreamingVolume_4 team=0 relative=(27334.33, 274533.00, -26237.47)
+2026-08-18 01:34:49.457 [ACTOR] index=16 actor=0x000001FC3EDE3FC0 root=0x000001FD03AF4800 class=TileStreamingVolume name=TileStreamingVolume_23 team=0 relative=(27334.33, 278524.80, -25966.98)
+2026-08-18 01:34:49.457 [ACTOR] index=17 actor=0x000001FD00FF36C0 root=0x000001FCDA0F4000 class=PostProcessVolume name=Cave1GeneralPostProcess_2 team=0 relative=(16523.75, 51662.17, -35581.91)
+2026-08-18 01:34:49.457 [ACTOR] index=18 actor=0x000001FC73922DA0 root=0x000001FCA5E2CF00 class=ExponentialHeightFog name=Cave1_ExponentialHeightFog team=0 relative=(-138350.00, -135960.00, -3540.00)
+2026-08-18 01:34:49.457 [ACTOR] index=19 actor=0x000001FC73923B50 root=0x000001FCA5E2C840 class=ExponentialHeightFog name=WeatherGlobalOutdoorrFog team=0 relative=(-109281.70, 230574.10, 50000.00)
+2026-08-18 01:34:49.457 [ACTOR] index=20 actor=0x000001FD00FF2DA0 root=0x000001FCDA0F6800 class=PostProcessVolume name=Cave02_Encompassing_PostProcess team=0 relative=(68571.84, -33290.56, -35605.01)
+2026-08-18 01:34:49.457 [ACTOR] index=21 actor=0x000001FC73924900 root=0x000001FCA5E2CCC0 class=ExponentialHeightFog name=Cave2_ExponentialHeightFog_2 team=0 relative=(-89650.00, -135960.00, -3540.00)
+2026-08-18 01:34:49.457 [ACTOR] index=22 actor=0x000001FD01934FB0 root=0x000001FD03AF7000 class=TileStreamingVolume name=TileStreamingVolume_3 team=0 relative=(61323.15, 136776.60, -17240.35)
+2026-08-18 01:34:49.457 [ACTOR] index=23 actor=0x000001FD01934A60 root=0x000001FD03AF6800 class=TileStreamingVolume name=TileStreamingVolume_27 team=0 relative=(75425.15, 141746.90, -19306.01)
+2026-08-18 01:34:49.457 [ACTOR] index=24 actor=0x000001FC70369A10 root=0x000001FCDA0F1000 class=TileStreamingVolume name=Cave2TileStreamingVolume_3 team=0 relative=(81832.24, 172606.90, -28624.20)
+2026-08-18 01:34:49.457 [ACTOR] index=25 actor=0x000001FC739256B0 root=0x000001FB95749200 class=MatineeValueInterpolationContainer_C name=MatineeValueInterpolationContainer_4 team=0 relative=(-108974.40, 195148.60, -6099.45)
+2026-08-18 01:34:49.457 [ACTOR] index=26 actor=0x000001FD0BB574E0 root=0x000001FCD59CE000 class=PlayerStart name=PlayerStart_63PrimaryStart team=0 relative=(-113927.00, 234912.80, -14334.56)
+2026-08-18 01:34:49.457 [ACTOR] index=27 actor=0x000001FD1212A4B0 root=0x000001FCDD556000 class=PlayerStart name=PlayerStart_164 team=0 relative=(-88001.56, 217960.60, -14241.48)
+2026-08-18 01:34:49.457 [ACTOR] index=28 actor=0x000001FD0BB50000 root=0x000001FCD59CF000 class=PlayerStart name=PlayerStart_65 team=0 relative=(-84755.56, 213967.60, -14222.90)
+2026-08-18 01:34:49.457 [ACTOR] index=29 actor=0x000001FD0BB50550 root=0x000001FCD59CF800 class=PlayerStart name=PlayerStart_66 team=0 relative=(-81190.56, 209755.60, -13933.01)
+2026-08-18 01:34:49.457 [ACTOR] index=30 actor=0x000001FD0BB50AA0 root=0x000001FCD59C0000 class=PlayerStart name=PlayerStart_67 team=0 relative=(-80587.56, 203726.60, -14292.87)
+2026-08-18 01:34:49.457 [ACTOR] index=31 actor=0x000001FD0BB51540 root=0x000001FBDE101800 class=PlayerStart name=PlayerStart_68 team=0 relative=(-91313.56, 224024.60, -14317.98)
+2026-08-18 01:34:49.457 [ACTOR] index=32 actor=0x000001FD0BB51A90 root=0x000001FBDE103000 class=PlayerStart name=PlayerStart_69 team=0 relative=(-97059.56, 226600.60, -14242.47)
+2026-08-18 01:34:49.457 [ACTOR] index=33 actor=0x000001FD0BB5E470 root=0x000001FBDE102000 class=PlayerStart name=PlayerStart_70 team=0 relative=(-100523.60, 229131.60, -14274.92)
+2026-08-18 01:34:49.457 [ACTOR] index=34 actor=0x000001FD0BB5DF20 root=0x000001FBDE101000 class=PlayerStart name=PlayerStart_71 team=0 relative=(-103850.60, 232168.60, -14241.42)
+2026-08-18 01:34:49.457 [ACTOR] index=35 actor=0x000001FD0BB5EF10 root=0x000001FBDE100800 class=PlayerStart name=PlayerStart_72 team=0 relative=(-107656.60, 235113.60, -14311.74)
+2026-08-18 01:34:49.457 [ACTOR] index=36 actor=0x000001FD0BB5E9C0 root=0x000001FBDE106800 class=PlayerStart name=PlayerStart_73 team=0 relative=(-113031.60, 234143.60, -14309.99)
+2026-08-18 01:34:49.457 [ACTOR] index=37 actor=0x000001FD0BB5F460 root=0x000001FBDE107000 class=PlayerStart name=PlayerStart_74 team=0 relative=(-110419.60, 231898.60, -14333.36)
+2026-08-18 01:34:49.457 [ACTOR] index=38 actor=0x000001FD0BB5F9B0 root=0x000001FBDE107800 class=PlayerStart name=PlayerStart_75 team=0 relative=(-106773.60, 229210.60, -14086.13)
+2026-08-18 01:34:49.457 [ACTOR] index=39 actor=0x000001FD0BB57F80 root=0x000001FBDE108000 class=PlayerStart name=PlayerStart_76 team=0 relative=(-104786.60, 225978.60, -14308.82)
+2026-08-18 01:34:49.457 [ACTOR] index=40 actor=0x000001FD0BB584D0 root=0x000001FBDE108800 class=PlayerStart name=PlayerStart_77 team=0 relative=(-104084.60, 222165.60, -14273.97)
+2026-08-18 01:34:49.457 [ACTOR] index=41 actor=0x000001FD0BB58A20 root=0x000001FBDE109000 class=PlayerStart name=PlayerStart_78 team=0 relative=(-103990.60, 218904.60, -14291.49)
+2026-08-18 01:34:49.457 [ACTOR] index=42 actor=0x000001FCFD46C9E0 root=0x000001FBDE109800 class=PlayerStart name=PlayerStart_79 team=0 relative=(-102352.60, 216057.60, -14311.01)
+2026-08-18 01:34:49.457 [ACTOR] index=43 actor=0x000001FCFD46BF40 root=0x000001FBDE10A800 class=PlayerStart name=PlayerStart_80 team=0 relative=(-99508.56, 212973.60, -14325.28)
+2026-08-18 01:34:49.457 [ACTOR] index=44 actor=0x000001FCFD46B9F0 root=0x000001FBDE10B000 class=PlayerStart name=PlayerStart_81 team=0 relative=(-96695.56, 209451.60, -14331.55)
+2026-08-18 01:34:49.457 [ACTOR] index=45 actor=0x000001FCFD46B4A0 root=0x000001FBDE10B800 class=PlayerStart name=PlayerStart_82 team=0 relative=(-94043.56, 205948.60, -14334.56)
+2026-08-18 01:34:49.457 [ACTOR] index=46 actor=0x000001FD01C9AD60 root=0x000001FD001C8000 class=PostProcessVolume name=PostProcessVolume_263 team=0 relative=(289080.00, 155170.00, -15550.00)
+2026-08-18 01:34:49.457 [ACTOR] index=47 actor=0x000001FC73926460 root=0x000001FCA5E2D140 class=ExponentialHeightFog name=Cave3_ExponentialHeightFog team=0 relative=(-15190.00, -135960.00, -3540.00)
+2026-08-18 01:34:49.457 [ACTOR] index=48 actor=0x000001FC7036E9C0 root=0x000001FCDA0F2000 class=TileStreamingVolume name=Cave03_TileStreamingVolume team=0 relative=(289081.00, 155171.00, -15550.00)
+2026-08-18 01:34:49.457 [ACTOR] index=49 actor=0x000001FD01935FA0 root=0x000001FD03AF8800 class=TileStreamingVolume name=TileStreamingVolume_5 team=0 relative=(287328.00, 161718.00, -13868.00)
+2026-08-18 01:34:49.457 [ACTOR] index=50 actor=0x000001FC73927210 root=0x000001FCA5E2D5C0 class=ExponentialHeightFog name=Cave5ExponentialHeightFog team=0 relative=(-17655.00, -70770.00, -1730.00)
+2026-08-18 01:34:49.457 [ACTOR] index=51 actor=0x000001FD01C9C8C0 root=0x000001FD001C9800 class=PostProcessVolume name=PostProcessVolume_4 team=0 relative=(-30775.00, -91735.00, 0.00)
+2026-08-18 01:34:49.457 [ACTOR] index=52 actor=0x000001FD01C9B680 root=0x000001FD001C8800 class=PostProcessVolume name=PostProcessVolume_264 team=0 relative=(-249156.70, -242063.90, -11044.20)
+2026-08-18 01:34:49.457 [ACTOR] index=53 actor=0x000001FC7392C430 root=0x000001FCA6869FC0 class=ExponentialHeightFog name=Cave6ExponentialHeightFog team=0 relative=(-258329.00, -250908.00, -11089.00)
+2026-08-18 01:34:49.457 [ACTOR] index=54 actor=0x000001FC7036E470 root=0x000001FCDA0F5800 class=TileStreamingVolume name=Cave06_TileVolume_2 team=0 relative=(-249155.70, -242062.90, -11044.20)
+2026-08-18 01:34:49.457 [ACTOR] index=55 actor=0x000001FC703684D0 root=0x000001FCDD391000 class=PhysicsVolume name=Cave7_PhysicsVolume_37 team=0 relative=(279540.00, -280950.00, -13445.00)
+2026-08-18 01:34:49.457 [ACTOR] index=56 actor=0x000001FD01C9A440 root=0x000001FD001C7800 class=PostProcessVolume name=PostProcessVolume_2 team=0 relative=(278315.00, -280275.00, -14075.00)
+2026-08-18 01:34:49.457 [ACTOR] index=57 actor=0x000001FC73927FC0 root=0x000001FCA5E2D380 class=ExponentialHeightFog name=Cave7ExponentialHeightFog_2 team=0 relative=(278010.00, -273200.00, -15780.00)
+2026-08-18 01:34:49.457 [ACTOR] index=58 actor=0x000001FC70367F80 root=0x000001FCDD392800 class=PhysicsVolume name=Cave7_WaterPhysicsVolume team=0 relative=(281745.00, -277070.00, -13445.00)
+2026-08-18 01:34:49.457 [ACTOR] index=59 actor=0x000001FC70367A30 root=0x000001FCDD393800 class=TileStreamingVolume name=Cave7TileVolume team=0 relative=(278766.00, -280774.00, -14075.00)
+2026-08-18 01:34:49.457 [ACTOR] index=60 actor=0x000001FD01936A40 root=0x000001FD03AF9000 class=TileStreamingVolume name=TileStreamingVolume_6 team=0 relative=(280410.00, -280111.00, -13755.00)
+2026-08-18 01:34:49.457 [ACTOR] index=61 actor=0x000001FBD5369A10 root=0x000001FD063F2000 class=BP_IslandWaterPlane_C name=BP_IslandWaterPlane_C_0 team=0 relative=(0.00, 0.00, -14460.24)
+2026-08-18 01:34:49.457 [ACTOR] index=62 actor=0x000001FD01800920 root=0x000001FD001C5000 class=PostProcessVolume name=PostProcessVolume_0 team=0 relative=(1373.76, -3784.85, -32172.94)
+2026-08-18 01:34:49.457 [ACTOR] index=63 actor=0x000001FBD7CDF660 root=0x000001FD0017C800 class=PostProcessVolume name=PostProcessVolume35 team=0 relative=(185854.30, 850.06, -11778.69)
+2026-08-18 01:34:49.457 [ACTOR] index=64 actor=0x000001FBD7CD5B40 root=0x000001FD0017D000 class=PostProcessVolume name=PostProcessVolume36 team=0 relative=(-135030.00, -107248.00, -3076.00)
+2026-08-18 01:34:49.457 [ACTOR] index=65 actor=0x000001FBDB2A1B60 root=0x000001FD0017E800 class=PostProcessVolume name=PostProcessVolume37 team=0 relative=(-63065.00, -233669.00, -10682.13)
+2026-08-18 01:34:49.457 [ACTOR] index=66 actor=0x000001FBDB2A2480 root=0x000001FD0017E000 class=PostProcessVolume name=PostProcessVolume38 team=0 relative=(-64269.00, -200317.00, -8266.98)
+2026-08-18 01:34:49.457 [ACTOR] index=67 actor=0x000001FBD7CD6460 root=0x000001FD0017F000 class=PostProcessVolume name=PostProcessVolume39 team=0 relative=(211329.30, 49812.69, -11778.20)
+2026-08-18 01:34:49.457 [ACTOR] index=68 actor=0x000001FBDB2A2DA0 root=0x000001FD0017D800 class=PostProcessVolume name=PostProcessVolume40 team=0 relative=(-78175.64, -156472.70, -5076.86)
+2026-08-18 01:34:49.457 [ACTOR] index=69 actor=0x000001FBDB2A36C0 root=0x000001FD00170000 class=PostProcessVolume name=PostProcessVolume41 team=0 relative=(-167811.00, -34876.00, -6883.00)
+2026-08-18 01:34:49.457 [ACTOR] index=70 actor=0x000001FBDB2A3FE0 root=0x000001FD00170800 class=PostProcessVolume name=PostProcessVolume42 team=0 relative=(-221246.00, 179460.00, -10878.95)
+2026-08-18 01:34:49.457 [ACTOR] index=71 actor=0x000001FBDB2A4900 root=0x000001FD00171000 class=PostProcessVolume name=PostProcessVolume43 team=0 relative=(-226722.00, 185064.00, -10878.95)
+2026-08-18 01:34:49.457 [ACTOR] index=72 actor=0x000001FBDB2A5220 root=0x000001FD00171800 class=PostProcessVolume name=PostProcessVolume44 team=0 relative=(-232343.00, 185064.00, -10878.95)
+2026-08-18 01:34:49.457 [ACTOR] index=73 actor=0x000001FBDB2A5B40 root=0x000001FD00172000 class=PostProcessVolume name=PostProcessVolume45 team=0 relative=(-237942.00, 185064.00, -10878.95)
+2026-08-18 01:34:49.458 [ACTOR] index=74 actor=0x000001FBDB2A6460 root=0x000001FD00172800 class=PostProcessVolume name=PostProcessVolume46 team=0 relative=(-229635.30, 220925.60, -12881.87)
+2026-08-18 01:34:49.458 [ACTOR] index=75 actor=0x000001FBDB2A6D80 root=0x000001FD00173000 class=PostProcessVolume name=PostProcessVolume47 team=0 relative=(155757.10, -60850.21, -11792.00)
+2026-08-18 01:34:49.458 [ACTOR] index=76 actor=0x000001FBDB2A76A0 root=0x000001FD00173800 class=PostProcessVolume name=PostProcessVolume48 team=0 relative=(-162984.00, -48997.00, -3076.00)
+2026-08-18 01:34:49.458 [ACTOR] index=77 actor=0x000001FBDB2A7FC0 root=0x000001FD00174000 class=PostProcessVolume name=PostProcessVolume49 team=0 relative=(-231693.30, 218340.60, -12881.87)
+2026-08-18 01:34:49.458 [ACTOR] index=78 actor=0x000001FBDB2A88E0 root=0x000001FD00174800 class=PostProcessVolume name=PostProcessVolume50 team=0 relative=(-234106.30, 224832.60, -12881.87)
+2026-08-18 01:34:49.458 [ACTOR] index=79 actor=0x000001FBDB2A9200 root=0x000001FD00175000 class=PostProcessVolume name=PostProcessVolume51 team=0 relative=(-230113.30, 225144.60, -12881.87)
+2026-08-18 01:34:49.458 [ACTOR] index=80 actor=0x000001FBDB2A9B20 root=0x000001FD00175800 class=PostProcessVolume name=PostProcessVolume52 team=0 relative=(-226446.30, 224989.60, -12880.01)
+2026-08-18 01:34:49.458 [ACTOR] index=81 actor=0x000001FBDB2AA440 root=0x000001FD00176000 class=PostProcessVolume name=PostProcessVolume53 team=0 relative=(-173186.00, -19298.00, -6876.18)
+2026-08-18 01:34:49.458 [ACTOR] index=82 actor=0x000001FD01C9BFA0 root=0x000001FD001C9000 class=PostProcessVolume name=PostProcessVolume_3 team=0 relative=(-211329.00, -19486.00, -9865.71)
+2026-08-18 01:34:49.458 [ACTOR] index=83 actor=0x000001FBDB2AB680 root=0x000001FD00177000 class=PostProcessVolume name=PostProcessVolume56 team=0 relative=(162093.30, -58150.31, -11792.00)
+2026-08-18 01:34:49.458 [ACTOR] index=84 actor=0x000001FBDB2ABFA0 root=0x000001FD00177800 class=PostProcessVolume name=PostProcessVolume57 team=0 relative=(162695.30, -53288.31, -11792.00)
+2026-08-18 01:34:49.458 [ACTOR] index=85 actor=0x000001FBDB2AC8C0 root=0x000001FD00178000 class=PostProcessVolume name=PostProcessVolume58 team=0 relative=(162695.30, -53288.31, -11792.00)
+2026-08-18 01:34:49.458 [ACTOR] index=86 actor=0x000001FBDB2AD1E0 root=0x000001FD00178800 class=PostProcessVolume name=PostProcessVolume59 team=0 relative=(169338.30, -47091.31, -11792.00)
+2026-08-18 01:34:49.458 [ACTOR] index=87 actor=0x000001FBD7CD9B20 root=0x000001FCFE0E7800 class=PostProcessVolume name=LakePostProcessVolume02 team=0 relative=(156294.00, -220819.00, -14642.40)
+2026-08-18 01:34:49.458 [ACTOR] index=88 actor=0x000001FBD7CD9200 root=0x000001FCFE0E8800 class=PostProcessVolume name=LakePostProcessVolume01 team=0 relative=(163075.00, -252427.00, -14273.86)
+2026-08-18 01:34:49.458 [ACTOR] index=89 actor=0x000001FBD7CDAD60 root=0x000001FCFE0E0800 class=PostProcessVolume name=LakePostProcessVolume04 team=0 relative=(171638.20, -199240.80, -14708.80)
+2026-08-18 01:34:49.458 [ACTOR] index=90 actor=0x000001FBD7CDA440 root=0x000001FCFE0E0000 class=PostProcessVolume name=LakePostProcessVolume03 team=0 relative=(-120394.00, 95550.00, -10386.89)
+2026-08-18 01:34:49.458 [ACTOR] index=91 actor=0x000001FBDB2AED40 root=0x000001FD0017A000 class=PostProcessVolume name=PostProcessVolume64 team=0 relative=(151518.30, 58067.69, -14177.43)
+2026-08-18 01:34:49.458 [ACTOR] index=92 actor=0x000001FBDB2AF660 root=0x000001FD0017A800 class=PostProcessVolume name=PostProcessVolume65 team=0 relative=(168711.00, 42345.88, -12284.87)
+2026-08-18 01:34:49.458 [ACTOR] index=93 actor=0x000001FD01801240 root=0x000001FD0017B000 class=PostProcessVolume name=PostProcessVolume66 team=0 relative=(206232.30, 43855.68, -11776.84)
+2026-08-18 01:34:49.458 [ACTOR] index=94 actor=0x000001FD01801B60 root=0x000001FD001C4000 class=PostProcessVolume name=PostProcessVolume67 team=0 relative=(206232.30, 40612.69, -11776.63)
+2026-08-18 01:34:49.458 [ACTOR] index=95 actor=0x000001FD01802480 root=0x000001FD001C4800 class=PostProcessVolume name=PostProcessVolume68 team=0 relative=(213834.30, 47711.69, -11780.00)
+2026-08-18 01:34:49.458 [ACTOR] index=96 actor=0x000001FD038D0000 root=0x000001FD05315800 class=PostProcessVolume name=UnderWaterCave_Medium_PostProcessVolume_3 team=0 relative=(327385.90, -114496.90, -44325.00)
+2026-08-18 01:34:49.458 [ACTOR] index=97 actor=0x000001FD038D2480 root=0x000001FD05311800 class=PostProcessVolume name=UnderWaterCave_SmalPostProcessVolume_3 team=0 relative=(336186.00, 21642.94, -44625.00)
+2026-08-18 01:34:49.458 [ACTOR] index=98 actor=0x000001FD038DC8C0 root=0x000001FD05315000 class=PostProcessVolume name=UnderWaterCave_BigPostProcessVolume_3 team=0 relative=(322536.00, 296643.00, -44375.00)
+2026-08-18 01:34:49.458 [ACTOR] index=99 actor=0x000001FD038D0920 root=0x000001FD05310000 class=PostProcessVolume name=UnderWaterCave_Medium_PostProcessVolume_4 team=0 relative=(-222190.30, -320199.20, -40241.01)
+2026-08-18 01:34:49.458 [ACTOR] index=100 actor=0x000001FD038D2DA0 root=0x000001FD05312000 class=PostProcessVolume name=UnderWaterCave_SmalPostProcessVolume_4 team=0 relative=(-79199.96, -316964.70, -40575.00)
+2026-08-18 01:34:49.458 [ACTOR] index=101 actor=0x000001FD038DD1E0 root=0x000001FD05316800 class=PostProcessVolume name=UnderWaterCave_BigPostProcessVolume_4 team=0 relative=(321236.10, -336603.40, -43958.83)
+2026-08-18 01:34:49.458 [ACTOR] index=102 actor=0x000001FD038DBFA0 root=0x000001FD05317000 class=PostProcessVolume name=UnderWaterCave_Medium_PostProcessVolume team=0 relative=(175457.10, 324486.00, -43825.00)
+2026-08-18 01:34:49.458 [ACTOR] index=103 actor=0x000001FD02EA1B60 root=0x000001FD05314800 class=PostProcessVolume name=UnderWaterCave_BigPostProcessVolume team=0 relative=(-106028.40, 322093.60, -44175.00)
+2026-08-18 01:34:49.458 [ACTOR] index=104 actor=0x000001FD038D1B60 root=0x000001FD05311000 class=PostProcessVolume name=UnderWaterCave_SmalPostProcessVolume_2 team=0 relative=(-292386.00, 328207.00, -44525.00)
+2026-08-18 01:34:49.458 [ACTOR] index=105 actor=0x000001FD038DDB00 root=0x000001FD05316000 class=PostProcessVolume name=UnderWaterCave_BigPostProcessVolume_5 team=0 relative=(-314578.30, 267543.70, -40125.00)
+2026-08-18 01:34:49.458 [ACTOR] index=106 actor=0x000001FD038D1240 root=0x000001FD05310800 class=PostProcessVolume name=UnderWaterCave_Medium_PostProcessVolume_5 team=0 relative=(-315031.10, 3031.49, -41725.00)
+2026-08-18 01:34:49.458 [ACTOR] index=107 actor=0x000001FD038D36C0 root=0x000001FD05312800 class=PostProcessVolume name=UnderWaterCave_SmalPostProcessVolume_5 team=0 relative=(-314850.00, -272814.70, -35825.00)
+2026-08-18 01:34:49.458 [ACTOR] index=108 actor=0x000001FD019384D0 root=0x000001FBDDF61800 class=PlayerStart name=PlayerStart_1 team=0 relative=(-67209.10, 201799.70, -14303.00)
+2026-08-18 01:34:49.458 [ACTOR] index=109 actor=0x000001FD11E35FA0 root=0x000001FC73934800 class=PlayerStart name=PlayerStart_2 team=0 relative=(-69574.12, 209288.90, -14319.11)
+2026-08-18 01:34:49.458 [ACTOR] index=110 actor=0x000001FD11E3EF10 root=0x000001FC46859800 class=PlayerStart name=PlayerStart_3 team=0 relative=(-69623.38, 214758.00, -14328.94)
+2026-08-18 01:34:49.458 [ACTOR] index=111 actor=0x000001FD0BB5B9F0 root=0x000001FC46858000 class=PlayerStart name=PlayerStart_4 team=0 relative=(-69278.47, 222838.50, -14318.43)
+2026-08-18 01:34:49.458 [ACTOR] index=112 actor=0x000001FD0BB59F60 root=0x000001FCD59C6000 class=PlayerStart name=PlayerStart_5 team=0 relative=(-69771.18, 233776.70, -14340.19)
+2026-08-18 01:34:49.458 [ACTOR] index=113 actor=0x000001FD0BB55500 root=0x000001FCD59CB800 class=PlayerStart name=PlayerStart_6 team=0 relative=(-68933.56, 244813.40, -14258.91)
+2026-08-18 01:34:49.458 [ACTOR] index=114 actor=0x000001FD0BB51FE0 root=0x000001FBDE102800 class=PlayerStart name=PlayerStart_7 team=0 relative=(-69081.38, 255603.80, -14125.59)
+2026-08-18 01:34:49.458 [ACTOR] index=115 actor=0x000001FCFD46C490 root=0x000001FBDE10A000 class=PlayerStart name=PlayerStart_8 team=0 relative=(-64942.61, 262797.40, -14315.65)
+2026-08-18 01:34:49.458 [ACTOR] index=116 actor=0x000001FCFD467A30 root=0x000001FBDE10F800 class=PlayerStart name=PlayerStart_9 team=0 relative=(-57946.10, 269744.70, -14052.96)
+2026-08-18 01:34:49.458 [ACTOR] index=117 actor=0x000001FD01938A20 root=0x000001FBDDF62000 class=PlayerStart name=PlayerStart_10 team=0 relative=(-48530.52, 274553.60, -14212.44)
+2026-08-18 01:34:49.458 [ACTOR] index=118 actor=0x000001FD01933520 root=0x000001FBDDF67800 class=PlayerStart name=PlayerStart_11 team=0 relative=(-36118.93, 273834.20, -14259.71)
+2026-08-18 01:34:49.458 [ACTOR] index=119 actor=0x000001FD03876F90 root=0x000001FBDDF6F800 class=PlayerStart name=PlayerStart_12 team=0 relative=(-29669.91, 270814.50, -14263.51)
+2026-08-18 01:34:49.458 [ACTOR] index=120 actor=0x000001FD03870FF0 root=0x000001FBDA2C3000 class=PlayerStart name=PlayerStart_13 team=0 relative=(-24314.16, 264815.20, -14292.47)
+2026-08-18 01:34:49.458 [ACTOR] index=121 actor=0x000001FD03874A60 root=0x000001FBDA2C8800 class=PlayerStart name=PlayerStart_14 team=0 relative=(-22717.14, 257673.20, -14283.84)
+2026-08-18 01:34:49.458 [ACTOR] index=122 actor=0x000001FD1212F9B0 root=0x000001FBDA2CF000 class=PlayerStart name=PlayerStart_15 team=0 relative=(-17346.57, 253583.70, -14173.60)
+2026-08-18 01:34:49.458 [ACTOR] index=123 actor=0x000001FD1212BF40 root=0x000001FCDD553800 class=PlayerStart name=PlayerStart_16 team=0 relative=(-10547.14, 258165.90, -14215.34)
+2026-08-18 01:34:49.458 [ACTOR] index=124 actor=0x000001FD121284D0 root=0x000001FCDD55A800 class=PlayerStart name=PlayerStart_17 team=0 relative=(-13404.87, 263434.20, -13959.25)
+2026-08-18 01:34:49.458 [ACTOR] index=125 actor=0x000001FD12124A60 root=0x000001FCDD552800 class=PlayerStart name=PlayerStart_18 team=0 relative=(-17100.22, 270877.90, -14246.07)
+2026-08-18 01:34:49.458 [ACTOR] index=126 actor=0x000001FD12120FF0 root=0x000001FC73F15000 class=PlayerStart name=PlayerStart_19 team=0 relative=(-13946.85, 278564.20, -14113.34)
+2026-08-18 01:34:49.459 [ACTOR] index=127 actor=0x000001FD11E364F0 root=0x000001FC73935000 class=PlayerStart name=PlayerStart_20 team=0 relative=(-5639.20, 282594.20, -14253.68)
+2026-08-18 01:34:49.459 [ACTOR] index=128 actor=0x000001FD11E39F60 root=0x000001FC7393A800 class=PlayerStart name=PlayerStart_21 team=0 relative=(-2121.75, 288615.50, -13871.46)
+2026-08-18 01:34:49.459 [ACTOR] index=129 actor=0x000001FD11E3B9F0 root=0x000001FC7393F800 class=PlayerStart name=PlayerStart_22 team=0 relative=(3298.08, 298864.00, -14014.30)
+2026-08-18 01:34:49.459 [ACTOR] index=130 actor=0x000001FD11E3C490 root=0x000001FC7393E000 class=PlayerStart name=PlayerStart_23 team=0 relative=(13103.06, 302066.60, -14026.97)
+2026-08-18 01:34:49.459 [ACTOR] index=131 actor=0x000001FD11E3C9E0 root=0x000001FC4685F000 class=PlayerStart name=PlayerStart_24 team=0 relative=(27145.37, 308225.50, -14069.23)
+2026-08-18 01:34:49.459 [ACTOR] index=132 actor=0x000001FD11E3CF30 root=0x000001FC46850000 class=PlayerStart name=PlayerStart_25 team=0 relative=(36767.52, 306214.90, -14158.43)
+2026-08-18 01:34:49.459 [ACTOR] index=133 actor=0x000001FD11E3D480 root=0x000001FC46857000 class=PlayerStart name=PlayerStart_26 team=0 relative=(45527.99, 303917.10, -14245.55)
+2026-08-18 01:34:49.459 [ACTOR] index=134 actor=0x000001FD11E3D9D0 root=0x000001FC4685D800 class=PlayerStart name=PlayerStart_27 team=0 relative=(55017.32, 304745.30, -14254.70)
+2026-08-18 01:34:49.459 [ACTOR] index=135 actor=0x000001FD11E3E470 root=0x000001FC4685E800 class=PlayerStart name=PlayerStart_28 team=0 relative=(61516.25, 305381.10, -14206.84)
+2026-08-18 01:34:49.459 [ACTOR] index=136 actor=0x000001FD11E3E9C0 root=0x000001FC46853000 class=PlayerStart name=PlayerStart_29 team=0 relative=(67224.98, 302176.70, -14234.41)
+2026-08-18 01:34:49.459 [ACTOR] index=137 actor=0x000001FD11E3F460 root=0x000001FC46850800 class=PlayerStart name=PlayerStart_30 team=0 relative=(69692.63, 297499.20, -14074.46)
+2026-08-18 01:34:49.459 [ACTOR] index=138 actor=0x000001FD11E3F9B0 root=0x000001FC46851800 class=PlayerStart name=PlayerStart_31 team=0 relative=(71976.13, 290980.20, -14185.13)
+2026-08-18 01:34:49.459 [ACTOR] index=139 actor=0x000001FD11E30000 root=0x000001FC46852000 class=PlayerStart name=PlayerStart_32 team=0 relative=(71042.29, 287371.00, -14201.28)
+2026-08-18 01:34:49.459 [ACTOR] index=140 actor=0x000001FD11E30550 root=0x000001FC46853800 class=PlayerStart name=PlayerStart_33 team=0 relative=(66304.22, 283540.50, -14307.22)
+2026-08-18 01:34:49.459 [ACTOR] index=141 actor=0x000001FD11E31A90 root=0x000001FC46854800 class=PlayerStart name=PlayerStart_34 team=0 relative=(59822.06, 283724.70, -14092.01)
+2026-08-18 01:34:49.459 [ACTOR] index=142 actor=0x000001FD11E31540 root=0x000001FC46855000 class=PlayerStart name=PlayerStart_35 team=0 relative=(55881.19, 275437.80, -14251.75)
+2026-08-18 01:34:49.459 [ACTOR] index=143 actor=0x000001FD11E31FE0 root=0x000001FC46855800 class=PlayerStart name=PlayerStart_36 team=0 relative=(47667.99, 271275.90, -14266.52)
+2026-08-18 01:34:49.459 [ACTOR] index=144 actor=0x000001FD11E32530 root=0x000001FC46856800 class=PlayerStart name=PlayerStart_37 team=0 relative=(41038.50, 267961.10, -14267.33)
+2026-08-18 01:34:49.459 [ACTOR] index=145 actor=0x000001FBC2831540 root=0x000001FC4685C800 class=PlayerStart name=PlayerStart_38 team=0 relative=(62036.35, 267964.40, -14324.33)
+2026-08-18 01:34:49.459 [ACTOR] index=146 actor=0x000001FBC2831A90 root=0x000001FC46854000 class=PlayerStart name=PlayerStart_39 team=0 relative=(63947.05, 260595.00, -14140.63)
+2026-08-18 01:34:49.459 [ACTOR] index=147 actor=0x000001FD0BB5BF40 root=0x000001FC4685B800 class=PlayerStart name=PlayerStart_40 team=0 relative=(64794.15, 254186.50, -14249.83)
+2026-08-18 01:34:49.459 [ACTOR] index=148 actor=0x000001FD0BB5C490 root=0x000001FC46852800 class=PlayerStart name=PlayerStart_41 team=0 relative=(67151.98, 247776.30, -14340.38)
+2026-08-18 01:34:49.459 [ACTOR] index=149 actor=0x000001FD0BB5D480 root=0x000001FC46856000 class=PlayerStart name=PlayerStart_42 team=0 relative=(67593.26, 245089.40, -14197.14)
+2026-08-18 01:34:49.459 [ACTOR] index=150 actor=0x000001FD0BB5D9D0 root=0x000001FC4685E000 class=PlayerStart name=PlayerStart_43 team=0 relative=(72528.55, 250687.60, -14258.42)
+2026-08-18 01:34:49.459 [ACTOR] index=151 actor=0x000001FD0BB5A4B0 root=0x000001FCD59C3000 class=PlayerStart name=PlayerStart_44 team=0 relative=(79194.88, 255917.60, -14261.26)
+2026-08-18 01:34:49.459 [ACTOR] index=152 actor=0x000001FD0BB53520 root=0x000001FCD59C3800 class=PlayerStart name=PlayerStart_45 team=0 relative=(85861.21, 259968.90, -14246.46)
+2026-08-18 01:34:49.459 [ACTOR] index=153 actor=0x000001FD0BB52530 root=0x000001FCD59C4000 class=PlayerStart name=PlayerStart_46 team=0 relative=(91938.23, 266414.30, -14198.49)
+2026-08-18 01:34:49.459 [ACTOR] index=154 actor=0x000001FD0BB52A80 root=0x000001FCD59C4800 class=PlayerStart name=PlayerStart_47 team=0 relative=(98788.71, 271570.60, -14242.64)
+2026-08-18 01:34:49.459 [ACTOR] index=155 actor=0x000001FD0BB52FD0 root=0x000001FCD59C5000 class=PlayerStart name=PlayerStart_48 team=0 relative=(106081.20, 275253.70, -14110.39)
+2026-08-18 01:34:49.459 [ACTOR] index=156 actor=0x000001FD0BB59A10 root=0x000001FCD59C5800 class=PlayerStart name=PlayerStart_49 team=0 relative=(115252.00, 278789.40, -14144.77)
+2026-08-18 01:34:49.459 [ACTOR] index=157 actor=0x000001FD0BB5AA00 root=0x000001FCD59C6800 class=PlayerStart name=PlayerStart_50 team=0 relative=(122691.70, 273448.90, -14166.75)
+2026-08-18 01:34:49.459 [ACTOR] index=158 actor=0x000001FD0BB5AF50 root=0x000001FCD59C7000 class=PlayerStart name=PlayerStart_51 team=0 relative=(134772.10, 270392.00, -14167.42)
+2026-08-18 01:34:49.459 [ACTOR] index=159 actor=0x000001FD0BB5B4A0 root=0x000001FCD59C7800 class=PlayerStart name=PlayerStart_52 team=0 relative=(145011.00, 267629.80, -14165.36)
+2026-08-18 01:34:49.459 [ACTOR] index=160 actor=0x000001FD0BB58F70 root=0x000001FCD59C8000 class=PlayerStart name=PlayerStart_53 team=0 relative=(151014.30, 262252.50, -14121.28)
+2026-08-18 01:34:49.459 [ACTOR] index=161 actor=0x000001FD0BB594C0 root=0x000001FCD59C8800 class=PlayerStart name=PlayerStart_54 team=0 relative=(155286.70, 254665.50, -13924.29)
+2026-08-18 01:34:49.459 [ACTOR] index=162 actor=0x000001FD0BB53A70 root=0x000001FCD59C9000 class=PlayerStart name=PlayerStart_55 team=0 relative=(158675.10, 248809.40, -14174.94)
+2026-08-18 01:34:49.459 [ACTOR] index=163 actor=0x000001FD0BB53FC0 root=0x000001FCD59C9800 class=PlayerStart name=PlayerStart_56 team=0 relative=(160406.10, 239785.90, -14142.74)
+2026-08-18 01:34:49.459 [ACTOR] index=164 actor=0x000001FD0BB54510 root=0x000001FCD59CA000 class=PlayerStart name=PlayerStart_57 team=0 relative=(156538.90, 233082.80, -14170.94)
+2026-08-18 01:34:49.459 [ACTOR] index=165 actor=0x000001FD0BB54A60 root=0x000001FCD59CA800 class=PlayerStart name=PlayerStart_58 team=0 relative=(158198.20, 226246.70, -14045.67)
+2026-08-18 01:34:49.459 [ACTOR] index=166 actor=0x000001FD0BB54FB0 root=0x000001FCD59CB000 class=PlayerStart name=PlayerStart_59 team=0 relative=(163308.60, 221136.20, -14183.50)
+2026-08-18 01:34:49.459 [ACTOR] index=167 actor=0x000001FD0BB55FA0 root=0x000001FCD59CC000 class=PlayerStart name=PlayerStart_60 team=0 relative=(170410.20, 218348.70, -14256.90)
+2026-08-18 01:34:49.459 [ACTOR] index=168 actor=0x000001FD0BB564F0 root=0x000001FCD59CC800 class=PlayerStart name=PlayerStart_61 team=0 relative=(172733.20, 211910.80, -14205.62)
+2026-08-18 01:34:49.459 [ACTOR] index=169 actor=0x000001FD0BB56A40 root=0x000001FCD59CD000 class=PlayerStart name=PlayerStart_62 team=0 relative=(181544.20, 211127.50, -14015.86)
+2026-08-18 01:34:49.459 [ACTOR] index=170 actor=0x000001FD0BB56F90 root=0x000001FCD59CD800 class=PlayerStart name=PlayerStart_63 team=0 relative=(188729.50, 219855.40, -14284.31)
+2026-08-18 01:34:49.459 [ACTOR] index=171 actor=0x000001FD0BB57A30 root=0x000001FCD59CE800 class=PlayerStart name=PlayerStart_64 team=0 relative=(197103.80, 229050.80, -14203.55)
+2026-08-18 01:34:49.459 [ACTOR] index=172 actor=0x000001FCFD46AF50 root=0x000001FBDE10C000 class=PlayerStart name=PlayerStart_83 team=0 relative=(210026.80, 233021.00, -14254.82)
+2026-08-18 01:34:49.459 [ACTOR] index=173 actor=0x000001FCFD46AA00 root=0x000001FBDE10C800 class=PlayerStart name=PlayerStart_84 team=0 relative=(228107.10, 231621.00, -14277.37)
+2026-08-18 01:34:49.459 [ACTOR] index=174 actor=0x000001FCFD46A4B0 root=0x000001FBDE10D000 class=PlayerStart name=PlayerStart_85 team=0 relative=(238711.10, 226051.00, -14241.60)
+2026-08-18 01:34:49.459 [ACTOR] index=175 actor=0x000001FCFD469F60 root=0x000001FBDE10D800 class=PlayerStart name=PlayerStart_86 team=0 relative=(247408.80, 219110.70, -14264.38)
+2026-08-18 01:34:49.459 [ACTOR] index=176 actor=0x000001FCFD469A10 root=0x000001FBDE10E000 class=PlayerStart name=PlayerStart_87 team=0 relative=(252144.80, 210293.90, -14148.70)
+2026-08-18 01:34:49.459 [ACTOR] index=177 actor=0x000001FCFD4694C0 root=0x000001FBDE10E800 class=PlayerStart name=PlayerStart_88 team=0 relative=(253912.70, 203235.60, -14302.86)
+2026-08-18 01:34:49.459 [ACTOR] index=178 actor=0x000001FCFD468F70 root=0x000001FBDE10F000 class=PlayerStart name=PlayerStart_89 team=0 relative=(249768.80, 194717.10, -14313.51)
+2026-08-18 01:34:49.459 [ACTOR] index=179 actor=0x000001FCFD466F90 root=0x000001FBDE103800 class=PlayerStart name=PlayerStart_90 team=0 relative=(276346.20, 187148.70, -14224.52)
+2026-08-18 01:34:49.459 [ACTOR] index=180 actor=0x000001FCFD466A40 root=0x000001FBDE104800 class=PlayerStart name=PlayerStart_91 team=0 relative=(282182.90, 195933.20, -14234.78)
+2026-08-18 01:34:49.459 [ACTOR] index=181 actor=0x000001FCFD4664F0 root=0x000001FBDE105800 class=PlayerStart name=PlayerStart_92 team=0 relative=(285956.20, 203125.90, -14289.56)
+2026-08-18 01:34:49.459 [ACTOR] index=182 actor=0x000001FCFD465FA0 root=0x000001FBDE105000 class=PlayerStart name=PlayerStart_93 team=0 relative=(297393.80, 195933.20, -14271.98)
+2026-08-18 01:34:49.459 [ACTOR] index=183 actor=0x000001FCFD465A50 root=0x000001FBDE104000 class=PlayerStart name=PlayerStart_94 team=0 relative=(300164.80, 186205.40, -14322.36)
+2026-08-18 01:34:49.459 [ACTOR] index=184 actor=0x000001FCFD465500 root=0x000001FBDE100000 class=PlayerStart name=PlayerStart_95 team=0 relative=(300915.90, 177247.80, -14292.67)
+2026-08-18 01:34:49.459 [ACTOR] index=185 actor=0x000001FCFD464FB0 root=0x000001FCD7CE7000 class=PlayerStart name=PlayerStart_96 team=0 relative=(300770.50, 167643.80, -14298.89)
+2026-08-18 01:34:49.459 [ACTOR] index=186 actor=0x000001FCFD464A60 root=0x000001FCD7CEC800 class=PlayerStart name=PlayerStart_97 team=0 relative=(301099.90, 161165.00, -14290.82)
+2026-08-18 01:34:49.459 [ACTOR] index=187 actor=0x000001FCFD464510 root=0x000001FCD7CED000 class=PlayerStart name=PlayerStart_98 team=0 relative=(298299.80, 151721.30, -14257.04)
+2026-08-18 01:34:49.459 [ACTOR] index=188 actor=0x000001FCFD463A70 root=0x000001FCD7CEE000 class=PlayerStart name=PlayerStart_99 team=0 relative=(296652.60, 140356.00, -14204.97)
+2026-08-18 01:34:49.459 [ACTOR] index=189 actor=0x000001FD01930000 root=0x000001FBDDF62800 class=PlayerStart name=PlayerStart_100 team=0 relative=(293248.50, 130528.10, -14213.83)
+2026-08-18 01:34:49.459 [ACTOR] index=190 actor=0x000001FD01930550 root=0x000001FBDDF63000 class=PlayerStart name=PlayerStart_101 team=0 relative=(288197.20, 123061.00, -14231.65)
+2026-08-18 01:34:49.459 [ACTOR] index=191 actor=0x000001FD01930AA0 root=0x000001FBDDF63800 class=PlayerStart name=PlayerStart_102 team=0 relative=(282926.30, 113068.30, -14248.65)
+2026-08-18 01:34:49.459 [ACTOR] index=192 actor=0x000001FD01930FF0 root=0x000001FBDDF64000 class=PlayerStart name=PlayerStart_103 team=0 relative=(285122.50, 101593.20, -14147.89)
+2026-08-18 01:34:49.459 [ACTOR] index=193 actor=0x000001FD01931540 root=0x000001FBDDF64800 class=PlayerStart name=PlayerStart_104 team=0 relative=(288252.10, 91106.35, -14263.89)
+2026-08-18 01:34:49.460 [ACTOR] index=194 actor=0x000001FD01931A90 root=0x000001FBDDF65000 class=PlayerStart name=PlayerStart_105 team=0 relative=(287922.60, 78533.13, -14299.87)
+2026-08-18 01:34:49.460 [ACTOR] index=195 actor=0x000001FD01931FE0 root=0x000001FBDDF65800 class=PlayerStart name=PlayerStart_106 team=0 relative=(283640.00, 67881.57, -14259.91)
+2026-08-18 01:34:49.460 [ACTOR] index=196 actor=0x000001FD01932530 root=0x000001FBDDF66000 class=PlayerStart name=PlayerStart_107 team=0 relative=(276227.80, 58986.98, -14091.43)
+2026-08-18 01:34:49.460 [ACTOR] index=197 actor=0x000001FD01932A80 root=0x000001FBDDF66800 class=PlayerStart name=PlayerStart_108 team=0 relative=(270528.70, 48221.17, -14231.58)
+2026-08-18 01:34:49.460 [ACTOR] index=198 actor=0x000001FD01932FD0 root=0x000001FBDDF67000 class=PlayerStart name=PlayerStart_109 team=0 relative=(273647.30, 39111.41, -14258.11)
+2026-08-18 01:34:49.460 [ACTOR] index=199 actor=0x000001FD01933A70 root=0x000001FBDDF68000 class=PlayerStart name=PlayerStart_110 team=0 relative=(265960.50, 28514.78, -14225.69)
+2026-08-18 01:34:49.460 [ACTOR] index=200 actor=0x000001FD01933FC0 root=0x000001FBDDF68800 class=PlayerStart name=PlayerStart_111 team=0 relative=(253771.60, 19345.67, -14267.86)
+2026-08-18 01:34:49.460 [ACTOR] index=201 actor=0x000001FD01934510 root=0x000001FBDDF69000 class=PlayerStart name=PlayerStart_112 team=0 relative=(257432.00, 7092.55, -14235.87)
+2026-08-18 01:34:49.460 [ACTOR] index=202 actor=0x000001FD02F60000 root=0x000001FBDDF69800 class=PlayerStart name=PlayerStart_113 team=0 relative=(265905.60, -1078.95, -14226.92)
+2026-08-18 01:34:49.460 [ACTOR] index=203 actor=0x000001FD02F60550 root=0x000001FBDDF6A000 class=PlayerStart name=PlayerStart_114 team=0 relative=(277528.10, -10121.99, -14103.08)
+2026-08-18 01:34:49.460 [ACTOR] index=204 actor=0x000001FD03875500 root=0x000001FBDDF6A800 class=PlayerStart name=PlayerStart_115 team=0 relative=(288661.00, -16186.99, -14261.83)
+2026-08-18 01:34:49.460 [ACTOR] index=205 actor=0x000001FD03875A50 root=0x000001FBDDF6B000 class=PlayerStart name=PlayerStart_116 team=0 relative=(288416.60, -2835.90, -14244.22)
+2026-08-18 01:34:49.460 [ACTOR] index=206 actor=0x000001FD03875FA0 root=0x000001FBDDF6B800 class=PlayerStart name=PlayerStart_117 team=0 relative=(287647.90, 8968.65, -14288.74)
+2026-08-18 01:34:49.460 [ACTOR] index=207 actor=0x000001FD038764F0 root=0x000001FBDDF6C000 class=PlayerStart name=PlayerStart_118 team=0 relative=(280664.30, 19243.79, -14305.08)
+2026-08-18 01:34:49.460 [ACTOR] index=208 actor=0x000001FD03876A40 root=0x000001FBDDF6F000 class=PlayerStart name=PlayerStart_119 team=0 relative=(295224.80, 23024.29, -14273.98)
+2026-08-18 01:34:49.460 [ACTOR] index=209 actor=0x000001FD038774E0 root=0x000001FBDDF6C800 class=PlayerStart name=PlayerStart_120 team=0 relative=(299022.20, 9677.19, -14212.54)
+2026-08-18 01:34:49.460 [ACTOR] index=210 actor=0x000001FD03877A30 root=0x000001FBDDF6D000 class=PlayerStart name=PlayerStart_121 team=0 relative=(300826.90, -3271.03, -14122.09)
+2026-08-18 01:34:49.460 [ACTOR] index=211 actor=0x000001FD03877F80 root=0x000001FBDDF6D800 class=PlayerStart name=PlayerStart_122 team=0 relative=(300166.30, -16671.93, -14230.31)
+2026-08-18 01:34:49.460 [ACTOR] index=212 actor=0x000001FD03878A20 root=0x000001FBDDF6E800 class=PlayerStart name=PlayerStart_123 team=0 relative=(298574.00, -28696.09, -14128.39)
+2026-08-18 01:34:49.460 [ACTOR] index=213 actor=0x000001FD038784D0 root=0x000001FBDDF6E000 class=PlayerStart name=PlayerStart_124 team=0 relative=(297256.30, -43136.07, -14222.59)
+2026-08-18 01:34:49.460 [ACTOR] index=214 actor=0x000001FD03878F70 root=0x000001FBDA2C2000 class=PlayerStart name=PlayerStart_125 team=0 relative=(290722.60, -55050.43, -14258.42)
+2026-08-18 01:34:49.460 [ACTOR] index=215 actor=0x000001FD038794C0 root=0x000001FBDA2CC000 class=PlayerStart name=PlayerStart_126 team=0 relative=(287428.30, -64933.31, -14277.53)
+2026-08-18 01:34:49.460 [ACTOR] index=216 actor=0x000001FD03870000 root=0x000001FBDA2C1000 class=PlayerStart name=PlayerStart_127 team=0 relative=(297750.40, -75090.73, -14320.50)
+2026-08-18 01:34:49.460 [ACTOR] index=217 actor=0x000001FD03870550 root=0x000001FBDA2C1800 class=PlayerStart name=PlayerStart_128 team=0 relative=(297970.00, -85467.75, -14207.11)
+2026-08-18 01:34:49.460 [ACTOR] index=218 actor=0x000001FD03870AA0 root=0x000001FBDA2C2800 class=PlayerStart name=PlayerStart_129 team=0 relative=(294730.60, -99029.26, -14150.83)
+2026-08-18 01:34:49.460 [ACTOR] index=219 actor=0x000001FD03871540 root=0x000001FBDA2C3800 class=PlayerStart name=PlayerStart_130 team=0 relative=(291930.40, -110559.30, -14220.48)
+2026-08-18 01:34:49.460 [ACTOR] index=220 actor=0x000001FD03871A90 root=0x000001FBDA2C4000 class=PlayerStart name=PlayerStart_131 team=0 relative=(293467.80, -124175.70, -14312.07)
+2026-08-18 01:34:49.460 [ACTOR] index=221 actor=0x000001FD03871FE0 root=0x000001FBDA2C4800 class=PlayerStart name=PlayerStart_132 team=0 relative=(295389.50, -139109.80, -14229.15)
+2026-08-18 01:34:49.460 [ACTOR] index=222 actor=0x000001FD03872530 root=0x000001FBDA2C5000 class=PlayerStart name=PlayerStart_133 team=0 relative=(297366.10, -152781.20, -14279.83)
+2026-08-18 01:34:49.460 [ACTOR] index=223 actor=0x000001FD03872A80 root=0x000001FBDA2C5800 class=PlayerStart name=PlayerStart_134 team=0 relative=(294840.40, -163542.50, -14350.54)
+2026-08-18 01:34:49.460 [ACTOR] index=224 actor=0x000001FD03872FD0 root=0x000001FBDA2C6000 class=PlayerStart name=PlayerStart_135 team=0 relative=(291436.20, -173699.90, -14317.12)
+2026-08-18 01:34:49.460 [ACTOR] index=225 actor=0x000001FD03873520 root=0x000001FBDA2C6800 class=PlayerStart name=PlayerStart_136 team=0 relative=(283035.80, -183747.50, -14250.61)
+2026-08-18 01:34:49.460 [ACTOR] index=226 actor=0x000001FD03873A70 root=0x000001FBDA2C7000 class=PlayerStart name=PlayerStart_137 team=0 relative=(272713.70, -190391.10, -14329.91)
+2026-08-18 01:34:49.460 [ACTOR] index=227 actor=0x000001FD03873FC0 root=0x000001FBDA2C7800 class=PlayerStart name=PlayerStart_138 team=0 relative=(257120.70, -198462.10, -14299.13)
+2026-08-18 01:34:49.460 [ACTOR] index=228 actor=0x000001FD03874510 root=0x000001FBDA2C8000 class=PlayerStart name=PlayerStart_139 team=0 relative=(240155.10, -195991.40, -14307.25)
+2026-08-18 01:34:49.460 [ACTOR] index=229 actor=0x000001FD03874FB0 root=0x000001FBDA2C9000 class=PlayerStart name=PlayerStart_140 team=0 relative=(220608.90, -190226.30, -14295.82)
+2026-08-18 01:34:49.460 [ACTOR] index=230 actor=0x000001FCC898AA00 root=0x000001FBDA2C9800 class=PlayerStart name=PlayerStart_141 team=0 relative=(201007.90, -189238.00, -14269.33)
+2026-08-18 01:34:49.460 [ACTOR] index=231 actor=0x000001FCC898A4B0 root=0x000001FBDA2CA000 class=PlayerStart name=PlayerStart_142 team=0 relative=(183620.80, -197892.60, -14331.75)
+2026-08-18 01:34:49.460 [ACTOR] index=232 actor=0x000001FB8057AA00 root=0x000001FBDA2CA800 class=PlayerStart name=PlayerStart_143 team=0 relative=(196953.50, -217228.90, -14292.22)
+2026-08-18 01:34:49.460 [ACTOR] index=233 actor=0x000001FC79419A10 root=0x000001FBDA2CB000 class=PlayerStart name=PlayerStart_144 team=0 relative=(198279.00, -234694.00, -14320.50)
+2026-08-18 01:34:49.460 [ACTOR] index=234 actor=0x000001FC8A4B3520 root=0x000001FBDA2CC800 class=PlayerStart name=PlayerStart_145 team=0 relative=(193846.50, -249142.60, -14303.13)
+2026-08-18 01:34:49.460 [ACTOR] index=235 actor=0x000001FC8ABDE470 root=0x000001FBDA2CD000 class=PlayerStart name=PlayerStart_146 team=0 relative=(189936.30, -261437.40, -14235.58)
+2026-08-18 01:34:49.460 [ACTOR] index=236 actor=0x000001FC8ABD7A30 root=0x000001FBDA2CD800 class=PlayerStart name=PlayerStart_147 team=0 relative=(173718.70, -274692.10, -14314.88)
+2026-08-18 01:34:49.460 [ACTOR] index=237 actor=0x000001FC7EB0B4A0 root=0x000001FBDA2CE000 class=PlayerStart name=PlayerStart_148 team=0 relative=(166935.40, -287790.90, -14263.18)
+2026-08-18 01:34:49.460 [ACTOR] index=238 actor=0x000001FD1212D480 root=0x000001FBDA2CE800 class=PlayerStart name=PlayerStart_149 team=0 relative=(151353.70, -290834.60, -14281.82)
+2026-08-18 01:34:49.460 [ACTOR] index=239 actor=0x000001FD12120550 root=0x000001FBDA2CF800 class=PlayerStart name=PlayerStart_150 team=0 relative=(147365.20, -274536.20, -14184.13)
+2026-08-18 01:34:49.460 [ACTOR] index=240 actor=0x000001FD1212F460 root=0x000001FBDA2CB800 class=PlayerStart name=PlayerStart_151 team=0 relative=(139802.20, -258786.40, -14234.49)
+2026-08-18 01:34:49.460 [ACTOR] index=241 actor=0x000001FD1212C9E0 root=0x000001FC8BD5B800 class=PlayerStart name=PlayerStart_152 team=0 relative=(121947.20, -255121.90, -14158.50)
+2026-08-18 01:34:49.460 [ACTOR] index=242 actor=0x000001FD1212CF30 root=0x000001FCDD552000 class=PlayerStart name=PlayerStart_153 team=0 relative=(100935.30, -246267.30, -12434.82)
+2026-08-18 01:34:49.460 [ACTOR] index=243 actor=0x000001FD1212D9D0 root=0x000001FCDD557800 class=PlayerStart name=PlayerStart_154 team=0 relative=(91305.30, -255355.80, -14317.63)
+2026-08-18 01:34:49.460 [ACTOR] index=244 actor=0x000001FD1212DF20 root=0x000001FCDD550000 class=PlayerStart name=PlayerStart_155 team=0 relative=(88920.13, -276797.30, -14301.23)
+2026-08-18 01:34:49.460 [ACTOR] index=245 actor=0x000001FD1212E470 root=0x000001FCDD550800 class=PlayerStart name=PlayerStart_156 team=0 relative=(62776.84, -285921.00, -14184.56)
+2026-08-18 01:34:49.460 [ACTOR] index=246 actor=0x000001FD1212E9C0 root=0x000001FCDD554800 class=PlayerStart name=PlayerStart_157 team=0 relative=(23394.12, -300811.80, -14318.45)
+2026-08-18 01:34:49.460 [ACTOR] index=247 actor=0x000001FD1212EF10 root=0x000001FCDD551800 class=PlayerStart name=PlayerStart_158 team=0 relative=(2186.50, -298550.70, -14232.20)
+2026-08-18 01:34:49.460 [ACTOR] index=248 actor=0x000001FD1212C490 root=0x000001FCDD551000 class=PlayerStart name=PlayerStart_159 team=0 relative=(-32275.88, -297927.00, -14261.71)
+2026-08-18 01:34:49.460 [ACTOR] index=249 actor=0x000001FD1212B9F0 root=0x000001FCDD554000 class=PlayerStart name=PlayerStart_160 team=0 relative=(-49507.07, -279604.20, -14327.15)
+2026-08-18 01:34:49.460 [ACTOR] index=250 actor=0x000001FD1212B4A0 root=0x000001FCDD55A000 class=PlayerStart name=PlayerStart_161 team=0 relative=(-69805.92, -272058.40, -14199.28)
+2026-08-18 01:34:49.460 [ACTOR] index=251 actor=0x000001FD1212AF50 root=0x000001FCDD555000 class=PlayerStart name=PlayerStart_162 team=0 relative=(-91766.34, -271495.40, -14299.56)
+2026-08-18 01:34:49.460 [ACTOR] index=252 actor=0x000001FD1212AA00 root=0x000001FCDD555800 class=PlayerStart name=PlayerStart_163 team=0 relative=(-108841.60, -278200.70, -14324.56)
+2026-08-18 01:34:49.469 [INFO] Level 0x000001FCEFD7F500: Actors data=0x000001FB8EA5AE00, count=15
+2026-08-18 01:34:49.469 [INFO] Level 0x000001FCCA4EB600: Actors data=0x000001FCD70F7310, count=13
+2026-08-18 01:34:49.470 [INFO] Level 0x000001FCCA4ED580: Actors data=0x000001FCD6990E80, count=7
+2026-08-18 01:34:49.470 [INFO] Level 0x000001FCCA4EE380: Actors data=0x000001FCD710BBC0, count=4
+2026-08-18 01:34:49.470 [INFO] Level 0x000001FCCA4E9300: Actors data=0x000001FBCE86AF80, count=44
+2026-08-18 01:34:49.470 [INFO] Level 0x000001FCD318C080: Actors data=0x000001FC7080C800, count=74
+2026-08-18 01:34:49.470 [INFO] Level 0x000001FCD3188180: Actors data=0x000001FCD6E81990, count=717
+2026-08-18 01:34:49.474 [INFO] Level 0x000001FCD3188500: Actors data=0x000001FCD71DC000, count=253
+2026-08-18 01:34:49.474 [INFO] Level 0x000001FCD3185400: Actors data=0x000001FCD6E01980, count=374
+2026-08-18 01:34:49.476 [INFO] Level 0x000001FCD3182680: Actors data=0x000001FCD7114020, count=33
+2026-08-18 01:34:49.476 [INFO] Level 0x000001FCD64F5780: Actors data=0x000001FBCE86EB80, count=44
+2026-08-18 01:34:49.476 [INFO] Level 0x000001FCD64F5B00: Actors data=0x000001FCD71DB000, count=245
+2026-08-18 01:34:49.477 [INFO] Level 0x000001FCC7F0B600: Actors data=0x000001FCEEEEB100, count=16
+2026-08-18 01:34:49.477 [INFO] Level 0x000001FB98A13B80: Actors data=0x000001FC3AE13FC0, count=181
+2026-08-18 01:34:49.477 [INFO] Level 0x000001FE5B68E700: Actors data=0x000001FD05501B60, count=138
+2026-08-18 01:34:49.478 [INFO] Level 0x000001FBE0EC6900: Actors data=0x000001FE1ADB0600, count=59
+2026-08-18 01:34:49.478 [INFO] Level 0x000001FCEB6C7A80: Actors data=0x000001FE62DDE100, count=65
+2026-08-18 01:34:49.478 [INFO] Traversal summary: levels=18 actorPointers=4841 roots=4821 locations=4821 logged=250 rejectedReads=0
+2026-08-18 01:34:49.495 [INFO] Player skeleton bone map: 0=ROOT_JNT_SKL, 1=Cnt_Pelvis_000_JNT_SKL, 2=Cnt_Spine_001_JNT_SKL, 3=Cnt_Spine_002_JNT_SKL, 4=cnt_spine_003_jnt_skl, 5=Cnt_Chest_000_JNT_SKL, 6=Cnt_Neck_Joint000_JNT_SKL, 7=Cnt_Neck_Joint001_JNT_SKL, 8=cnt_Head_jnt_skl, 9=Cnt_Jaw000_JNT_SKL, 10=d_L_lowerLip_jnt, 11=d_C_lowerLip_jnt, 12=d_R_lowerLip_jnt1, 13=d_C_upperLip_jnt, 14=d_L_upperLip_jnt, 15=d_L_mouthCorner_jnt, 16=d_L_cheekBone_jnt, 17=d_L_browStart_jnt, 18=d_L_browEnd_jnt, 19=Lft_EyeBall_JNT_SKL, 20=Lft_EyeBottomLid_JNT_SKL, 21=Lft_EyeTopLid_JNT_SKL, 22=d_R_browStart_jnt, 23=d_R_browEnd_jnt, 24=d_R_cheekBone_jnt1, 25=d_R_upperLip_jnt1, 26=d_R_mouthCorner_jnt1, 27=Rht_EyeBall_JNT_SKL, 28=Rht_EyeBottomLid_JNT_SKL, 29=Rht_EyeTopLid_JNT_SKL, 30=d_R_browMid_jnt, 31=d_L_browMid_jnt, 32=Lft_Arm_Clav000_JNT_SKL, 33=Lft_Arm_001Tear000_JNT_SKL, 34=Lft_Arm_001Tear003_JNT_SKL, 35=Lft_shoulder_helper_JNT_SKL, 36=Lft_Arm_002Tear000_JNT_SKL, 37=Lft_Arm_002Tear003_JNT_SKL, 38=Lft_Arm_002Tear006_JNT_SKL, 39=Lft_Thumb_000_JNT_SKL, 40=Lft_Thumb_001_JNT_SKL, 41=Lft_Thumb_002_JNT_SKL, 42=Lft_IndexFinger_000_JNT_SKL, 43=Lft_IndexFinger_001_JNT_SKL, 44=Lft_IndexFinger_002_JNT_SKL, 45=Lft_MiddleFinger_000_JNT_SKL, 46=Lft_MiddleFinger_001_JNT_SKL, 47=Lft_MiddleFinger_002_JNT_SKL, 48=Lft_RingFinger_000_JNT_SKL, 49=Lft_RingFinger_001_JNT_SKL, 50=Lft_RingFinger_002_JNT_SKL, 51=Lft_LittleFinger_000_JNT_SKL, 52=Lft_LittleFinger_001_JNT_SKL, 53=Lft_LittleFinger_002_JNT_SKL, 54=c_L_weapon_jnt, 55=c_L_attatch_jnt, 56=Lft_Breast_JNT_SKL, 57=Rht_Breast_JNT_SKL, 58=Rht_Arm_Clav000_JNT_SKL, 59=Rht_Arm_001Tear000_JNT_SKL, 60=Rht_Arm_001Tear003_JNT_SKL, 61=Rht_shoulder_helper_JNT_SKL, 62=Rht_Arm_002Tear000_JNT_SKL, 63=Rht_Arm_002Tear003_JNT_SKL, 64=Rht_Arm_002Tear006_JNT_SKL, 65=Rht_LittleFinger_000_JNT_SKL, 66=Rht_LittleFinger_001_JNT_SKL, 67=Rht_LittleFinger_002_JNT_SKL, 68=Rht_RingFinger_000_JNT_SKL, 69=Rht_RingFinger_001_JNT_SKL, 70=Rht_RingFinger_002_JNT_SKL, 71=Rht_MiddleFinger_000_JNT_SKL, 72=Rht_MiddleFinger_001_JNT_SKL, 73=Rht_MiddleFinger_002_JNT_SKL, 74=Rht_IndexFinger_000_JNT_SKL, 75=Rht_IndexFinger_001_JNT_SKL, 76=Rht_IndexFinger_002_JNT_SKL, 77=c_R_weapon_jnt, 78=Rht_Thumb_000_JNT_SKL, 79=Rht_Thumb_001_JNT_SKL, 80=Rht_Thumb_002_JNT_SKL, 81=c_R_attatch_jnt, 82=Lft_Leg_001Tear000_JNT_SKL, 83=Lft_Leg_001Tear003_JNT_SKL, 84=Lft_Leg_002Tear000_JNT_SKL, 85=Lft_Leg_002Tear003_JNT_SKL, 86=Lft_Leg_002_JNT_SKL, 87=Lft_Leg_003_JNT_SKL, 88=Rht_Leg_001Tear000_JNT_SKL, 89=Rht_Leg_001Tear003_JNT_SKL, 90=Rht_Leg_002Tear000_JNT_SKL, 91=Rht_Leg_002Tear003_JNT_SKL, 92=Rht_Leg_002_JNT_SKL, 93=Rht_Leg_003_JNT_SKL
+2026-08-18 01:34:49.495 [WARN] Player skeleton unavailable: bone geometry rejected (count=94, headDelta=41.3, height=36.7). The lightweight fallback skeleton remains active.
+2026-08-18 01:34:49.519 [INFO] Tracker snapshot: dinos=8 structures=1837 players=1 localPlayer=True camera=True fov=112.5 movement=False cameraPos=(328193.40, 302367.30, -44236.32) cameraRot=(-9.46, -50.25, 0.00) rejectedReads=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=StructureTekCavePortalTerminal_C name=Terminal level=0 team=0 pos=(-116681.30, -95490.28, -7256.74) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Dino class=Purlovia_Character_BP_C name=Purlovia level=352 team=1441134301 pos=(330819.00, 301383.00, -44317.00) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Dino class=LanternPug_Character_BP_C name=Bulbdog level=374 team=1441134301 pos=(330245.80, 298449.90, -44378.30) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=BP_LargeWall_Glass_C name=S+ Large Glass Wall level=0 team=1441134301 pos=(331289.10, 302072.10, -44410.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Metal_C name=Metal Floor level=0 team=1441134301 pos=(330037.10, 302321.10, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Tek_C name=Tek Floor level=0 team=1441134301 pos=(330332.80, 302367.90, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Tek_C name=Tek Floor level=0 team=1441134301 pos=(330675.40, 302119.00, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Metal_C name=Metal Floor level=0 team=1441134301 pos=(330971.10, 302165.80, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Tek_C name=Tek Floor level=0 team=1441134301 pos=(330083.90, 302025.30, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Metal_C name=Metal Floor level=0 team=1441134301 pos=(330379.60, 302072.10, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Tek_C name=Tek Floor level=0 team=1441134301 pos=(329492.40, 301931.70, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Metal_C name=Metal Floor level=0 team=1441134301 pos=(329445.60, 302227.50, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Metal_C name=Metal Floor level=0 team=1441134301 pos=(329788.10, 301978.50, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Tek_C name=Tek Floor level=0 team=1441134301 pos=(329741.30, 302274.30, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Metal_C name=Metal Floor level=0 team=1441134301 pos=(332435.00, 300578.50, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Dino class=Procoptodon_Character_BP_C name=Procoptodon level=373 team=1441134301 pos=(334671.20, 303761.00, -44258.30) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Dino class=Diplodocus_Character_BP_C name=Diplodocus level=302 team=1441134301 pos=(334848.60, 299771.30, -44119.10) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Dino class=Equus_Character_BP_Aberrant_C name=Aberrant Equus level=521 team=1441134301 pos=(330018.20, 304110.50, -44308.40) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Dino class=Carno_Character_BP_C name=Carnotaurus level=534 team=1441134301 pos=(332932.70, 303681.20, -44283.30) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Player class=PlayerPawnTest_Female_C name=DarknesS. level=0 team=1441134301 pos=(332555.10, 302527.70, -44386.14) weapon=Fists Female armor=Riot Shield Q2 31080, Nerdry Glasses Q4 858, Federation Exo-Gloves, Federation Exo-Chestpiece, Flak Boots Q2 1904, T-Re… bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Dino class=Griffin_Character_BP_C name=Griffin level=542 team=1441134301 pos=(329988.00, 303817.00, -44257.00) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Dino class=BionicRex_Character_BP_C name=Tek Rex level=595 team=1441134301 pos=(332845.90, 299869.10, -44138.30) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Tek_C name=Tek Floor level=0 team=1441134301 pos=(332388.20, 300874.30, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Tek_C name=Tek Floor level=0 team=1441134301 pos=(332232.90, 299940.20, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Metal_C name=Metal Floor level=0 team=1441134301 pos=(332528.60, 299987.00, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Tek_C name=Tek Floor level=0 team=1441134301 pos=(332481.80, 300282.80, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Metal_C name=Metal Floor level=0 team=1441134301 pos=(332186.10, 300236.00, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=BP_DoubleDoorframe_large_Metal_C name=AF Large Metal Double Doorframe level=0 team=1441134301 pos=(328013.60, 300788.20, -43674.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=BP_DoubleDoorframe_large_Tek_C name=Large Tek Double Doorframe level=0 team=1441134301 pos=(327966.80, 301083.90, -43666.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=BP_DoubleDoorframe_large_Tek_C name=Large Tek Double Doorframe level=0 team=1441134301 pos=(328060.40, 300492.40, -42922.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=BP_DoubleDoorframe_large_Metal_C name=AF Large Metal Double Doorframe level=0 team=1441134301 pos=(328107.20, 300196.70, -42938.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=BP_LargeHatchframe_Metal_C name=S+ Large Metal Hatchframe level=0 team=1441134301 pos=(327826.50, 300003.80, -43670.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=BP_LargeHatchframe_Tek_C name=S+ Large Tek Hatchframe level=0 team=1441134301 pos=(327827.60, 299994.80, -43302.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=BP_DoubleDoorframe_large_Metal_C name=AF Large Metal Double Doorframe level=0 team=1441134301 pos=(328107.20, 300196.70, -43674.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=BP_DoubleDoorframe_large_Tek_C name=Large Tek Double Doorframe level=0 team=1441134301 pos=(328060.40, 300492.40, -43666.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=BP_LargeHatchframe_Metal_C name=S+ Large Metal Hatchframe level=0 team=1441134301 pos=(327733.80, 300587.50, -44038.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=BP_DoubleDoorframe_large_Metal_C name=AF Large Metal Double Doorframe level=0 team=1441134301 pos=(328013.60, 300788.20, -44410.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=BP_Foundation_Metal_C name=S+ Metal Foundation level=0 team=1441134301 pos=(328107.30, 301106.10, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Metal_C name=Metal Floor level=0 team=1441134301 pos=(327858.30, 300763.60, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=BP_DoubleDoorframe_large_Tek_C name=Large Tek Double Doorframe level=0 team=1441134301 pos=(327966.80, 301083.90, -44410.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=BP_LargeHatchframe_Tek_C name=S+ Large Tek Hatchframe level=0 team=1441134301 pos=(327827.60, 299994.80, -44038.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Metal_C name=Metal Floor level=0 team=1441134301 pos=(327952.00, 300172.10, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=BP_DoubleDoorframe_large_Metal_C name=AF Large Metal Double Doorframe level=0 team=1441134301 pos=(328107.20, 300196.70, -44410.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Tek_C name=Tek Floor level=0 team=1441134301 pos=(327905.10, 300467.80, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=BP_DoubleDoorframe_large_Tek_C name=Large Tek Double Doorframe level=0 team=1441134301 pos=(328060.40, 300492.40, -44410.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Tek_C name=Tek Floor level=0 team=1441134301 pos=(327998.80, 299876.30, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Metal_C name=Metal Floor level=0 team=1441134301 pos=(327703.00, 299829.50, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Metal_C name=Metal Floor level=0 team=1441134301 pos=(332279.70, 299644.50, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Tek_C name=Tek Floor level=0 team=1441134301 pos=(332326.50, 299348.70, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Tek_C name=Tek Floor level=0 team=1441134301 pos=(332575.50, 299691.30, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Metal_C name=Metal Floor level=0 team=1441134301 pos=(332373.30, 299053.00, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=BP_Railing_Metal_C name=S+ Metal Railing level=0 team=1441134301 pos=(332397.90, 298897.70, -44132.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=BP_Wall_Glass_C name=S+ Glass Wall level=0 team=1441134301 pos=(332264.90, 298732.60, -44410.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=BP_Wall_Glass_C name=S+ Glass Wall level=0 team=1441134301 pos=(332264.90, 298732.60, -44226.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=BP_Railing_Metal_C name=S+ Metal Railing level=0 team=1441134301 pos=(332397.90, 298897.70, -44224.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=BP_LargeHatchframe_Tek_C name=S+ Large Tek Hatchframe level=0 team=1441134301 pos=(327920.30, 299411.20, -43670.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=BP_LargeHatchframe_Metal_C name=S+ Large Metal Hatchframe level=0 team=1441134301 pos=(327921.30, 299402.20, -43302.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=BP_LargeHatchframe_Metal_C name=S+ Large Metal Hatchframe level=0 team=1441134301 pos=(328014.00, 298818.50, -43670.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=BP_LargeHatchframe_Metal_C name=S+ Large Metal Hatchframe level=0 team=1441134301 pos=(327921.30, 299402.20, -44038.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Tek_C name=Tek Floor level=0 team=1441134301 pos=(328092.40, 299284.80, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Metal_C name=Metal Floor level=0 team=1441134301 pos=(328045.60, 299580.60, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Metal_C name=Metal Floor level=0 team=1441134301 pos=(327796.60, 299238.00, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Tek_C name=Tek Floor level=0 team=1441134301 pos=(327749.80, 299533.80, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=BP_LargeHatchframe_Tek_C name=S+ Large Tek Hatchframe level=0 team=1441134301 pos=(328015.10, 298809.60, -44038.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=BP_Ceiling_Glass_C name=S+ Glass Ceiling level=0 team=1441134301 pos=(331313.70, 301916.80, -43670.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=BP_Ceiling_Glass_C name=S+ Glass Ceiling level=0 team=1441134301 pos=(331703.10, 301372.10, -43670.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=BP_XLHatchframe_Tek_C name=S+ Behemoth Tek Hatchframe level=0 team=1441134301 pos=(331133.20, 300220.50, -42182.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=AF_AutoTurretTek_C name=AF Tek Turret level=0 team=1441134301 pos=(331671.40, 300438.50, -42176.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=BP_Ceiling_Glass_C name=S+ Glass Ceiling level=0 team=1441134301 pos=(331407.30, 301325.30, -43670.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=BP_Ceiling_Glass_C name=S+ Glass Ceiling level=0 team=1441134301 pos=(331360.50, 301621.10, -43670.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=BP_Ceiling_Glass_C name=S+ Glass Ceiling level=0 team=1441134301 pos=(331656.30, 301667.90, -43670.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=BP_AutoTurret_Heavy_AF_C name=AF Heavy Auto Turret level=0 team=1441134301 pos=(330531.40, 300280.80, -42176.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=AF_AutoTurretTek_C name=AF Tek Turret level=0 team=1441134301 pos=(329343.20, 299963.00, -42176.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=BP_AutoTurret_Heavy_AF_C name=AF Heavy Auto Turret level=0 team=1441134301 pos=(329141.70, 301070.10, -42176.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=AF_AutoTurretTek_C name=AF Tek Turret level=0 team=1441134301 pos=(330314.20, 301521.80, -42176.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Metal_C name=Metal Floor level=0 team=1441134301 pos=(331313.70, 301916.80, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=BP_LargeWall_Glass_C name=S+ Large Glass Wall level=0 team=1441134301 pos=(331158.40, 301892.20, -44410.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Metal_C name=Metal Floor level=0 team=1441134301 pos=(330722.20, 301823.20, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Tek_C name=Tek Floor level=0 team=1441134301 pos=(331018.00, 301870.00, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Metal_C name=Metal Floor level=0 team=1441134301 pos=(330130.70, 301729.60, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Tek_C name=Tek Floor level=0 team=1441134301 pos=(330426.50, 301776.40, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Metal_C name=Metal Floor level=0 team=1441134301 pos=(329196.60, 301884.90, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=BP_LargeWall_Glass_C name=S+ Large Glass Wall level=0 team=1441134301 pos=(331843.50, 301394.40, -44410.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Tek_C name=Tek Floor level=0 team=1441134301 pos=(331703.10, 301372.10, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=BP_LargeWall_Glass_C name=S+ Large Glass Wall level=0 team=1441134301 pos=(331725.30, 301231.70, -44410.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Metal_C name=Metal Floor level=0 team=1441134301 pos=(331656.30, 301667.90, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Metal_C name=Metal Floor level=0 team=1441134301 pos=(331998.80, 301419.00, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Tek_C name=Tek Floor level=0 team=1441134301 pos=(331360.50, 301621.10, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Tek_C name=Tek Floor level=0 team=1441134301 pos=(331111.60, 301278.50, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Metal_C name=Metal Floor level=0 team=1441134301 pos=(331064.80, 301574.30, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Metal_C name=Metal Floor level=0 team=1441134301 pos=(331407.30, 301325.30, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=BP_LargeWall_Glass_C name=S+ Large Glass Wall level=0 team=1441134301 pos=(331252.00, 301300.70, -44410.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=BP_LargeWall_Glass_C name=S+ Large Glass Wall level=0 team=1441134301 pos=(331429.50, 301184.90, -44410.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=BP_LargeWall_Glass_C name=S+ Large Glass Wall level=0 team=1441134301 pos=(331205.20, 301596.50, -44410.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Metal_C name=Metal Floor level=0 team=1441134301 pos=(332092.50, 300827.50, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Tek_C name=Tek Floor level=0 team=1441134301 pos=(331796.70, 300780.60, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Tek_C name=Tek Floor level=0 team=1441134301 pos=(332139.30, 300531.70, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Metal_C name=Metal Floor level=0 team=1441134301 pos=(331749.90, 301076.40, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Tek_C name=Tek Floor level=0 team=1441134301 pos=(332045.60, 301123.20, -44466.20) weapon= armor= bones=0
+2026-08-18 01:34:49.520 [INFO] TRACK kind=Structure class=Floor_Metal_C name=Metal Floor level=0 team=1441134301 pos=(331501.00, 300733.80, -44466.20) weapon= armor= bones=0

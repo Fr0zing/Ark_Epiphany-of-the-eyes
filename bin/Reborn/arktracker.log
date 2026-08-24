@@ -1,0 +1,1018 @@
+2026-08-19 03:04:11.399 [INFO] ARK Tracker read-only diagnostic MVP
+2026-08-19 03:04:11.399 [INFO] Target: ARK: Survival Evolved / ShooterGame.exe / UE4 / x64
+2026-08-19 03:04:11.399 [INFO] Access mask: PROCESS_QUERY_INFORMATION | PROCESS_VM_READ (0x0410). No write/injection APIs are used.
+2026-08-19 03:04:11.401 [INFO] Security context: elevated=False SeDebugPrivilege=unavailable (Win32 error 1300)
+2026-08-19 03:04:11.420 [INFO] Process: name=ShooterGame.exe pid=34172 parentPid=14996 threads=125
+2026-08-19 03:04:11.421 [INFO] Read-only process handle opened successfully.
+2026-08-19 03:04:11.422 [WARN] Module snapshot failed with Win32 error 5; trying PSAPI through the same read-only handle.
+2026-08-19 03:04:11.451 [INFO] Target module: ShooterGame.exe base=0x00007FF739130000 size=0x4DAB000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\ShooterGame.exe
+2026-08-19 03:04:11.452 [INFO] Build fingerprint: fileLength=80346664 lastWriteUtc=2026-08-17T08:21:59Z
+2026-08-19 03:04:11.528 [INFO] Build fingerprint: SHA256=9BC401417A776C5244A1B0B3255DC3AF4A9D73E3F5C1BA96228FBE3FB1A43477
+2026-08-19 03:04:11.528 [INFO] Build profile fingerprint verified.
+2026-08-19 03:04:11.615 [INFO] GNames global=0x00007FF73DB3AC78 table=0x00000295F598FAF0 index0='None'
+2026-08-19 03:04:11.616 [INFO] Scanning readable pages of ShooterGame.exe for the configured GWorld signature...
+2026-08-19 03:04:11.840 [INFO] GWorld signature match: 0x00007FF73A0FF190 (matches collected: 1)
+2026-08-19 03:04:11.840 [INFO] Resolved GWorld global address: 0x00007FF73DB0C2A8
+2026-08-19 03:04:11.840 [INFO] UWorld: 0x0000029714DC0CC0
+2026-08-19 03:04:12.212 [INFO] Native Direct2D/DirectComposition overlay initialized.
+2026-08-19 03:04:12.267 [INFO] Hotkeys: Insert=True F10=True F6-F9/F11=registered
+2026-08-19 03:04:12.360 [INFO] Low-latency pipeline: actors=5 captureMs=1 intervalMs=50 viewHz=250 overlay=True
+2026-08-19 03:10:23.449 [INFO] ARK Tracker read-only diagnostic MVP
+2026-08-19 03:10:23.451 [INFO] Target: ARK: Survival Evolved / ShooterGame.exe / UE4 / x64
+2026-08-19 03:10:23.451 [INFO] Access mask: PROCESS_QUERY_INFORMATION | PROCESS_VM_READ (0x0410). No write/injection APIs are used.
+2026-08-19 03:10:23.452 [INFO] Security context: elevated=False SeDebugPrivilege=unavailable (Win32 error 1300)
+2026-08-19 03:10:23.481 [INFO] Process: name=ShooterGame.exe pid=34172 parentPid=14996 threads=123
+2026-08-19 03:10:23.481 [INFO] Read-only process handle opened successfully.
+2026-08-19 03:10:23.482 [WARN] Module snapshot failed with Win32 error 5; trying PSAPI through the same read-only handle.
+2026-08-19 03:10:23.514 [INFO] Target module: ShooterGame.exe base=0x00007FF739130000 size=0x4DAB000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\ShooterGame.exe
+2026-08-19 03:10:23.514 [INFO] Build fingerprint: fileLength=80346664 lastWriteUtc=2026-08-17T08:21:59Z
+2026-08-19 03:10:23.597 [INFO] Build fingerprint: SHA256=9BC401417A776C5244A1B0B3255DC3AF4A9D73E3F5C1BA96228FBE3FB1A43477
+2026-08-19 03:10:23.597 [INFO] Build profile fingerprint verified.
+2026-08-19 03:10:23.685 [INFO] GNames global=0x00007FF73DB3AC78 table=0x00000295F598FAF0 index0='None'
+2026-08-19 03:10:23.686 [INFO] Scanning readable pages of ShooterGame.exe for the configured GWorld signature...
+2026-08-19 03:10:23.897 [INFO] GWorld signature match: 0x00007FF73A0FF190 (matches collected: 1)
+2026-08-19 03:10:23.897 [INFO] Resolved GWorld global address: 0x00007FF73DB0C2A8
+2026-08-19 03:10:23.897 [INFO] UWorld: 0x0000029714DC0CC0
+2026-08-19 03:10:24.219 [INFO] Native Direct2D/DirectComposition overlay initialized.
+2026-08-19 03:10:24.282 [INFO] Hotkeys: Insert=True F10=True F6-F9/F11=registered
+2026-08-19 03:10:24.372 [INFO] Low-latency pipeline: actors=30 captureMs=1 intervalMs=50 viewHz=250 overlay=True
+2026-08-19 03:10:45.524 [INFO] ARK Tracker read-only diagnostic MVP
+2026-08-19 03:10:45.524 [INFO] Target: ARK: Survival Evolved / ShooterGame.exe / UE4 / x64
+2026-08-19 03:10:45.524 [INFO] Access mask: PROCESS_QUERY_INFORMATION | PROCESS_VM_READ (0x0410). No write/injection APIs are used.
+2026-08-19 03:10:45.525 [INFO] Security context: elevated=False SeDebugPrivilege=unavailable (Win32 error 1300)
+2026-08-19 03:10:45.546 [INFO] Process: name=ShooterGame.exe pid=34172 parentPid=14996 threads=123
+2026-08-19 03:10:45.546 [INFO] Read-only process handle opened successfully.
+2026-08-19 03:10:45.547 [WARN] Module snapshot failed with Win32 error 5; trying PSAPI through the same read-only handle.
+2026-08-19 03:10:45.572 [INFO] Target module: ShooterGame.exe base=0x00007FF739130000 size=0x4DAB000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\ShooterGame.exe
+2026-08-19 03:10:45.573 [INFO] Build fingerprint: fileLength=80346664 lastWriteUtc=2026-08-17T08:21:59Z
+2026-08-19 03:10:45.654 [INFO] Build fingerprint: SHA256=9BC401417A776C5244A1B0B3255DC3AF4A9D73E3F5C1BA96228FBE3FB1A43477
+2026-08-19 03:10:45.655 [INFO] Build profile fingerprint verified.
+2026-08-19 03:10:45.742 [INFO] GNames global=0x00007FF73DB3AC78 table=0x00000295F598FAF0 index0='None'
+2026-08-19 03:10:45.744 [INFO] Scanning readable pages of ShooterGame.exe for the configured GWorld signature...
+2026-08-19 03:10:45.944 [INFO] GWorld signature match: 0x00007FF73A0FF190 (matches collected: 1)
+2026-08-19 03:10:45.945 [INFO] Resolved GWorld global address: 0x00007FF73DB0C2A8
+2026-08-19 03:10:45.945 [INFO] UWorld: 0x0000029714DC0CC0
+2026-08-19 03:10:46.259 [INFO] Native Direct2D/DirectComposition overlay initialized.
+2026-08-19 03:10:46.312 [INFO] Hotkeys: Insert=True F10=True F6-F9/F11=registered
+2026-08-19 03:10:46.409 [INFO] Low-latency pipeline: actors=29 captureMs=1 intervalMs=50 viewHz=250 overlay=True
+2026-08-19 03:11:21.432 [INFO] Player skeleton mapped from the live skeletal mesh (94 bones).
+2026-08-19 03:11:26.210 [WARN] Player skeleton unavailable: bone geometry rejected (count=94, headDelta=3290.9, height=49.5). The lightweight fallback skeleton remains active.
+2026-08-19 03:13:53.987 [INFO] ARK Tracker read-only diagnostic MVP
+2026-08-19 03:13:53.987 [INFO] Target: ARK: Survival Evolved / ShooterGame.exe / UE4 / x64
+2026-08-19 03:13:53.987 [INFO] Access mask: PROCESS_QUERY_INFORMATION | PROCESS_VM_READ (0x0410). No write/injection APIs are used.
+2026-08-19 03:13:53.989 [INFO] Security context: elevated=True SeDebugPrivilege=enabled
+2026-08-19 03:13:54.009 [INFO] Process: name=ShooterGame.exe pid=34172 parentPid=14996 threads=127
+2026-08-19 03:13:54.009 [INFO] Read-only process handle opened successfully.
+2026-08-19 03:13:54.012 [INFO] Target module: ShooterGame.exe base=0x00007FF739130000 size=0x4DAB000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\ShooterGame.exe
+2026-08-19 03:13:54.012 [INFO] Build fingerprint: fileLength=80346664 lastWriteUtc=2026-08-17T08:21:59Z
+2026-08-19 03:13:54.092 [INFO] Build fingerprint: SHA256=9BC401417A776C5244A1B0B3255DC3AF4A9D73E3F5C1BA96228FBE3FB1A43477
+2026-08-19 03:13:54.092 [INFO] Build profile fingerprint verified.
+2026-08-19 03:13:54.182 [INFO] GNames global=0x00007FF73DB3AC78 table=0x00000295F598FAF0 index0='None'
+2026-08-19 03:13:54.183 [INFO] Scanning readable pages of ShooterGame.exe for the configured GWorld signature...
+2026-08-19 03:13:54.395 [INFO] GWorld signature match: 0x00007FF73A0FF190 (matches collected: 1)
+2026-08-19 03:13:54.395 [INFO] Resolved GWorld global address: 0x00007FF73DB0C2A8
+2026-08-19 03:13:54.395 [INFO] UWorld: 0x000002967A1F9900
+2026-08-19 03:13:54.588 [INFO] Native Direct2D/DirectComposition overlay initialized.
+2026-08-19 03:13:54.666 [INFO] Hotkeys: Insert=True F10=True F6-F9/F11=registered
+2026-08-19 03:13:54.804 [INFO] Player skeleton mapped from the live skeletal mesh (94 bones).
+2026-08-19 03:13:54.855 [INFO] Low-latency pipeline: actors=5099 captureMs=13 intervalMs=50 viewHz=250 overlay=True
+2026-08-19 03:15:09.018 [WARN] Player skeleton unavailable: bone geometry rejected (count=94, headDelta=1211.5, height=50.4). The lightweight fallback skeleton remains active.
+2026-08-19 03:34:01.697 [INFO] ARK Tracker read-only diagnostic MVP
+2026-08-19 03:34:01.697 [INFO] Target: ARK: Survival Evolved / ShooterGame.exe / UE4 / x64
+2026-08-19 03:34:01.697 [INFO] Access mask: PROCESS_QUERY_INFORMATION | PROCESS_VM_READ (0x0410). No write/injection APIs are used.
+2026-08-19 03:34:01.699 [INFO] Security context: elevated=False SeDebugPrivilege=unavailable (Win32 error 1300)
+2026-08-19 03:34:01.718 [INFO] Process: name=ShooterGame.exe pid=34172 parentPid=14996 threads=123
+2026-08-19 03:34:01.718 [INFO] Read-only process handle opened successfully.
+2026-08-19 03:34:01.719 [WARN] Module snapshot failed with Win32 error 5; trying PSAPI through the same read-only handle.
+2026-08-19 03:34:01.744 [INFO] Target module: ShooterGame.exe base=0x00007FF739130000 size=0x4DAB000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\ShooterGame.exe
+2026-08-19 03:34:01.744 [INFO] Build fingerprint: fileLength=80346664 lastWriteUtc=2026-08-17T08:21:59Z
+2026-08-19 03:34:01.823 [INFO] Build fingerprint: SHA256=9BC401417A776C5244A1B0B3255DC3AF4A9D73E3F5C1BA96228FBE3FB1A43477
+2026-08-19 03:34:01.823 [INFO] Build profile fingerprint verified.
+2026-08-19 03:34:01.906 [INFO] GNames global=0x00007FF73DB3AC78 table=0x00000295F598FAF0 index0='None'
+2026-08-19 03:34:01.907 [INFO] Scanning readable pages of ShooterGame.exe for the configured GWorld signature...
+2026-08-19 03:34:02.102 [INFO] GWorld signature match: 0x00007FF73A0FF190 (matches collected: 1)
+2026-08-19 03:34:02.102 [INFO] Resolved GWorld global address: 0x00007FF73DB0C2A8
+2026-08-19 03:34:02.102 [INFO] UWorld: 0x000002967A1F9900
+2026-08-19 03:34:02.452 [INFO] Native Direct2D/DirectComposition overlay initialized.
+2026-08-19 03:34:02.661 [INFO] Hotkeys: Insert=True F10=True F6-F9/F11=registered
+2026-08-19 03:34:02.930 [INFO] Player skeleton mapped from the live skeletal mesh (94 bones).
+2026-08-19 03:34:02.982 [INFO] Low-latency pipeline: actors=5102 captureMs=8 intervalMs=50 viewHz=250 overlay=True
+2026-08-19 03:35:31.539 [INFO] ARK Tracker read-only diagnostic MVP
+2026-08-19 03:35:31.539 [INFO] Target: ARK: Survival Evolved / ShooterGame.exe / UE4 / x64
+2026-08-19 03:35:31.539 [INFO] Access mask: PROCESS_QUERY_INFORMATION | PROCESS_VM_READ (0x0410). No write/injection APIs are used.
+2026-08-19 03:35:31.541 [INFO] Security context: elevated=False SeDebugPrivilege=unavailable (Win32 error 1300)
+2026-08-19 03:35:31.561 [INFO] Process: name=ShooterGame.exe pid=34172 parentPid=14996 threads=123
+2026-08-19 03:35:31.561 [INFO] Read-only process handle opened successfully.
+2026-08-19 03:35:31.562 [WARN] Module snapshot failed with Win32 error 5; trying PSAPI through the same read-only handle.
+2026-08-19 03:35:31.588 [INFO] Target module: ShooterGame.exe base=0x00007FF739130000 size=0x4DAB000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\ShooterGame.exe
+2026-08-19 03:35:31.589 [INFO] Build fingerprint: fileLength=80346664 lastWriteUtc=2026-08-17T08:21:59Z
+2026-08-19 03:35:31.667 [INFO] Build fingerprint: SHA256=9BC401417A776C5244A1B0B3255DC3AF4A9D73E3F5C1BA96228FBE3FB1A43477
+2026-08-19 03:35:31.667 [INFO] Build profile fingerprint verified.
+2026-08-19 03:35:31.747 [INFO] GNames global=0x00007FF73DB3AC78 table=0x00000295F598FAF0 index0='None'
+2026-08-19 03:35:31.747 [INFO] Scanning readable pages of ShooterGame.exe for the configured GWorld signature...
+2026-08-19 03:35:31.946 [INFO] GWorld signature match: 0x00007FF73A0FF190 (matches collected: 1)
+2026-08-19 03:35:31.946 [INFO] Resolved GWorld global address: 0x00007FF73DB0C2A8
+2026-08-19 03:35:31.947 [INFO] UWorld: 0x000002967A1F9900
+2026-08-19 03:35:32.230 [INFO] Native Direct2D/DirectComposition overlay initialized.
+2026-08-19 03:35:32.383 [INFO] Hotkeys: Insert=True F10=True F6-F9/F11=registered
+2026-08-19 03:35:32.578 [INFO] Player skeleton mapped from the live skeletal mesh (94 bones).
+2026-08-19 03:35:32.616 [INFO] Low-latency pipeline: actors=5102 captureMs=9 intervalMs=50 viewHz=250 overlay=True
+2026-08-19 03:36:33.695 [WARN] Player skeleton unavailable: bone geometry rejected (count=94, headDelta=632.0, height=50.7). The lightweight fallback skeleton remains active.
+2026-08-19 03:37:33.857 [INFO] ARK Tracker read-only diagnostic MVP
+2026-08-19 03:37:33.858 [INFO] Target: ARK: Survival Evolved / ShooterGame.exe / UE4 / x64
+2026-08-19 03:37:33.858 [INFO] Access mask: PROCESS_QUERY_INFORMATION | PROCESS_VM_READ (0x0410). No write/injection APIs are used.
+2026-08-19 03:37:33.859 [INFO] Security context: elevated=True SeDebugPrivilege=enabled
+2026-08-19 03:37:33.877 [INFO] Process: name=ShooterGame.exe pid=34172 parentPid=14996 threads=124
+2026-08-19 03:37:33.877 [INFO] Read-only process handle opened successfully.
+2026-08-19 03:37:33.880 [INFO] Target module: ShooterGame.exe base=0x00007FF739130000 size=0x4DAB000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\ShooterGame.exe
+2026-08-19 03:37:33.880 [INFO] Build fingerprint: fileLength=80346664 lastWriteUtc=2026-08-17T08:21:59Z
+2026-08-19 03:37:33.960 [INFO] Build fingerprint: SHA256=9BC401417A776C5244A1B0B3255DC3AF4A9D73E3F5C1BA96228FBE3FB1A43477
+2026-08-19 03:37:33.960 [INFO] Build profile fingerprint verified.
+2026-08-19 03:37:34.043 [INFO] GNames global=0x00007FF73DB3AC78 table=0x00000295F598FAF0 index0='None'
+2026-08-19 03:37:34.043 [INFO] Scanning readable pages of ShooterGame.exe for the configured GWorld signature...
+2026-08-19 03:37:34.255 [INFO] GWorld signature match: 0x00007FF73A0FF190 (matches collected: 1)
+2026-08-19 03:37:34.256 [INFO] Resolved GWorld global address: 0x00007FF73DB0C2A8
+2026-08-19 03:37:34.256 [INFO] UWorld: 0x000002967A1F9900
+2026-08-19 03:37:34.441 [INFO] Native Direct2D/DirectComposition overlay initialized.
+2026-08-19 03:37:34.591 [INFO] Hotkeys: Insert=True F10=True F6-F9/F11=registered
+2026-08-19 03:37:34.755 [INFO] Player skeleton mapped from the live skeletal mesh (94 bones).
+2026-08-19 03:37:34.793 [INFO] Low-latency pipeline: actors=5100 captureMs=8 intervalMs=50 viewHz=250 overlay=True
+2026-08-19 03:40:12.719 [WARN] Player skeleton unavailable: mesh pointer is unreadable. The lightweight fallback skeleton remains active.
+2026-08-19 03:41:44.885 [INFO] ARK Tracker read-only diagnostic MVP
+2026-08-19 03:41:44.885 [INFO] Target: ARK: Survival Evolved / ShooterGame.exe / UE4 / x64
+2026-08-19 03:41:44.885 [INFO] Access mask: PROCESS_QUERY_INFORMATION | PROCESS_VM_READ (0x0410). No write/injection APIs are used.
+2026-08-19 03:41:44.887 [INFO] Security context: elevated=False SeDebugPrivilege=unavailable (Win32 error 1300)
+2026-08-19 03:41:44.907 [INFO] Process: name=ShooterGame.exe pid=34172 parentPid=14996 threads=125
+2026-08-19 03:41:44.908 [INFO] Read-only process handle opened successfully.
+2026-08-19 03:41:44.909 [WARN] Module snapshot failed with Win32 error 5; trying PSAPI through the same read-only handle.
+2026-08-19 03:41:44.935 [INFO] Target module: ShooterGame.exe base=0x00007FF739130000 size=0x4DAB000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\ShooterGame.exe
+2026-08-19 03:41:44.935 [INFO] Build fingerprint: fileLength=80346664 lastWriteUtc=2026-08-17T08:21:59Z
+2026-08-19 03:41:45.013 [INFO] Build fingerprint: SHA256=9BC401417A776C5244A1B0B3255DC3AF4A9D73E3F5C1BA96228FBE3FB1A43477
+2026-08-19 03:41:45.013 [INFO] Build profile fingerprint verified.
+2026-08-19 03:41:45.094 [INFO] GNames global=0x00007FF73DB3AC78 table=0x00000295F598FAF0 index0='None'
+2026-08-19 03:41:45.096 [INFO] Scanning readable pages of ShooterGame.exe for the configured GWorld signature...
+2026-08-19 03:41:45.292 [INFO] GWorld signature match: 0x00007FF73A0FF190 (matches collected: 1)
+2026-08-19 03:41:45.292 [INFO] Resolved GWorld global address: 0x00007FF73DB0C2A8
+2026-08-19 03:41:45.293 [INFO] UWorld: 0x00000297C320CC00
+2026-08-19 03:41:45.760 [INFO] Native Direct2D/DirectComposition overlay initialized.
+2026-08-19 03:41:45.922 [INFO] Hotkeys: Insert=True F10=True F6-F9/F11=registered
+2026-08-19 03:41:46.044 [INFO] Player skeleton mapped from the live skeletal mesh (94 bones).
+2026-08-19 03:41:46.074 [INFO] Low-latency pipeline: actors=122 captureMs=1 intervalMs=50 viewHz=250 overlay=True
+2026-08-19 03:42:13.131 [WARN] Player skeleton unavailable: bone geometry rejected (count=94, headDelta=4485.9, height=48.7). The lightweight fallback skeleton remains active.
+2026-08-19 03:42:36.193 [INFO] ARK Tracker read-only diagnostic MVP
+2026-08-19 03:42:36.193 [INFO] Target: ARK: Survival Evolved / ShooterGame.exe / UE4 / x64
+2026-08-19 03:42:36.193 [INFO] Access mask: PROCESS_QUERY_INFORMATION | PROCESS_VM_READ (0x0410). No write/injection APIs are used.
+2026-08-19 03:42:36.194 [INFO] Security context: elevated=True SeDebugPrivilege=enabled
+2026-08-19 03:42:36.215 [INFO] Process: name=ShooterGame.exe pid=34172 parentPid=14996 threads=127
+2026-08-19 03:42:36.215 [INFO] Read-only process handle opened successfully.
+2026-08-19 03:42:36.218 [INFO] Target module: ShooterGame.exe base=0x00007FF739130000 size=0x4DAB000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\ShooterGame.exe
+2026-08-19 03:42:36.219 [INFO] Build fingerprint: fileLength=80346664 lastWriteUtc=2026-08-17T08:21:59Z
+2026-08-19 03:42:36.298 [INFO] Build fingerprint: SHA256=9BC401417A776C5244A1B0B3255DC3AF4A9D73E3F5C1BA96228FBE3FB1A43477
+2026-08-19 03:42:36.298 [INFO] Build profile fingerprint verified.
+2026-08-19 03:42:36.384 [INFO] GNames global=0x00007FF73DB3AC78 table=0x00000295F598FAF0 index0='None'
+2026-08-19 03:42:36.384 [INFO] Scanning readable pages of ShooterGame.exe for the configured GWorld signature...
+2026-08-19 03:42:36.601 [INFO] GWorld signature match: 0x00007FF73A0FF190 (matches collected: 1)
+2026-08-19 03:42:36.601 [INFO] Resolved GWorld global address: 0x00007FF73DB0C2A8
+2026-08-19 03:42:36.601 [INFO] UWorld: 0x00000297C320CC00
+2026-08-19 03:42:36.818 [INFO] Native Direct2D/DirectComposition overlay initialized.
+2026-08-19 03:42:37.002 [INFO] Hotkeys: Insert=True F10=True F6-F9/F11=registered
+2026-08-19 03:42:37.176 [INFO] Player skeleton mapped from the live skeletal mesh (94 bones).
+2026-08-19 03:42:37.203 [INFO] Low-latency pipeline: actors=3003 captureMs=5 intervalMs=50 viewHz=250 overlay=True
+2026-08-19 03:50:51.573 [WARN] Player skeleton unavailable: bone geometry rejected (count=94, headDelta=910.8, height=50.3). The lightweight fallback skeleton remains active.
+2026-08-19 03:54:17.472 [INFO] ARK Tracker read-only diagnostic MVP
+2026-08-19 03:54:17.472 [INFO] Target: ARK: Survival Evolved / ShooterGame.exe / UE4 / x64
+2026-08-19 03:54:17.472 [INFO] Access mask: PROCESS_QUERY_INFORMATION | PROCESS_VM_READ (0x0410). No write/injection APIs are used.
+2026-08-19 03:54:17.474 [INFO] Security context: elevated=False SeDebugPrivilege=unavailable (Win32 error 1300)
+2026-08-19 03:54:17.493 [INFO] Process: name=ShooterGame.exe pid=34172 parentPid=14996 threads=126
+2026-08-19 03:54:17.493 [INFO] Read-only process handle opened successfully.
+2026-08-19 03:54:17.494 [WARN] Module snapshot failed with Win32 error 5; trying PSAPI through the same read-only handle.
+2026-08-19 03:54:17.521 [INFO] Target module: ShooterGame.exe base=0x00007FF739130000 size=0x4DAB000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\ShooterGame.exe
+2026-08-19 03:54:17.522 [INFO] Build fingerprint: fileLength=80346664 lastWriteUtc=2026-08-17T08:21:59Z
+2026-08-19 03:54:17.597 [INFO] Build fingerprint: SHA256=9BC401417A776C5244A1B0B3255DC3AF4A9D73E3F5C1BA96228FBE3FB1A43477
+2026-08-19 03:54:17.597 [INFO] Build profile fingerprint verified.
+2026-08-19 03:54:17.677 [INFO] GNames global=0x00007FF73DB3AC78 table=0x00000295F598FAF0 index0='None'
+2026-08-19 03:54:17.678 [INFO] Scanning readable pages of ShooterGame.exe for the configured GWorld signature...
+2026-08-19 03:54:17.873 [INFO] GWorld signature match: 0x00007FF73A0FF190 (matches collected: 1)
+2026-08-19 03:54:17.874 [INFO] Resolved GWorld global address: 0x00007FF73DB0C2A8
+2026-08-19 03:54:17.874 [INFO] UWorld: 0x00000296D3D61980
+2026-08-19 03:54:18.183 [INFO] Native Direct2D/DirectComposition overlay initialized.
+2026-08-19 03:54:18.330 [INFO] Hotkeys: Insert=True F10=True F6-F9/F11=registered
+2026-08-19 03:54:18.504 [INFO] Player skeleton mapped from the live skeletal mesh (94 bones).
+2026-08-19 03:54:18.531 [INFO] Low-latency pipeline: actors=4990 captureMs=8 intervalMs=50 viewHz=250 overlay=True
+2026-08-19 03:56:21.321 [INFO] ARK Tracker read-only diagnostic MVP
+2026-08-19 03:56:21.322 [INFO] Target: ARK: Survival Evolved / ShooterGame.exe / UE4 / x64
+2026-08-19 03:56:21.322 [INFO] Access mask: PROCESS_QUERY_INFORMATION | PROCESS_VM_READ (0x0410). No write/injection APIs are used.
+2026-08-19 03:56:21.323 [INFO] Security context: elevated=True SeDebugPrivilege=enabled
+2026-08-19 03:56:21.341 [INFO] Process: name=ShooterGame.exe pid=34172 parentPid=14996 threads=127
+2026-08-19 03:56:21.342 [INFO] Read-only process handle opened successfully.
+2026-08-19 03:56:21.344 [INFO] Target module: ShooterGame.exe base=0x00007FF739130000 size=0x4DAB000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\ShooterGame.exe
+2026-08-19 03:56:21.344 [INFO] Build fingerprint: fileLength=80346664 lastWriteUtc=2026-08-17T08:21:59Z
+2026-08-19 03:56:21.421 [INFO] Build fingerprint: SHA256=9BC401417A776C5244A1B0B3255DC3AF4A9D73E3F5C1BA96228FBE3FB1A43477
+2026-08-19 03:56:21.421 [INFO] Build profile fingerprint verified.
+2026-08-19 03:56:21.501 [INFO] GNames global=0x00007FF73DB3AC78 table=0x00000295F598FAF0 index0='None'
+2026-08-19 03:56:21.501 [INFO] Scanning readable pages of ShooterGame.exe for the configured GWorld signature...
+2026-08-19 03:56:21.711 [INFO] GWorld signature match: 0x00007FF73A0FF190 (matches collected: 1)
+2026-08-19 03:56:21.711 [INFO] Resolved GWorld global address: 0x00007FF73DB0C2A8
+2026-08-19 03:56:21.712 [INFO] UWorld: 0x00000296D3D61980
+2026-08-19 03:56:21.904 [INFO] Native Direct2D/DirectComposition overlay initialized.
+2026-08-19 03:56:22.075 [INFO] Hotkeys: Insert=True F10=True F6-F9/F11=registered
+2026-08-19 03:56:22.267 [INFO] Player skeleton mapped from the live skeletal mesh (94 bones).
+2026-08-19 03:56:22.324 [INFO] Low-latency pipeline: actors=4309 captureMs=13 intervalMs=50 viewHz=250 overlay=True
+2026-08-19 03:56:22.425 [WARN] Player skeleton unavailable: mesh pointer is unreadable. The lightweight fallback skeleton remains active.
+2026-08-19 04:33:01.739 [INFO] Player skeleton mapped from the live skeletal mesh (92 bones).
+2026-08-19 04:46:05.836 [INFO] ARK Tracker read-only diagnostic MVP
+2026-08-19 04:46:05.837 [INFO] Target: ARK: Survival Evolved / ShooterGame.exe / UE4 / x64
+2026-08-19 04:46:05.837 [INFO] Access mask: PROCESS_QUERY_INFORMATION | PROCESS_VM_READ (0x0410). No write/injection APIs are used.
+2026-08-19 04:46:05.837 [INFO] Security context: elevated=True SeDebugPrivilege=enabled
+2026-08-19 04:46:05.857 [INFO] Process: name=ShooterGame.exe pid=34172 parentPid=14996 threads=127
+2026-08-19 04:46:05.857 [INFO] Read-only process handle opened successfully.
+2026-08-19 04:46:05.859 [INFO] Target module: ShooterGame.exe base=0x00007FF739130000 size=0x4DAB000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\ShooterGame.exe
+2026-08-19 04:46:05.860 [INFO] Build fingerprint: fileLength=80346664 lastWriteUtc=2026-08-17T08:21:59Z
+2026-08-19 04:46:05.941 [INFO] Build fingerprint: SHA256=9BC401417A776C5244A1B0B3255DC3AF4A9D73E3F5C1BA96228FBE3FB1A43477
+2026-08-19 04:46:05.941 [INFO] Build profile fingerprint verified.
+2026-08-19 04:46:06.024 [INFO] GNames global=0x00007FF73DB3AC78 table=0x00000295F598FAF0 index0='None'
+2026-08-19 04:46:06.025 [INFO] Scanning readable pages of ShooterGame.exe for the configured GWorld signature...
+2026-08-19 04:46:06.237 [INFO] GWorld signature match: 0x00007FF73A0FF190 (matches collected: 1)
+2026-08-19 04:46:06.237 [INFO] Resolved GWorld global address: 0x00007FF73DB0C2A8
+2026-08-19 04:46:06.238 [INFO] UWorld: 0x00000296A481A5C0
+2026-08-19 04:46:06.490 [INFO] Native Direct2D/DirectComposition overlay initialized.
+2026-08-19 04:46:06.659 [INFO] Hotkeys: Insert=True F10=True F6-F9/F11=registered
+2026-08-19 04:46:06.777 [INFO] Low-latency pipeline: actors=16 captureMs=0 intervalMs=50 viewHz=250 overlay=True
+2026-08-19 04:47:29.887 [INFO] ARK Tracker read-only diagnostic MVP
+2026-08-19 04:47:29.887 [INFO] Target: ARK: Survival Evolved / ShooterGame.exe / UE4 / x64
+2026-08-19 04:47:29.887 [INFO] Access mask: PROCESS_QUERY_INFORMATION | PROCESS_VM_READ (0x0410). No write/injection APIs are used.
+2026-08-19 04:47:29.888 [INFO] Security context: elevated=True SeDebugPrivilege=enabled
+2026-08-19 04:47:29.910 [INFO] Process: name=ShooterGame.exe pid=34172 parentPid=14996 threads=127
+2026-08-19 04:47:29.910 [INFO] Read-only process handle opened successfully.
+2026-08-19 04:47:29.913 [INFO] Target module: ShooterGame.exe base=0x00007FF739130000 size=0x4DAB000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\ShooterGame.exe
+2026-08-19 04:47:29.913 [INFO] Build fingerprint: fileLength=80346664 lastWriteUtc=2026-08-17T08:21:59Z
+2026-08-19 04:47:29.995 [INFO] Build fingerprint: SHA256=9BC401417A776C5244A1B0B3255DC3AF4A9D73E3F5C1BA96228FBE3FB1A43477
+2026-08-19 04:47:29.995 [INFO] Build profile fingerprint verified.
+2026-08-19 04:47:30.085 [INFO] GNames global=0x00007FF73DB3AC78 table=0x00000295F598FAF0 index0='None'
+2026-08-19 04:47:30.086 [INFO] Scanning readable pages of ShooterGame.exe for the configured GWorld signature...
+2026-08-19 04:47:30.310 [INFO] GWorld signature match: 0x00007FF73A0FF190 (matches collected: 1)
+2026-08-19 04:47:30.310 [INFO] Resolved GWorld global address: 0x00007FF73DB0C2A8
+2026-08-19 04:47:30.310 [INFO] UWorld: 0x00000296A481A5C0
+2026-08-19 04:47:30.511 [INFO] Native Direct2D/DirectComposition overlay initialized.
+2026-08-19 04:47:30.656 [INFO] Hotkeys: Insert=True F10=True F6-F9/F11=registered
+2026-08-19 04:47:30.780 [INFO] Low-latency pipeline: actors=58 captureMs=1 intervalMs=50 viewHz=250 overlay=True
+2026-08-19 20:53:46.412 [INFO] ARK Tracker read-only diagnostic MVP
+2026-08-19 20:53:46.413 [INFO] Target: ARK: Survival Evolved / ShooterGame.exe / UE4 / x64
+2026-08-19 20:53:46.413 [INFO] Access mask: PROCESS_QUERY_INFORMATION | PROCESS_VM_READ (0x0410). No write/injection APIs are used.
+2026-08-19 20:53:46.414 [INFO] Security context: elevated=True SeDebugPrivilege=enabled
+2026-08-19 20:53:46.445 [INFO] Process: name=ShooterGame.exe pid=30376 parentPid=11716 threads=125
+2026-08-19 20:53:46.445 [INFO] Read-only process handle opened successfully.
+2026-08-19 20:53:46.447 [INFO] Target module: ShooterGame.exe base=0x00007FF6FE6B0000 size=0x4DAB000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\ShooterGame.exe
+2026-08-19 20:53:46.448 [INFO] Build fingerprint: fileLength=80346664 lastWriteUtc=2026-08-17T08:21:59Z
+2026-08-19 20:53:46.524 [INFO] Build fingerprint: SHA256=9BC401417A776C5244A1B0B3255DC3AF4A9D73E3F5C1BA96228FBE3FB1A43477
+2026-08-19 20:53:46.524 [INFO] Build profile fingerprint verified.
+2026-08-19 20:53:46.614 [INFO] GNames global=0x00007FF7030BAC78 table=0x0000022B66D3FAF0 index0='None'
+2026-08-19 20:53:46.614 [INFO] Scanning readable pages of ShooterGame.exe for the configured GWorld signature...
+2026-08-19 20:53:46.855 [INFO] GWorld signature match: 0x00007FF6FF67F190 (matches collected: 1)
+2026-08-19 20:53:46.857 [INFO] Resolved GWorld global address: 0x00007FF70308C2A8
+2026-08-19 20:53:46.857 [INFO] UWorld: 0x0000022D8B1B6600
+2026-08-19 20:53:47.118 [INFO] Native Direct2D/DirectComposition overlay initialized.
+2026-08-19 20:53:47.372 [INFO] Hotkeys: Insert=True F10=True F6-F9/F11=registered
+2026-08-19 20:53:47.530 [INFO] Player skeleton mapped from the live skeletal mesh (94 bones).
+2026-08-19 20:53:47.577 [INFO] Low-latency pipeline: actors=2149 captureMs=4 intervalMs=50 viewHz=250 overlay=True
+2026-08-19 20:54:08.715 [WARN] Player skeleton unavailable: bone geometry rejected (count=94, headDelta=1325.5, height=50.2). The lightweight fallback skeleton remains active.
+2026-08-19 21:09:08.156 [INFO] ARK Tracker read-only diagnostic MVP
+2026-08-19 21:09:08.156 [INFO] Target: ARK: Survival Evolved / ShooterGame.exe / UE4 / x64
+2026-08-19 21:09:08.156 [INFO] Access mask: PROCESS_QUERY_INFORMATION | PROCESS_VM_READ (0x0410). No write/injection APIs are used.
+2026-08-19 21:09:08.158 [INFO] Security context: elevated=True SeDebugPrivilege=enabled
+2026-08-19 21:09:08.178 [INFO] Process: name=ShooterGame.exe pid=34488 parentPid=11716 threads=132
+2026-08-19 21:09:08.178 [INFO] Read-only process handle opened successfully.
+2026-08-19 21:09:08.181 [INFO] Target module: ShooterGame.exe base=0x00007FF6FE6B0000 size=0x4DAB000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\ShooterGame.exe
+2026-08-19 21:09:08.182 [INFO] Build fingerprint: fileLength=80346664 lastWriteUtc=2026-08-17T08:21:59Z
+2026-08-19 21:09:08.266 [INFO] Build fingerprint: SHA256=9BC401417A776C5244A1B0B3255DC3AF4A9D73E3F5C1BA96228FBE3FB1A43477
+2026-08-19 21:09:08.266 [INFO] Build profile fingerprint verified.
+2026-08-19 21:09:08.350 [INFO] GNames global=0x00007FF7030BAC78 table=0x0000019B1DE6FAF0 index0='None'
+2026-08-19 21:09:08.351 [INFO] Scanning readable pages of ShooterGame.exe for the configured GWorld signature...
+2026-08-19 21:09:08.570 [INFO] GWorld signature match: 0x00007FF6FF67F190 (matches collected: 1)
+2026-08-19 21:09:08.570 [INFO] Resolved GWorld global address: 0x00007FF70308C2A8
+2026-08-19 21:09:08.570 [INFO] UWorld: 0x0000019C86040CC0
+2026-08-19 21:09:08.781 [INFO] Native Direct2D/DirectComposition overlay initialized.
+2026-08-19 21:09:08.945 [INFO] Hotkeys: Insert=True F10=True F6-F9/F11=registered
+2026-08-19 21:09:09.108 [INFO] Player skeleton mapped from the live skeletal mesh (94 bones).
+2026-08-19 21:09:09.109 [WARN] Player skeleton unavailable: bone geometry rejected (count=94, headDelta=1027.1, height=46.4). The lightweight fallback skeleton remains active.
+2026-08-19 21:09:09.152 [INFO] Low-latency pipeline: actors=4136 captureMs=5 intervalMs=50 viewHz=250 overlay=True
+2026-08-20 20:14:27.367 [INFO] ARK Tracker read-only diagnostic MVP
+2026-08-20 20:14:27.367 [INFO] Target: ARK: Survival Evolved / ShooterGame.exe / UE4 / x64
+2026-08-20 20:14:27.367 [INFO] Access mask: PROCESS_QUERY_INFORMATION | PROCESS_VM_READ (0x0410). No write/injection APIs are used.
+2026-08-20 20:14:27.368 [INFO] Security context: elevated=False SeDebugPrivilege=unavailable (Win32 error 1300)
+2026-08-20 20:14:27.388 [INFO] Process: name=ShooterGame.exe pid=30224 parentPid=15052 threads=124
+2026-08-20 20:14:27.388 [INFO] Read-only process handle opened successfully.
+2026-08-20 20:14:27.391 [INFO] Target module: ShooterGame.exe base=0x00007FF673E80000 size=0x4DAB000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\ShooterGame.exe
+2026-08-20 20:14:27.391 [INFO] Build fingerprint: fileLength=80346664 lastWriteUtc=2026-08-17T08:21:59Z
+2026-08-20 20:14:27.467 [INFO] Build fingerprint: SHA256=9BC401417A776C5244A1B0B3255DC3AF4A9D73E3F5C1BA96228FBE3FB1A43477
+2026-08-20 20:14:27.467 [INFO] Build profile fingerprint verified.
+2026-08-20 20:14:27.550 [INFO] GNames global=0x00007FF67888AC78 table=0x000001F86A63FAF0 index0='None'
+2026-08-20 20:14:27.550 [INFO] Scanning readable pages of ShooterGame.exe for the configured GWorld signature...
+2026-08-20 20:14:27.751 [INFO] GWorld signature match: 0x00007FF674E4F190 (matches collected: 1)
+2026-08-20 20:14:27.751 [INFO] Resolved GWorld global address: 0x00007FF67885C2A8
+2026-08-20 20:14:27.752 [INFO] UWorld: 0x000001F97AD4E580
+2026-08-20 20:14:28.018 [INFO] Native Direct2D/DirectComposition overlay initialized.
+2026-08-20 20:14:28.256 [INFO] Hotkeys: Insert=True F10=True F6-F9/F11=registered
+2026-08-20 20:14:28.446 [INFO] Low-latency pipeline: actors=59 captureMs=1 intervalMs=50 viewHz=250 overlay=True
+2026-08-20 20:14:29.899 [INFO] Player skeleton mapped from the live skeletal mesh (92 bones).
+2026-08-20 20:14:32.577 [INFO] Player skeleton mapped from the live skeletal mesh (94 bones).
+2026-08-20 20:15:25.809 [WARN] Player skeleton unavailable: bone geometry rejected (count=94, headDelta=1711.7, height=50.0). The lightweight fallback skeleton remains active.
+2026-08-20 20:19:11.802 [INFO] ARK Tracker read-only diagnostic MVP
+2026-08-20 20:19:11.803 [INFO] Target: ARK: Survival Evolved / ShooterGame.exe / UE4 / x64
+2026-08-20 20:19:11.803 [INFO] Access mask: PROCESS_QUERY_INFORMATION | PROCESS_VM_READ (0x0410). No write/injection APIs are used.
+2026-08-20 20:19:11.804 [INFO] Security context: elevated=False SeDebugPrivilege=unavailable (Win32 error 1300)
+2026-08-20 20:19:11.822 [INFO] Process: name=ShooterGame.exe pid=30224 parentPid=15052 threads=125
+2026-08-20 20:19:11.822 [INFO] Read-only process handle opened successfully.
+2026-08-20 20:19:11.825 [INFO] Target module: ShooterGame.exe base=0x00007FF673E80000 size=0x4DAB000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\ShooterGame.exe
+2026-08-20 20:19:11.826 [INFO] Build fingerprint: fileLength=80346664 lastWriteUtc=2026-08-17T08:21:59Z
+2026-08-20 20:19:11.900 [INFO] Build fingerprint: SHA256=9BC401417A776C5244A1B0B3255DC3AF4A9D73E3F5C1BA96228FBE3FB1A43477
+2026-08-20 20:19:11.900 [INFO] Build profile fingerprint verified.
+2026-08-20 20:19:11.981 [INFO] GNames global=0x00007FF67888AC78 table=0x000001F86A63FAF0 index0='None'
+2026-08-20 20:19:11.982 [INFO] Scanning readable pages of ShooterGame.exe for the configured GWorld signature...
+2026-08-20 20:19:12.178 [INFO] GWorld signature match: 0x00007FF674E4F190 (matches collected: 1)
+2026-08-20 20:19:12.179 [INFO] Resolved GWorld global address: 0x00007FF67885C2A8
+2026-08-20 20:19:12.179 [INFO] UWorld: 0x000001F97AD4E580
+2026-08-20 20:19:12.379 [INFO] Native Direct2D/DirectComposition overlay initialized.
+2026-08-20 20:19:12.536 [INFO] Hotkeys: Insert=True F10=True F6-F9/F11=registered
+2026-08-20 20:19:12.727 [INFO] Player skeleton mapped from the live skeletal mesh (94 bones).
+2026-08-20 20:19:12.728 [INFO] Player skeleton mapped from the live skeletal mesh (92 bones).
+2026-08-20 20:19:12.779 [INFO] Low-latency pipeline: actors=5639 captureMs=12 intervalMs=50 viewHz=250 overlay=True
+2026-08-20 20:23:35.990 [INFO] ARK Tracker read-only diagnostic MVP
+2026-08-20 20:23:35.990 [INFO] Target: ARK: Survival Evolved / ShooterGame.exe / UE4 / x64
+2026-08-20 20:23:35.990 [INFO] Access mask: PROCESS_QUERY_INFORMATION | PROCESS_VM_READ (0x0410). No write/injection APIs are used.
+2026-08-20 20:23:35.991 [INFO] Security context: elevated=False SeDebugPrivilege=unavailable (Win32 error 1300)
+2026-08-20 20:23:36.008 [INFO] Process: name=ShooterGame.exe pid=30224 parentPid=15052 threads=124
+2026-08-20 20:23:36.008 [INFO] Read-only process handle opened successfully.
+2026-08-20 20:23:36.011 [INFO] Target module: ShooterGame.exe base=0x00007FF673E80000 size=0x4DAB000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\ShooterGame.exe
+2026-08-20 20:23:36.012 [INFO] Build fingerprint: fileLength=80346664 lastWriteUtc=2026-08-17T08:21:59Z
+2026-08-20 20:23:36.088 [INFO] Build fingerprint: SHA256=9BC401417A776C5244A1B0B3255DC3AF4A9D73E3F5C1BA96228FBE3FB1A43477
+2026-08-20 20:23:36.088 [INFO] Build profile fingerprint verified.
+2026-08-20 20:23:36.168 [INFO] GNames global=0x00007FF67888AC78 table=0x000001F86A63FAF0 index0='None'
+2026-08-20 20:23:36.168 [INFO] Scanning readable pages of ShooterGame.exe for the configured GWorld signature...
+2026-08-20 20:23:36.365 [INFO] GWorld signature match: 0x00007FF674E4F190 (matches collected: 1)
+2026-08-20 20:23:36.365 [INFO] Resolved GWorld global address: 0x00007FF67885C2A8
+2026-08-20 20:23:36.365 [INFO] UWorld: 0x000001F97AD4E580
+2026-08-20 20:23:36.594 [INFO] Native Direct2D/DirectComposition overlay initialized.
+2026-08-20 20:23:36.747 [INFO] Hotkeys: Insert=True F10=True F6-F9/F11=registered
+2026-08-20 20:23:36.946 [INFO] Player skeleton mapped from the live skeletal mesh (94 bones).
+2026-08-20 20:23:36.996 [INFO] Low-latency pipeline: actors=5502 captureMs=124 intervalMs=50 viewHz=250 overlay=True
+2026-08-20 20:24:00.615 [WARN] Attached ShooterGame.exe pid=30224 closed; shutting down this tracker instance.
+2026-08-20 20:24:22.749 [INFO] ARK Tracker read-only diagnostic MVP
+2026-08-20 20:24:22.750 [INFO] Target: ARK: Survival Evolved / ShooterGame.exe / UE4 / x64
+2026-08-20 20:24:22.750 [INFO] Access mask: PROCESS_QUERY_INFORMATION | PROCESS_VM_READ (0x0410). No write/injection APIs are used.
+2026-08-20 20:24:22.751 [INFO] Security context: elevated=False SeDebugPrivilege=unavailable (Win32 error 1300)
+2026-08-20 20:24:22.766 [ERROR] ShooterGame.exe was not found. Start ASE without BattlEye on your local/private environment, or pass --wait.
+2026-08-20 20:27:28.471 [INFO] ARK Tracker read-only diagnostic MVP
+2026-08-20 20:27:28.471 [INFO] Target: ARK: Survival Evolved / ShooterGame.exe / UE4 / x64
+2026-08-20 20:27:28.472 [INFO] Access mask: PROCESS_QUERY_INFORMATION | PROCESS_VM_READ (0x0410). No write/injection APIs are used.
+2026-08-20 20:27:28.473 [INFO] Security context: elevated=False SeDebugPrivilege=unavailable (Win32 error 1300)
+2026-08-20 20:27:28.490 [INFO] Process: name=ShooterGame.exe pid=16336 parentPid=15052 threads=125
+2026-08-20 20:27:28.491 [INFO] Read-only process handle opened successfully.
+2026-08-20 20:27:28.493 [INFO] Target module: ShooterGame.exe base=0x00007FF673E80000 size=0x4DAB000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\ShooterGame.exe
+2026-08-20 20:27:28.494 [INFO] Build fingerprint: fileLength=80346664 lastWriteUtc=2026-08-17T08:21:59Z
+2026-08-20 20:27:28.569 [INFO] Build fingerprint: SHA256=9BC401417A776C5244A1B0B3255DC3AF4A9D73E3F5C1BA96228FBE3FB1A43477
+2026-08-20 20:27:28.569 [INFO] Build profile fingerprint verified.
+2026-08-20 20:27:28.652 [INFO] GNames global=0x00007FF67888AC78 table=0x000001C293B8FAF0 index0='None'
+2026-08-20 20:27:28.653 [INFO] Scanning readable pages of ShooterGame.exe for the configured GWorld signature...
+2026-08-20 20:27:28.854 [INFO] GWorld signature match: 0x00007FF674E4F190 (matches collected: 1)
+2026-08-20 20:27:28.854 [INFO] Resolved GWorld global address: 0x00007FF67885C2A8
+2026-08-20 20:27:28.854 [INFO] UWorld: 0x000001C408362640
+2026-08-20 20:27:29.045 [INFO] Native Direct2D/DirectComposition overlay initialized.
+2026-08-20 20:27:29.198 [INFO] Hotkeys: Insert=True F10=True F6-F9/F11=registered
+2026-08-20 20:27:29.348 [INFO] Player skeleton mapped from the live skeletal mesh (94 bones).
+2026-08-20 20:27:29.403 [INFO] Low-latency pipeline: actors=5064 captureMs=98 intervalMs=50 viewHz=250 overlay=True
+2026-08-20 20:29:17.821 [WARN] Player skeleton unavailable: bone geometry rejected (count=94, headDelta=3781.3, height=48.6). The lightweight fallback skeleton remains active.
+2026-08-20 20:31:25.840 [INFO] ARK Tracker read-only diagnostic MVP
+2026-08-20 20:31:25.840 [INFO] Target: ARK: Survival Evolved / ShooterGame.exe / UE4 / x64
+2026-08-20 20:31:25.840 [INFO] Access mask: PROCESS_QUERY_INFORMATION | PROCESS_VM_READ (0x0410). No write/injection APIs are used.
+2026-08-20 20:31:25.841 [INFO] Security context: elevated=False SeDebugPrivilege=unavailable (Win32 error 1300)
+2026-08-20 20:31:25.860 [INFO] Process: name=ShooterGame.exe pid=16336 parentPid=15052 threads=127
+2026-08-20 20:31:25.860 [INFO] Read-only process handle opened successfully.
+2026-08-20 20:31:25.863 [INFO] Target module: ShooterGame.exe base=0x00007FF673E80000 size=0x4DAB000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\ShooterGame.exe
+2026-08-20 20:31:25.863 [INFO] Build fingerprint: fileLength=80346664 lastWriteUtc=2026-08-17T08:21:59Z
+2026-08-20 20:31:25.939 [INFO] Build fingerprint: SHA256=9BC401417A776C5244A1B0B3255DC3AF4A9D73E3F5C1BA96228FBE3FB1A43477
+2026-08-20 20:31:25.939 [INFO] Build profile fingerprint verified.
+2026-08-20 20:31:26.020 [INFO] GNames global=0x00007FF67888AC78 table=0x000001C293B8FAF0 index0='None'
+2026-08-20 20:31:26.021 [INFO] Scanning readable pages of ShooterGame.exe for the configured GWorld signature...
+2026-08-20 20:31:26.218 [INFO] GWorld signature match: 0x00007FF674E4F190 (matches collected: 1)
+2026-08-20 20:31:26.218 [INFO] Resolved GWorld global address: 0x00007FF67885C2A8
+2026-08-20 20:31:26.218 [INFO] UWorld: 0x000001C408362640
+2026-08-20 20:31:26.415 [INFO] Native Direct2D/DirectComposition overlay initialized.
+2026-08-20 20:31:26.568 [INFO] Hotkeys: Insert=True F10=True F6-F9/F11=registered
+2026-08-20 20:31:26.798 [INFO] Player skeleton mapped from the live skeletal mesh (94 bones).
+2026-08-20 20:31:26.832 [INFO] Overlay packet: camera=True actors=5095 visible=2504 labels=194 points=2310 enabled=True radar=True teamMode=All
+2026-08-20 20:31:26.858 [INFO] Low-latency pipeline: actors=5095 captureMs=12 intervalMs=50 viewHz=250 overlay=True
+2026-08-20 20:31:29.012 [INFO] Overlay packet: camera=True actors=5095 visible=2504 labels=194 points=2310 enabled=True radar=True teamMode=All
+2026-08-20 20:31:31.142 [INFO] Overlay packet: camera=True actors=5095 visible=2504 labels=194 points=2310 enabled=True radar=True teamMode=All
+2026-08-20 20:31:33.271 [INFO] Overlay packet: camera=True actors=5095 visible=2504 labels=194 points=2310 enabled=True radar=True teamMode=All
+2026-08-20 20:31:35.326 [INFO] Overlay packet: camera=True actors=5095 visible=2504 labels=194 points=2310 enabled=True radar=True teamMode=All
+2026-08-20 20:31:37.353 [INFO] Overlay packet: camera=True actors=5095 visible=2504 labels=194 points=2310 enabled=True radar=True teamMode=All
+2026-08-20 20:31:39.376 [INFO] Overlay packet: camera=True actors=5094 visible=2503 labels=193 points=2310 enabled=True radar=True teamMode=All
+2026-08-20 20:31:40.116 [WARN] Player skeleton unavailable: bone geometry rejected (count=94, headDelta=729.6, height=50.5). The lightweight fallback skeleton remains active.
+2026-08-20 20:31:41.418 [INFO] Overlay packet: camera=True actors=5094 visible=2503 labels=193 points=2310 enabled=True radar=True teamMode=All
+2026-08-20 20:31:43.430 [INFO] Overlay packet: camera=True actors=5094 visible=2503 labels=193 points=2310 enabled=True radar=True teamMode=All
+2026-08-20 20:31:45.458 [INFO] Overlay packet: camera=True actors=5095 visible=2504 labels=194 points=2310 enabled=True radar=True teamMode=All
+2026-08-20 20:31:47.464 [INFO] Overlay packet: camera=True actors=5095 visible=2504 labels=194 points=2310 enabled=True radar=True teamMode=All
+2026-08-20 20:31:49.601 [INFO] Overlay packet: camera=True actors=5095 visible=2504 labels=194 points=2310 enabled=True radar=True teamMode=All
+2026-08-20 20:31:51.717 [INFO] Overlay packet: camera=True actors=5095 visible=2504 labels=194 points=2310 enabled=True radar=True teamMode=All
+2026-08-20 20:31:53.733 [INFO] Overlay packet: camera=True actors=5095 visible=2504 labels=194 points=2310 enabled=True radar=True teamMode=All
+2026-08-20 20:31:55.736 [INFO] Overlay packet: camera=True actors=5095 visible=2504 labels=194 points=2310 enabled=True radar=True teamMode=All
+2026-08-20 20:31:57.891 [INFO] Overlay packet: camera=True actors=5095 visible=2504 labels=194 points=2310 enabled=True radar=True teamMode=All
+2026-08-20 20:31:59.901 [INFO] Overlay packet: camera=True actors=5095 visible=2504 labels=194 points=2310 enabled=True radar=True teamMode=All
+2026-08-20 20:32:01.938 [INFO] Overlay packet: camera=True actors=5094 visible=2504 labels=194 points=2310 enabled=True radar=True teamMode=All
+2026-08-20 20:32:04.046 [INFO] Overlay packet: camera=True actors=5094 visible=2504 labels=194 points=2310 enabled=True radar=True teamMode=All
+2026-08-20 20:32:06.175 [INFO] Overlay packet: camera=True actors=5094 visible=2504 labels=194 points=2310 enabled=True radar=True teamMode=All
+2026-08-20 20:32:08.316 [INFO] Overlay packet: camera=True actors=5094 visible=2504 labels=194 points=2310 enabled=True radar=True teamMode=All
+2026-08-20 20:32:56.528 [INFO] ARK Tracker read-only diagnostic MVP
+2026-08-20 20:32:56.528 [INFO] Target: ARK: Survival Evolved / ShooterGame.exe / UE4 / x64
+2026-08-20 20:32:56.528 [INFO] Access mask: PROCESS_QUERY_INFORMATION | PROCESS_VM_READ (0x0410). No write/injection APIs are used.
+2026-08-20 20:32:56.529 [INFO] Security context: elevated=False SeDebugPrivilege=unavailable (Win32 error 1300)
+2026-08-20 20:32:56.549 [INFO] Process: name=ShooterGame.exe pid=16336 parentPid=15052 threads=123
+2026-08-20 20:32:56.549 [INFO] Read-only process handle opened successfully.
+2026-08-20 20:32:56.553 [INFO] Target module: ShooterGame.exe base=0x00007FF673E80000 size=0x4DAB000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\ShooterGame.exe
+2026-08-20 20:32:56.553 [INFO] Build fingerprint: fileLength=80346664 lastWriteUtc=2026-08-17T08:21:59Z
+2026-08-20 20:32:56.632 [INFO] Build fingerprint: SHA256=9BC401417A776C5244A1B0B3255DC3AF4A9D73E3F5C1BA96228FBE3FB1A43477
+2026-08-20 20:32:56.632 [INFO] Build profile fingerprint verified.
+2026-08-20 20:32:56.714 [INFO] GNames global=0x00007FF67888AC78 table=0x000001C293B8FAF0 index0='None'
+2026-08-20 20:32:56.715 [INFO] Scanning readable pages of ShooterGame.exe for the configured GWorld signature...
+2026-08-20 20:32:56.907 [INFO] GWorld signature match: 0x00007FF674E4F190 (matches collected: 1)
+2026-08-20 20:32:56.908 [INFO] Resolved GWorld global address: 0x00007FF67885C2A8
+2026-08-20 20:32:56.908 [INFO] UWorld: 0x000001C408362640
+2026-08-20 20:32:57.098 [INFO] Native Direct2D/DirectComposition overlay initialized.
+2026-08-20 20:32:57.236 [INFO] Hotkeys: Insert=True F10=True F6-F9/F11=registered
+2026-08-20 20:32:57.418 [INFO] Player skeleton mapped from the live skeletal mesh (94 bones).
+2026-08-20 20:32:57.441 [INFO] Overlay packet: camera=True actors=5194 visible=2507 labels=196 points=2311 enabled=True radar=True teamMode=All
+2026-08-20 20:32:57.449 [INFO] Low-latency pipeline: actors=5194 captureMs=102 intervalMs=50 viewHz=250 overlay=True
+2026-08-20 20:32:59.452 [INFO] Overlay packet: camera=True actors=5194 visible=2507 labels=196 points=2311 enabled=True radar=True teamMode=All
+2026-08-20 20:33:01.538 [INFO] Overlay packet: camera=True actors=5194 visible=2507 labels=196 points=2311 enabled=True radar=True teamMode=All
+2026-08-20 20:33:03.631 [INFO] Overlay packet: camera=True actors=5194 visible=2507 labels=196 points=2311 enabled=True radar=True teamMode=All
+2026-08-20 20:33:05.752 [INFO] Overlay packet: camera=True actors=5194 visible=2507 labels=196 points=2311 enabled=True radar=True teamMode=All
+2026-08-20 20:33:07.895 [INFO] Overlay packet: camera=True actors=5193 visible=2506 labels=195 points=2311 enabled=True radar=True teamMode=All
+2026-08-20 20:33:10.037 [INFO] Overlay packet: camera=True actors=5192 visible=2506 labels=194 points=2312 enabled=True radar=True teamMode=All
+2026-08-20 20:33:12.174 [INFO] Overlay packet: camera=True actors=5192 visible=2506 labels=194 points=2312 enabled=True radar=True teamMode=All
+2026-08-20 20:33:14.180 [INFO] Overlay packet: camera=True actors=5192 visible=2506 labels=194 points=2312 enabled=True radar=True teamMode=All
+2026-08-20 20:33:16.245 [INFO] Overlay packet: camera=True actors=5192 visible=2506 labels=194 points=2312 enabled=True radar=True teamMode=All
+2026-08-20 20:33:18.388 [INFO] Overlay packet: camera=True actors=5192 visible=2506 labels=194 points=2312 enabled=True radar=True teamMode=All
+2026-08-20 20:33:20.504 [INFO] Overlay packet: camera=True actors=5192 visible=2506 labels=194 points=2312 enabled=True radar=True teamMode=All
+2026-08-20 20:33:22.638 [INFO] Overlay packet: camera=True actors=5192 visible=2506 labels=194 points=2312 enabled=True radar=True teamMode=All
+2026-08-20 20:33:24.770 [INFO] Overlay packet: camera=True actors=5192 visible=2506 labels=194 points=2312 enabled=True radar=True teamMode=All
+2026-08-20 20:33:25.549 [WARN] Player skeleton unavailable: bone geometry rejected (count=94, headDelta=1189.8, height=49.7). The lightweight fallback skeleton remains active.
+2026-08-20 20:33:26.897 [INFO] Overlay packet: camera=True actors=5191 visible=2506 labels=193 points=2313 enabled=True radar=True teamMode=All
+2026-08-20 20:33:28.911 [INFO] Overlay packet: camera=True actors=5190 visible=2506 labels=192 points=2314 enabled=True radar=True teamMode=All
+2026-08-20 20:33:31.042 [INFO] Overlay packet: camera=True actors=5190 visible=2506 labels=192 points=2314 enabled=True radar=True teamMode=All
+2026-08-20 20:33:33.180 [INFO] Overlay packet: camera=True actors=5190 visible=2506 labels=192 points=2314 enabled=True radar=True teamMode=All
+2026-08-23 22:37:32.151 [INFO] ARK Tracker read-only diagnostic MVP
+2026-08-23 22:37:32.152 [INFO] Target: ARK: Survival Evolved / ShooterGame.exe / UE4 / x64
+2026-08-23 22:37:32.152 [INFO] Access mask: PROCESS_QUERY_INFORMATION | PROCESS_VM_READ (0x0410). No write/injection APIs are used.
+2026-08-23 22:37:32.153 [INFO] Security context: elevated=True SeDebugPrivilege=enabled
+2026-08-23 22:37:32.181 [INFO] Process: name=ShooterGame.exe pid=6032 parentPid=29092 threads=132
+2026-08-23 22:37:32.182 [INFO] Read-only process handle opened successfully.
+2026-08-23 22:37:32.183 [WARN] Module snapshot failed with Win32 error 5; trying PSAPI through the same read-only handle.
+2026-08-23 22:37:32.187 [ERROR] Win32Exception: Could not enumerate target modules. Snapshot error=5, PSAPI error=5, PEB fallback error=ReadProcessMemory failed while reading the main image at 0xD0DC0B8010 (Win32 error 5, bytes=0/8)..
+2026-08-23 22:37:32.187 [ERROR] If ASE is elevated, run this diagnostic at the same elevation. Do not run it with BattlEye.
+2026-08-23 22:38:30.674 [INFO] ARK Tracker read-only diagnostic MVP
+2026-08-23 22:38:30.676 [INFO] Target: ARK: Survival Evolved / ShooterGame.exe / UE4 / x64
+2026-08-23 22:38:30.676 [INFO] Access mask: PROCESS_QUERY_INFORMATION | PROCESS_VM_READ (0x0410). No write/injection APIs are used.
+2026-08-23 22:38:30.677 [INFO] Security context: elevated=True SeDebugPrivilege=enabled
+2026-08-23 22:38:30.693 [INFO] Process: name=ShooterGame.exe pid=35744 parentPid=15448 threads=129
+2026-08-23 22:38:30.695 [INFO] Read-only process handle opened successfully.
+2026-08-23 22:38:30.697 [INFO] Target module: ShooterGame.exe base=0x00007FF75D360000 size=0x4DAB000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\ShooterGame.exe
+2026-08-23 22:38:30.698 [INFO] Build fingerprint: fileLength=80346664 lastWriteUtc=2026-08-17T08:21:59Z
+2026-08-23 22:38:30.780 [INFO] Build fingerprint: SHA256=9BC401417A776C5244A1B0B3255DC3AF4A9D73E3F5C1BA96228FBE3FB1A43477
+2026-08-23 22:38:30.780 [INFO] Build profile fingerprint verified.
+2026-08-23 22:38:30.866 [INFO] GNames global=0x00007FF761D6AC78 table=0x0000013C720CFAF0 index0='None'
+2026-08-23 22:38:30.867 [INFO] Scanning readable pages of ShooterGame.exe for the configured GWorld signature...
+2026-08-23 22:38:31.090 [INFO] GWorld signature match: 0x00007FF75E32F190 (matches collected: 1)
+2026-08-23 22:38:31.090 [INFO] Resolved GWorld global address: 0x00007FF761D3C2A8
+2026-08-23 22:38:31.090 [INFO] UWorld: 0x0000013CEFFF1980
+2026-08-23 22:38:31.355 [INFO] Native Direct2D/DirectComposition overlay initialized.
+2026-08-23 22:38:31.636 [INFO] Hotkeys: Insert=True F10=True F6-F9/F11=registered
+2026-08-23 22:38:31.777 [INFO] Overlay packet: camera=True actors=121 visible=16 labels=0 points=16 enabled=True radar=True teamMode=All
+2026-08-23 22:38:31.788 [INFO] Low-latency pipeline: actors=121 captureMs=2 intervalMs=50 viewHz=250 overlay=True
+2026-08-23 22:38:33.809 [INFO] Overlay packet: camera=True actors=123 visible=16 labels=0 points=16 enabled=True radar=True teamMode=All
+2026-08-23 22:38:35.880 [INFO] Overlay packet: camera=True actors=123 visible=96 labels=80 points=16 enabled=True radar=True teamMode=All
+2026-08-23 22:38:37.957 [INFO] Overlay packet: camera=True actors=123 visible=96 labels=80 points=16 enabled=True radar=True teamMode=All
+2026-08-23 22:38:40.081 [INFO] Overlay packet: camera=True actors=123 visible=96 labels=80 points=16 enabled=True radar=True teamMode=All
+2026-08-23 22:38:42.103 [INFO] Overlay packet: camera=True actors=123 visible=96 labels=80 points=16 enabled=True radar=True teamMode=All
+2026-08-23 22:38:44.120 [INFO] Overlay packet: camera=True actors=123 visible=96 labels=80 points=16 enabled=True radar=True teamMode=All
+2026-08-23 22:38:46.144 [INFO] Overlay packet: camera=True actors=123 visible=96 labels=80 points=16 enabled=True radar=True teamMode=All
+2026-08-23 22:38:48.266 [INFO] Overlay packet: camera=True actors=123 visible=96 labels=80 points=16 enabled=True radar=True teamMode=All
+2026-08-23 22:38:50.291 [INFO] Overlay packet: camera=True actors=123 visible=96 labels=80 points=16 enabled=True radar=True teamMode=All
+2026-08-23 22:38:52.318 [INFO] Overlay packet: camera=True actors=123 visible=96 labels=80 points=16 enabled=True radar=True teamMode=All
+2026-08-23 22:38:54.331 [INFO] Overlay packet: camera=True actors=125 visible=98 labels=82 points=16 enabled=True radar=True teamMode=All
+2026-08-23 22:38:56.351 [INFO] Overlay packet: camera=True actors=125 visible=98 labels=82 points=16 enabled=True radar=True teamMode=All
+2026-08-23 22:38:58.424 [INFO] Overlay packet: camera=True actors=127 visible=98 labels=82 points=16 enabled=True radar=True teamMode=All
+2026-08-23 22:39:00.536 [INFO] Overlay packet: camera=True actors=130 visible=100 labels=82 points=18 enabled=True radar=True teamMode=All
+2026-08-23 22:39:02.611 [INFO] Overlay packet: camera=True actors=132 visible=100 labels=81 points=19 enabled=True radar=True teamMode=All
+2026-08-23 22:39:04.633 [INFO] Overlay packet: camera=True actors=134 visible=100 labels=81 points=19 enabled=True radar=True teamMode=All
+2026-08-23 22:39:06.654 [INFO] Overlay packet: camera=True actors=137 visible=100 labels=81 points=19 enabled=True radar=True teamMode=All
+2026-08-23 22:39:08.684 [INFO] Overlay packet: camera=True actors=138 visible=100 labels=81 points=19 enabled=True radar=True teamMode=All
+2026-08-23 22:39:10.760 [INFO] Overlay packet: camera=True actors=141 visible=101 labels=81 points=20 enabled=True radar=True teamMode=All
+2026-08-23 22:39:12.840 [INFO] Overlay packet: camera=True actors=141 visible=101 labels=81 points=20 enabled=True radar=True teamMode=All
+2026-08-23 22:39:14.912 [INFO] Overlay packet: camera=True actors=141 visible=101 labels=81 points=20 enabled=True radar=True teamMode=All
+2026-08-23 22:39:16.984 [INFO] Overlay packet: camera=True actors=141 visible=101 labels=81 points=20 enabled=True radar=True teamMode=All
+2026-08-23 22:39:19.062 [INFO] Overlay packet: camera=True actors=141 visible=101 labels=81 points=20 enabled=True radar=True teamMode=All
+2026-08-23 22:39:21.186 [INFO] Overlay packet: camera=True actors=144 visible=101 labels=81 points=20 enabled=True radar=True teamMode=All
+2026-08-23 22:39:23.206 [INFO] Overlay packet: camera=True actors=144 visible=101 labels=81 points=20 enabled=True radar=True teamMode=All
+2026-08-23 22:39:25.276 [INFO] Overlay packet: camera=True actors=143 visible=100 labels=80 points=20 enabled=True radar=True teamMode=All
+2026-08-23 22:39:27.403 [INFO] Overlay packet: camera=True actors=143 visible=100 labels=80 points=20 enabled=True radar=True teamMode=All
+2026-08-23 22:39:29.474 [INFO] Overlay packet: camera=True actors=142 visible=99 labels=79 points=20 enabled=True radar=True teamMode=All
+2026-08-23 22:39:31.552 [INFO] Overlay packet: camera=True actors=144 visible=99 labels=79 points=20 enabled=True radar=True teamMode=All
+2026-08-23 22:39:33.572 [INFO] Overlay packet: camera=True actors=145 visible=100 labels=79 points=21 enabled=True radar=True teamMode=All
+2026-08-23 22:39:35.591 [INFO] Overlay packet: camera=True actors=145 visible=100 labels=79 points=21 enabled=True radar=True teamMode=All
+2026-08-23 22:39:37.725 [INFO] Overlay packet: camera=True actors=145 visible=99 labels=78 points=21 enabled=True radar=True teamMode=All
+2026-08-23 22:39:39.797 [INFO] Overlay packet: camera=True actors=148 visible=101 labels=80 points=21 enabled=True radar=True teamMode=All
+2026-08-23 22:39:41.829 [INFO] Overlay packet: camera=True actors=149 visible=101 labels=80 points=21 enabled=True radar=True teamMode=All
+2026-08-23 22:39:43.908 [INFO] Overlay packet: camera=True actors=148 visible=100 labels=79 points=21 enabled=True radar=True teamMode=All
+2026-08-23 22:39:46.033 [INFO] Overlay packet: camera=True actors=152 visible=104 labels=83 points=21 enabled=True radar=True teamMode=All
+2026-08-23 22:39:48.158 [INFO] Overlay packet: camera=True actors=152 visible=104 labels=83 points=21 enabled=True radar=True teamMode=All
+2026-08-23 22:39:50.237 [INFO] Overlay packet: camera=True actors=152 visible=104 labels=82 points=22 enabled=True radar=True teamMode=All
+2026-08-23 22:39:52.257 [INFO] Overlay packet: camera=True actors=154 visible=104 labels=82 points=22 enabled=True radar=True teamMode=All
+2026-08-23 22:39:54.284 [INFO] Overlay packet: camera=True actors=154 visible=104 labels=82 points=22 enabled=True radar=True teamMode=All
+2026-08-23 22:39:56.354 [INFO] Overlay packet: camera=True actors=154 visible=104 labels=82 points=22 enabled=True radar=True teamMode=All
+2026-08-23 22:39:58.384 [INFO] Overlay packet: camera=True actors=154 visible=104 labels=82 points=22 enabled=True radar=True teamMode=All
+2026-08-23 22:40:00.454 [INFO] Overlay packet: camera=True actors=154 visible=104 labels=82 points=22 enabled=True radar=True teamMode=All
+2026-08-23 22:40:02.531 [INFO] Overlay packet: camera=True actors=154 visible=104 labels=82 points=22 enabled=True radar=True teamMode=All
+2026-08-23 22:40:04.608 [INFO] Overlay packet: camera=True actors=154 visible=104 labels=82 points=22 enabled=True radar=True teamMode=All
+2026-08-23 22:40:06.724 [INFO] Overlay packet: camera=True actors=154 visible=104 labels=82 points=22 enabled=True radar=True teamMode=All
+2026-08-23 22:40:08.806 [INFO] Overlay packet: camera=True actors=154 visible=104 labels=82 points=22 enabled=True radar=True teamMode=All
+2026-08-23 22:40:10.886 [INFO] Overlay packet: camera=True actors=154 visible=104 labels=82 points=22 enabled=True radar=True teamMode=All
+2026-08-23 22:40:12.961 [INFO] Overlay packet: camera=True actors=154 visible=104 labels=82 points=22 enabled=True radar=True teamMode=All
+2026-08-23 22:40:14.989 [INFO] Overlay packet: camera=True actors=154 visible=104 labels=82 points=22 enabled=True radar=True teamMode=All
+2026-08-23 22:40:17.015 [INFO] Overlay packet: camera=True actors=154 visible=104 labels=82 points=22 enabled=True radar=True teamMode=All
+2026-08-23 22:40:19.093 [INFO] Overlay packet: camera=True actors=155 visible=104 labels=82 points=22 enabled=True radar=True teamMode=All
+2026-08-23 22:40:21.175 [INFO] Overlay packet: camera=True actors=155 visible=104 labels=82 points=22 enabled=True radar=True teamMode=All
+2026-08-23 22:40:23.311 [INFO] Overlay packet: camera=True actors=154 visible=103 labels=81 points=22 enabled=True radar=True teamMode=All
+2026-08-23 22:40:25.382 [INFO] Overlay packet: camera=True actors=154 visible=103 labels=81 points=22 enabled=True radar=True teamMode=All
+2026-08-23 22:40:27.510 [INFO] Overlay packet: camera=True actors=154 visible=103 labels=81 points=22 enabled=True radar=True teamMode=All
+2026-08-23 22:40:29.538 [INFO] Overlay packet: camera=True actors=154 visible=103 labels=81 points=22 enabled=True radar=True teamMode=All
+2026-08-23 22:40:31.613 [INFO] Overlay packet: camera=True actors=154 visible=103 labels=81 points=22 enabled=True radar=True teamMode=All
+2026-08-23 22:40:33.688 [INFO] Overlay packet: camera=True actors=154 visible=103 labels=81 points=22 enabled=True radar=True teamMode=All
+2026-08-23 22:40:35.718 [INFO] Overlay packet: camera=True actors=154 visible=103 labels=81 points=22 enabled=True radar=True teamMode=All
+2026-08-23 22:40:37.751 [INFO] Overlay packet: camera=True actors=154 visible=103 labels=81 points=22 enabled=True radar=True teamMode=All
+2026-08-23 22:40:39.781 [INFO] Overlay packet: camera=True actors=154 visible=103 labels=81 points=22 enabled=True radar=True teamMode=All
+2026-08-23 22:40:41.813 [INFO] Overlay packet: camera=True actors=156 visible=105 labels=82 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:40:43.890 [INFO] Overlay packet: camera=True actors=156 visible=105 labels=82 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:40:45.968 [INFO] Overlay packet: camera=True actors=156 visible=105 labels=82 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:40:48.101 [INFO] Overlay packet: camera=True actors=156 visible=105 labels=82 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:40:50.231 [INFO] Overlay packet: camera=True actors=156 visible=105 labels=82 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:40:52.249 [INFO] Overlay packet: camera=True actors=156 visible=105 labels=82 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:40:54.374 [INFO] Overlay packet: camera=True actors=159 visible=108 labels=85 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:40:56.447 [INFO] Overlay packet: camera=True actors=159 visible=108 labels=85 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:40:58.571 [INFO] Overlay packet: camera=True actors=159 visible=108 labels=85 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:41:00.696 [INFO] Overlay packet: camera=True actors=158 visible=107 labels=84 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:41:02.772 [INFO] Overlay packet: camera=True actors=158 visible=107 labels=84 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:41:04.803 [INFO] Overlay packet: camera=True actors=158 visible=107 labels=84 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:41:06.879 [INFO] Overlay packet: camera=True actors=158 visible=107 labels=84 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:41:09.008 [INFO] Overlay packet: camera=True actors=158 visible=107 labels=84 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:41:11.136 [INFO] Overlay packet: camera=True actors=158 visible=107 labels=84 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:41:13.220 [INFO] Overlay packet: camera=True actors=158 visible=107 labels=84 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:41:15.299 [INFO] Overlay packet: camera=True actors=158 visible=107 labels=84 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:41:17.373 [INFO] Overlay packet: camera=True actors=158 visible=107 labels=84 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:41:19.399 [INFO] Overlay packet: camera=True actors=158 visible=107 labels=84 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:41:21.427 [INFO] Overlay packet: camera=True actors=158 visible=107 labels=84 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:41:23.506 [INFO] Overlay packet: camera=True actors=158 visible=107 labels=84 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:41:25.642 [INFO] Overlay packet: camera=True actors=158 visible=107 labels=84 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:41:27.717 [INFO] Overlay packet: camera=True actors=158 visible=107 labels=84 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:41:29.801 [INFO] Overlay packet: camera=True actors=158 visible=107 labels=84 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:41:31.833 [INFO] Overlay packet: camera=True actors=160 visible=107 labels=84 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:41:33.866 [INFO] Overlay packet: camera=True actors=160 visible=107 labels=84 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:41:35.896 [INFO] Overlay packet: camera=True actors=160 visible=107 labels=84 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:41:37.924 [INFO] Overlay packet: camera=True actors=160 visible=107 labels=84 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:41:40.009 [INFO] Overlay packet: camera=True actors=160 visible=107 labels=84 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:41:42.033 [INFO] Overlay packet: camera=True actors=160 visible=107 labels=84 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:41:44.061 [INFO] Overlay packet: camera=True actors=159 visible=106 labels=83 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:41:46.089 [INFO] Overlay packet: camera=True actors=159 visible=106 labels=83 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:41:48.212 [INFO] Overlay packet: camera=True actors=158 visible=105 labels=82 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:41:50.289 [INFO] Overlay packet: camera=True actors=158 visible=105 labels=82 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:41:52.369 [INFO] Overlay packet: camera=True actors=158 visible=105 labels=82 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:41:54.391 [INFO] Overlay packet: camera=True actors=158 visible=105 labels=82 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:41:56.418 [INFO] Overlay packet: camera=True actors=158 visible=105 labels=82 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:41:58.498 [INFO] Overlay packet: camera=True actors=158 visible=105 labels=82 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:42:00.523 [INFO] Overlay packet: camera=True actors=158 visible=105 labels=82 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:42:02.603 [INFO] Overlay packet: camera=True actors=158 visible=105 labels=82 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:42:04.631 [INFO] Overlay packet: camera=True actors=158 visible=105 labels=82 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:42:06.718 [INFO] Overlay packet: camera=True actors=158 visible=105 labels=82 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:42:08.850 [INFO] Overlay packet: camera=True actors=158 visible=105 labels=82 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:42:10.972 [INFO] Overlay packet: camera=True actors=158 visible=105 labels=82 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:42:13.100 [INFO] Overlay packet: camera=True actors=158 visible=105 labels=82 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:42:15.219 [INFO] Overlay packet: camera=True actors=160 visible=105 labels=82 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:42:17.357 [INFO] Overlay packet: camera=True actors=160 visible=105 labels=82 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:42:19.438 [INFO] Overlay packet: camera=True actors=160 visible=105 labels=82 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:42:21.473 [INFO] Overlay packet: camera=True actors=160 visible=105 labels=82 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:42:23.591 [INFO] Overlay packet: camera=True actors=159 visible=104 labels=81 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:42:25.667 [INFO] Overlay packet: camera=True actors=159 visible=104 labels=81 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:42:27.756 [INFO] Overlay packet: camera=True actors=159 visible=104 labels=81 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:42:29.782 [INFO] Overlay packet: camera=True actors=159 visible=104 labels=81 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:42:31.814 [INFO] Overlay packet: camera=True actors=159 visible=104 labels=81 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:42:33.891 [INFO] Overlay packet: camera=True actors=159 visible=104 labels=81 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:42:36.013 [INFO] Overlay packet: camera=True actors=159 visible=104 labels=81 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:42:38.035 [INFO] Overlay packet: camera=True actors=159 visible=104 labels=81 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:42:40.070 [INFO] Overlay packet: camera=True actors=159 visible=104 labels=81 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:42:42.099 [INFO] Overlay packet: camera=True actors=159 visible=104 labels=81 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:42:44.128 [INFO] Overlay packet: camera=True actors=159 visible=104 labels=81 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:42:46.154 [INFO] Overlay packet: camera=True actors=159 visible=104 labels=81 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:42:48.232 [INFO] Overlay packet: camera=True actors=159 visible=104 labels=81 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:42:50.309 [INFO] Overlay packet: camera=True actors=159 visible=104 labels=81 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:42:52.341 [INFO] Overlay packet: camera=True actors=159 visible=104 labels=81 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:42:54.474 [INFO] Overlay packet: camera=True actors=159 visible=104 labels=81 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:42:56.507 [INFO] Overlay packet: camera=True actors=159 visible=104 labels=81 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:42:58.583 [INFO] Overlay packet: camera=True actors=159 visible=104 labels=81 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:43:00.658 [INFO] Overlay packet: camera=True actors=159 visible=104 labels=81 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:43:02.789 [INFO] Overlay packet: camera=True actors=161 visible=106 labels=82 points=24 enabled=True radar=True teamMode=All
+2026-08-23 22:43:04.918 [INFO] Overlay packet: camera=True actors=161 visible=106 labels=82 points=24 enabled=True radar=True teamMode=All
+2026-08-23 22:43:06.937 [INFO] Overlay packet: camera=True actors=161 visible=106 labels=82 points=24 enabled=True radar=True teamMode=All
+2026-08-23 22:43:08.973 [INFO] Overlay packet: camera=True actors=161 visible=106 labels=82 points=24 enabled=True radar=True teamMode=All
+2026-08-23 22:43:11.045 [INFO] Overlay packet: camera=True actors=161 visible=106 labels=82 points=24 enabled=True radar=True teamMode=All
+2026-08-23 22:43:13.123 [INFO] Overlay packet: camera=True actors=161 visible=106 labels=82 points=24 enabled=True radar=True teamMode=All
+2026-08-23 22:43:15.155 [INFO] Overlay packet: camera=True actors=161 visible=106 labels=82 points=24 enabled=True radar=True teamMode=All
+2026-08-23 22:43:17.221 [INFO] Overlay packet: camera=True actors=161 visible=106 labels=82 points=24 enabled=True radar=True teamMode=All
+2026-08-23 22:43:19.252 [INFO] Overlay packet: camera=True actors=161 visible=106 labels=82 points=24 enabled=True radar=True teamMode=All
+2026-08-23 22:43:21.376 [INFO] Overlay packet: camera=True actors=161 visible=106 labels=82 points=24 enabled=True radar=True teamMode=All
+2026-08-23 22:43:23.456 [INFO] Overlay packet: camera=True actors=161 visible=106 labels=82 points=24 enabled=True radar=True teamMode=All
+2026-08-23 22:43:25.532 [INFO] Overlay packet: camera=True actors=161 visible=106 labels=82 points=24 enabled=True radar=True teamMode=All
+2026-08-23 22:43:27.553 [INFO] Overlay packet: camera=True actors=161 visible=106 labels=82 points=24 enabled=True radar=True teamMode=All
+2026-08-23 22:43:29.634 [INFO] Overlay packet: camera=True actors=160 visible=105 labels=81 points=24 enabled=True radar=True teamMode=All
+2026-08-23 22:43:31.713 [INFO] Overlay packet: camera=True actors=160 visible=105 labels=81 points=24 enabled=True radar=True teamMode=All
+2026-08-23 22:43:33.734 [INFO] Overlay packet: camera=True actors=160 visible=105 labels=81 points=24 enabled=True radar=True teamMode=All
+2026-08-23 22:43:35.811 [INFO] Overlay packet: camera=True actors=160 visible=105 labels=81 points=24 enabled=True radar=True teamMode=All
+2026-08-23 22:43:37.937 [INFO] Overlay packet: camera=True actors=160 visible=105 labels=81 points=24 enabled=True radar=True teamMode=All
+2026-08-23 22:43:39.958 [INFO] Overlay packet: camera=True actors=160 visible=105 labels=81 points=24 enabled=True radar=True teamMode=All
+2026-08-23 22:43:42.034 [INFO] Overlay packet: camera=True actors=160 visible=105 labels=81 points=24 enabled=True radar=True teamMode=All
+2026-08-23 22:43:44.168 [INFO] Overlay packet: camera=True actors=160 visible=105 labels=81 points=24 enabled=True radar=True teamMode=All
+2026-08-23 22:43:46.239 [INFO] Overlay packet: camera=True actors=160 visible=105 labels=81 points=24 enabled=True radar=True teamMode=All
+2026-08-23 22:43:48.309 [INFO] Overlay packet: camera=True actors=162 visible=107 labels=82 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:43:50.390 [INFO] Overlay packet: camera=True actors=162 visible=107 labels=82 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:43:52.416 [INFO] Overlay packet: camera=True actors=162 visible=107 labels=82 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:43:54.487 [INFO] Overlay packet: camera=True actors=162 visible=107 labels=82 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:43:56.514 [INFO] Overlay packet: camera=True actors=162 visible=107 labels=82 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:43:58.585 [INFO] Overlay packet: camera=True actors=162 visible=107 labels=82 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:44:00.713 [INFO] Overlay packet: camera=True actors=162 visible=107 labels=82 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:44:02.743 [INFO] Overlay packet: camera=True actors=162 visible=107 labels=82 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:44:04.763 [INFO] Overlay packet: camera=True actors=162 visible=107 labels=82 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:44:06.793 [INFO] Overlay packet: camera=True actors=162 visible=107 labels=82 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:44:08.879 [INFO] Overlay packet: camera=True actors=162 visible=107 labels=82 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:44:10.913 [INFO] Overlay packet: camera=True actors=162 visible=107 labels=82 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:44:12.941 [INFO] Overlay packet: camera=True actors=162 visible=107 labels=82 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:44:14.963 [INFO] Overlay packet: camera=True actors=162 visible=107 labels=82 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:44:17.098 [INFO] Overlay packet: camera=True actors=162 visible=107 labels=82 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:44:19.169 [INFO] Overlay packet: camera=True actors=162 visible=107 labels=82 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:44:21.203 [INFO] Overlay packet: camera=True actors=162 visible=107 labels=82 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:44:23.279 [INFO] Overlay packet: camera=True actors=162 visible=107 labels=82 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:44:25.358 [INFO] Overlay packet: camera=True actors=162 visible=107 labels=82 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:44:27.383 [INFO] Overlay packet: camera=True actors=162 visible=107 labels=82 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:44:29.464 [INFO] Overlay packet: camera=True actors=162 visible=107 labels=82 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:44:31.600 [INFO] Overlay packet: camera=True actors=162 visible=107 labels=82 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:44:33.626 [INFO] Overlay packet: camera=True actors=164 visible=109 labels=83 points=26 enabled=True radar=True teamMode=All
+2026-08-23 22:44:35.659 [INFO] Overlay packet: camera=True actors=164 visible=109 labels=83 points=26 enabled=True radar=True teamMode=All
+2026-08-23 22:44:37.738 [INFO] Overlay packet: camera=True actors=164 visible=109 labels=83 points=26 enabled=True radar=True teamMode=All
+2026-08-23 22:44:39.828 [INFO] Overlay packet: camera=True actors=164 visible=109 labels=83 points=26 enabled=True radar=True teamMode=All
+2026-08-23 22:44:41.958 [INFO] Overlay packet: camera=True actors=164 visible=109 labels=83 points=26 enabled=True radar=True teamMode=All
+2026-08-23 22:44:44.086 [INFO] Overlay packet: camera=True actors=164 visible=109 labels=83 points=26 enabled=True radar=True teamMode=All
+2026-08-23 22:44:46.210 [INFO] Overlay packet: camera=True actors=164 visible=109 labels=83 points=26 enabled=True radar=True teamMode=All
+2026-08-23 22:44:48.233 [INFO] Overlay packet: camera=True actors=164 visible=109 labels=83 points=26 enabled=True radar=True teamMode=All
+2026-08-23 22:44:50.312 [INFO] Overlay packet: camera=True actors=164 visible=109 labels=83 points=26 enabled=True radar=True teamMode=All
+2026-08-23 22:44:52.394 [INFO] Overlay packet: camera=True actors=164 visible=109 labels=83 points=26 enabled=True radar=True teamMode=All
+2026-08-23 22:44:54.469 [INFO] Overlay packet: camera=True actors=163 visible=108 labels=82 points=26 enabled=True radar=True teamMode=All
+2026-08-23 22:44:56.500 [INFO] Overlay packet: camera=True actors=163 visible=108 labels=82 points=26 enabled=True radar=True teamMode=All
+2026-08-23 22:44:58.521 [INFO] Overlay packet: camera=True actors=163 visible=108 labels=82 points=26 enabled=True radar=True teamMode=All
+2026-08-23 22:45:00.593 [INFO] Overlay packet: camera=True actors=163 visible=108 labels=82 points=26 enabled=True radar=True teamMode=All
+2026-08-23 22:45:02.673 [INFO] Overlay packet: camera=True actors=163 visible=108 labels=82 points=26 enabled=True radar=True teamMode=All
+2026-08-23 22:45:04.803 [INFO] Overlay packet: camera=True actors=163 visible=108 labels=82 points=26 enabled=True radar=True teamMode=All
+2026-08-23 22:45:06.876 [INFO] Overlay packet: camera=True actors=163 visible=108 labels=82 points=26 enabled=True radar=True teamMode=All
+2026-08-23 22:45:08.909 [INFO] Overlay packet: camera=True actors=163 visible=108 labels=82 points=26 enabled=True radar=True teamMode=All
+2026-08-23 22:45:10.924 [INFO] Overlay packet: camera=True actors=178 visible=122 labels=97 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:45:12.954 [INFO] Overlay packet: camera=True actors=184 visible=125 labels=102 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:45:15.030 [INFO] Overlay packet: camera=True actors=187 visible=128 labels=105 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:45:17.154 [INFO] Overlay packet: camera=True actors=187 visible=128 labels=105 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:45:19.233 [INFO] Overlay packet: camera=True actors=187 visible=128 labels=105 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:45:21.312 [INFO] Overlay packet: camera=True actors=186 visible=127 labels=104 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:45:23.439 [INFO] Overlay packet: camera=True actors=188 visible=129 labels=105 points=24 enabled=True radar=True teamMode=All
+2026-08-23 22:45:25.514 [INFO] Overlay packet: camera=True actors=187 visible=128 labels=104 points=24 enabled=True radar=True teamMode=All
+2026-08-23 22:45:27.542 [INFO] Overlay packet: camera=True actors=187 visible=128 labels=104 points=24 enabled=True radar=True teamMode=All
+2026-08-23 22:45:29.564 [INFO] Overlay packet: camera=True actors=186 visible=127 labels=103 points=24 enabled=True radar=True teamMode=All
+2026-08-23 22:45:31.632 [INFO] Overlay packet: camera=True actors=185 visible=126 labels=102 points=24 enabled=True radar=True teamMode=All
+2026-08-23 22:45:33.757 [INFO] Overlay packet: camera=True actors=184 visible=125 labels=101 points=24 enabled=True radar=True teamMode=All
+2026-08-23 22:45:35.837 [INFO] Overlay packet: camera=True actors=185 visible=126 labels=102 points=24 enabled=True radar=True teamMode=All
+2026-08-23 22:45:37.862 [INFO] Overlay packet: camera=True actors=180 visible=124 labels=98 points=26 enabled=True radar=True teamMode=All
+2026-08-23 22:45:39.935 [INFO] Overlay packet: camera=True actors=180 visible=124 labels=98 points=26 enabled=True radar=True teamMode=All
+2026-08-23 22:45:42.062 [INFO] Overlay packet: camera=True actors=180 visible=124 labels=98 points=26 enabled=True radar=True teamMode=All
+2026-08-23 22:45:44.190 [INFO] Overlay packet: camera=True actors=180 visible=124 labels=98 points=26 enabled=True radar=True teamMode=All
+2026-08-23 22:45:46.313 [INFO] Overlay packet: camera=True actors=180 visible=124 labels=98 points=26 enabled=True radar=True teamMode=All
+2026-08-23 22:45:48.390 [INFO] Overlay packet: camera=True actors=180 visible=124 labels=98 points=26 enabled=True radar=True teamMode=All
+2026-08-23 22:45:50.464 [INFO] Overlay packet: camera=True actors=186 visible=127 labels=103 points=24 enabled=True radar=True teamMode=All
+2026-08-23 22:45:52.591 [INFO] Overlay packet: camera=True actors=186 visible=127 labels=103 points=24 enabled=True radar=True teamMode=All
+2026-08-23 22:45:54.663 [INFO] Overlay packet: camera=True actors=186 visible=127 labels=103 points=24 enabled=True radar=True teamMode=All
+2026-08-23 22:45:56.739 [INFO] Overlay packet: camera=True actors=186 visible=127 labels=103 points=24 enabled=True radar=True teamMode=All
+2026-08-23 22:45:58.758 [INFO] Overlay packet: camera=True actors=185 visible=126 labels=102 points=24 enabled=True radar=True teamMode=All
+2026-08-23 22:46:00.775 [INFO] Overlay packet: camera=True actors=184 visible=125 labels=101 points=24 enabled=True radar=True teamMode=All
+2026-08-23 22:46:02.897 [INFO] Overlay packet: camera=True actors=184 visible=125 labels=101 points=24 enabled=True radar=True teamMode=All
+2026-08-23 22:46:05.023 [INFO] Overlay packet: camera=True actors=184 visible=125 labels=101 points=24 enabled=True radar=True teamMode=All
+2026-08-23 22:46:07.151 [INFO] Overlay packet: camera=True actors=184 visible=125 labels=101 points=24 enabled=True radar=True teamMode=All
+2026-08-23 22:46:09.274 [INFO] Overlay packet: camera=True actors=186 visible=127 labels=102 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:46:11.304 [INFO] Overlay packet: camera=True actors=185 visible=126 labels=101 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:46:13.335 [INFO] Overlay packet: camera=True actors=183 visible=124 labels=99 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:46:15.462 [INFO] Overlay packet: camera=True actors=183 visible=124 labels=99 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:46:17.583 [INFO] Overlay packet: camera=True actors=183 visible=124 labels=99 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:46:19.612 [INFO] Overlay packet: camera=True actors=183 visible=124 labels=99 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:46:21.741 [INFO] Overlay packet: camera=True actors=183 visible=124 labels=99 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:46:23.822 [INFO] Overlay packet: camera=True actors=183 visible=124 labels=99 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:46:25.908 [INFO] Overlay packet: camera=True actors=182 visible=123 labels=98 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:46:27.934 [INFO] Overlay packet: camera=True actors=182 visible=123 labels=98 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:46:30.062 [INFO] Overlay packet: camera=True actors=182 visible=123 labels=98 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:46:32.142 [INFO] Overlay packet: camera=True actors=182 visible=123 labels=98 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:46:34.221 [INFO] Overlay packet: camera=True actors=181 visible=122 labels=97 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:46:36.251 [INFO] Overlay packet: camera=True actors=181 visible=122 labels=97 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:46:38.329 [INFO] Overlay packet: camera=True actors=180 visible=121 labels=96 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:46:40.407 [INFO] Overlay packet: camera=True actors=179 visible=120 labels=95 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:46:42.439 [INFO] Overlay packet: camera=True actors=179 visible=120 labels=95 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:46:44.464 [INFO] Overlay packet: camera=True actors=179 visible=120 labels=95 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:46:46.546 [INFO] Overlay packet: camera=True actors=179 visible=120 labels=95 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:46:48.622 [INFO] Overlay packet: camera=True actors=179 visible=120 labels=95 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:46:50.650 [INFO] Overlay packet: camera=True actors=180 visible=121 labels=96 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:46:52.780 [INFO] Overlay packet: camera=True actors=187 visible=128 labels=103 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:46:54.855 [INFO] Overlay packet: camera=True actors=189 visible=129 labels=104 points=25 enabled=True radar=True teamMode=All
+2026-08-23 22:46:56.928 [INFO] Overlay packet: camera=True actors=205 visible=141 labels=118 points=23 enabled=True radar=True teamMode=All
+2026-08-23 22:46:58.956 [INFO] Overlay packet: camera=True actors=206 visible=132 labels=116 points=16 enabled=True radar=True teamMode=All
+2026-08-23 22:47:01.033 [INFO] Overlay packet: camera=True actors=167 visible=87 labels=75 points=12 enabled=True radar=True teamMode=All
+2026-08-23 22:47:03.110 [INFO] Overlay packet: camera=True actors=132 visible=50 labels=40 points=10 enabled=True radar=True teamMode=All
+2026-08-23 22:47:05.134 [INFO] Overlay packet: camera=True actors=183 visible=107 labels=92 points=15 enabled=True radar=True teamMode=All
+2026-08-23 22:47:07.162 [INFO] Overlay packet: camera=True actors=162 visible=82 labels=70 points=12 enabled=True radar=True teamMode=All
+2026-08-23 22:47:09.248 [INFO] Overlay packet: camera=True actors=161 visible=80 labels=69 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:47:11.281 [INFO] Overlay packet: camera=True actors=161 visible=80 labels=69 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:47:13.309 [INFO] Overlay packet: camera=True actors=161 visible=80 labels=69 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:47:15.341 [INFO] Overlay packet: camera=True actors=161 visible=80 labels=69 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:47:17.422 [INFO] Overlay packet: camera=True actors=161 visible=80 labels=69 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:47:19.551 [INFO] Overlay packet: camera=True actors=161 visible=80 labels=69 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:47:21.632 [INFO] Overlay packet: camera=True actors=160 visible=79 labels=68 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:47:23.754 [INFO] Overlay packet: camera=True actors=160 visible=79 labels=68 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:47:25.838 [INFO] Overlay packet: camera=True actors=160 visible=79 labels=68 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:47:27.967 [INFO] Overlay packet: camera=True actors=159 visible=78 labels=67 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:47:30.043 [INFO] Overlay packet: camera=True actors=159 visible=78 labels=67 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:47:32.072 [INFO] Overlay packet: camera=True actors=159 visible=78 labels=67 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:47:34.151 [INFO] Overlay packet: camera=True actors=159 visible=78 labels=67 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:47:36.176 [INFO] Overlay packet: camera=True actors=159 visible=78 labels=67 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:47:38.254 [INFO] Overlay packet: camera=True actors=158 visible=77 labels=66 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:47:40.333 [INFO] Overlay packet: camera=True actors=158 visible=77 labels=66 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:47:42.362 [INFO] Overlay packet: camera=True actors=159 visible=76 labels=65 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:47:44.493 [INFO] Overlay packet: camera=True actors=159 visible=76 labels=65 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:47:46.523 [INFO] Overlay packet: camera=True actors=159 visible=76 labels=65 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:47:48.603 [INFO] Overlay packet: camera=True actors=159 visible=76 labels=65 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:47:50.627 [INFO] Overlay packet: camera=True actors=159 visible=76 labels=65 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:47:52.654 [INFO] Overlay packet: camera=True actors=159 visible=76 labels=65 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:47:54.686 [INFO] Overlay packet: camera=True actors=159 visible=76 labels=65 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:47:56.764 [INFO] Overlay packet: camera=True actors=158 visible=75 labels=64 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:47:58.792 [INFO] Overlay packet: camera=True actors=158 visible=75 labels=64 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:48:00.820 [INFO] Overlay packet: camera=True actors=158 visible=75 labels=64 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:48:02.854 [INFO] Overlay packet: camera=True actors=158 visible=75 labels=64 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:48:04.989 [INFO] Overlay packet: camera=True actors=157 visible=74 labels=63 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:48:07.063 [INFO] Overlay packet: camera=True actors=157 visible=74 labels=63 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:48:09.094 [INFO] Overlay packet: camera=True actors=157 visible=74 labels=63 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:48:11.126 [INFO] Overlay packet: camera=True actors=157 visible=74 labels=63 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:48:13.253 [INFO] Overlay packet: camera=True actors=156 visible=73 labels=62 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:48:15.288 [INFO] Overlay packet: camera=True actors=156 visible=73 labels=62 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:48:17.366 [INFO] Overlay packet: camera=True actors=156 visible=73 labels=62 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:48:19.451 [INFO] Overlay packet: camera=True actors=156 visible=73 labels=62 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:48:21.476 [INFO] Overlay packet: camera=True actors=155 visible=72 labels=61 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:48:23.554 [INFO] Overlay packet: camera=True actors=153 visible=70 labels=59 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:48:25.674 [INFO] Overlay packet: camera=True actors=153 visible=70 labels=59 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:48:27.702 [INFO] Overlay packet: camera=True actors=155 visible=70 labels=59 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:48:29.719 [INFO] Overlay packet: camera=True actors=155 visible=70 labels=59 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:48:31.746 [INFO] Overlay packet: camera=True actors=155 visible=70 labels=59 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:48:33.823 [INFO] Overlay packet: camera=True actors=155 visible=70 labels=59 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:48:35.902 [INFO] Overlay packet: camera=True actors=155 visible=70 labels=59 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:48:37.982 [INFO] Overlay packet: camera=True actors=155 visible=70 labels=59 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:48:40.074 [INFO] Overlay packet: camera=True actors=155 visible=70 labels=59 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:48:42.161 [INFO] Overlay packet: camera=True actors=155 visible=70 labels=59 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:48:44.231 [INFO] Overlay packet: camera=True actors=154 visible=69 labels=58 points=11 enabled=True radar=True teamMode=All
+2026-08-23 22:49:32.151 [INFO] ARK Tracker read-only diagnostic MVP
+2026-08-23 22:49:32.152 [INFO] Target: ARK: Survival Evolved / ShooterGame.exe / UE4 / x64
+2026-08-23 22:49:32.152 [INFO] Access mask: PROCESS_QUERY_INFORMATION | PROCESS_VM_READ (0x0410). No write/injection APIs are used.
+2026-08-23 22:49:32.153 [INFO] Security context: elevated=True SeDebugPrivilege=enabled
+2026-08-23 22:49:32.172 [INFO] Process: name=ShooterGame.exe pid=35744 parentPid=15448 threads=121
+2026-08-23 22:49:32.173 [INFO] Read-only process handle opened successfully.
+2026-08-23 22:49:32.178 [INFO] Target module: ShooterGame.exe base=0x00007FF75D360000 size=0x4DAB000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\ShooterGame.exe
+2026-08-23 22:49:32.178 [INFO] Build fingerprint: fileLength=80346664 lastWriteUtc=2026-08-17T08:21:59Z
+2026-08-23 22:49:32.266 [INFO] Build fingerprint: SHA256=9BC401417A776C5244A1B0B3255DC3AF4A9D73E3F5C1BA96228FBE3FB1A43477
+2026-08-23 22:49:32.266 [INFO] Build profile fingerprint verified.
+2026-08-23 22:49:32.351 [INFO] GNames global=0x00007FF761D6AC78 table=0x0000013C720CFAF0 index0='None'
+2026-08-23 22:49:32.352 [INFO] Scanning readable pages of ShooterGame.exe for the configured GWorld signature...
+2026-08-23 22:49:32.553 [INFO] GWorld signature match: 0x00007FF75E32F190 (matches collected: 1)
+2026-08-23 22:49:32.553 [INFO] Resolved GWorld global address: 0x00007FF761D3C2A8
+2026-08-23 22:49:32.553 [INFO] UWorld: 0x0000013CEFFF1980
+2026-08-23 22:49:32.747 [INFO] Native Direct2D/DirectComposition overlay initialized.
+2026-08-23 22:49:32.900 [INFO] Hotkeys: Insert=True F10=True F6-F9/F11=registered
+2026-08-23 22:49:33.018 [INFO] Overlay packet: camera=True actors=137 visible=64 labels=57 points=7 pitch=-20.1 yaw=65.1 roll=0.0 fov=112.5 camPos=-90689,318962,-33370 enabled=True radar=True teamMode=Enemies
+2026-08-23 22:49:33.032 [INFO] Low-latency pipeline: actors=137 captureMs=2 intervalMs=50 viewHz=250 overlay=True
+2026-08-23 22:49:35.049 [INFO] Overlay packet: camera=True actors=138 visible=64 labels=57 points=7 pitch=-18.2 yaw=-12.3 roll=0.0 fov=112.5 camPos=-90701,319180,-33374 enabled=True radar=True teamMode=Enemies
+2026-08-23 22:49:37.172 [INFO] Overlay packet: camera=True actors=136 visible=64 labels=57 points=7 pitch=-14.5 yaw=148.2 roll=0.0 fov=112.5 camPos=-90446,318887,-33392 enabled=True radar=True teamMode=Enemies
+2026-08-23 22:49:39.297 [INFO] Overlay packet: camera=True actors=135 visible=63 labels=56 points=7 pitch=-14.7 yaw=133.4 roll=0.0 fov=112.5 camPos=-90588,318770,-33391 enabled=True radar=True teamMode=Enemies
+2026-08-23 22:49:41.367 [INFO] Overlay packet: camera=True actors=135 visible=63 labels=56 points=7 pitch=-16.9 yaw=-159.4 roll=0.0 fov=112.5 camPos=-90333,319064,-33387 enabled=True radar=True teamMode=Enemies
+2026-08-23 22:49:43.386 [INFO] Overlay packet: camera=True actors=134 visible=63 labels=56 points=7 pitch=-11.5 yaw=-46.0 roll=0.0 fov=112.5 camPos=-90416,319073,-33318 enabled=True radar=True teamMode=Enemies
+2026-08-23 22:49:45.461 [INFO] Overlay packet: camera=True actors=133 visible=64 labels=56 points=8 pitch=-6.4 yaw=10.5 roll=0.0 fov=112.5 camPos=-85725,316326,-34508 enabled=True radar=True teamMode=Enemies
+2026-08-23 22:49:47.538 [INFO] Overlay packet: camera=True actors=132 visible=63 labels=55 points=8 pitch=-10.3 yaw=138.0 roll=0.0 fov=112.5 camPos=-86182,317286,-34712 enabled=True radar=True teamMode=Enemies
+2026-08-23 22:49:49.653 [INFO] Overlay packet: camera=True actors=138 visible=67 labels=59 points=8 pitch=-8.9 yaw=-139.3 roll=0.0 fov=112.5 camPos=-86086,317514,-34715 enabled=True radar=True teamMode=Enemies
+2026-08-23 22:49:51.676 [INFO] Overlay packet: camera=True actors=138 visible=66 labels=58 points=8 pitch=-8.7 yaw=-126.1 roll=0.0 fov=112.5 camPos=-86104,317554,-34715 enabled=True radar=True teamMode=Enemies
+2026-08-23 22:49:53.743 [INFO] Overlay packet: camera=True actors=138 visible=66 labels=58 points=8 pitch=1.6 yaw=-127.7 roll=0.0 fov=112.5 camPos=-86093,317560,-34277 enabled=True radar=True teamMode=Enemies
+2026-08-23 22:49:55.815 [INFO] Overlay packet: camera=True actors=137 visible=65 labels=57 points=8 pitch=-2.7 yaw=-64.8 roll=0.0 fov=112.5 camPos=-86278,317649,-30429 enabled=True radar=True teamMode=Enemies
+2026-08-23 22:49:57.896 [INFO] Overlay packet: camera=True actors=139 visible=65 labels=57 points=8 pitch=-8.1 yaw=-5.2 roll=0.0 fov=112.5 camPos=-86432,317539,-30419 enabled=True radar=True teamMode=Enemies
+2026-08-23 22:49:59.920 [INFO] Overlay packet: camera=True actors=140 visible=65 labels=57 points=8 pitch=-11.5 yaw=95.7 roll=0.0 fov=112.5 camPos=-86316,317277,-30413 enabled=True radar=True teamMode=Enemies
+2026-08-23 22:50:01.993 [INFO] Overlay packet: camera=True actors=146 visible=67 labels=56 points=11 pitch=-11.2 yaw=91.1 roll=0.0 fov=112.5 camPos=-86330,317281,-30413 enabled=True radar=True teamMode=Enemies
+2026-08-23 22:50:04.066 [INFO] Overlay packet: camera=True actors=154 visible=75 labels=64 points=11 pitch=-10.7 yaw=172.7 roll=0.0 fov=112.5 camPos=-92341,317749,-30999 enabled=True radar=True teamMode=Enemies
+2026-08-23 22:50:06.091 [INFO] Overlay packet: camera=True actors=136 visible=55 labels=45 points=10 pitch=-12.1 yaw=177.0 roll=0.0 fov=112.5 camPos=-116433,335255,-36059 enabled=True radar=True teamMode=Enemies
+2026-08-23 22:50:08.112 [INFO] Overlay packet: camera=True actors=134 visible=52 labels=41 points=11 pitch=-60.8 yaw=-176.4 roll=0.0 fov=112.5 camPos=-121948,335290,-38067 enabled=True radar=True teamMode=Enemies
+2026-08-23 22:50:10.134 [INFO] Overlay packet: camera=True actors=146 visible=65 labels=53 points=12 pitch=-59.0 yaw=-178.2 roll=0.0 fov=112.5 camPos=-118196,330334,-32011 enabled=True radar=True teamMode=Enemies
+2026-08-23 22:50:12.210 [INFO] Overlay packet: camera=True actors=149 visible=64 labels=53 points=11 pitch=-24.1 yaw=-94.4 roll=0.0 fov=112.5 camPos=-120554,332754,-36341 enabled=True radar=True teamMode=Enemies
+2026-08-23 22:50:14.294 [INFO] Overlay packet: camera=True actors=149 visible=64 labels=53 points=11 pitch=-22.4 yaw=-88.9 roll=0.0 fov=112.5 camPos=-120568,332764,-36344 enabled=True radar=True teamMode=Enemies
+2026-08-23 22:50:16.323 [INFO] Overlay packet: camera=True actors=150 visible=64 labels=53 points=11 pitch=-22.4 yaw=-88.9 roll=0.0 fov=112.5 camPos=-120568,332764,-36344 enabled=True radar=True teamMode=Enemies
+2026-08-23 22:50:18.451 [INFO] Overlay packet: camera=True actors=149 visible=64 labels=52 points=12 pitch=-22.4 yaw=-88.9 roll=0.0 fov=112.5 camPos=-122058,332765,-36344 enabled=True radar=True teamMode=Enemies
+2026-08-23 22:50:20.575 [INFO] Overlay packet: camera=True actors=149 visible=64 labels=52 points=12 pitch=3.7 yaw=-88.7 roll=0.0 fov=112.5 camPos=-123754,331202,-36290 enabled=True radar=True teamMode=Enemies
+2026-08-23 22:50:22.701 [INFO] Overlay packet: camera=True actors=161 visible=76 labels=64 points=12 pitch=-22.1 yaw=33.0 roll=0.0 fov=112.5 camPos=-125905,324150,-33415 enabled=True radar=True teamMode=Enemies
+2026-08-23 22:50:24.780 [INFO] Overlay packet: camera=True actors=161 visible=76 labels=64 points=12 pitch=-12.1 yaw=-44.9 roll=0.0 fov=112.5 camPos=-125239,326962,-33484 enabled=True radar=True teamMode=Enemies
+2026-08-23 22:50:26.866 [INFO] Overlay packet: camera=True actors=161 visible=76 labels=64 points=12 pitch=-12.4 yaw=-46.5 roll=0.0 fov=112.5 camPos=-125239,326962,-33484 enabled=True radar=True teamMode=Enemies
+2026-08-23 22:50:28.897 [INFO] Overlay packet: camera=True actors=162 visible=76 labels=64 points=12 pitch=-12.4 yaw=-46.5 roll=0.0 fov=112.5 camPos=-125239,326962,-33484 enabled=True radar=True teamMode=Enemies
+2026-08-23 22:50:30.921 [INFO] Overlay packet: camera=True actors=161 visible=74 labels=62 points=12 pitch=-12.4 yaw=-51.8 roll=0.0 fov=112.5 camPos=-125239,326962,-33484 enabled=True radar=True teamMode=Enemies
+2026-08-24 00:55:01.779 [INFO] ARK Tracker read-only diagnostic MVP
+2026-08-24 00:55:01.780 [INFO] Target: ARK: Survival Evolved / ShooterGame.exe / UE4 / x64
+2026-08-24 00:55:01.780 [INFO] Access mask: PROCESS_QUERY_INFORMATION | PROCESS_VM_READ (0x0410). No write/injection APIs are used.
+2026-08-24 00:55:01.781 [INFO] Security context: elevated=True SeDebugPrivilege=enabled
+2026-08-24 00:55:01.801 [INFO] Process: name=ShooterGame.exe pid=35388 parentPid=15448 threads=124
+2026-08-24 00:55:01.801 [INFO] Read-only process handle opened successfully.
+2026-08-24 00:55:01.805 [INFO] Target module: ShooterGame.exe base=0x00007FF75D360000 size=0x4DAB000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\ShooterGame.exe
+2026-08-24 00:55:01.805 [INFO] Build fingerprint: fileLength=80346664 lastWriteUtc=2026-08-17T08:21:59Z
+2026-08-24 00:55:01.887 [INFO] Build fingerprint: SHA256=9BC401417A776C5244A1B0B3255DC3AF4A9D73E3F5C1BA96228FBE3FB1A43477
+2026-08-24 00:55:01.887 [INFO] Build profile fingerprint verified.
+2026-08-24 00:55:01.969 [INFO] GNames global=0x00007FF761D6AC78 table=0x0000021A5BA3FAF0 index0='None'
+2026-08-24 00:55:01.971 [INFO] Scanning readable pages of ShooterGame.exe for the configured GWorld signature...
+2026-08-24 00:55:02.174 [INFO] GWorld signature match: 0x00007FF75E32F190 (matches collected: 1)
+2026-08-24 00:55:02.174 [INFO] Resolved GWorld global address: 0x00007FF761D3C2A8
+2026-08-24 00:55:02.175 [INFO] UWorld: 0x0000021B60A272C0
+2026-08-24 00:55:02.376 [INFO] Native Direct2D/DirectComposition overlay initialized.
+2026-08-24 00:55:02.545 [INFO] Hotkeys: Insert=True F10=True F6-F9/F11=registered
+2026-08-24 00:55:02.692 [INFO] Overlay packet: camera=True actors=111 visible=57 labels=53 points=4 pitch=-25.2 yaw=21.1 roll=0.0 fov=112.5 camPos=19715,-218047,42201 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 00:55:02.705 [INFO] Low-latency pipeline: actors=111 captureMs=1 intervalMs=50 viewHz=250 overlay=True
+2026-08-24 00:55:04.775 [INFO] Overlay packet: camera=True actors=111 visible=57 labels=53 points=4 pitch=-24.0 yaw=18.6 roll=0.0 fov=112.5 camPos=19713,-218040,42199 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 00:55:06.841 [INFO] Overlay packet: camera=True actors=111 visible=57 labels=53 points=4 pitch=-24.0 yaw=18.6 roll=0.0 fov=112.5 camPos=19713,-218040,42199 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 00:55:08.917 [INFO] Overlay packet: camera=True actors=111 visible=57 labels=53 points=4 pitch=-24.0 yaw=18.6 roll=0.0 fov=112.5 camPos=19713,-218040,42199 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 00:55:10.994 [INFO] Overlay packet: camera=True actors=111 visible=57 labels=53 points=4 pitch=-24.0 yaw=18.6 roll=0.0 fov=112.5 camPos=19713,-218040,42199 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 00:55:13.016 [INFO] Overlay packet: camera=True actors=111 visible=57 labels=53 points=4 pitch=-24.0 yaw=18.6 roll=0.0 fov=112.5 camPos=19713,-218040,42199 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 00:55:15.091 [INFO] Overlay packet: camera=True actors=111 visible=57 labels=53 points=4 pitch=-24.0 yaw=18.6 roll=0.0 fov=112.5 camPos=19713,-218040,42199 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 00:55:17.114 [INFO] Overlay packet: camera=True actors=111 visible=57 labels=53 points=4 pitch=-24.0 yaw=18.6 roll=0.0 fov=112.5 camPos=19713,-218040,42199 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 00:55:19.233 [INFO] Overlay packet: camera=True actors=111 visible=57 labels=53 points=4 pitch=-21.6 yaw=12.5 roll=0.0 fov=112.5 camPos=19713,-218024,42195 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 00:55:21.303 [INFO] Overlay packet: camera=True actors=111 visible=57 labels=53 points=4 pitch=-21.6 yaw=12.5 roll=0.0 fov=112.5 camPos=19713,-218024,42195 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 00:55:23.310 [INFO] Overlay packet: camera=True actors=110 visible=56 labels=52 points=4 pitch=-21.6 yaw=12.5 roll=0.0 fov=112.5 camPos=19713,-218024,42195 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 00:55:25.388 [INFO] Overlay packet: camera=True actors=109 visible=55 labels=51 points=4 pitch=-43.6 yaw=73.6 roll=0.0 fov=112.5 camPos=19779,-218149,42236 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 00:55:27.460 [INFO] Overlay packet: camera=True actors=112 visible=58 labels=54 points=4 pitch=-42.4 yaw=-28.1 roll=0.0 fov=112.5 camPos=20689,-217303,42169 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 00:55:29.537 [INFO] Overlay packet: camera=True actors=113 visible=59 labels=55 points=4 pitch=41.1 yaw=-113.4 roll=0.0 fov=112.5 camPos=20393,-218846,43243 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 00:55:31.605 [INFO] Overlay packet: camera=True actors=113 visible=59 labels=55 points=4 pitch=-17.2 yaw=31.6 roll=0.0 fov=112.5 camPos=19480,-218678,42802 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 00:55:33.738 [INFO] Overlay packet: camera=True actors=111 visible=57 labels=53 points=4 pitch=-18.0 yaw=30.4 roll=0.0 fov=112.5 camPos=19714,-218338,42394 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 00:55:35.761 [INFO] Overlay packet: camera=True actors=111 visible=57 labels=53 points=4 pitch=-18.0 yaw=30.4 roll=0.0 fov=112.5 camPos=19714,-218338,42394 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 00:59:37.793 [INFO] ARK Tracker read-only diagnostic MVP
+2026-08-24 00:59:37.794 [INFO] Target: ARK: Survival Evolved / ShooterGame.exe / UE4 / x64
+2026-08-24 00:59:37.794 [INFO] Access mask: PROCESS_QUERY_INFORMATION | PROCESS_VM_READ (0x0410). No write/injection APIs are used.
+2026-08-24 00:59:37.795 [INFO] Security context: elevated=True SeDebugPrivilege=enabled
+2026-08-24 00:59:37.818 [INFO] Process: name=ShooterGame.exe pid=35388 parentPid=15448 threads=126
+2026-08-24 00:59:37.819 [INFO] Read-only process handle opened successfully.
+2026-08-24 00:59:37.821 [INFO] Target module: ShooterGame.exe base=0x00007FF75D360000 size=0x4DAB000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\ShooterGame.exe
+2026-08-24 00:59:37.821 [INFO] Build fingerprint: fileLength=80346664 lastWriteUtc=2026-08-17T08:21:59Z
+2026-08-24 00:59:37.903 [INFO] Build fingerprint: SHA256=9BC401417A776C5244A1B0B3255DC3AF4A9D73E3F5C1BA96228FBE3FB1A43477
+2026-08-24 00:59:37.903 [INFO] Build profile fingerprint verified.
+2026-08-24 00:59:37.990 [INFO] GNames global=0x00007FF761D6AC78 table=0x0000021A5BA3FAF0 index0='None'
+2026-08-24 00:59:37.990 [INFO] Scanning readable pages of ShooterGame.exe for the configured GWorld signature...
+2026-08-24 00:59:38.200 [INFO] GWorld signature match: 0x00007FF75E32F190 (matches collected: 1)
+2026-08-24 00:59:38.200 [INFO] Resolved GWorld global address: 0x00007FF761D3C2A8
+2026-08-24 00:59:38.200 [INFO] UWorld: 0x0000021B60A272C0
+2026-08-24 00:59:38.419 [INFO] Native Direct2D/DirectComposition overlay initialized.
+2026-08-24 00:59:38.658 [INFO] Hotkeys: Insert=True F10=True F6-F9/F11=registered
+2026-08-24 00:59:38.811 [INFO] Overlay packet: camera=True actors=106 visible=52 labels=48 points=4 pitch=-19.4 yaw=47.6 roll=0.0 fov=112.5 camPos=19989,-218154,42209 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 00:59:38.828 [INFO] Low-latency pipeline: actors=106 captureMs=1 intervalMs=50 viewHz=250 overlay=True
+2026-08-24 00:59:40.888 [INFO] Overlay packet: camera=True actors=106 visible=52 labels=48 points=4 pitch=-19.6 yaw=35.4 roll=0.0 fov=112.5 camPos=19978,-218119,42209 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 00:59:42.959 [INFO] Overlay packet: camera=True actors=106 visible=52 labels=48 points=4 pitch=-18.9 yaw=57.3 roll=0.0 fov=112.5 camPos=20374,-217789,42124 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 00:59:44.980 [INFO] Overlay packet: camera=True actors=106 visible=52 labels=48 points=4 pitch=-11.2 yaw=34.7 roll=0.0 fov=112.5 camPos=19804,-218534,42716 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 00:59:46.997 [INFO] Overlay packet: camera=True actors=106 visible=52 labels=48 points=4 pitch=-11.2 yaw=32.2 roll=0.0 fov=112.5 camPos=20044,-218195,42246 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 00:59:49.066 [INFO] Overlay packet: camera=True actors=106 visible=52 labels=48 points=4 pitch=-12.0 yaw=27.5 roll=0.0 fov=112.5 camPos=20043,-218180,42248 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 00:59:51.086 [INFO] Overlay packet: camera=True actors=106 visible=52 labels=48 points=4 pitch=-12.0 yaw=27.5 roll=0.0 fov=112.5 camPos=20043,-218180,42248 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 00:59:53.102 [INFO] Overlay packet: camera=True actors=106 visible=9 labels=5 points=4 pitch=-12.0 yaw=27.5 roll=0.0 fov=112.5 camPos=20043,-218180,42248 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 00:59:55.126 [INFO] Overlay packet: camera=True actors=106 visible=9 labels=5 points=4 pitch=-12.0 yaw=27.5 roll=0.0 fov=112.5 camPos=20043,-218180,42248 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 00:59:57.192 [INFO] Overlay packet: camera=True actors=106 visible=9 labels=5 points=4 pitch=-12.0 yaw=27.5 roll=0.0 fov=112.5 camPos=20043,-218180,42248 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 00:59:59.220 [INFO] Overlay packet: camera=True actors=106 visible=9 labels=5 points=4 pitch=-12.0 yaw=27.5 roll=0.0 fov=112.5 camPos=20043,-218180,42248 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:00:01.243 [INFO] Overlay packet: camera=True actors=106 visible=9 labels=5 points=4 pitch=-12.0 yaw=27.5 roll=0.0 fov=112.5 camPos=20043,-218180,42248 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:00:03.314 [INFO] Overlay packet: camera=True actors=106 visible=9 labels=5 points=4 pitch=-12.0 yaw=27.5 roll=0.0 fov=112.5 camPos=20043,-218180,42248 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:00:05.374 [INFO] Overlay packet: camera=True actors=106 visible=9 labels=5 points=4 pitch=-12.0 yaw=27.5 roll=0.0 fov=112.5 camPos=20043,-218180,42248 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:00:07.496 [INFO] Overlay packet: camera=True actors=106 visible=9 labels=5 points=4 pitch=-12.0 yaw=27.5 roll=0.0 fov=112.5 camPos=20043,-218180,42248 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:00:09.618 [INFO] Overlay packet: camera=True actors=106 visible=9 labels=5 points=4 pitch=-12.0 yaw=27.5 roll=0.0 fov=112.5 camPos=20043,-218180,42248 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:00:11.637 [INFO] Overlay packet: camera=True actors=107 visible=9 labels=5 points=4 pitch=-12.7 yaw=26.8 roll=0.0 fov=112.5 camPos=20044,-218177,42249 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:00:13.714 [INFO] Overlay packet: camera=True actors=107 visible=9 labels=5 points=4 pitch=-12.7 yaw=26.8 roll=0.0 fov=112.5 camPos=20044,-218177,42249 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:00:15.847 [INFO] Overlay packet: camera=True actors=106 visible=9 labels=5 points=4 pitch=-34.2 yaw=65.1 roll=0.0 fov=112.5 camPos=20427,-217700,42084 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:00:17.873 [INFO] Overlay packet: camera=True actors=107 visible=9 labels=5 points=4 pitch=-21.4 yaw=42.9 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:00:19.890 [INFO] Overlay packet: camera=True actors=106 visible=9 labels=5 points=4 pitch=-21.6 yaw=43.7 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:00:21.910 [INFO] Overlay packet: camera=True actors=106 visible=9 labels=5 points=4 pitch=-22.1 yaw=38.5 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:00:23.971 [INFO] Overlay packet: camera=True actors=105 visible=9 labels=5 points=4 pitch=-22.1 yaw=38.5 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:00:25.994 [INFO] Overlay packet: camera=True actors=105 visible=9 labels=5 points=4 pitch=-22.1 yaw=38.5 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:00:28.013 [INFO] Overlay packet: camera=True actors=105 visible=9 labels=5 points=4 pitch=-22.1 yaw=38.5 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:00:30.129 [INFO] Overlay packet: camera=True actors=106 visible=9 labels=5 points=4 pitch=-22.1 yaw=38.5 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:00:32.245 [INFO] Overlay packet: camera=True actors=106 visible=9 labels=5 points=4 pitch=-22.1 yaw=38.5 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:00:34.367 [INFO] Overlay packet: camera=True actors=106 visible=9 labels=5 points=4 pitch=-22.1 yaw=38.5 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:00:36.440 [INFO] Overlay packet: camera=True actors=106 visible=9 labels=5 points=4 pitch=-22.1 yaw=38.5 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:00:38.511 [INFO] Overlay packet: camera=True actors=105 visible=9 labels=5 points=4 pitch=-22.1 yaw=38.5 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:00:40.586 [INFO] Overlay packet: camera=True actors=104 visible=9 labels=5 points=4 pitch=-22.1 yaw=38.5 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:00:42.609 [INFO] Overlay packet: camera=True actors=104 visible=9 labels=5 points=4 pitch=-22.1 yaw=38.5 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:00:44.627 [INFO] Overlay packet: camera=True actors=104 visible=9 labels=5 points=4 pitch=-22.1 yaw=38.5 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:00:46.739 [INFO] Overlay packet: camera=True actors=103 visible=9 labels=5 points=4 pitch=-22.1 yaw=38.5 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:00:48.815 [INFO] Overlay packet: camera=True actors=103 visible=9 labels=5 points=4 pitch=-22.1 yaw=38.5 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:00:50.830 [INFO] Overlay packet: camera=True actors=103 visible=9 labels=5 points=4 pitch=-22.1 yaw=38.5 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:00:52.849 [INFO] Overlay packet: camera=True actors=103 visible=9 labels=5 points=4 pitch=-22.1 yaw=38.5 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:00:54.869 [INFO] Overlay packet: camera=True actors=103 visible=9 labels=5 points=4 pitch=-22.1 yaw=38.5 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:00:56.895 [INFO] Overlay packet: camera=True actors=103 visible=9 labels=5 points=4 pitch=-22.1 yaw=38.5 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:00:58.911 [INFO] Overlay packet: camera=True actors=103 visible=9 labels=5 points=4 pitch=-22.1 yaw=38.5 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:01:00.981 [INFO] Overlay packet: camera=True actors=103 visible=9 labels=5 points=4 pitch=-22.1 yaw=38.5 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:01:03.001 [INFO] Overlay packet: camera=True actors=103 visible=9 labels=5 points=4 pitch=-22.1 yaw=38.5 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:01:05.071 [INFO] Overlay packet: camera=True actors=103 visible=9 labels=5 points=4 pitch=-22.1 yaw=38.5 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:01:07.095 [INFO] Overlay packet: camera=True actors=102 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:01:09.223 [INFO] Overlay packet: camera=True actors=103 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:01:11.256 [INFO] Overlay packet: camera=True actors=103 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:01:13.277 [INFO] Overlay packet: camera=True actors=103 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:01:15.293 [INFO] Overlay packet: camera=True actors=103 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:01:17.365 [INFO] Overlay packet: camera=True actors=103 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:01:19.389 [INFO] Overlay packet: camera=True actors=103 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:01:21.512 [INFO] Overlay packet: camera=True actors=103 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:01:23.589 [INFO] Overlay packet: camera=True actors=103 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:01:25.610 [INFO] Overlay packet: camera=True actors=103 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:01:27.683 [INFO] Overlay packet: camera=True actors=103 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:01:29.717 [INFO] Overlay packet: camera=True actors=103 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:01:31.828 [INFO] Overlay packet: camera=True actors=103 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:01:33.862 [INFO] Overlay packet: camera=True actors=103 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:01:35.985 [INFO] Overlay packet: camera=True actors=103 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:01:38.055 [INFO] Overlay packet: camera=True actors=103 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:01:40.174 [INFO] Overlay packet: camera=True actors=103 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:01:42.248 [INFO] Overlay packet: camera=True actors=104 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:01:44.270 [INFO] Overlay packet: camera=True actors=104 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:01:46.289 [INFO] Overlay packet: camera=True actors=104 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:01:48.368 [INFO] Overlay packet: camera=True actors=104 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:01:50.389 [INFO] Overlay packet: camera=True actors=104 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:01:52.471 [INFO] Overlay packet: camera=True actors=104 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:01:54.602 [INFO] Overlay packet: camera=True actors=104 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:01:56.671 [INFO] Overlay packet: camera=True actors=104 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:01:58.735 [INFO] Overlay packet: camera=True actors=104 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:02:00.809 [INFO] Overlay packet: camera=True actors=104 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:02:02.932 [INFO] Overlay packet: camera=True actors=103 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:02:05.057 [INFO] Overlay packet: camera=True actors=103 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:02:07.130 [INFO] Overlay packet: camera=True actors=103 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:02:09.206 [INFO] Overlay packet: camera=True actors=103 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:02:11.278 [INFO] Overlay packet: camera=True actors=103 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:02:13.299 [INFO] Overlay packet: camera=True actors=103 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:02:15.371 [INFO] Overlay packet: camera=True actors=103 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:02:17.402 [INFO] Overlay packet: camera=True actors=102 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:02:19.428 [INFO] Overlay packet: camera=True actors=102 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:02:21.451 [INFO] Overlay packet: camera=True actors=102 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:02:23.576 [INFO] Overlay packet: camera=True actors=102 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:02:25.656 [INFO] Overlay packet: camera=True actors=102 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:02:27.783 [INFO] Overlay packet: camera=True actors=102 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:02:29.914 [INFO] Overlay packet: camera=True actors=102 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:02:31.991 [INFO] Overlay packet: camera=True actors=102 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:02:34.065 [INFO] Overlay packet: camera=True actors=102 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:02:36.137 [INFO] Overlay packet: camera=True actors=101 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:02:38.161 [INFO] Overlay packet: camera=True actors=101 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:02:40.234 [INFO] Overlay packet: camera=True actors=101 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:02:42.361 [INFO] Overlay packet: camera=True actors=100 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:02:44.387 [INFO] Overlay packet: camera=True actors=99 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:02:46.454 [INFO] Overlay packet: camera=True actors=99 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:02:48.475 [INFO] Overlay packet: camera=True actors=99 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:02:50.601 [INFO] Overlay packet: camera=True actors=99 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:02:52.622 [INFO] Overlay packet: camera=True actors=99 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:02:54.693 [INFO] Overlay packet: camera=True actors=98 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:02:56.815 [INFO] Overlay packet: camera=True actors=98 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:02:58.949 [INFO] Overlay packet: camera=True actors=98 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:03:01.068 [INFO] Overlay packet: camera=True actors=97 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:03:03.089 [INFO] Overlay packet: camera=True actors=97 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:03:05.114 [INFO] Overlay packet: camera=True actors=98 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:03:07.238 [INFO] Overlay packet: camera=True actors=98 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:03:09.314 [INFO] Overlay packet: camera=True actors=97 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:03:11.377 [INFO] Overlay packet: camera=True actors=97 visible=9 labels=5 points=4 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/9
+2026-08-24 01:03:13.506 [INFO] Overlay packet: camera=True actors=98 visible=10 labels=5 points=5 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/10
+2026-08-24 01:03:15.570 [INFO] Overlay packet: camera=True actors=98 visible=10 labels=5 points=5 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/10
+2026-08-24 01:03:17.588 [INFO] Overlay packet: camera=True actors=98 visible=10 labels=5 points=5 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/10
+2026-08-24 01:03:19.716 [INFO] Overlay packet: camera=True actors=97 visible=10 labels=5 points=5 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/10
+2026-08-24 01:03:21.739 [INFO] Overlay packet: camera=True actors=96 visible=10 labels=5 points=5 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/10
+2026-08-24 01:03:23.761 [INFO] Overlay packet: camera=True actors=96 visible=10 labels=5 points=5 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/10
+2026-08-24 01:03:25.779 [INFO] Overlay packet: camera=True actors=96 visible=10 labels=5 points=5 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/10
+2026-08-24 01:03:27.856 [INFO] Overlay packet: camera=True actors=96 visible=10 labels=5 points=5 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/10
+2026-08-24 01:03:29.927 [INFO] Overlay packet: camera=True actors=97 visible=10 labels=5 points=5 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/10
+2026-08-24 01:03:31.997 [INFO] Overlay packet: camera=True actors=97 visible=10 labels=5 points=5 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/10
+2026-08-24 01:03:34.121 [INFO] Overlay packet: camera=True actors=97 visible=10 labels=5 points=5 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/10
+2026-08-24 01:03:36.231 [INFO] Overlay packet: camera=True actors=97 visible=10 labels=5 points=5 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/10
+2026-08-24 01:03:38.295 [INFO] Overlay packet: camera=True actors=97 visible=10 labels=5 points=5 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/10
+2026-08-24 01:03:40.321 [INFO] Overlay packet: camera=True actors=97 visible=10 labels=5 points=5 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/10
+2026-08-24 01:03:42.345 [INFO] Overlay packet: camera=True actors=96 visible=10 labels=5 points=5 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/10
+2026-08-24 01:03:44.369 [INFO] Overlay packet: camera=True actors=96 visible=10 labels=5 points=5 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/10
+2026-08-24 01:03:46.393 [INFO] Overlay packet: camera=True actors=96 visible=10 labels=5 points=5 pitch=-22.0 yaw=38.4 roll=0.0 fov=112.5 camPos=20398,-217277,42079 enabled=True radar=True teamMode=Enemies structureOwners=0/10
+2026-08-24 01:03:48.469 [INFO] Overlay packet: camera=True actors=96 visible=10 labels=5 points=5 pitch=-30.4 yaw=-11.3 roll=0.0 fov=112.5 camPos=20393,-217373,42084 enabled=True radar=True teamMode=Enemies structureOwners=0/10
+2026-08-24 01:03:50.540 [INFO] Overlay packet: camera=True actors=97 visible=11 labels=5 points=6 pitch=-2.1 yaw=19.6 roll=0.0 fov=112.5 camPos=20723,-216737,41821 enabled=True radar=True teamMode=Enemies structureOwners=0/11
+2026-08-24 01:03:52.565 [INFO] Overlay packet: camera=True actors=98 visible=11 labels=5 points=6 pitch=-5.5 yaw=22.5 roll=0.0 fov=112.5 camPos=20762,-216716,41821 enabled=True radar=True teamMode=Enemies structureOwners=0/11
+2026-08-24 01:03:54.587 [INFO] Overlay packet: camera=True actors=99 visible=11 labels=5 points=6 pitch=-5.5 yaw=22.5 roll=0.0 fov=112.5 camPos=20762,-216716,41821 enabled=True radar=True teamMode=Enemies structureOwners=0/11
+2026-08-24 01:03:56.616 [INFO] Overlay packet: camera=True actors=99 visible=11 labels=5 points=6 pitch=-4.8 yaw=20.5 roll=0.0 fov=112.5 camPos=20762,-216716,41821 enabled=True radar=True teamMode=Enemies structureOwners=0/11
+2026-08-24 01:03:58.643 [INFO] Overlay packet: camera=True actors=99 visible=11 labels=5 points=6 pitch=-4.8 yaw=20.5 roll=0.0 fov=112.5 camPos=20762,-216716,41821 enabled=True radar=True teamMode=Enemies structureOwners=0/11
+2026-08-24 01:04:00.767 [INFO] Overlay packet: camera=True actors=99 visible=11 labels=5 points=6 pitch=-4.8 yaw=20.5 roll=0.0 fov=112.5 camPos=20762,-216716,41821 enabled=True radar=True teamMode=Enemies structureOwners=0/11
+2026-08-24 01:04:02.897 [INFO] Overlay packet: camera=True actors=99 visible=11 labels=5 points=6 pitch=-4.8 yaw=20.5 roll=0.0 fov=112.5 camPos=20762,-216716,41821 enabled=True radar=True teamMode=Enemies structureOwners=0/11
+2026-08-24 01:04:05.022 [INFO] Overlay packet: camera=True actors=98 visible=11 labels=5 points=6 pitch=-4.8 yaw=20.5 roll=0.0 fov=112.5 camPos=20762,-216716,41821 enabled=True radar=True teamMode=Enemies structureOwners=0/11
+2026-08-24 01:04:07.041 [INFO] Overlay packet: camera=True actors=98 visible=11 labels=5 points=6 pitch=-11.3 yaw=-37.4 roll=0.0 fov=112.5 camPos=20668,-216556,41846 enabled=True radar=True teamMode=Enemies structureOwners=0/11

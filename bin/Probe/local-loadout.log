@@ -1,0 +1,468 @@
+2026-08-18 02:06:47.891 [INFO] ARK Tracker read-only diagnostic MVP
+2026-08-18 02:06:47.893 [INFO] Target: ARK: Survival Evolved / ShooterGame.exe / UE4 / x64
+2026-08-18 02:06:47.893 [INFO] Access mask: PROCESS_QUERY_INFORMATION | PROCESS_VM_READ (0x0410). No write/injection APIs are used.
+2026-08-18 02:06:47.895 [INFO] Security context: elevated=False SeDebugPrivilege=unavailable (Win32 error 1300)
+2026-08-18 02:06:47.925 [INFO] Process: name=ShooterGame.exe pid=620 parentPid=14392 threads=121
+2026-08-18 02:06:47.926 [INFO] Read-only process handle opened successfully.
+2026-08-18 02:06:47.931 [INFO] Module: XINPUT1_3.dll base=0x0000000000400000 size=0x1E000 path=C:\WINDOWS\SYSTEM32\XINPUT1_3.dll
+2026-08-18 02:06:47.931 [INFO] Module: steam_api64.dll base=0x000000006A150000 size=0x37000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\Engine\Binaries\ThirdParty\Steamworks\Steamv132\Win64\steam_api64.dll
+2026-08-18 02:06:47.931 [INFO] Module: X3DAudio1_7.dll base=0x000000006A190000 size=0x9000 path=C:\WINDOWS\SYSTEM32\X3DAudio1_7.dll
+2026-08-18 02:06:47.931 [INFO] Module: MFCORE.DLL base=0x000002013A9A0000 size=0x419000 path=C:\WINDOWS\SYSTEM32\MFCORE.DLL
+2026-08-18 02:06:47.931 [INFO] Module: ShooterGame.exe base=0x00007FF7AD1E0000 size=0x4DAB000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\ShooterGame.exe
+2026-08-18 02:06:47.931 [INFO] Module: vivoxsdk.dll base=0x00007FF942E50000 size=0xC4A000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\Engine\Binaries\ThirdParty\VivoxCoreLibrary\Windows\Win64\vivoxsdk.dll
+2026-08-18 02:06:47.931 [INFO] Module: wmvdecod.dll base=0x00007FF95B710000 size=0x2A7000 path=C:\Windows\System32\wmvdecod.dll
+2026-08-18 02:06:47.931 [INFO] Module: APEX_Legacy_x64.dll base=0x00007FF95E810000 size=0x36F000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\Engine\Binaries\ThirdParty\PhysX\PhysX-3.4\Win64\VS2013\APEX_Legacy_x64.dll
+2026-08-18 02:06:47.931 [INFO] Module: APEX_Destructible_x64.dll base=0x00007FF95EB80000 size=0x244000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\Engine\Binaries\ThirdParty\PhysX\PhysX-3.4\Win64\VS2013\APEX_Destructible_x64.dll
+2026-08-18 02:06:47.932 [INFO] Module: d3dcompiler_47_64.dll base=0x00007FF95EDD0000 size=0x48D000 path=C:\WINDOWS\System32\DriverStore\FileRepository\nvrfi.inf_amd64_87b4cb6242e17d7d\NvCamera\d3dcompiler_47_64.dll
+2026-08-18 02:06:47.932 [INFO] Module: NvCamera64.dll base=0x00007FF95F270000 size=0x883000 path=C:\WINDOWS\System32\DriverStore\FileRepository\nvrfi.inf_amd64_87b4cb6242e17d7d\NvCamera\NvCamera64.dll
+2026-08-18 02:06:47.932 [INFO] Module: WMADMOD.DLL base=0x00007FF973E00000 size=0xF5000 path=C:\Windows\System32\WMADMOD.DLL
+2026-08-18 02:06:47.932 [INFO] Module: nvppex.dll base=0x00007FF974EE0000 size=0x727000 path=C:\WINDOWS\System32\DriverStore\FileRepository\nvrfi.inf_amd64_87b4cb6242e17d7d\nvppex.dll
+2026-08-18 02:06:47.932 [INFO] Module: nvspcap64.dll base=0x00007FF975610000 size=0x164000 path=C:\WINDOWS\system32\nvspcap64.dll
+2026-08-18 02:06:47.932 [INFO] Module: mfperfhelper.dll base=0x00007FF979550000 size=0x130000 path=C:\Windows\System32\mfperfhelper.dll
+2026-08-18 02:06:47.932 [INFO] Module: d3d9.dll base=0x00007FF979D20000 size=0x1B2000 path=C:\WINDOWS\SYSTEM32\d3d9.dll
+2026-08-18 02:06:47.932 [INFO] Module: DINPUT8.dll base=0x00007FF97E010000 size=0x4B000 path=C:\WINDOWS\SYSTEM32\DINPUT8.dll
+2026-08-18 02:06:47.932 [INFO] Module: ResampleDmo.DLL base=0x00007FF97E0C0000 size=0xB7000 path=C:\WINDOWS\SYSTEM32\ResampleDmo.DLL
+2026-08-18 02:06:47.932 [INFO] Module: DSOUND.dll base=0x00007FF97E180000 size=0x94000 path=C:\WINDOWS\SYSTEM32\DSOUND.dll
+2026-08-18 02:06:47.932 [INFO] Module: steamclient64.dll base=0x00007FF97FC70000 size=0x1964000 path=C:\Program Files (x86)\Steam\steamclient64.dll
+2026-08-18 02:06:47.932 [INFO] Module: OPENGL32.dll base=0x00007FF9A1EB0000 size=0x10C000 path=C:\WINDOWS\SYSTEM32\OPENGL32.dll
+2026-08-18 02:06:47.932 [INFO] Module: vstdlib_s64.dll base=0x00007FF9A3BC0000 size=0xC3000 path=C:\Program Files (x86)\Steam\vstdlib_s64.dll
+2026-08-18 02:06:47.932 [INFO] Module: tier0_s64.dll base=0x00007FF9A4380000 size=0x30E000 path=C:\Program Files (x86)\Steam\tier0_s64.dll
+2026-08-18 02:06:47.932 [INFO] Module: crashhandler64.dll base=0x00007FF9A6E50000 size=0x1B0000 path=C:\Program Files (x86)\Steam\crashhandler64.dll
+2026-08-18 02:06:47.932 [INFO] Module: PhysX3_x64.dll base=0x00007FF9AAA10000 size=0x2B1000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\Engine\Binaries\ThirdParty\PhysX\PhysX-3.4\Win64\VS2013\PhysX3_x64.dll
+2026-08-18 02:06:47.932 [INFO] Module: Windows.Media.dll base=0x00007FF9B20F0000 size=0x69B000 path=C:\Windows\System32\Windows.Media.dll
+2026-08-18 02:06:47.932 [INFO] Module: GLU32.dll base=0x00007FF9B4B20000 size=0x2D000 path=C:\WINDOWS\SYSTEM32\GLU32.dll
+2026-08-18 02:06:47.932 [INFO] Module: mfasfsrcsnk.dll base=0x00007FF9B8A40000 size=0x184000 path=C:\WINDOWS\System32\mfasfsrcsnk.dll
+2026-08-18 02:06:47.932 [INFO] Module: explorerframe.dll base=0x00007FF9D49E0000 size=0x311000 path=C:\WINDOWS\system32\explorerframe.dll
+2026-08-18 02:06:47.932 [INFO] Module: libprotobuf.dll base=0x00007FF9D84E0000 size=0x276000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\libprotobuf.dll
+2026-08-18 02:06:47.932 [INFO] Module: APEXFramework_x64.dll base=0x00007FF9D8C20000 size=0x12D000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\Engine\Binaries\ThirdParty\PhysX\PhysX-3.4\Win64\VS2013\APEXFramework_x64.dll
+2026-08-18 02:06:47.932 [INFO] Module: mfplay.dll base=0x00007FF9D9680000 size=0x88000 path=C:\WINDOWS\SYSTEM32\mfplay.dll
+2026-08-18 02:06:47.932 [INFO] Module: PhysX3Common_x64.dll base=0x00007FF9D9800000 size=0x1E4000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\Engine\Binaries\ThirdParty\PhysX\PhysX-3.4\Win64\VS2013\PhysX3Common_x64.dll
+2026-08-18 02:06:47.932 [INFO] Module: colorcnv.dll base=0x00007FF9D9A20000 size=0x46000 path=C:\Windows\System32\colorcnv.dll
+2026-08-18 02:06:47.932 [INFO] Module: libvorbis_64.dll base=0x00007FF9D9A70000 size=0x1A5000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\Engine\Binaries\ThirdParty\Vorbis\Win64\VS2013\libvorbis_64.dll
+2026-08-18 02:06:47.932 [INFO] Module: gameoverlayrenderer64.dll base=0x00007FF9D9C20000 size=0x1B7000 path=C:\Program Files (x86)\Steam\gameoverlayrenderer64.dll
+2026-08-18 02:06:47.932 [INFO] Module: XAudio2_7.dll base=0x00007FF9DAAB0000 size=0x8B000 path=C:\WINDOWS\SYSTEM32\XAudio2_7.dll
+2026-08-18 02:06:47.932 [INFO] Module: dataexchange.dll base=0x00007FF9DDE70000 size=0x5C000 path=C:\WINDOWS\system32\dataexchange.dll
+2026-08-18 02:06:47.932 [INFO] Module: GameNetworkingSockets.dll base=0x00007FF9E5170000 size=0x71000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\GameNetworkingSockets.dll
+2026-08-18 02:06:47.932 [INFO] Module: MSVCR120.dll base=0x00007FF9E51F0000 size=0xEF000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\MSVCR120.dll
+2026-08-18 02:06:47.932 [INFO] Module: MSVCP120.dll base=0x00007FF9E59C0000 size=0xA6000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\MSVCP120.dll
+2026-08-18 02:06:47.932 [INFO] Module: AcGenral.DLL base=0x00007FF9E5A70000 size=0x7D000 path=C:\WINDOWS\SYSTEM32\AcGenral.DLL
+2026-08-18 02:06:47.932 [INFO] Module: textinputframework.dll base=0x00007FF9E7E90000 size=0x146000 path=C:\WINDOWS\SYSTEM32\textinputframework.dll
+2026-08-18 02:06:47.932 [INFO] Module: inputhost.dll base=0x00007FF9E7FE0000 size=0x1E3000 path=C:\WINDOWS\SYSTEM32\inputhost.dll
+2026-08-18 02:06:47.932 [INFO] Module: ncryptsslp.dll base=0x00007FF9E9470000 size=0x48000 path=C:\WINDOWS\system32\ncryptsslp.dll
+2026-08-18 02:06:47.932 [INFO] Module: Windows.UI.dll base=0x00007FF9EA940000 size=0x159000 path=C:\Windows\System32\Windows.UI.dll
+2026-08-18 02:06:47.932 [INFO] Module: winmmbase.dll base=0x00007FF9EBD00000 size=0x37000 path=C:\WINDOWS\SYSTEM32\winmmbase.dll
+2026-08-18 02:06:47.932 [INFO] Module: PhysX3Cooking_x64.dll base=0x00007FF9EC5B0000 size=0x4A000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\Engine\Binaries\ThirdParty\PhysX\PhysX-3.4\Win64\VS2013\PhysX3Cooking_x64.dll
+2026-08-18 02:06:47.932 [INFO] Module: Windows.StateRepositoryPS.dll base=0x00007FF9EEA00000 size=0xC4000 path=C:\Windows\System32\Windows.StateRepositoryPS.dll
+2026-08-18 02:06:47.932 [INFO] Module: Windows.ApplicationModel.dll base=0x00007FF9EF010000 size=0xD8000 path=C:\Windows\System32\Windows.ApplicationModel.dll
+2026-08-18 02:06:47.932 [INFO] Module: dbgcore.DLL base=0x00007FF9F0280000 size=0x3B000 path=C:\WINDOWS\SYSTEM32\dbgcore.DLL
+2026-08-18 02:06:47.932 [INFO] Module: PxFoundation_x64.dll base=0x00007FF9F05D0000 size=0x13000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\Engine\Binaries\ThirdParty\PhysX\PhysX-3.4\Win64\VS2013\PxFoundation_x64.dll
+2026-08-18 02:06:47.932 [INFO] Module: windows.staterepositoryclient.dll base=0x00007FF9F1350000 size=0x44000 path=C:\WINDOWS\SYSTEM32\windows.staterepositoryclient.dll
+2026-08-18 02:06:47.932 [INFO] Module: windows.staterepositorycore.dll base=0x00007FF9F16F0000 size=0x1F000 path=C:\WINDOWS\SYSTEM32\windows.staterepositorycore.dll
+2026-08-18 02:06:47.932 [INFO] Module: AUDIOSES.DLL base=0x00007FF9F3E30000 size=0x1B7000 path=C:\WINDOWS\SYSTEM32\AUDIOSES.DLL
+2026-08-18 02:06:47.932 [INFO] Module: srvcli.dll base=0x00007FF9F3FF0000 size=0x29000 path=C:\WINDOWS\SYSTEM32\srvcli.dll
+2026-08-18 02:06:47.932 [INFO] Module: msdmo.dll base=0x00007FF9F4020000 size=0xE000 path=C:\WINDOWS\SYSTEM32\msdmo.dll
+2026-08-18 02:06:47.932 [INFO] Module: SensApi.dll base=0x00007FF9F4040000 size=0xB000 path=C:\WINDOWS\SYSTEM32\SensApi.dll
+2026-08-18 02:06:47.932 [INFO] Module: gameux.dll base=0x00007FF9F4050000 size=0xC000 path=C:\Windows\System32\gameux.dll
+2026-08-18 02:06:47.932 [INFO] Module: XINPUT9_1_0.dll base=0x00007FF9F4120000 size=0x9000 path=C:\WINDOWS\SYSTEM32\XINPUT9_1_0.dll
+2026-08-18 02:06:47.932 [INFO] Module: libvorbisfile_64.dll base=0x00007FF9F4160000 size=0xD000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\Engine\Binaries\ThirdParty\Vorbis\Win64\VS2013\libvorbisfile_64.dll
+2026-08-18 02:06:47.932 [INFO] Module: iertutil.dll base=0x00007FF9F4170000 size=0x2C4000 path=C:\WINDOWS\SYSTEM32\iertutil.dll
+2026-08-18 02:06:47.932 [INFO] Module: urlmon.dll base=0x00007FF9F4490000 size=0x1DD000 path=C:\WINDOWS\SYSTEM32\urlmon.dll
+2026-08-18 02:06:47.932 [INFO] Module: MPR.dll base=0x00007FF9F4680000 size=0x21000 path=C:\WINDOWS\SYSTEM32\MPR.dll
+2026-08-18 02:06:47.932 [INFO] Module: WININET.dll base=0x00007FF9F52B0000 size=0x295000 path=C:\WINDOWS\SYSTEM32\WININET.dll
+2026-08-18 02:06:47.932 [INFO] Module: NvMessageBus.dll base=0x00007FF9F5F50000 size=0x364000 path=C:\WINDOWS\System32\DriverStore\FileRepository\nvrfi.inf_amd64_87b4cb6242e17d7d\Display.NvContainer\NvMessageBus.dll
+2026-08-18 02:06:47.932 [INFO] Module: nvwgf2umx.dll base=0x00007FF9F6440000 size=0x55A5000 path=C:\WINDOWS\System32\DriverStore\FileRepository\nvrfi.inf_amd64_87b4cb6242e17d7d\nvwgf2umx.dll
+2026-08-18 02:06:47.932 [INFO] Module: nvapi64_impl.dll base=0x00007FF9FBCD0000 size=0x577000 path=C:\WINDOWS\system32\DriverStore\FileRepository\nvrfi.inf_amd64_87b4cb6242e17d7d\nvapi64_impl.dll
+2026-08-18 02:06:47.932 [INFO] Module: nvapi64.dll base=0x00007FF9FC3B0000 size=0x89000 path=C:\WINDOWS\SYSTEM32\nvapi64.dll
+2026-08-18 02:06:47.932 [INFO] Module: NvMemMapStoragex.dll base=0x00007FF9FC9C0000 size=0x13B000 path=C:\WINDOWS\System32\DriverStore\FileRepository\nvrfi.inf_amd64_87b4cb6242e17d7d\NvMemMapStoragex.dll
+2026-08-18 02:06:47.932 [INFO] Module: dbghelp.dll base=0x00007FF9FCB00000 size=0x242000 path=C:\WINDOWS\SYSTEM32\dbghelp.dll
+2026-08-18 02:06:47.932 [INFO] Module: WINMM.dll base=0x00007FF9FD740000 size=0x36000 path=C:\WINDOWS\SYSTEM32\WINMM.dll
+2026-08-18 02:06:47.932 [INFO] Module: CompPkgSup.DLL base=0x00007FF9FEB00000 size=0x32000 path=C:\WINDOWS\SYSTEM32\CompPkgSup.DLL
+2026-08-18 02:06:47.932 [INFO] Module: mf.dll base=0x00007FF9FFC20000 size=0x98000 path=C:\WINDOWS\SYSTEM32\mf.dll
+2026-08-18 02:06:47.932 [INFO] Module: RTWorkQ.DLL base=0x00007FFA00580000 size=0x3B000 path=C:\WINDOWS\SYSTEM32\RTWorkQ.DLL
+2026-08-18 02:06:47.932 [INFO] Module: mfplat.dll base=0x00007FFA005C0000 size=0x224000 path=C:\WINDOWS\SYSTEM32\mfplat.dll
+2026-08-18 02:06:47.932 [INFO] Module: XAPOFX1_5.dll base=0x00007FFA01290000 size=0x15000 path=C:\WINDOWS\SYSTEM32\XAPOFX1_5.dll
+2026-08-18 02:06:47.932 [INFO] Module: nvgpucomp64.dll base=0x00007FFA01420000 size=0x5E0E000 path=C:\WINDOWS\System32\DriverStore\FileRepository\nvrfi.inf_amd64_87b4cb6242e17d7d\nvgpucomp64.dll
+2026-08-18 02:06:47.932 [INFO] Module: twinapi.appcore.dll base=0x00007FFA07510000 size=0x250000 path=C:\WINDOWS\system32\twinapi.appcore.dll
+2026-08-18 02:06:47.932 [INFO] Module: ondemandconnroutehelper.dll base=0x00007FFA079C0000 size=0x18000 path=C:\WINDOWS\SYSTEM32\ondemandconnroutehelper.dll
+2026-08-18 02:06:47.932 [INFO] Module: libogg_64.dll base=0x00007FFA07EC0000 size=0xF000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\Engine\Binaries\ThirdParty\Ogg\Win64\VS2013\libogg_64.dll
+2026-08-18 02:06:47.932 [INFO] Module: drvstore.dll base=0x00007FFA082A0000 size=0x17A000 path=C:\WINDOWS\SYSTEM32\drvstore.dll
+2026-08-18 02:06:47.932 [INFO] Module: cryptnet.dll base=0x00007FFA08420000 size=0x3B000 path=C:\WINDOWS\SYSTEM32\cryptnet.dll
+2026-08-18 02:06:47.932 [INFO] Module: nvldumdx.dll base=0x00007FFA08530000 size=0xCA000 path=C:\WINDOWS\System32\DriverStore\FileRepository\nvrfi.inf_amd64_87b4cb6242e17d7d\nvldumdx.dll
+2026-08-18 02:06:47.932 [INFO] Module: dhcpcsvc.DLL base=0x00007FFA08A30000 size=0x25000 path=C:\WINDOWS\SYSTEM32\dhcpcsvc.DLL
+2026-08-18 02:06:47.932 [INFO] Module: WINHTTP.dll base=0x00007FFA08A60000 size=0x128000 path=C:\WINDOWS\SYSTEM32\WINHTTP.dll
+2026-08-18 02:06:47.932 [INFO] Module: CoreUIComponents.dll base=0x00007FFA08B90000 size=0x2E4000 path=C:\WINDOWS\SYSTEM32\CoreUIComponents.dll
+2026-08-18 02:06:47.932 [INFO] Module: VERSION.dll base=0x00007FFA08E80000 size=0xB000 path=C:\WINDOWS\SYSTEM32\VERSION.dll
+2026-08-18 02:06:47.932 [INFO] Module: directxdatabasehelper.dll base=0x00007FFA09210000 size=0x5F000 path=C:\WINDOWS\SYSTEM32\directxdatabasehelper.dll
+2026-08-18 02:06:47.932 [INFO] Module: AppXDeploymentClient.dll base=0x00007FFA09760000 size=0x171000 path=C:\Windows\System32\AppXDeploymentClient.dll
+2026-08-18 02:06:47.932 [INFO] Module: avrt.dll base=0x00007FFA098E0000 size=0xB000 path=C:\WINDOWS\SYSTEM32\avrt.dll
+2026-08-18 02:06:47.932 [INFO] Module: MMDevApi.dll base=0x00007FFA09950000 size=0xA6000 path=C:\WINDOWS\System32\MMDevApi.dll
+2026-08-18 02:06:47.932 [INFO] Module: wintypes.dll base=0x00007FFA0A2D0000 size=0x16A000 path=C:\WINDOWS\SYSTEM32\wintypes.dll
+2026-08-18 02:06:47.932 [INFO] Module: Microsoft.Internal.WarpPal.dll base=0x00007FFA0A9A0000 size=0x19000 path=C:\WINDOWS\SYSTEM32\Microsoft.Internal.WarpPal.dll
+2026-08-18 02:06:47.932 [INFO] Module: WindowsCodecs.dll base=0x00007FFA0AE50000 size=0x22D000 path=C:\WINDOWS\SYSTEM32\WindowsCodecs.dll
+2026-08-18 02:06:47.932 [INFO] Module: DWrite.dll base=0x00007FFA0B090000 size=0x267000 path=C:\WINDOWS\SYSTEM32\DWrite.dll
+2026-08-18 02:06:47.932 [INFO] Module: d3d11.dll base=0x00007FFA0B940000 size=0x260000 path=C:\WINDOWS\SYSTEM32\d3d11.dll
+2026-08-18 02:06:47.932 [INFO] Module: dcomp.dll base=0x00007FFA0BC60000 size=0x225000 path=C:\WINDOWS\SYSTEM32\dcomp.dll
+2026-08-18 02:06:47.932 [INFO] Module: CoreMessaging.dll base=0x00007FFA0C4C0000 size=0x12B000 path=C:\WINDOWS\SYSTEM32\CoreMessaging.dll
+2026-08-18 02:06:47.932 [INFO] Module: PROPSYS.dll base=0x00007FFA0C7E0000 size=0xF4000 path=C:\WINDOWS\SYSTEM32\PROPSYS.dll
+2026-08-18 02:06:47.932 [INFO] Module: apphelp.dll base=0x00007FFA0D060000 size=0x9F000 path=C:\WINDOWS\SYSTEM32\apphelp.dll
+2026-08-18 02:06:47.932 [INFO] Module: Secur32.dll base=0x00007FFA0D110000 size=0xD000 path=C:\WINDOWS\SYSTEM32\Secur32.dll
+2026-08-18 02:06:47.932 [INFO] Module: WINNSI.DLL base=0x00007FFA0D270000 size=0xE000 path=C:\WINDOWS\SYSTEM32\WINNSI.DLL
+2026-08-18 02:06:47.932 [INFO] Module: uxtheme.dll base=0x00007FFA0D2E0000 size=0xA8000 path=C:\WINDOWS\system32\uxtheme.dll
+2026-08-18 02:06:47.932 [INFO] Module: dxcore.dll base=0x00007FFA0D3E0000 size=0x45000 path=C:\WINDOWS\SYSTEM32\dxcore.dll
+2026-08-18 02:06:47.932 [INFO] Module: dxgi.dll base=0x00007FFA0D430000 size=0x13A000 path=C:\WINDOWS\SYSTEM32\dxgi.dll
+2026-08-18 02:06:47.932 [INFO] Module: dwmapi.dll base=0x00007FFA0D590000 size=0x2F000 path=C:\WINDOWS\SYSTEM32\dwmapi.dll
+2026-08-18 02:06:47.932 [INFO] Module: wer.dll base=0x00007FFA0D5E0000 size=0xF2000 path=C:\WINDOWS\SYSTEM32\wer.dll
+2026-08-18 02:06:47.932 [INFO] Module: resourcepolicyclient.dll base=0x00007FFA0D820000 size=0x14000 path=C:\WINDOWS\SYSTEM32\resourcepolicyclient.dll
+2026-08-18 02:06:47.932 [INFO] Module: windows.storage.dll base=0x00007FFA0DC60000 size=0x89B000 path=C:\WINDOWS\SYSTEM32\windows.storage.dll
+2026-08-18 02:06:47.932 [INFO] Module: HID.DLL base=0x00007FFA0E500000 size=0xF000 path=C:\WINDOWS\SYSTEM32\HID.DLL
+2026-08-18 02:06:47.932 [INFO] Module: netutils.dll base=0x00007FFA0E810000 size=0xD000 path=C:\WINDOWS\SYSTEM32\netutils.dll
+2026-08-18 02:06:47.932 [INFO] Module: IPHLPAPI.DLL base=0x00007FFA0E830000 size=0x33000 path=C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL
+2026-08-18 02:06:47.932 [INFO] Module: schannel.DLL base=0x00007FFA0ECB0000 size=0xC5000 path=C:\WINDOWS\system32\schannel.DLL
+2026-08-18 02:06:47.932 [INFO] Module: rsaenh.dll base=0x00007FFA0EDE0000 size=0x39000 path=C:\WINDOWS\system32\rsaenh.dll
+2026-08-18 02:06:47.932 [INFO] Module: kernel.appcore.dll base=0x00007FFA0EE80000 size=0x1B000 path=C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+2026-08-18 02:06:47.932 [INFO] Module: ntmarta.dll base=0x00007FFA0EFB0000 size=0x36000 path=C:\WINDOWS\SYSTEM32\ntmarta.dll
+2026-08-18 02:06:47.932 [INFO] Module: SspiCli.dll base=0x00007FFA0F130000 size=0x49000 path=C:\WINDOWS\SYSTEM32\SspiCli.dll
+2026-08-18 02:06:47.932 [INFO] Module: MSWSOCK.dll base=0x00007FFA0F410000 size=0x6C000 path=C:\WINDOWS\SYSTEM32\MSWSOCK.dll
+2026-08-18 02:06:47.932 [INFO] Module: gpapi.dll base=0x00007FFA0F490000 size=0x25000 path=C:\WINDOWS\SYSTEM32\gpapi.dll
+2026-08-18 02:06:47.932 [INFO] Module: USERENV.dll base=0x00007FFA0F4C0000 size=0x32000 path=C:\WINDOWS\SYSTEM32\USERENV.dll
+2026-08-18 02:06:47.932 [INFO] Module: CRYPTBASE.DLL base=0x00007FFA0F670000 size=0xC000 path=C:\WINDOWS\SYSTEM32\CRYPTBASE.DLL
+2026-08-18 02:06:47.932 [INFO] Module: wldp.dll base=0x00007FFA0F730000 size=0x6A000 path=C:\WINDOWS\SYSTEM32\wldp.dll
+2026-08-18 02:06:47.932 [INFO] Module: CRYPTSP.dll base=0x00007FFA0F830000 size=0x1B000 path=C:\WINDOWS\System32\CRYPTSP.dll
+2026-08-18 02:06:47.932 [INFO] Module: msasn1.dll base=0x00007FFA0F890000 size=0x13000 path=C:\WINDOWS\SYSTEM32\msasn1.dll
+2026-08-18 02:06:47.932 [INFO] Module: NTASN1.dll base=0x00007FFA0F940000 size=0x3F000 path=C:\WINDOWS\SYSTEM32\NTASN1.dll
+2026-08-18 02:06:47.932 [INFO] Module: ncrypt.dll base=0x00007FFA0F990000 size=0x30000 path=C:\WINDOWS\SYSTEM32\ncrypt.dll
+2026-08-18 02:06:47.932 [INFO] Module: cfgmgr32.dll base=0x00007FFA0FD50000 size=0x52000 path=C:\WINDOWS\SYSTEM32\cfgmgr32.dll
+2026-08-18 02:06:47.932 [INFO] Module: DEVOBJ.dll base=0x00007FFA0FDB0000 size=0x2F000 path=C:\WINDOWS\System32\DEVOBJ.dll
+2026-08-18 02:06:47.932 [INFO] Module: DPAPI.DLL base=0x00007FFA0FE10000 size=0xA000 path=C:\WINDOWS\System32\DPAPI.DLL
+2026-08-18 02:06:47.932 [INFO] Module: UMPDC.dll base=0x00007FFA0FE50000 size=0x15000 path=C:\WINDOWS\SYSTEM32\UMPDC.dll
+2026-08-18 02:06:47.932 [INFO] Module: POWRPROF.dll base=0x00007FFA0FE70000 size=0x5E000 path=C:\WINDOWS\SYSTEM32\POWRPROF.dll
+2026-08-18 02:06:47.932 [INFO] Module: bcrypt.dll base=0x00007FFA100C0000 size=0x2A000 path=C:\WINDOWS\SYSTEM32\bcrypt.dll
+2026-08-18 02:06:47.932 [INFO] Module: profapi.dll base=0x00007FFA100F0000 size=0x29000 path=C:\WINDOWS\SYSTEM32\profapi.dll
+2026-08-18 02:06:47.932 [INFO] Module: KERNELBASE.dll base=0x00007FFA101D0000 size=0x3FF000 path=C:\WINDOWS\System32\KERNELBASE.dll
+2026-08-18 02:06:47.932 [INFO] Module: gdi32full.dll base=0x00007FFA105E0000 size=0x129000 path=C:\WINDOWS\System32\gdi32full.dll
+2026-08-18 02:06:47.932 [INFO] Module: bcryptPrimitives.dll base=0x00007FFA107D0000 size=0xAC000 path=C:\WINDOWS\System32\bcryptPrimitives.dll
+2026-08-18 02:06:47.932 [INFO] Module: CRYPT32.dll base=0x00007FFA10890000 size=0x17E000 path=C:\WINDOWS\System32\CRYPT32.dll
+2026-08-18 02:06:47.932 [INFO] Module: win32u.dll base=0x00007FFA10A20000 size=0x27000 path=C:\WINDOWS\System32\win32u.dll
+2026-08-18 02:06:47.932 [INFO] Module: wintrust.dll base=0x00007FFA10A50000 size=0x83000 path=C:\WINDOWS\System32\wintrust.dll
+2026-08-18 02:06:47.932 [INFO] Module: msvcp_win.dll base=0x00007FFA10AE0000 size=0xA3000 path=C:\WINDOWS\System32\msvcp_win.dll
+2026-08-18 02:06:47.932 [INFO] Module: ucrtbase.dll base=0x00007FFA10B90000 size=0x14C000 path=C:\WINDOWS\System32\ucrtbase.dll
+2026-08-18 02:06:47.932 [INFO] Module: Normaliz.dll base=0x00007FFA10D80000 size=0x8000 path=C:\WINDOWS\System32\Normaliz.dll
+2026-08-18 02:06:47.932 [INFO] Module: SHLWAPI.dll base=0x00007FFA10D90000 size=0x66000 path=C:\WINDOWS\System32\SHLWAPI.dll
+2026-08-18 02:06:47.932 [INFO] Module: shcore.dll base=0x00007FFA10E20000 size=0xF9000 path=C:\WINDOWS\System32\shcore.dll
+2026-08-18 02:06:47.932 [INFO] Module: OLEAUT32.dll base=0x00007FFA10F20000 size=0xD9000 path=C:\WINDOWS\System32\OLEAUT32.dll
+2026-08-18 02:06:47.932 [INFO] Module: IMM32.DLL base=0x00007FFA11000000 size=0x32000 path=C:\WINDOWS\System32\IMM32.DLL
+2026-08-18 02:06:47.932 [INFO] Module: WLDAP32.dll base=0x00007FFA11280000 size=0x73000 path=C:\WINDOWS\System32\WLDAP32.dll
+2026-08-18 02:06:47.932 [INFO] Module: NSI.dll base=0x00007FFA11300000 size=0xA000 path=C:\WINDOWS\System32\NSI.dll
+2026-08-18 02:06:47.932 [INFO] Module: advapi32.dll base=0x00007FFA11310000 size=0xBC000 path=C:\WINDOWS\System32\advapi32.dll
+2026-08-18 02:06:47.932 [INFO] Module: RPCRT4.dll base=0x00007FFA113E0000 size=0x118000 path=C:\WINDOWS\System32\RPCRT4.dll
+2026-08-18 02:06:47.932 [INFO] Module: SETUPAPI.dll base=0x00007FFA11500000 size=0x487000 path=C:\WINDOWS\System32\SETUPAPI.dll
+2026-08-18 02:06:47.932 [INFO] Module: WS2_32.dll base=0x00007FFA11990000 size=0x82000 path=C:\WINDOWS\System32\WS2_32.dll
+2026-08-18 02:06:47.932 [INFO] Module: GDI32.dll base=0x00007FFA11AB0000 size=0x2B000 path=C:\WINDOWS\System32\GDI32.dll
+2026-08-18 02:06:47.932 [INFO] Module: imagehlp.dll base=0x00007FFA11AE0000 size=0x20000 path=C:\WINDOWS\System32\imagehlp.dll
+2026-08-18 02:06:47.932 [INFO] Module: KERNEL32.DLL base=0x00007FFA11C30000 size=0xC9000 path=C:\WINDOWS\System32\KERNEL32.DLL
+2026-08-18 02:06:47.932 [INFO] Module: PSAPI.DLL base=0x00007FFA11D00000 size=0x8000 path=C:\WINDOWS\System32\PSAPI.DLL
+2026-08-18 02:06:47.932 [INFO] Module: USER32.dll base=0x00007FFA11D10000 size=0x1C6000 path=C:\WINDOWS\System32\USER32.dll
+2026-08-18 02:06:47.932 [INFO] Module: sechost.dll base=0x00007FFA11EE0000 size=0xAA000 path=C:\WINDOWS\System32\sechost.dll
+2026-08-18 02:06:47.932 [INFO] Module: ole32.dll base=0x00007FFA11F90000 size=0x199000 path=C:\WINDOWS\System32\ole32.dll
+2026-08-18 02:06:47.932 [INFO] Module: clbcatq.dll base=0x00007FFA12130000 size=0xAE000 path=C:\WINDOWS\System32\clbcatq.dll
+2026-08-18 02:06:47.932 [INFO] Module: combase.dll base=0x00007FFA121F0000 size=0x385000 path=C:\WINDOWS\System32\combase.dll
+2026-08-18 02:06:47.932 [INFO] Module: msctf.dll base=0x00007FFA12580000 size=0x15D000 path=C:\WINDOWS\System32\msctf.dll
+2026-08-18 02:06:47.932 [INFO] Module: SHELL32.dll base=0x00007FFA12740000 size=0x788000 path=C:\WINDOWS\System32\SHELL32.dll
+2026-08-18 02:06:47.932 [INFO] Module: msvcrt.dll base=0x00007FFA12ED0000 size=0xA9000 path=C:\WINDOWS\System32\msvcrt.dll
+2026-08-18 02:06:47.932 [INFO] Module: ntdll.dll base=0x00007FFA12FC0000 size=0x266000 path=C:\WINDOWS\SYSTEM32\ntdll.dll
+2026-08-18 02:06:47.933 [INFO] Build fingerprint: fileLength=80346664 lastWriteUtc=2026-08-17T08:21:59Z
+2026-08-18 02:06:48.027 [INFO] Build fingerprint: SHA256=9BC401417A776C5244A1B0B3255DC3AF4A9D73E3F5C1BA96228FBE3FB1A43477
+2026-08-18 02:06:48.027 [INFO] Build profile fingerprint verified.
+2026-08-18 02:06:48.115 [INFO] GNames global=0x00007FF7B1BEAC78 table=0x000002011A7AFAF0 index0='None'
+2026-08-18 02:06:48.116 [INFO] Scanning readable pages of ShooterGame.exe for the configured GWorld signature...
+2026-08-18 02:06:48.338 [INFO] GWorld signature match: 0x00007FF7AE1AF190 (matches collected: 1)
+2026-08-18 02:06:48.339 [INFO] Resolved GWorld global address: 0x00007FF7B1BBC2A8
+2026-08-18 02:06:48.339 [INFO] UWorld: 0x00000203D40CB280
+2026-08-18 02:06:48.341 [INFO] UWorld Levels: data=0x000002025C648400, count=21
+2026-08-18 02:06:48.341 [INFO] PersistentLevel: 0x000002021B503100
+2026-08-18 02:06:48.342 [INFO] Level 0x000002021B503100: Actors data=0x00000201FC09C000, count=842
+2026-08-18 02:06:48.343 [ACTOR] index=0 actor=0x00000201BDB99200 root=0x0000020391B11000 class=PrimalWorldSettings name=PrimalWorldSettings team=0 relative=(0.00, 0.00, 0.00)
+2026-08-18 02:06:48.343 [ACTOR] index=1 actor=0x000002013B961FE0 root=0x0000020391B18800 class=BP_IslandWaterPlane_C name=BP_IslandWaterPlane_C_4 team=0 relative=(1.00, -12400.00, -14465.00)
+2026-08-18 02:06:48.343 [ACTOR] index=2 actor=0x000002027E15CF30 root=0x0000020144B544C0 class=DayCycleAmbientSound name=DayCycleAmbientSound_0 team=0 relative=(68089.28, 267436.60, -6252.46)
+2026-08-18 02:06:48.343 [ACTOR] index=3 actor=0x000002017729D9D0 root=0x00000202666FF200 class=DayCycleAmbientSound name=AmbGlobalRainSound team=0 relative=(68089.28, 267436.60, -6252.46)
+2026-08-18 02:06:48.343 [ACTOR] index=4 actor=0x00000201E9823520 root=0x00000202666FBB00 class=DayCycleAmbientSound name=AmbGlobalRainSoundSnow team=0 relative=(68089.28, 267436.60, -6252.46)
+2026-08-18 02:06:48.343 [ACTOR] index=5 actor=0x00000202850C2480 root=0x00000203F4C66800 class=GroundClutterLayerActor name=Clutter-JungleLeaves team=0 relative=(0.00, 0.00, 0.00)
+2026-08-18 02:06:48.343 [ACTOR] index=6 actor=0x00000202850C3230 root=0x00000203F4C64000 class=GroundClutterLayerActor name=Clutter-SharedGrass team=0 relative=(0.00, 0.00, 0.00)
+2026-08-18 02:06:48.343 [ACTOR] index=7 actor=0x00000202850C36C0 root=0x00000203F4C62800 class=GroundClutterLayerActor name=Clutter-Underwater team=0 relative=(0.00, 0.00, 0.00)
+2026-08-18 02:06:48.343 [ACTOR] index=8 actor=0x00000202850C1240 root=0x00000203F4C63800 class=GroundClutterLayerActor name=Cluter-SharedGround01 team=0 relative=(0.00, 0.00, 0.00)
+2026-08-18 02:06:48.343 [ACTOR] index=9 actor=0x00000202850C16D0 root=0x00000203F4C65800 class=GroundClutterLayerActor name=Clutter-Beach_Sands_Dirt_02 team=0 relative=(0.00, 0.00, 0.00)
+2026-08-18 02:06:48.343 [ACTOR] index=10 actor=0x00000202850C2910 root=0x00000203F4C65000 class=GroundClutterLayerActor name=Clutter-PineNeedle team=0 relative=(0.00, 0.00, 0.00)
+2026-08-18 02:06:48.343 [ACTOR] index=11 actor=0x000002027CD7F9B0 root=0x00000203FE07F800 class=PlayerStart name=PlayerStart_63PrimaryStart team=0 relative=(-361758.60, -440476.00, -14138.78)
+2026-08-18 02:06:48.343 [ACTOR] index=12 actor=0x0000020280AE74E0 root=0x00000203FE078000 class=PlayerStart name=PlayerStart_16 team=0 relative=(-348204.50, -447269.20, -13449.68)
+2026-08-18 02:06:48.343 [ACTOR] index=13 actor=0x0000020280AE2530 root=0x00000203F5A2A800 class=PlayerStart name=PlayerStart_100 team=0 relative=(-408035.90, -406687.10, -14204.74)
+2026-08-18 02:06:48.343 [ACTOR] index=14 actor=0x0000020280AE1FE0 root=0x00000203F5A2B800 class=PlayerStart name=PlayerStart_101 team=0 relative=(-415955.90, -408138.90, -14260.22)
+2026-08-18 02:06:48.343 [ACTOR] index=15 actor=0x0000020280AE0550 root=0x00000203F5A2D800 class=PlayerStart name=PlayerStart_132 team=0 relative=(-410463.90, -316939.80, -14270.87)
+2026-08-18 02:06:48.343 [ACTOR] index=16 actor=0x0000020280AE0000 root=0x00000203F5A2E800 class=PlayerStart name=PlayerStart_133 team=0 relative=(-442973.60, -356229.50, -13996.89)
+2026-08-18 02:06:48.343 [ACTOR] index=17 actor=0x0000020280AE7F80 root=0x00000203FE072800 class=PlayerStart name=PlayerStart_155 team=0 relative=(240164.30, -442553.30, -14252.21)
+2026-08-18 02:06:48.343 [ACTOR] index=18 actor=0x0000020280AE7A30 root=0x00000203FE074000 class=PlayerStart name=PlayerStart_156 team=0 relative=(235647.00, -444541.10, -14253.02)
+2026-08-18 02:06:48.343 [ACTOR] index=19 actor=0x0000020280AE6A40 root=0x00000203FE076800 class=PlayerStart name=PlayerStart_173 team=0 relative=(424240.50, -442405.60, -14238.94)
+2026-08-18 02:06:48.343 [ACTOR] index=20 actor=0x0000020108940AA0 root=0x00000203FE075800 class=PlayerStart name=PlayerStart_174 team=0 relative=(420100.10, -454913.60, -14280.62)
+2026-08-18 02:06:48.343 [ACTOR] index=21 actor=0x0000020108942A80 root=0x00000203FE075000 class=PlayerStart name=PlayerStart_183 team=0 relative=(437734.60, -321877.00, -14149.13)
+2026-08-18 02:06:48.343 [ACTOR] index=22 actor=0x0000020108940550 root=0x00000203FE074800 class=PlayerStart name=PlayerStart_184 team=0 relative=(418251.80, -323477.40, -14270.74)
+2026-08-18 02:06:48.343 [ACTOR] index=23 actor=0x0000020108942530 root=0x00000203FE073800 class=PlayerStart name=PlayerStart_197 team=0 relative=(-240537.30, -408005.80, -14277.18)
+2026-08-18 02:06:48.343 [ACTOR] index=24 actor=0x00000202011CF460 root=0x00000203FE072000 class=PlayerStart name=PlayerStart_198 team=0 relative=(-240570.50, -412592.60, -14249.00)
+2026-08-18 02:06:48.343 [ACTOR] index=25 actor=0x00000202009D2A80 root=0x00000203FE070800 class=PlayerStart name=PlayerStart_206 team=0 relative=(-247862.40, -381485.50, -14237.45)
+2026-08-18 02:06:48.343 [ACTOR] index=26 actor=0x00000202009DC9E0 root=0x00000203FE071000 class=PlayerStart name=PlayerStart_207 team=0 relative=(-239798.80, -374960.20, -14227.27)
+2026-08-18 02:06:48.343 [ACTOR] index=27 actor=0x00000202009D6F90 root=0x00000203FE071800 class=PlayerStart name=PlayerStart_214 team=0 relative=(-196822.10, -368808.80, -14265.86)
+2026-08-18 02:06:48.343 [ACTOR] index=28 actor=0x0000020280AE3520 root=0x00000203F5A29000 class=PlayerStart name=PlayerStart_0 team=0 relative=(-285749.60, 345261.40, -14323.52)
+2026-08-18 02:06:48.343 [ACTOR] index=29 actor=0x000002027CD7C9E0 root=0x00000203FE077800 class=PlayerStart name=PlayerStart_230 team=0 relative=(-295910.00, 344462.50, -14282.60)
+2026-08-18 02:06:48.343 [ACTOR] index=30 actor=0x000002027CD76A40 root=0x00000203FE07E000 class=PlayerStart name=PlayerStart_5 team=0 relative=(-330000.90, 196257.40, -14284.87)
+2026-08-18 02:06:48.344 [ACTOR] index=31 actor=0x000002027CD7AA00 root=0x00000203FE07A800 class=PlayerStart name=PlayerStart_242 team=0 relative=(-310393.00, 187948.40, -14256.63)
+2026-08-18 02:06:48.344 [ACTOR] index=32 actor=0x0000020280AE1540 root=0x00000203F5A2C000 class=PlayerStart name=PlayerStart_11 team=0 relative=(-302533.70, 111416.10, -13846.23)
+2026-08-18 02:06:48.344 [ACTOR] index=33 actor=0x000002027CD794C0 root=0x00000203FE07B000 class=PlayerStart name=PlayerStart_249 team=0 relative=(-292587.70, 110845.60, -14268.06)
+2026-08-18 02:06:48.344 [ACTOR] index=34 actor=0x00000201166D5FA0 root=0x00000203F5A62000 class=PhysicsVolume name=PhysicsVolume_203 team=0 relative=(634974.40, -590064.40, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=35 actor=0x000002011828C490 root=0x00000203F5A68800 class=PhysicsVolume name=PhysicsVolume_25 team=0 relative=(554767.40, -590064.40, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=36 actor=0x000002011828BF40 root=0x00000203F5A69000 class=PhysicsVolume name=PhysicsVolume_26 team=0 relative=(427848.30, -590064.40, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=37 actor=0x000002011828B4A0 root=0x00000203F5A69800 class=PhysicsVolume name=PhysicsVolume_27 team=0 relative=(301068.30, -590064.40, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=38 actor=0x0000020118288F70 root=0x00000203F5A6C800 class=PhysicsVolume name=PhysicsVolume_31 team=0 relative=(174147.90, -590064.40, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=39 actor=0x000002011828A4B0 root=0x00000203F5A6B000 class=PhysicsVolume name=PhysicsVolume_29 team=0 relative=(47138.04, -590064.40, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=40 actor=0x0000020118289A10 root=0x00000203F5A6C000 class=PhysicsVolume name=PhysicsVolume_30 team=0 relative=(-79782.02, -590064.40, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=41 actor=0x0000020104AF5A50 root=0x00000203B0E81000 class=PhysicsVolume name=PhysicsVolume_154 team=0 relative=(-206902.10, -590064.40, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=42 actor=0x0000020118288A20 root=0x00000203F5A6D000 class=PhysicsVolume name=PhysicsVolume_32 team=0 relative=(-333821.70, -590064.40, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=43 actor=0x00000201182884D0 root=0x00000203F5A6E000 class=PhysicsVolume name=PhysicsVolume_33 team=0 relative=(-460831.80, -590064.40, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=44 actor=0x0000020118287A30 root=0x00000203F5A6E800 class=PhysicsVolume name=PhysicsVolume_34 team=0 relative=(-587752.80, -590064.40, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=45 actor=0x00000201182874E0 root=0x00000203F5A6F000 class=PhysicsVolume name=PhysicsVolume_36 team=0 relative=(634974.40, -467406.90, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=46 actor=0x0000020118286F90 root=0x00000203F5A6F800 class=PhysicsVolume name=PhysicsVolume_37 team=0 relative=(554767.40, -467406.90, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=47 actor=0x0000020118286A40 root=0x00000203FCEBA000 class=PhysicsVolume name=PhysicsVolume_38 team=0 relative=(427848.30, -467406.90, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=48 actor=0x00000201182864F0 root=0x00000203FCEB1000 class=PhysicsVolume name=PhysicsVolume_39 team=0 relative=(301068.30, -467406.90, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=49 actor=0x0000020118285A50 root=0x00000203FCEB0000 class=PhysicsVolume name=PhysicsVolume_40 team=0 relative=(174147.90, -467406.90, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=50 actor=0x0000020118285500 root=0x00000203FCEB3800 class=PhysicsVolume name=PhysicsVolume_41 team=0 relative=(47138.04, -467406.90, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=51 actor=0x0000020118284FB0 root=0x00000203FCEB4800 class=PhysicsVolume name=PhysicsVolume_42 team=0 relative=(-79782.02, -467406.90, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=52 actor=0x0000020104AF64F0 root=0x00000203B0E89000 class=PhysicsVolume name=PhysicsVolume_151 team=0 relative=(-206902.10, -467406.90, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=53 actor=0x0000020104AF1A90 root=0x00000203FCD6F800 class=PhysicsVolume name=PhysicsVolume_145 team=0 relative=(-333821.70, -467406.90, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=54 actor=0x000002011828F9B0 root=0x00000203FCEB6000 class=PhysicsVolume name=PhysicsVolume_45 team=0 relative=(-460831.80, -467406.90, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=55 actor=0x000002011828F460 root=0x00000203FCEB6800 class=PhysicsVolume name=PhysicsVolume_46 team=0 relative=(-587752.80, -467406.90, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=56 actor=0x000002011828EF10 root=0x00000203FCEB7800 class=PhysicsVolume name=PhysicsVolume_48 team=0 relative=(634974.40, -344476.90, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=57 actor=0x000002011828E9C0 root=0x00000203FCEB8000 class=PhysicsVolume name=PhysicsVolume_49 team=0 relative=(554767.40, -344476.90, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=58 actor=0x000002027FE11FE0 root=0x00000203FCEB9000 class=PhysicsVolume name=PhysicsVolume_50 team=0 relative=(427848.30, -344476.90, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=59 actor=0x000002027FE11A90 root=0x00000203FCEB9800 class=PhysicsVolume name=PhysicsVolume_51 team=0 relative=(301068.30, -344476.90, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=60 actor=0x000002027FE11540 root=0x00000203FCEBB000 class=PhysicsVolume name=PhysicsVolume_52 team=0 relative=(174147.90, -344476.90, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=61 actor=0x000002027FE10FF0 root=0x00000203FCEBB800 class=PhysicsVolume name=PhysicsVolume_53 team=0 relative=(47138.04, -344476.90, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=62 actor=0x000002027FE10AA0 root=0x00000203FCEBC000 class=PhysicsVolume name=PhysicsVolume_54 team=0 relative=(-79782.02, -344476.90, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=63 actor=0x000002027FE10550 root=0x00000203FCEBC800 class=PhysicsVolume name=PhysicsVolume_55 team=0 relative=(-206902.10, -344476.90, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=64 actor=0x000002027FE10000 root=0x00000203FCEBD000 class=PhysicsVolume name=PhysicsVolume_56 team=0 relative=(-333821.70, -344476.90, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=65 actor=0x000002028067F9B0 root=0x00000203FCEBE000 class=PhysicsVolume name=PhysicsVolume_57 team=0 relative=(-460831.80, -344476.90, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=66 actor=0x000002028067E9C0 root=0x00000203FCEBE800 class=PhysicsVolume name=PhysicsVolume_58 team=0 relative=(-587752.80, -344476.90, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=67 actor=0x000002028067D9D0 root=0x00000203FCEBF800 class=PhysicsVolume name=PhysicsVolume_60 team=0 relative=(634974.40, -221725.50, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=68 actor=0x000002028067D480 root=0x000002027D470000 class=PhysicsVolume name=PhysicsVolume_61 team=0 relative=(554767.40, -221725.50, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=69 actor=0x000002028067CF30 root=0x000002027D471000 class=PhysicsVolume name=PhysicsVolume_62 team=0 relative=(427848.30, -221725.50, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=70 actor=0x000002028067C9E0 root=0x000002027D471800 class=PhysicsVolume name=PhysicsVolume_63 team=0 relative=(301068.30, -221725.50, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=71 actor=0x000002028067F460 root=0x000002027D472000 class=PhysicsVolume name=PhysicsVolume_64 team=0 relative=(174147.90, -221725.50, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=72 actor=0x000002028067EF10 root=0x000002027D472800 class=PhysicsVolume name=PhysicsVolume_65 team=0 relative=(47138.04, -221725.50, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=73 actor=0x0000020280DB84D0 root=0x000002027D473000 class=PhysicsVolume name=PhysicsVolume_66 team=0 relative=(-79782.02, -221725.50, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=74 actor=0x0000020280DB6F90 root=0x000002027D474000 class=PhysicsVolume name=PhysicsVolume_67 team=0 relative=(-206902.10, -221725.50, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=75 actor=0x0000020280DB64F0 root=0x000002027D474800 class=PhysicsVolume name=PhysicsVolume_68 team=0 relative=(-333821.70, -221725.50, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=76 actor=0x0000020280DB5500 root=0x000002027D475000 class=PhysicsVolume name=PhysicsVolume_69 team=0 relative=(-460831.80, -221725.50, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=77 actor=0x0000020280DB4A60 root=0x000002027D476000 class=PhysicsVolume name=PhysicsVolume_70 team=0 relative=(-587752.80, -221725.50, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=78 actor=0x0000020280DB4510 root=0x000002027D477000 class=PhysicsVolume name=PhysicsVolume_72 team=0 relative=(634974.40, -98935.45, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=79 actor=0x0000020280DB3FC0 root=0x000002027D477800 class=PhysicsVolume name=PhysicsVolume_73 team=0 relative=(554767.40, -98935.45, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=80 actor=0x0000020280DB3A70 root=0x000002027D478000 class=PhysicsVolume name=PhysicsVolume_74 team=0 relative=(427848.30, -98935.45, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=81 actor=0x0000020280DB3520 root=0x000002027D478800 class=PhysicsVolume name=PhysicsVolume_75 team=0 relative=(301068.30, -98935.45, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=82 actor=0x0000020280DB2A80 root=0x000002027D479000 class=PhysicsVolume name=PhysicsVolume_76 team=0 relative=(174147.90, -98935.45, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=83 actor=0x0000020280DB2530 root=0x000002027D47A000 class=PhysicsVolume name=PhysicsVolume_77 team=0 relative=(47138.04, -98935.45, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=84 actor=0x0000020104AF5FA0 root=0x00000203B0E8B800 class=PhysicsVolume name=PhysicsVolume_152 team=0 relative=(-79782.02, -98935.45, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=85 actor=0x0000020280DB1A90 root=0x000002027D47B000 class=PhysicsVolume name=PhysicsVolume_79 team=0 relative=(-206902.10, -98935.45, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=86 actor=0x0000020280DB0FF0 root=0x000002027D47C000 class=PhysicsVolume name=PhysicsVolume_80 team=0 relative=(-333821.70, -98935.45, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=87 actor=0x0000020280DB0AA0 root=0x000002027D47C800 class=PhysicsVolume name=PhysicsVolume_81 team=0 relative=(-460831.80, -98935.45, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=88 actor=0x0000020280DB0550 root=0x000002027D47D000 class=PhysicsVolume name=PhysicsVolume_82 team=0 relative=(-587752.80, -98935.45, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=89 actor=0x0000020280DBF9B0 root=0x000002027D47E000 class=PhysicsVolume name=PhysicsVolume_84 team=0 relative=(634974.40, 23824.36, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=90 actor=0x0000020280DBF460 root=0x000002027D47E800 class=PhysicsVolume name=PhysicsVolume_85 team=0 relative=(554767.40, 23824.36, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=91 actor=0x0000020280DBEF10 root=0x000002027D47F000 class=PhysicsVolume name=PhysicsVolume_86 team=0 relative=(427848.30, 23824.36, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=92 actor=0x0000020280DBE9C0 root=0x000002027D47F800 class=PhysicsVolume name=PhysicsVolume_87 team=0 relative=(301068.30, 23824.36, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=93 actor=0x0000020280DBE470 root=0x00000203D421B000 class=PhysicsVolume name=PhysicsVolume_88 team=0 relative=(174147.90, 23824.36, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=94 actor=0x0000020280DBDF20 root=0x00000203D421A800 class=PhysicsVolume name=PhysicsVolume_89 team=0 relative=(47138.04, 23824.36, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=95 actor=0x0000020280DBD480 root=0x00000203D421A000 class=PhysicsVolume name=PhysicsVolume_90 team=0 relative=(-79782.02, 23824.36, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=96 actor=0x0000020280DBCF30 root=0x00000203D4219800 class=PhysicsVolume name=PhysicsVolume_91 team=0 relative=(-206902.10, 23824.36, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=97 actor=0x0000020280DBC9E0 root=0x00000203D4219000 class=PhysicsVolume name=PhysicsVolume_92 team=0 relative=(-333821.70, 23824.36, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=98 actor=0x0000020280DBC490 root=0x00000203D4218000 class=PhysicsVolume name=PhysicsVolume_93 team=0 relative=(-460831.80, 23824.36, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=99 actor=0x0000020280DBBF40 root=0x00000203D4217800 class=PhysicsVolume name=PhysicsVolume_94 team=0 relative=(-587752.80, 23824.36, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=100 actor=0x0000020280DBB9F0 root=0x00000203D4216800 class=PhysicsVolume name=PhysicsVolume_96 team=0 relative=(634974.40, 146654.60, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=101 actor=0x0000020280DBB4A0 root=0x00000203D4210000 class=PhysicsVolume name=PhysicsVolume_97 team=0 relative=(554767.40, 146654.60, -31463.00)
+2026-08-18 02:06:48.344 [ACTOR] index=102 actor=0x0000020280DBAF50 root=0x00000203D4211000 class=PhysicsVolume name=PhysicsVolume_98 team=0 relative=(427848.30, 146654.60, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=103 actor=0x0000020280DBAA00 root=0x00000203D4211800 class=PhysicsVolume name=PhysicsVolume_99 team=0 relative=(301068.30, 146654.60, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=104 actor=0x000002027FCA0AA0 root=0x00000203FAB77000 class=PhysicsVolume name=PhysicsVolume_100 team=0 relative=(174147.90, 146654.60, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=105 actor=0x000002027FCA0550 root=0x00000203FAB70000 class=PhysicsVolume name=PhysicsVolume_101 team=0 relative=(47138.04, 146654.60, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=106 actor=0x000002027FCA0000 root=0x00000203FAB70800 class=PhysicsVolume name=PhysicsVolume_102 team=0 relative=(-79782.02, 146654.60, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=107 actor=0x000002027FCAF9B0 root=0x00000203FAB71000 class=PhysicsVolume name=PhysicsVolume_103 team=0 relative=(-206902.10, 146654.60, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=108 actor=0x000002027FCAF460 root=0x00000203FAB72800 class=PhysicsVolume name=PhysicsVolume_104 team=0 relative=(-333821.70, 146654.60, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=109 actor=0x000002027FCAEF10 root=0x00000203FAB73000 class=PhysicsVolume name=PhysicsVolume_105 team=0 relative=(-460831.80, 146654.60, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=110 actor=0x000002027FCAE9C0 root=0x00000203FAB73800 class=PhysicsVolume name=PhysicsVolume_106 team=0 relative=(-587752.80, 146654.60, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=111 actor=0x000002027FCAE470 root=0x00000203FAB74000 class=PhysicsVolume name=PhysicsVolume_108 team=0 relative=(634974.40, 269432.90, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=112 actor=0x000002027FCADF20 root=0x00000203FAB74800 class=PhysicsVolume name=PhysicsVolume_109 team=0 relative=(554767.40, 269432.90, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=113 actor=0x000002027FCAD9D0 root=0x00000203FAB75000 class=PhysicsVolume name=PhysicsVolume_110 team=0 relative=(427848.30, 269432.90, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=114 actor=0x000002027FCAD480 root=0x00000203FAB75800 class=PhysicsVolume name=PhysicsVolume_111 team=0 relative=(301068.30, 269432.90, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=115 actor=0x000002027FCACF30 root=0x00000203FAB76800 class=PhysicsVolume name=PhysicsVolume_112 team=0 relative=(174147.90, 269432.90, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=116 actor=0x000002027FCAC9E0 root=0x00000203FAB7D000 class=PhysicsVolume name=PhysicsVolume_113 team=0 relative=(47138.04, 269432.90, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=117 actor=0x000002027FCAC490 root=0x00000203FAB7E000 class=PhysicsVolume name=PhysicsVolume_114 team=0 relative=(-79782.02, 269432.90, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=118 actor=0x000002027FCABF40 root=0x00000203FAB7E800 class=PhysicsVolume name=PhysicsVolume_115 team=0 relative=(-206902.10, 269432.90, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=119 actor=0x000002027FCAB9F0 root=0x00000203FAB7F000 class=PhysicsVolume name=PhysicsVolume_116 team=0 relative=(-333821.70, 269432.90, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=120 actor=0x000002027FCAB4A0 root=0x00000203FAB7F800 class=PhysicsVolume name=PhysicsVolume_117 team=0 relative=(-460831.80, 269432.90, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=121 actor=0x000002027FCAAF50 root=0x00000203FCD69000 class=PhysicsVolume name=PhysicsVolume_118 team=0 relative=(-587752.80, 269432.90, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=122 actor=0x000002027FCAAA00 root=0x00000203FCD64800 class=PhysicsVolume name=PhysicsVolume_120 team=0 relative=(634974.40, 392213.10, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=123 actor=0x000002027FCAA4B0 root=0x00000203FCD65000 class=PhysicsVolume name=PhysicsVolume_121 team=0 relative=(554767.40, 392213.10, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=124 actor=0x000002027FCA9F60 root=0x00000203FCD65800 class=PhysicsVolume name=PhysicsVolume_122 team=0 relative=(427848.30, 392213.10, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=125 actor=0x000002027FCA9A10 root=0x00000203FCD67000 class=PhysicsVolume name=PhysicsVolume_123 team=0 relative=(301068.30, 392213.10, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=126 actor=0x000002027FCA94C0 root=0x00000203FCD67800 class=PhysicsVolume name=PhysicsVolume_124 team=0 relative=(174147.90, 392213.10, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=127 actor=0x00000201021CF9B0 root=0x00000203FCD6A800 class=PhysicsVolume name=PhysicsVolume_125 team=0 relative=(47138.04, 392213.10, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=128 actor=0x00000201021CF460 root=0x00000203FCD68000 class=PhysicsVolume name=PhysicsVolume_126 team=0 relative=(-79782.02, 392213.10, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=129 actor=0x00000201021CE9C0 root=0x00000203FCD60000 class=PhysicsVolume name=PhysicsVolume_127 team=0 relative=(-206902.10, 392213.10, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=130 actor=0x00000201021CE470 root=0x00000203FCD61000 class=PhysicsVolume name=PhysicsVolume_128 team=0 relative=(-333821.70, 392213.10, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=131 actor=0x00000201021CDF20 root=0x00000203FCD61800 class=PhysicsVolume name=PhysicsVolume_129 team=0 relative=(-460831.80, 392213.10, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=132 actor=0x00000201021CD9D0 root=0x00000203FCD62000 class=PhysicsVolume name=PhysicsVolume_130 team=0 relative=(-587752.80, 392213.10, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=133 actor=0x00000201021CD480 root=0x00000203FCD62800 class=PhysicsVolume name=PhysicsVolume_132 team=0 relative=(634974.40, 514993.10, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=134 actor=0x00000201021CC9E0 root=0x00000203FCD63000 class=PhysicsVolume name=PhysicsVolume_133 team=0 relative=(554767.40, 514993.10, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=135 actor=0x00000201021CBF40 root=0x00000203FCD68800 class=PhysicsVolume name=PhysicsVolume_134 team=0 relative=(427848.30, 514993.10, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=136 actor=0x00000201021CB9F0 root=0x00000203FCD64000 class=PhysicsVolume name=PhysicsVolume_135 team=0 relative=(301068.30, 514993.10, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=137 actor=0x00000201021CB4A0 root=0x00000203FCD66000 class=PhysicsVolume name=PhysicsVolume_136 team=0 relative=(174147.90, 514993.10, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=138 actor=0x00000201021CAF50 root=0x00000203FCD6B800 class=PhysicsVolume name=PhysicsVolume_137 team=0 relative=(47138.04, 514993.10, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=139 actor=0x00000201021CA4B0 root=0x00000203FCD6C000 class=PhysicsVolume name=PhysicsVolume_138 team=0 relative=(-79782.02, 514993.10, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=140 actor=0x00000201021C9F60 root=0x00000203FCD6C800 class=PhysicsVolume name=PhysicsVolume_139 team=0 relative=(-206902.10, 514993.10, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=141 actor=0x00000201021C9A10 root=0x00000203FCD6D000 class=PhysicsVolume name=PhysicsVolume_140 team=0 relative=(-333821.70, 514993.10, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=142 actor=0x00000201021C94C0 root=0x00000203FCD6D800 class=PhysicsVolume name=PhysicsVolume_141 team=0 relative=(-460831.80, 514993.10, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=143 actor=0x0000020104AF6F90 root=0x00000203FCD6E000 class=PhysicsVolume name=PhysicsVolume_142 team=0 relative=(-587752.80, 514993.10, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=144 actor=0x00000201166D4510 root=0x00000203B0E87000 class=PhysicsVolume name=PhysicsVolume_166 team=0 relative=(634787.80, 614271.60, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=145 actor=0x00000201166D3FC0 root=0x00000203B0E87800 class=PhysicsVolume name=PhysicsVolume_167 team=0 relative=(555615.90, 614271.60, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=146 actor=0x00000201166D3A70 root=0x00000203B0E88000 class=PhysicsVolume name=PhysicsVolume_168 team=0 relative=(428696.70, 614271.60, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=147 actor=0x00000201166D3520 root=0x00000203B0E88800 class=PhysicsVolume name=PhysicsVolume_169 team=0 relative=(301916.70, 614271.60, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=148 actor=0x00000201166D2FD0 root=0x00000203B0E8D800 class=PhysicsVolume name=PhysicsVolume_170 team=0 relative=(174996.30, 614271.60, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=149 actor=0x00000201166D2A80 root=0x00000203B0E8E000 class=PhysicsVolume name=PhysicsVolume_171 team=0 relative=(47986.49, 614271.60, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=150 actor=0x00000201166DF9B0 root=0x00000203B0E8A800 class=PhysicsVolume name=PhysicsVolume_172 team=0 relative=(-78933.56, 614271.60, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=151 actor=0x00000201166DF460 root=0x00000203B0E60800 class=PhysicsVolume name=PhysicsVolume_173 team=0 relative=(-206053.70, 614271.60, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=152 actor=0x00000201166DEF10 root=0x00000203B0E60000 class=PhysicsVolume name=PhysicsVolume_174 team=0 relative=(-332973.30, 614271.60, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=153 actor=0x00000201021CAA00 root=0x00000203B0E61800 class=PhysicsVolume name=PhysicsVolume_175 team=0 relative=(-460548.90, 613988.80, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=154 actor=0x00000201166DE9C0 root=0x00000203B0E62000 class=PhysicsVolume name=PhysicsVolume_176 team=0 relative=(-587752.80, 613988.80, -31463.00)
+2026-08-18 02:06:48.345 [ACTOR] index=155 actor=0x00000201E4AC36C0 root=0x00000203FA942800 class=PostProcessVolume name=Snow_PP team=0 relative=(-56480.00, 84520.00, 49990.00)
+2026-08-18 02:06:48.345 [ACTOR] index=156 actor=0x0000020104AF6A40 root=0x00000203FCD6E800 class=PhysicsVolume name=PhysicsVolume_143 team=0 relative=(-266199.30, -425759.60, -14234.36)
+2026-08-18 02:06:48.345 [ACTOR] index=157 actor=0x00000201166DE470 root=0x00000203B0E63000 class=PhysicsVolume name=PhysicsVolume_178 team=0 relative=(-290849.30, -413319.60, -4334.36)
+2026-08-18 02:06:48.345 [ACTOR] index=158 actor=0x00000201166DD480 root=0x00000203B0E64800 class=PhysicsVolume name=PhysicsVolume_181 team=0 relative=(-284209.30, -418359.60, -5104.36)
+2026-08-18 02:06:48.345 [ACTOR] index=159 actor=0x0000020118284A60 root=0x00000203FCEB5000 class=PhysicsVolume name=PhysicsVolume_43 team=0 relative=(-302799.30, -384069.60, 4995.64)
+2026-08-18 02:06:48.345 [ACTOR] index=160 actor=0x00000201166DDF20 root=0x00000203B0E63800 class=PhysicsVolume name=PhysicsVolume_179 team=0 relative=(-279339.30, -420889.60, -13814.36)
+2026-08-18 02:06:48.345 [ACTOR] index=161 actor=0x00000201166DD9D0 root=0x00000203B0E64000 class=PhysicsVolume name=PhysicsVolume_180 team=0 relative=(-256419.30, -433949.60, -13654.36)
+2026-08-18 02:06:48.345 [ACTOR] index=162 actor=0x00000201166DC9E0 root=0x00000203B0E65800 class=PhysicsVolume name=PhysicsVolume_183 team=0 relative=(-313159.30, -353589.60, -904.36)
+2026-08-18 02:06:48.345 [ACTOR] index=163 actor=0x00000201166DC490 root=0x00000203B0E66000 class=PhysicsVolume name=PhysicsVolume_184 team=0 relative=(-343029.30, -317879.60, -274.36)
+2026-08-18 02:06:48.345 [ACTOR] index=164 actor=0x0000020280DB4FB0 root=0x000002027D475800 class=PhysicsVolume name=PhysicsVolume_7 team=0 relative=(-366989.30, -311229.60, -5674.36)
+2026-08-18 02:06:48.345 [ACTOR] index=165 actor=0x0000020280DBD9D0 root=0x00000203D4217000 class=PhysicsVolume name=PhysicsVolume_9 team=0 relative=(-377059.30, -300589.60, -5644.36)
+2026-08-18 02:06:48.345 [ACTOR] index=166 actor=0x0000020280DB1FE0 root=0x000002027D47A800 class=PhysicsVolume name=PhysicsVolume_78 team=0 relative=(-386359.30, -320949.60, -8404.36)
+2026-08-18 02:06:48.345 [ACTOR] index=167 actor=0x00000201166DAF50 root=0x00000203B0E68800 class=PhysicsVolume name=PhysicsVolume_188 team=0 relative=(-381169.30, -305549.60, -6684.36)
+2026-08-18 02:06:48.345 [ACTOR] index=168 actor=0x0000020104AF1FE0 root=0x00000203FCD6F000 class=PhysicsVolume name=PhysicsVolume_144 team=0 relative=(-392609.30, -293419.60, -7594.36)
+2026-08-18 02:06:48.346 [ACTOR] index=169 actor=0x00000201166DA4B0 root=0x00000203B0E69800 class=PhysicsVolume name=PhysicsVolume_190 team=0 relative=(-381509.30, -310299.60, -7464.36)
+2026-08-18 02:06:48.346 [ACTOR] index=170 actor=0x00000201166D9F60 root=0x00000203B0E6A000 class=PhysicsVolume name=PhysicsVolume_191 team=0 relative=(-401009.30, -286109.60, -8444.36)
+2026-08-18 02:06:48.346 [ACTOR] index=171 actor=0x0000020271997FC0 root=0x00000203D421B800 class=PostProcessVolume name=PostProcessVolume_13 team=0 relative=(-257060.00, -433300.00, -14050.00)
+2026-08-18 02:06:48.346 [ACTOR] index=172 actor=0x00000201E3BB0000 root=0x0000020259707000 class=PostProcessVolume name=PostProcessVolume_9 team=0 relative=(-263390.00, -427460.00, -13920.00)
+2026-08-18 02:06:48.346 [ACTOR] index=173 actor=0x00000201E4BD5B40 root=0x00000203F4F7A800 class=PostProcessVolume name=River_PP_3 team=0 relative=(-276010.00, -425030.00, -13500.00)
+2026-08-18 02:06:48.346 [ACTOR] index=174 actor=0x0000020252FCE420 root=0x00000203F4A64800 class=PostProcessVolume name=PostProcessVolume_27 team=0 relative=(-284910.00, -416330.00, -5340.00)
+2026-08-18 02:06:48.346 [ACTOR] index=175 actor=0x0000020271995220 root=0x00000203D421E800 class=PostProcessVolume name=PostProcessVolume_17 team=0 relative=(-290970.00, -413620.00, -4570.00)
+2026-08-18 02:06:48.346 [ACTOR] index=176 actor=0x0000020252FC36C0 root=0x00000203F4A6F000 class=PostProcessVolume name=PostProcessVolume_43 team=0 relative=(-301110.00, -384760.00, 5310.00)
+2026-08-18 02:06:48.346 [ACTOR] index=177 actor=0x0000020271992DA0 root=0x00000203F4A6E800 class=PostProcessVolume name=PostProcessVolume_19 team=0 relative=(-311950.00, -353050.00, -80.00)
+2026-08-18 02:06:48.346 [ACTOR] index=178 actor=0x00000201E386DB00 root=0x00000202596F9000 class=PostProcessVolume name=PostProcessVolume_59 team=0 relative=(-348630.00, -317970.00, -780.00)
+2026-08-18 02:06:48.346 [ACTOR] index=179 actor=0x0000020271990920 root=0x00000203F4A61000 class=PostProcessVolume name=PostProcessVolume_21 team=0 relative=(-368120.00, -311120.00, -5360.00)
+2026-08-18 02:06:48.346 [ACTOR] index=180 actor=0x0000020252FC5220 root=0x00000203F4A6D000 class=PostProcessVolume name=PostProcessVolume_4 team=0 relative=(-380620.00, -309290.00, -7710.00)
+2026-08-18 02:06:48.346 [ACTOR] index=181 actor=0x0000020271991240 root=0x00000203F4A62800 class=PostProcessVolume name=PostProcessVolume_23 team=0 relative=(-377890.00, -300810.00, -5740.00)
+2026-08-18 02:06:48.346 [ACTOR] index=182 actor=0x0000020252FC1240 root=0x00000202596F3000 class=PostProcessVolume name=PostProcessVolume_5 team=0 relative=(-384800.00, -319390.00, -8330.00)
+2026-08-18 02:06:48.346 [ACTOR] index=183 actor=0x00000201FEDE9B20 root=0x00000203F4A63800 class=PostProcessVolume name=PostProcessVolume_25 team=0 relative=(-390590.00, -294830.00, -7280.00)
+2026-08-18 02:06:48.346 [ACTOR] index=184 actor=0x00000201FEDE2DA0 root=0x00000203F4A64000 class=PostProcessVolume name=PostProcessVolume_26 team=0 relative=(-381220.00, -304890.00, -6950.00)
+2026-08-18 02:06:48.346 [ACTOR] index=185 actor=0x00000201E4BDC8C0 root=0x00000203F4F78000 class=PostProcessVolume name=River_PP_15 team=0 relative=(-400630.00, -288290.00, -8510.00)
+2026-08-18 02:06:48.346 [ACTOR] index=186 actor=0x00000201E4BDA440 root=0x00000203F4F77000 class=PostProcessVolume name=River_PP_16 team=0 relative=(-283580.00, -423700.00, -9730.00)
+2026-08-18 02:06:48.346 [ACTOR] index=187 actor=0x0000020104AF4510 root=0x00000203B0E82800 class=PhysicsVolume name=PhysicsVolume_157 team=0 relative=(-284959.30, -419719.60, -10044.36)
+2026-08-18 02:06:48.346 [ACTOR] index=188 actor=0x0000020104AF5500 root=0x00000203B0E80800 class=PhysicsVolume name=PhysicsVolume_153 team=0 relative=(-294229.30, -406989.60, -2294.36)
+2026-08-18 02:06:48.346 [ACTOR] index=189 actor=0x0000020104AF3520 root=0x00000203B0E84800 class=PhysicsVolume name=PhysicsVolume_160 team=0 relative=(-296969.30, -405059.60, -344.36)
+2026-08-18 02:06:48.346 [ACTOR] index=190 actor=0x00000201166D8A20 root=0x00000203B0E6C800 class=PhysicsVolume name=PhysicsVolume_195 team=0 relative=(-301879.30, -402539.60, 225.64)
+2026-08-18 02:06:48.346 [ACTOR] index=191 actor=0x0000020252FC76A0 root=0x00000203F4A6F800 class=PostProcessVolume name=PostProcessVolume_42 team=0 relative=(-293070.00, -406740.00, -2410.00)
+2026-08-18 02:06:48.346 [ACTOR] index=192 actor=0x00000201E3862480 root=0x00000202596FB000 class=PostProcessVolume name=PostProcessVolume_65 team=0 relative=(-295540.00, -404130.00, -470.00)
+2026-08-18 02:06:48.346 [ACTOR] index=193 actor=0x00000201E4BD9200 root=0x00000203F4F71800 class=PostProcessVolume name=River_PP_20 team=0 relative=(-301940.00, -400340.00, 100.00)
+2026-08-18 02:06:48.346 [ACTOR] index=194 actor=0x0000020252FCF660 root=0x00000203F4A65800 class=PostProcessVolume name=PostProcessVolume_28 team=0 relative=(-317040.00, -322850.00, 5150.00)
+2026-08-18 02:06:48.346 [ACTOR] index=195 actor=0x000002011828AF50 root=0x00000203F5A6A000 class=PhysicsVolume name=PhysicsVolume_28 team=0 relative=(-316029.30, -319019.60, 4835.64)
+2026-08-18 02:06:48.346 [ACTOR] index=196 actor=0x0000020104AF2530 root=0x00000203B0E86800 class=PhysicsVolume name=PhysicsVolume_164 team=0 relative=(-303039.30, -300799.60, 6755.64)
+2026-08-18 02:06:48.346 [ACTOR] index=197 actor=0x00000201166D9A10 root=0x00000203B0E6A800 class=PhysicsVolume name=PhysicsVolume_192 team=0 relative=(-292939.30, -286189.60, 8115.64)
+2026-08-18 02:06:48.346 [ACTOR] index=198 actor=0x000002027FCA0FF0 root=0x00000203FAB7B800 class=PhysicsVolume name=PhysicsVolume_10 team=0 relative=(-273199.30, -292989.60, 8465.64)
+2026-08-18 02:06:48.346 [ACTOR] index=199 actor=0x00000201166D64F0 root=0x00000203F5A61800 class=PhysicsVolume name=PhysicsVolume_201 team=0 relative=(-267039.30, -284179.60, 11215.64)
+2026-08-18 02:06:48.346 [ACTOR] index=200 actor=0x00000201E386C8C0 root=0x00000202596F9800 class=PostProcessVolume name=PostProcessVolume_6 team=0 relative=(-303760.00, -300690.00, 7070.00)
+2026-08-18 02:06:48.346 [ACTOR] index=201 actor=0x00000201E3BB9200 root=0x0000020259703800 class=PostProcessVolume name=PostProcessVolume_7 team=0 relative=(-295700.00, -283620.00, 8430.00)
+2026-08-18 02:06:48.346 [ACTOR] index=202 actor=0x0000020252FCAD60 root=0x00000203F4A69000 class=PostProcessVolume name=PostProcessVolume_33 team=0 relative=(-275840.00, -290680.00, 8780.00)
+2026-08-18 02:06:48.346 [ACTOR] index=203 actor=0x00000201E4BD7FC0 root=0x00000203F4F79800 class=PostProcessVolume name=River_PP_24 team=0 relative=(-267660.00, -285120.00, 11530.00)
+2026-08-18 02:06:48.346 [ACTOR] index=204 actor=0x0000020104AF1540 root=0x00000203B0E8B000 class=PhysicsVolume name=PhysicsVolume_146 team=0 relative=(-280869.30, -354789.60, -5314.36)
+2026-08-18 02:06:48.346 [ACTOR] index=205 actor=0x0000020104AF0FF0 root=0x00000203B0E8C000 class=PhysicsVolume name=PhysicsVolume_147 team=0 relative=(-278499.30, -349079.60, -6334.36)
+2026-08-18 02:06:48.346 [ACTOR] index=206 actor=0x00000201166D5A50 root=0x00000203F5A63000 class=PhysicsVolume name=PhysicsVolume_204 team=0 relative=(-270769.30, -354609.60, -6464.36)
+2026-08-18 02:06:48.346 [ACTOR] index=207 actor=0x0000020104AF0550 root=0x00000203B0E8C800 class=PhysicsVolume name=PhysicsVolume_149 team=0 relative=(-262959.30, -356449.60, -8584.36)
+2026-08-18 02:06:48.346 [ACTOR] index=208 actor=0x00000201166D4FB0 root=0x00000203F5A64000 class=PhysicsVolume name=PhysicsVolume_206 team=0 relative=(-258779.30, -358589.60, -9404.36)
+2026-08-18 02:06:48.346 [ACTOR] index=209 actor=0x0000020252FC3FE0 root=0x00000202596FF000 class=PostProcessVolume name=PostProcessVolume_44 team=0 relative=(-276680.00, -352410.00, -5000.00)
+2026-08-18 02:06:48.346 [ACTOR] index=210 actor=0x00000201E3BB1240 root=0x0000020259706800 class=PostProcessVolume name=PostProcessVolume_8 team=0 relative=(-268480.00, -355800.00, -6150.00)
+2026-08-18 02:06:48.346 [ACTOR] index=211 actor=0x0000020271996460 root=0x00000203D421C000 class=PostProcessVolume name=PostProcessVolume_14 team=0 relative=(-261970.00, -356090.00, -8270.00)
+2026-08-18 02:06:48.346 [ACTOR] index=212 actor=0x00000201E4BD6D80 root=0x00000203F4F7A000 class=PostProcessVolume name=River_PP_29 team=0 relative=(-259420.00, -357510.00, -9090.00)
+2026-08-18 02:06:48.346 [ACTOR] index=213 actor=0x000002015A524470 root=0x0000020391B14000 class=StaticMeshActor name=Dirt_Plane_2700 team=0 relative=(-13439.67, -16013.48, -179210.60)
+2026-08-18 02:06:48.346 [ACTOR] index=214 actor=0x000002027E80BFA0 root=0x00000203D458B800 class=PostProcessVolume name=B1_Cave_1 team=0 relative=(-295675.90, -304077.60, 10802.52)
+2026-08-18 02:06:48.346 [ACTOR] index=215 actor=0x000002027E80D1E0 root=0x00000203D458C000 class=PostProcessVolume name=B1_Cave_2 team=0 relative=(-299669.30, -308701.80, 13329.15)
+2026-08-18 02:06:48.346 [ACTOR] index=217 actor=0x000002021AFDA440 root=0x0000020137BF8800 class=AtmosphericFog name=AtmosphericFog_1 team=0 relative=(265460.00, 154900.00, -13370.00)
+2026-08-18 02:06:48.346 [ACTOR] index=220 actor=0x00000203F5A27800 root=0x0000020280AE3FC0 class=CameraActor name=BuildMatineeCamera team=0 relative=(-24545.36, -72079.66, -6822.57)
+2026-08-18 02:06:48.346 [ACTOR] index=221 actor=0x000002021AFD7FC0 root=0x00000202746AC400 class=MatineeValueInterpolationContainer_C name=MatineeValueInterpolationContainer_4 team=0 relative=(-108974.40, 195148.60, -6099.45)
+2026-08-18 02:06:48.346 [ACTOR] index=222 actor=0x000002021AFD0920 root=0x0000020137BF8C00 class=DirectionalLight name=DirectionalLight team=0 relative=(39845.00, 43790.00, -2241.02)
+2026-08-18 02:06:48.346 [ACTOR] index=223 actor=0x000002021AFD4900 root=0x0000020137BF8400 class=SkyLight name=SkyLight1 team=0 relative=(0.00, 0.00, 7855.31)
+2026-08-18 02:06:48.346 [ACTOR] index=224 actor=0x0000020101C6E420 root=0x00000203F5A27000 class=Global_PostProcess_Blueprint_C name=Global_PostProcess_Blueprint team=0 relative=(46492.87, 47630.14, -19560.57)
+2026-08-18 02:06:48.346 [ACTOR] index=225 actor=0x000002015A5236C0 root=0x0000020100D25000 class=WindDirectionalSource name=WindDirectionalSource_0 team=0 relative=(46590.00, 50010.00, -19660.00)
+2026-08-18 02:06:48.346 [ACTOR] index=226 actor=0x000002021AFD1B60 root=0x0000020213503A80 class=ExponentialHeightFog name=WeatherGlobalOutdoorrFog team=0 relative=(0.00, 0.00, 50000.00)
+2026-08-18 02:06:48.346 [ACTOR] index=227 actor=0x00000203F5A28800 root=0x0000020280AE3A70 class=CameraActor name=StartingCamera team=0 relative=(444493.30, -333012.80, -13722.40)
+2026-08-18 02:06:48.346 [ACTOR] index=228 actor=0x00000202B0BBA800 root=0x00000202746A9600 class=BP_Sky_Sphere_C name=BP_Sky_Sphere_C_1 team=0 relative=(1.00, 0.00, 0.00)
+2026-08-18 02:06:48.347 [ACTOR] index=229 actor=0x000002027E8088E0 root=0x00000203F561E000 class=PostProcessVolume name=A1_Underwater_Cave_PP team=0 relative=(-346235.30, -550350.40, -51351.27)
+2026-08-18 02:06:48.347 [ACTOR] index=230 actor=0x000002027EA8C490 root=0x00000203F561D800 class=PhysicsVolume name=A1_Underwater_Cave_Physics team=0 relative=(-352500.00, -546260.00, -52458.33)
+2026-08-18 02:06:48.347 [ACTOR] index=231 actor=0x0000020283A9B4A0 root=0x00000203F62C2000 class=StructurePreventionZoneVolume name=StructurePreventionZoneVolume_66 team=0 relative=(-354872.80, -546457.10, -57917.54)
+2026-08-18 02:06:48.347 [ACTOR] index=232 actor=0x000002027CD7C490 root=0x00000203FE077000 class=PlayerStart name=PlayerStart_215 team=0 relative=(-199776.30, -385315.20, -14209.14)
+2026-08-18 02:06:48.347 [ACTOR] index=233 actor=0x0000020104AF0AA0 root=0x00000203B0E8D000 class=PhysicsVolume name=PhysicsVolume_148 team=0 relative=(-288763.60, -336293.40, -2124.87)
+2026-08-18 02:06:48.347 [ACTOR] index=234 actor=0x00000201E4BD2480 root=0x00000203F4F7B000 class=PostProcessVolume name=River_PP_30 team=0 relative=(-286730.30, -338784.50, -1812.99)
+2026-08-18 02:06:48.347 [ACTOR] index=235 actor=0x000002027E80DB00 root=0x00000203D458D000 class=PostProcessVolume name=B1_LargeCave team=0 relative=(-287748.70, -333124.70, 384.80)
+2026-08-18 02:06:48.347 [ACTOR] index=236 actor=0x0000020104AF0000 root=0x00000203B0E89800 class=PhysicsVolume name=PhysicsVolume_150 team=0 relative=(-286259.80, -344554.30, -491.57)
+2026-08-18 02:06:48.347 [ACTOR] index=237 actor=0x0000020283A9B9F0 root=0x00000203F62C3000 class=StructurePreventionZoneVolume name=StructurePreventionZoneVolume_65 team=0 relative=(-297709.40, -387860.90, -143.27)
+2026-08-18 02:06:48.347 [ACTOR] index=238 actor=0x0000020282DDB4A0 root=0x00000203FD9CB800 class=StructurePreventionZoneVolume name=StructurePreventionZoneVolume_25 team=0 relative=(-280589.90, -383934.50, -8720.51)
+2026-08-18 02:06:48.347 [ACTOR] index=239 actor=0x0000020118284510 root=0x00000203FCEB5800 class=PhysicsVolume name=PhysicsVolume_44 team=0 relative=(-288763.60, -336293.40, -2124.87)
+2026-08-18 02:06:48.347 [ACTOR] index=240 actor=0x0000020271990000 root=0x00000203F4A61800 class=PostProcessVolume name=PostProcessVolume_22 team=0 relative=(-296158.40, -389116.00, 1314.52)
+2026-08-18 02:06:48.347 [ACTOR] index=241 actor=0x000002027E809B20 root=0x00000203F561B800 class=PostProcessVolume name=A1_MiniCave_2 team=0 relative=(-275178.80, -384209.00, -6960.23)
+2026-08-18 02:06:48.347 [ACTOR] index=242 actor=0x0000020252FCDB00 root=0x00000203F4A66000 class=PostProcessVolume name=PostProcessVolume_29 team=0 relative=(-351797.40, -403806.50, -13944.91)
+2026-08-18 02:06:48.347 [ACTOR] index=243 actor=0x0000020282DDF9B0 root=0x00000203FD9C5000 class=StructurePreventionZoneVolume name=StructurePreventionZoneVolume_181 team=0 relative=(-289664.40, -410124.80, -3379.84)
+2026-08-18 02:06:48.347 [ACTOR] index=244 actor=0x000002027E805220 root=0x00000203F5618800 class=PostProcessVolume name=A1_Cave_Lake_Main_PostProcess team=0 relative=(-296140.80, -392088.10, -9192.84)
+2026-08-18 02:06:48.347 [ACTOR] index=245 actor=0x000002027EA8D480 root=0x00000203F5619000 class=PhysicsVolume name=A1_Cave_Lake_Physics team=0 relative=(-301602.40, -389836.30, -9073.53)
+2026-08-18 02:06:48.347 [ACTOR] index=246 actor=0x000002027EA8CF30 root=0x00000203F5619800 class=PhysicsVolume name=A1_Cave_Lake_Physics_2 team=0 relative=(-294238.40, -392769.30, -9570.53)
+2026-08-18 02:06:48.347 [ACTOR] index=247 actor=0x000002027E8076A0 root=0x00000203F561A000 class=PostProcessVolume name=A1_Cave_Lake_PostProcess team=0 relative=(-301381.90, -389554.10, -9189.23)
+2026-08-18 02:06:48.347 [ACTOR] index=248 actor=0x000002027E806D80 root=0x00000203F561A800 class=PostProcessVolume name=A1_Cave_Lake_PostProcess_2 team=0 relative=(-294514.90, -392799.10, -9688.84)
+2026-08-18 02:06:48.347 [ACTOR] index=249 actor=0x000002027E809200 root=0x00000203F561C800 class=PostProcessVolume name=A1_SkellyCave team=0 relative=(-256057.60, -357643.30, -14357.23)
+2026-08-18 02:06:48.347 [ACTOR] index=250 actor=0x00000201166D4A60 root=0x00000203F5A64800 class=PhysicsVolume name=PhysicsVolume_211 team=0 relative=(-288763.60, -336293.40, -2124.87)
+2026-08-18 02:06:48.347 [ACTOR] index=251 actor=0x000002027E150FF0 root=0x00000203F5612800 class=TileStreamingVolume name=A1_1_TS0 team=0 relative=(-288046.30, -406405.60, -3528.11)
+2026-08-18 02:06:48.347 [ACTOR] index=252 actor=0x000002027E150000 root=0x00000203F5613800 class=TileStreamingVolume name=A1_1_TS2 team=0 relative=(-284728.70, -411926.20, -3528.11)
+2026-08-18 02:06:48.350 [INFO] Level 0x000002026503F500: Actors data=0x000002026BFF3F00, count=2
+2026-08-18 02:06:48.350 [INFO] Level 0x000002026503AF00: Actors data=0x0000020235801240, count=265
+2026-08-18 02:06:48.351 [INFO] Level 0x0000020265030380: Actors data=0x000002026BFF8010, count=2
+2026-08-18 02:06:48.351 [INFO] Level 0x000002026503B280: Actors data=0x000002027BC564F0, count=147
+2026-08-18 02:06:48.352 [INFO] Level 0x0000020157098F80: Actors data=0x000002016179E580, count=34
+2026-08-18 02:06:48.352 [INFO] Level 0x0000020117062D80: Actors data=0x000002025C8D9F40, count=49
+2026-08-18 02:06:48.353 [INFO] Level 0x0000020266235780: Actors data=0x0000020104ECD140, count=65
+2026-08-18 02:06:48.353 [INFO] Level 0x000002026746A480: Actors data=0x00000201BEFB2D00, count=8
+2026-08-18 02:06:48.353 [INFO] Level 0x0000020280932680: Actors data=0x000002025C8D3B80, count=49
+2026-08-18 02:06:48.354 [INFO] Level 0x00000201DCB3B600: Actors data=0x000002026C7F1B60, count=282
+2026-08-18 02:06:48.355 [INFO] Level 0x00000201E04F5E80: Actors data=0x00000201E1240000, count=139
+2026-08-18 02:06:48.355 [INFO] Level 0x00000201E04F2A00: Actors data=0x000002021A66E2B0, count=5
+2026-08-18 02:06:48.355 [INFO] Level 0x00000202002D4600: Actors data=0x000002024957B4C0, count=6
+2026-08-18 02:06:48.355 [INFO] Level 0x00000202498EC080: Actors data=0x000002024C0F5B40, count=549
+2026-08-18 02:06:48.358 [INFO] Level 0x00000202498E1500: Actors data=0x000002024A63F500, count=17
+2026-08-18 02:06:48.358 [INFO] Level 0x000002026A0E3B80: Actors data=0x000002025031AA80, count=658
+2026-08-18 02:06:48.360 [INFO] Level 0x0000020134937E00: Actors data=0x00000202506F9970, count=9
+2026-08-18 02:06:48.360 [INFO] Level 0x0000020136D41F80: Actors data=0x000002021B64EF40, count=6
+2026-08-18 02:06:48.360 [INFO] Level 0x00000201FD700A80: Actors data=0x000002014F29C8A0, count=4
+2026-08-18 02:06:48.361 [INFO] Level 0x0000020177246580: Actors data=0x0000020259292400, count=61
+2026-08-18 02:06:48.361 [INFO] Traversal summary: levels=21 actorPointers=3163 roots=3146 locations=3146 logged=250 rejectedReads=36
+2026-08-18 02:06:48.379 [INFO] Local loadout probe: armor=Flak Boots Q4 2086, Giga Poop Swim Bottom Q2 2086, Flak Helmet Q4 2086, Riot Shield Q2 39982, Federation Exo-Chestpiece… hotbar=1:Tek Bow x1 | 2:Harpoon Launcher x1 | 3:Whip x1 | 4:Metal Hatchet x1 | 5:Crossbow x1 | 6:Compound Bow x1 | 7:Awesome SpyGlass! x1 | 8:Sniper Rifle AF24 x1 | 9:Awesome Teleporter x1 | 10:Medical Brew x181
+2026-08-18 02:06:48.396 [INFO] Tracker snapshot: dinos=0 structures=12 players=0 localPlayer=True camera=True fov=112.5 movement=True cameraPos=(559354.10, 534699.40, 20442.21) cameraRot=(-3.46, -140.70, 0.00) rejectedReads=0
+2026-08-18 02:06:48.397 [INFO] TRACK kind=Structure class=SupplyCrate_Level35_C name=Supply Crate level=0 team=0 pos=(212187.90, -112488.30, 33869.70) weapon= armor= hotbar= bones=0
+2026-08-18 02:06:48.397 [INFO] TRACK kind=Structure class=SupplyCrate_Level35_C name=Supply Crate level=0 team=0 pos=(-155534.80, 209104.40, -3935.58) weapon= armor= hotbar= bones=0
+2026-08-18 02:06:48.397 [INFO] TRACK kind=Structure class=SupplyCrate_Level25_Double_C name=Supply Crate level=0 team=0 pos=(77145.72, -101793.50, 38002.57) weapon= armor= hotbar= bones=0
+2026-08-18 02:06:48.397 [INFO] TRACK kind=Structure class=SupplyCrate_Level15_ScorchedEarth_C name=Supply Crate level=0 team=0 pos=(11960.43, 106650.10, 16177.88) weapon= armor= hotbar= bones=0
+2026-08-18 02:06:48.397 [INFO] TRACK kind=Structure class=SupplyCrate_Level03_ScorchedEarth_C name=Supply Crate level=0 team=0 pos=(322489.30, 348952.60, -9743.99) weapon= armor= hotbar= bones=0
+2026-08-18 02:06:48.397 [INFO] TRACK kind=Structure class=SupplyCrate_Level03_C name=Supply Crate level=0 team=0 pos=(-292795.50, -420701.40, -2800.98) weapon= armor= hotbar= bones=0
+2026-08-18 02:06:48.397 [INFO] TRACK kind=Structure class=SupplyCrate_Level15_Double_C name=Supply Crate level=0 team=0 pos=(-81491.74, -28362.26, 33347.67) weapon= armor= hotbar= bones=0
+2026-08-18 02:06:48.397 [INFO] TRACK kind=Structure class=SupplyCrate_Level03_ScorchedEarth_C name=Supply Crate level=0 team=0 pos=(194434.60, 443640.00, -6228.72) weapon= armor= hotbar= bones=0
+2026-08-18 02:06:48.397 [INFO] TRACK kind=Structure class=SupplyCrate_Level15_C name=Supply Crate level=0 team=0 pos=(-316371.50, 355355.90, -10267.73) weapon= armor= hotbar= bones=0
+2026-08-18 02:06:48.397 [INFO] TRACK kind=Structure class=SupplyCrate_Level03_C name=Supply Crate level=0 team=0 pos=(-462877.80, 180721.80, 13493.05) weapon= armor= hotbar= bones=0
+2026-08-18 02:06:48.397 [INFO] TRACK kind=Structure class=SupplyCrate_Level15_C name=Supply Crate level=0 team=0 pos=(244859.60, -350910.70, 48565.12) weapon= armor= hotbar= bones=0
+2026-08-18 02:06:48.397 [INFO] TRACK kind=Structure class=SupplyCrate_Level30_ScorchedEarth_C name=Supply Crate level=0 team=0 pos=(41381.61, 456962.70, 31617.68) weapon= armor= hotbar= bones=0

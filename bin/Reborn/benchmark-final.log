@@ -1,0 +1,4 @@
+2026-08-17 23:49:21.527 [INFO] ARK Tracker read-only diagnostic MVP
+2026-08-17 23:49:21.528 [INFO] Target: ARK: Survival Evolved / ShooterGame.exe / UE4 / x64
+2026-08-17 23:49:21.528 [INFO] Access mask: PROCESS_QUERY_INFORMATION | PROCESS_VM_READ (0x0410). No write/injection APIs are used.
+2026-08-17 23:49:21.542 [ERROR] ShooterGame.exe was not found. Start ASE without BattlEye on your local/private environment, or pass --wait.

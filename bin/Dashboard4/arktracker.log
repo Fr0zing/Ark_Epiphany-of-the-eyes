@@ -1,0 +1,181 @@
+2026-08-17 23:47:41.792 [INFO] ARK Tracker read-only diagnostic MVP
+2026-08-17 23:47:41.793 [INFO] Target: ARK: Survival Evolved / ShooterGame.exe / UE4 / x64
+2026-08-17 23:47:41.793 [INFO] Access mask: PROCESS_QUERY_INFORMATION | PROCESS_VM_READ (0x0410). No write/injection APIs are used.
+2026-08-17 23:47:41.810 [INFO] Process: name=ShooterGame.exe pid=10576 parentPid=18228 threads=125
+2026-08-17 23:47:41.811 [INFO] Read-only process handle opened successfully.
+2026-08-17 23:47:41.814 [INFO] Module: XINPUT1_3.dll base=0x0000000000400000 size=0x1E000 path=C:\WINDOWS\SYSTEM32\XINPUT1_3.dll
+2026-08-17 23:47:41.815 [INFO] Module: steam_api64.dll base=0x000000006F6C0000 size=0x37000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\Engine\Binaries\ThirdParty\Steamworks\Steamv132\Win64\steam_api64.dll
+2026-08-17 23:47:41.815 [INFO] Module: X3DAudio1_7.dll base=0x000000006F700000 size=0x9000 path=C:\WINDOWS\SYSTEM32\X3DAudio1_7.dll
+2026-08-17 23:47:41.815 [INFO] Module: bcryptPrimitives.dll base=0x000002588C3A0000 size=0xA5000 path=C:\WINDOWS\System32\bcryptPrimitives.dll
+2026-08-17 23:47:41.815 [INFO] Module: ShooterGame.exe base=0x00007FF656650000 size=0x4DAB000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\ShooterGame.exe
+2026-08-17 23:47:41.815 [INFO] Module: vivoxsdk.dll base=0x00007FFB65FA0000 size=0xC4A000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\Engine\Binaries\ThirdParty\VivoxCoreLibrary\Windows\Win64\vivoxsdk.dll
+2026-08-17 23:47:41.815 [INFO] Module: wmvdecod.dll base=0x00007FFB66BF0000 size=0x2A5000 path=C:\Windows\System32\wmvdecod.dll
+2026-08-17 23:47:41.815 [INFO] Module: APEX_Legacy_x64.dll base=0x00007FFB681E0000 size=0x36F000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\Engine\Binaries\ThirdParty\PhysX\PhysX-3.4\Win64\VS2013\APEX_Legacy_x64.dll
+2026-08-17 23:47:41.816 [INFO] Module: APEX_Destructible_x64.dll base=0x00007FFB68550000 size=0x244000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\Engine\Binaries\ThirdParty\PhysX\PhysX-3.4\Win64\VS2013\APEX_Destructible_x64.dll
+2026-08-17 23:47:41.816 [INFO] Module: PhysX3_x64.dll base=0x00007FFB687A0000 size=0x2B1000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\Engine\Binaries\ThirdParty\PhysX\PhysX-3.4\Win64\VS2013\PhysX3_x64.dll
+2026-08-17 23:47:41.816 [INFO] Module: d3dcompiler_47_64.dll base=0x00007FFB68A60000 size=0x48D000 path=C:\WINDOWS\System32\DriverStore\FileRepository\nvrfi.inf_amd64_87b4cb6242e17d7d\NvCamera\d3dcompiler_47_64.dll
+2026-08-17 23:47:41.816 [INFO] Module: mfasfsrcsnk.dll base=0x00007FFB6B990000 size=0x182000 path=C:\WINDOWS\System32\mfasfsrcsnk.dll
+2026-08-17 23:47:41.816 [INFO] Module: APEXFramework_x64.dll base=0x00007FFB6BCD0000 size=0x12D000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\Engine\Binaries\ThirdParty\PhysX\PhysX-3.4\Win64\VS2013\APEXFramework_x64.dll
+2026-08-17 23:47:41.816 [INFO] Module: PhysX3Common_x64.dll base=0x00007FFB6BE00000 size=0x1E4000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\Engine\Binaries\ThirdParty\PhysX\PhysX-3.4\Win64\VS2013\PhysX3Common_x64.dll
+2026-08-17 23:47:41.816 [INFO] Module: NvCamera64.dll base=0x00007FFB6BFF0000 size=0x883000 path=C:\WINDOWS\System32\DriverStore\FileRepository\nvrfi.inf_amd64_87b4cb6242e17d7d\NvCamera\NvCamera64.dll
+2026-08-17 23:47:41.817 [INFO] Module: libprotobuf.dll base=0x00007FFB6D810000 size=0x276000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\libprotobuf.dll
+2026-08-17 23:47:41.817 [INFO] Module: libvorbis_64.dll base=0x00007FFB6DBD0000 size=0x1A5000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\Engine\Binaries\ThirdParty\Vorbis\Win64\VS2013\libvorbis_64.dll
+2026-08-17 23:47:41.817 [INFO] Module: nvppex.dll base=0x00007FFB744D0000 size=0x727000 path=C:\WINDOWS\System32\DriverStore\FileRepository\nvrfi.inf_amd64_87b4cb6242e17d7d\nvppex.dll
+2026-08-17 23:47:41.817 [INFO] Module: nvspcap64.dll base=0x00007FFB74C00000 size=0x164000 path=C:\WINDOWS\system32\nvspcap64.dll
+2026-08-17 23:47:41.817 [INFO] Module: MSVCR120.dll base=0x00007FFB79A90000 size=0xEF000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\MSVCR120.dll
+2026-08-17 23:47:41.817 [INFO] Module: colorcnv.dll base=0x00007FFB79BF0000 size=0x42000 path=C:\Windows\System32\colorcnv.dll
+2026-08-17 23:47:41.817 [INFO] Module: gameoverlayrenderer64.dll base=0x00007FFB79C40000 size=0x1B7000 path=C:\Program Files (x86)\Steam\gameoverlayrenderer64.dll
+2026-08-17 23:47:41.818 [INFO] Module: mfperfhelper.dll base=0x00007FFB79E00000 size=0x130000 path=C:\Windows\System32\mfperfhelper.dll
+2026-08-17 23:47:41.818 [INFO] Module: d3d9.dll base=0x00007FFB7A1B0000 size=0x1B2000 path=C:\WINDOWS\SYSTEM32\d3d9.dll
+2026-08-17 23:47:41.818 [INFO] Module: mfplay.dll base=0x00007FFB7A450000 size=0x81000 path=C:\WINDOWS\SYSTEM32\mfplay.dll
+2026-08-17 23:47:41.818 [INFO] Module: PhysX3Cooking_x64.dll base=0x00007FFB7AED0000 size=0x4A000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\Engine\Binaries\ThirdParty\PhysX\PhysX-3.4\Win64\VS2013\PhysX3Cooking_x64.dll
+2026-08-17 23:47:41.818 [INFO] Module: XAudio2_7.dll base=0x00007FFB7E190000 size=0x8B000 path=C:\WINDOWS\SYSTEM32\XAudio2_7.dll
+2026-08-17 23:47:41.818 [INFO] Module: winmmbase.dll base=0x00007FFB7E2A0000 size=0x37000 path=C:\WINDOWS\SYSTEM32\winmmbase.dll
+2026-08-17 23:47:41.818 [INFO] Module: ResampleDmo.DLL base=0x00007FFB7E2E0000 size=0xB1000 path=C:\WINDOWS\SYSTEM32\ResampleDmo.DLL
+2026-08-17 23:47:41.818 [INFO] Module: DSOUND.dll base=0x00007FFB7E3A0000 size=0x94000 path=C:\WINDOWS\SYSTEM32\DSOUND.dll
+2026-08-17 23:47:41.819 [INFO] Module: GameNetworkingSockets.dll base=0x00007FFB7E440000 size=0x71000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\GameNetworkingSockets.dll
+2026-08-17 23:47:41.819 [INFO] Module: MSVCP120.dll base=0x00007FFB7E4C0000 size=0xA6000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\MSVCP120.dll
+2026-08-17 23:47:41.819 [INFO] Module: AcGenral.DLL base=0x00007FFB7E570000 size=0x6F000 path=C:\WINDOWS\SYSTEM32\AcGenral.DLL
+2026-08-17 23:47:41.819 [INFO] Module: steamclient64.dll base=0x00007FFB7E5F0000 size=0x1964000 path=C:\Program Files (x86)\Steam\steamclient64.dll
+2026-08-17 23:47:41.819 [INFO] Module: GLU32.dll base=0x00007FFB901B0000 size=0x2D000 path=C:\WINDOWS\SYSTEM32\GLU32.dll
+2026-08-17 23:47:41.819 [INFO] Module: OPENGL32.dll base=0x00007FFB901E0000 size=0x10E000 path=C:\WINDOWS\SYSTEM32\OPENGL32.dll
+2026-08-17 23:47:41.819 [INFO] Module: tier0_s64.dll base=0x00007FFB91200000 size=0x30E000 path=C:\Program Files (x86)\Steam\tier0_s64.dll
+2026-08-17 23:47:41.819 [INFO] Module: crashhandler64.dll base=0x00007FFBAD4A0000 size=0x1B0000 path=C:\Program Files (x86)\Steam\crashhandler64.dll
+2026-08-17 23:47:41.820 [INFO] Module: DINPUT8.dll base=0x00007FFBB3B90000 size=0x4B000 path=C:\WINDOWS\SYSTEM32\DINPUT8.dll
+2026-08-17 23:47:41.820 [INFO] Module: vstdlib_s64.dll base=0x00007FFBB5690000 size=0xC3000 path=C:\Program Files (x86)\Steam\vstdlib_s64.dll
+2026-08-17 23:47:41.820 [INFO] Module: explorerframe.dll base=0x00007FFBDC600000 size=0x2D8000 path=C:\WINDOWS\system32\explorerframe.dll
+2026-08-17 23:47:41.820 [INFO] Module: dataexchange.dll base=0x00007FFBDD970000 size=0x5A000 path=C:\WINDOWS\system32\dataexchange.dll
+2026-08-17 23:47:41.820 [INFO] Module: MFCORE.DLL base=0x00007FFBE4BF0000 size=0x418000 path=C:\WINDOWS\SYSTEM32\MFCORE.DLL
+2026-08-17 23:47:41.820 [INFO] Module: Windows.Media.dll base=0x00007FFBE6640000 size=0x685000 path=C:\Windows\System32\Windows.Media.dll
+2026-08-17 23:47:41.820 [INFO] Module: mfplat.dll base=0x00007FFBE70D0000 size=0x21A000 path=C:\WINDOWS\SYSTEM32\mfplat.dll
+2026-08-17 23:47:41.820 [INFO] Module: inputhost.dll base=0x00007FFBE7C40000 size=0x1E3000 path=C:\WINDOWS\SYSTEM32\inputhost.dll
+2026-08-17 23:47:41.820 [INFO] Module: textinputframework.dll base=0x00007FFBE7E30000 size=0x148000 path=C:\WINDOWS\SYSTEM32\textinputframework.dll
+2026-08-17 23:47:41.820 [INFO] Module: mf.dll base=0x00007FFBEC580000 size=0x98000 path=C:\WINDOWS\SYSTEM32\mf.dll
+2026-08-17 23:47:41.821 [INFO] Module: SensApi.dll base=0x00007FFBED1F0000 size=0xB000 path=C:\WINDOWS\SYSTEM32\SensApi.dll
+2026-08-17 23:47:41.821 [INFO] Module: dbgcore.DLL base=0x00007FFBED2B0000 size=0x3B000 path=C:\WINDOWS\SYSTEM32\dbgcore.DLL
+2026-08-17 23:47:41.821 [INFO] Module: Windows.ApplicationModel.dll base=0x00007FFBED590000 size=0xD6000 path=C:\Windows\System32\Windows.ApplicationModel.dll
+2026-08-17 23:47:41.821 [INFO] Module: Windows.StateRepositoryPS.dll base=0x00007FFBEDAF0000 size=0xC4000 path=C:\Windows\System32\Windows.StateRepositoryPS.dll
+2026-08-17 23:47:41.821 [INFO] Module: PxFoundation_x64.dll base=0x00007FFBEE2A0000 size=0x13000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\Engine\Binaries\ThirdParty\PhysX\PhysX-3.4\Win64\VS2013\PxFoundation_x64.dll
+2026-08-17 23:47:41.821 [INFO] Module: XINPUT9_1_0.dll base=0x00007FFBEE7D0000 size=0x9000 path=C:\WINDOWS\SYSTEM32\XINPUT9_1_0.dll
+2026-08-17 23:47:41.821 [INFO] Module: msdmo.dll base=0x00007FFBEE7F0000 size=0xE000 path=C:\WINDOWS\SYSTEM32\msdmo.dll
+2026-08-17 23:47:41.821 [INFO] Module: windows.staterepositoryclient.dll base=0x00007FFBEF350000 size=0x47000 path=C:\WINDOWS\SYSTEM32\windows.staterepositoryclient.dll
+2026-08-17 23:47:41.821 [INFO] Module: gameux.dll base=0x00007FFBF2410000 size=0xC000 path=C:\Windows\System32\gameux.dll
+2026-08-17 23:47:41.821 [INFO] Module: srvcli.dll base=0x00007FFBF25A0000 size=0x29000 path=C:\WINDOWS\SYSTEM32\srvcli.dll
+2026-08-17 23:47:41.822 [INFO] Module: iertutil.dll base=0x00007FFBF2810000 size=0x2C4000 path=C:\WINDOWS\SYSTEM32\iertutil.dll
+2026-08-17 23:47:41.822 [INFO] Module: MPR.dll base=0x00007FFBF2C80000 size=0x21000 path=C:\WINDOWS\SYSTEM32\MPR.dll
+2026-08-17 23:47:41.822 [INFO] Module: urlmon.dll base=0x00007FFBF2CB0000 size=0x1DD000 path=C:\WINDOWS\SYSTEM32\urlmon.dll
+2026-08-17 23:47:41.822 [INFO] Module: WININET.dll base=0x00007FFBF3780000 size=0x288000 path=C:\WINDOWS\SYSTEM32\WININET.dll
+2026-08-17 23:47:41.822 [INFO] Module: RTWorkQ.DLL base=0x00007FFBF4420000 size=0x3C000 path=C:\WINDOWS\SYSTEM32\RTWorkQ.DLL
+2026-08-17 23:47:41.822 [INFO] Module: Windows.UI.dll base=0x00007FFBF4650000 size=0x156000 path=C:\Windows\System32\Windows.UI.dll
+2026-08-17 23:47:41.822 [INFO] Module: NvMessageBus.dll base=0x00007FFBF4960000 size=0x364000 path=C:\WINDOWS\System32\DriverStore\FileRepository\nvrfi.inf_amd64_87b4cb6242e17d7d\Display.NvContainer\NvMessageBus.dll
+2026-08-17 23:47:41.822 [INFO] Module: libvorbisfile_64.dll base=0x00007FFBF4DE0000 size=0xD000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\Engine\Binaries\ThirdParty\Vorbis\Win64\VS2013\libvorbisfile_64.dll
+2026-08-17 23:47:41.822 [INFO] Module: nvapi64_impl.dll base=0x00007FFBF5730000 size=0x577000 path=C:\WINDOWS\system32\DriverStore\FileRepository\nvrfi.inf_amd64_87b4cb6242e17d7d\nvapi64_impl.dll
+2026-08-17 23:47:41.822 [INFO] Module: nvwgf2umx.dll base=0x00007FFBF5CB0000 size=0x55A5000 path=C:\WINDOWS\System32\DriverStore\FileRepository\nvrfi.inf_amd64_87b4cb6242e17d7d\nvwgf2umx.dll
+2026-08-17 23:47:41.822 [INFO] Module: nvapi64.dll base=0x00007FFBFB2B0000 size=0x89000 path=C:\WINDOWS\SYSTEM32\nvapi64.dll
+2026-08-17 23:47:41.822 [INFO] Module: windows.staterepositorycore.dll base=0x00007FFBFB810000 size=0x1A000 path=C:\WINDOWS\SYSTEM32\windows.staterepositorycore.dll
+2026-08-17 23:47:41.822 [INFO] Module: CompPkgSup.DLL base=0x00007FFBFD590000 size=0x36000 path=C:\WINDOWS\SYSTEM32\CompPkgSup.DLL
+2026-08-17 23:47:41.822 [INFO] Module: AUDIOSES.DLL base=0x00007FFBFD5D0000 size=0x1B2000 path=C:\WINDOWS\SYSTEM32\AUDIOSES.DLL
+2026-08-17 23:47:41.822 [INFO] Module: WINMM.dll base=0x00007FFBFD790000 size=0x35000 path=C:\WINDOWS\SYSTEM32\WINMM.dll
+2026-08-17 23:47:41.824 [INFO] Module: NvMemMapStoragex.dll base=0x00007FFBFD9B0000 size=0x13B000 path=C:\WINDOWS\System32\DriverStore\FileRepository\nvrfi.inf_amd64_87b4cb6242e17d7d\NvMemMapStoragex.dll
+2026-08-17 23:47:41.824 [INFO] Module: ncryptsslp.dll base=0x00007FFBFF2F0000 size=0x42000 path=C:\WINDOWS\system32\ncryptsslp.dll
+2026-08-17 23:47:41.824 [INFO] Module: ondemandconnroutehelper.dll base=0x00007FFBFF340000 size=0x1F000 path=C:\WINDOWS\SYSTEM32\ondemandconnroutehelper.dll
+2026-08-17 23:47:41.824 [INFO] Module: nvgpucomp64.dll base=0x00007FFBFF430000 size=0x5E0E000 path=C:\WINDOWS\System32\DriverStore\FileRepository\nvrfi.inf_amd64_87b4cb6242e17d7d\nvgpucomp64.dll
+2026-08-17 23:47:41.824 [INFO] Module: twinapi.appcore.dll base=0x00007FFC05400000 size=0x244000 path=C:\WINDOWS\system32\twinapi.appcore.dll
+2026-08-17 23:47:41.824 [INFO] Module: AppXDeploymentClient.dll base=0x00007FFC05D10000 size=0x16A000 path=C:\Windows\System32\AppXDeploymentClient.dll
+2026-08-17 23:47:41.824 [INFO] Module: dhcpcsvc.DLL base=0x00007FFC05E80000 size=0x23000 path=C:\WINDOWS\SYSTEM32\dhcpcsvc.DLL
+2026-08-17 23:47:41.824 [INFO] Module: WINHTTP.dll base=0x00007FFC060A0000 size=0x127000 path=C:\WINDOWS\SYSTEM32\WINHTTP.dll
+2026-08-17 23:47:41.824 [INFO] Module: MMDevApi.dll base=0x00007FFC06340000 size=0x98000 path=C:\WINDOWS\System32\MMDevApi.dll
+2026-08-17 23:47:41.824 [INFO] Module: cryptnet.dll base=0x00007FFC063F0000 size=0x3B000 path=C:\WINDOWS\SYSTEM32\cryptnet.dll
+2026-08-17 23:47:41.824 [INFO] Module: VERSION.dll base=0x00007FFC06450000 size=0xB000 path=C:\WINDOWS\SYSTEM32\VERSION.dll
+2026-08-17 23:47:41.825 [INFO] Module: nvldumdx.dll base=0x00007FFC06460000 size=0xCA000 path=C:\WINDOWS\System32\DriverStore\FileRepository\nvrfi.inf_amd64_87b4cb6242e17d7d\nvldumdx.dll
+2026-08-17 23:47:41.825 [INFO] Module: CoreUIComponents.dll base=0x00007FFC071E0000 size=0x2E2000 path=C:\WINDOWS\SYSTEM32\CoreUIComponents.dll
+2026-08-17 23:47:41.825 [INFO] Module: avrt.dll base=0x00007FFC078C0000 size=0xB000 path=C:\WINDOWS\SYSTEM32\avrt.dll
+2026-08-17 23:47:41.825 [INFO] Module: directxdatabasehelper.dll base=0x00007FFC07F10000 size=0x60000 path=C:\WINDOWS\SYSTEM32\directxdatabasehelper.dll
+2026-08-17 23:47:41.825 [INFO] Module: libogg_64.dll base=0x00007FFC083D0000 size=0xF000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\Engine\Binaries\ThirdParty\Ogg\Win64\VS2013\libogg_64.dll
+2026-08-17 23:47:41.825 [INFO] Module: WINNSI.DLL base=0x00007FFC08620000 size=0xE000 path=C:\WINDOWS\SYSTEM32\WINNSI.DLL
+2026-08-17 23:47:41.825 [INFO] Module: PROPSYS.dll base=0x00007FFC086B0000 size=0x103000 path=C:\WINDOWS\SYSTEM32\PROPSYS.dll
+2026-08-17 23:47:41.825 [INFO] Module: WindowsCodecs.dll base=0x00007FFC087F0000 size=0x22D000 path=C:\WINDOWS\SYSTEM32\WindowsCodecs.dll
+2026-08-17 23:47:41.825 [INFO] Module: Microsoft.Internal.WarpPal.dll base=0x00007FFC08EB0000 size=0x19000 path=C:\WINDOWS\SYSTEM32\Microsoft.Internal.WarpPal.dll
+2026-08-17 23:47:41.825 [INFO] Module: DWrite.dll base=0x00007FFC09050000 size=0x267000 path=C:\WINDOWS\SYSTEM32\DWrite.dll
+2026-08-17 23:47:41.826 [INFO] Module: d3d11.dll base=0x00007FFC09900000 size=0x263000 path=C:\WINDOWS\SYSTEM32\d3d11.dll
+2026-08-17 23:47:41.826 [INFO] Module: dcomp.dll base=0x00007FFC09B70000 size=0x220000 path=C:\WINDOWS\SYSTEM32\dcomp.dll
+2026-08-17 23:47:41.826 [INFO] Module: CoreMessaging.dll base=0x00007FFC0A2A0000 size=0x127000 path=C:\WINDOWS\SYSTEM32\CoreMessaging.dll
+2026-08-17 23:47:41.826 [INFO] Module: XAPOFX1_5.dll base=0x00007FFC0A580000 size=0x15000 path=C:\WINDOWS\SYSTEM32\XAPOFX1_5.dll
+2026-08-17 23:47:41.826 [INFO] Module: apphelp.dll base=0x00007FFC0A680000 size=0x9F000 path=C:\WINDOWS\SYSTEM32\apphelp.dll
+2026-08-17 23:47:41.826 [INFO] Module: Secur32.dll base=0x00007FFC0A730000 size=0xD000 path=C:\WINDOWS\SYSTEM32\Secur32.dll
+2026-08-17 23:47:41.826 [INFO] Module: uxtheme.dll base=0x00007FFC0A7A0000 size=0xAA000 path=C:\WINDOWS\system32\uxtheme.dll
+2026-08-17 23:47:41.826 [INFO] Module: dxcore.dll base=0x00007FFC0A880000 size=0x43000 path=C:\WINDOWS\SYSTEM32\dxcore.dll
+2026-08-17 23:47:41.826 [INFO] Module: dxgi.dll base=0x00007FFC0A8D0000 size=0x13E000 path=C:\WINDOWS\SYSTEM32\dxgi.dll
+2026-08-17 23:47:41.826 [INFO] Module: dwmapi.dll base=0x00007FFC0AA40000 size=0x2E000 path=C:\WINDOWS\SYSTEM32\dwmapi.dll
+2026-08-17 23:47:41.826 [INFO] Module: resourcepolicyclient.dll base=0x00007FFC0AFC0000 size=0x14000 path=C:\WINDOWS\SYSTEM32\resourcepolicyclient.dll
+2026-08-17 23:47:41.826 [INFO] Module: HID.DLL base=0x00007FFC0B500000 size=0xF000 path=C:\WINDOWS\SYSTEM32\HID.DLL
+2026-08-17 23:47:41.826 [INFO] Module: netutils.dll base=0x00007FFC0B9C0000 size=0xD000 path=C:\WINDOWS\SYSTEM32\netutils.dll
+2026-08-17 23:47:41.826 [INFO] Module: IPHLPAPI.DLL base=0x00007FFC0B9D0000 size=0x33000 path=C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL
+2026-08-17 23:47:41.827 [INFO] Module: schannel.DLL base=0x00007FFC0BE20000 size=0xC4000 path=C:\WINDOWS\system32\schannel.DLL
+2026-08-17 23:47:41.827 [INFO] Module: kernel.appcore.dll base=0x00007FFC0BFA0000 size=0x1B000 path=C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+2026-08-17 23:47:41.827 [INFO] Module: SspiCli.dll base=0x00007FFC0C200000 size=0x49000 path=C:\WINDOWS\SYSTEM32\SspiCli.dll
+2026-08-17 23:47:41.827 [INFO] Module: MSWSOCK.dll base=0x00007FFC0C4B0000 size=0x6B000 path=C:\WINDOWS\SYSTEM32\MSWSOCK.dll
+2026-08-17 23:47:41.827 [INFO] Module: USERENV.dll base=0x00007FFC0C520000 size=0x32000 path=C:\WINDOWS\SYSTEM32\USERENV.dll
+2026-08-17 23:47:41.827 [INFO] Module: wldp.dll base=0x00007FFC0C760000 size=0x68000 path=C:\WINDOWS\SYSTEM32\wldp.dll
+2026-08-17 23:47:41.827 [INFO] Module: gpapi.dll base=0x00007FFC0C890000 size=0x30000 path=C:\WINDOWS\SYSTEM32\gpapi.dll
+2026-08-17 23:47:41.827 [INFO] Module: CRYPTBASE.DLL base=0x00007FFC0C8E0000 size=0xC000 path=C:\WINDOWS\SYSTEM32\CRYPTBASE.DLL
+2026-08-17 23:47:41.828 [INFO] Module: rsaenh.dll base=0x00007FFC0C910000 size=0x39000 path=C:\WINDOWS\system32\rsaenh.dll
+2026-08-17 23:47:41.828 [INFO] Module: msasn1.dll base=0x00007FFC0C9A0000 size=0x13000 path=C:\WINDOWS\SYSTEM32\msasn1.dll
+2026-08-17 23:47:41.828 [INFO] Module: drvstore.dll base=0x00007FFC0CA30000 size=0x178000 path=C:\WINDOWS\SYSTEM32\drvstore.dll
+2026-08-17 23:47:41.828 [INFO] Module: NTASN1.dll base=0x00007FFC0CBF0000 size=0x3F000 path=C:\WINDOWS\SYSTEM32\NTASN1.dll
+2026-08-17 23:47:41.828 [INFO] Module: ncrypt.dll base=0x00007FFC0CC40000 size=0x30000 path=C:\WINDOWS\SYSTEM32\ncrypt.dll
+2026-08-17 23:47:41.828 [INFO] Module: ntmarta.dll base=0x00007FFC0D360000 size=0x36000 path=C:\WINDOWS\SYSTEM32\ntmarta.dll
+2026-08-17 23:47:41.828 [INFO] Module: dbghelp.dll base=0x00007FFC0D3C0000 size=0x242000 path=C:\WINDOWS\SYSTEM32\dbghelp.dll
+2026-08-17 23:47:41.828 [INFO] Module: wer.dll base=0x00007FFC0D610000 size=0xEF000 path=C:\WINDOWS\SYSTEM32\wer.dll
+2026-08-17 23:47:41.828 [INFO] Module: CRYPTSP.dll base=0x00007FFC0D710000 size=0x1B000 path=C:\WINDOWS\System32\CRYPTSP.dll
+2026-08-17 23:47:41.829 [INFO] Module: DEVOBJ.dll base=0x00007FFC0D730000 size=0x2D000 path=C:\WINDOWS\System32\DEVOBJ.dll
+2026-08-17 23:47:41.829 [INFO] Module: CFGMGR32.dll base=0x00007FFC0D760000 size=0x57000 path=C:\WINDOWS\SYSTEM32\CFGMGR32.dll
+2026-08-17 23:47:41.829 [INFO] Module: DPAPI.DLL base=0x00007FFC0D7E0000 size=0xA000 path=C:\WINDOWS\System32\DPAPI.DLL
+2026-08-17 23:47:41.829 [INFO] Module: UMPDC.dll base=0x00007FFC0D810000 size=0x14000 path=C:\WINDOWS\SYSTEM32\UMPDC.dll
+2026-08-17 23:47:41.829 [INFO] Module: POWRPROF.dll base=0x00007FFC0D830000 size=0x5E000 path=C:\WINDOWS\SYSTEM32\POWRPROF.dll
+2026-08-17 23:47:41.829 [INFO] Module: bcrypt.dll base=0x00007FFC0DA70000 size=0x2A000 path=C:\WINDOWS\SYSTEM32\bcrypt.dll
+2026-08-17 23:47:41.829 [INFO] Module: profapi.dll base=0x00007FFC0DAA0000 size=0x29000 path=C:\WINDOWS\SYSTEM32\profapi.dll
+2026-08-17 23:47:41.829 [INFO] Module: win32u.dll base=0x00007FFC0DB80000 size=0x27000 path=C:\WINDOWS\System32\win32u.dll
+2026-08-17 23:47:41.829 [INFO] Module: wintypes.dll base=0x00007FFC0DBB0000 size=0x16A000 path=C:\WINDOWS\System32\wintypes.dll
+2026-08-17 23:47:41.829 [INFO] Module: wintrust.dll base=0x00007FFC0DD20000 size=0x81000 path=C:\WINDOWS\System32\wintrust.dll
+2026-08-17 23:47:41.830 [INFO] Module: msvcp_win.dll base=0x00007FFC0DDB0000 size=0xA3000 path=C:\WINDOWS\System32\msvcp_win.dll
+2026-08-17 23:47:41.830 [INFO] Module: CRYPT32.dll base=0x00007FFC0DE60000 size=0x177000 path=C:\WINDOWS\System32\CRYPT32.dll
+2026-08-17 23:47:41.830 [INFO] Module: gdi32full.dll base=0x00007FFC0E090000 size=0x12B000 path=C:\WINDOWS\System32\gdi32full.dll
+2026-08-17 23:47:41.830 [INFO] Module: KERNELBASE.dll base=0x00007FFC0E1C0000 size=0x3F1000 path=C:\WINDOWS\System32\KERNELBASE.dll
+2026-08-17 23:47:41.830 [INFO] Module: Windows.Storage.dll base=0x00007FFC0E5C0000 size=0x864000 path=C:\WINDOWS\System32\Windows.Storage.dll
+2026-08-17 23:47:41.830 [INFO] Module: ucrtbase.dll base=0x00007FFC0EEF0000 size=0x14B000 path=C:\WINDOWS\System32\ucrtbase.dll
+2026-08-17 23:47:41.830 [INFO] Module: clbcatq.dll base=0x00007FFC0F140000 size=0xAE000 path=C:\WINDOWS\System32\clbcatq.dll
+2026-08-17 23:47:41.830 [INFO] Module: sechost.dll base=0x00007FFC0F200000 size=0xA7000 path=C:\WINDOWS\System32\sechost.dll
+2026-08-17 23:47:41.830 [INFO] Module: RPCRT4.dll base=0x00007FFC0F2D0000 size=0x118000 path=C:\WINDOWS\System32\RPCRT4.dll
+2026-08-17 23:47:41.830 [INFO] Module: IMM32.DLL base=0x00007FFC0F3F0000 size=0x31000 path=C:\WINDOWS\System32\IMM32.DLL
+2026-08-17 23:47:41.830 [INFO] Module: Normaliz.dll base=0x00007FFC0F4B0000 size=0x8000 path=C:\WINDOWS\System32\Normaliz.dll
+2026-08-17 23:47:41.830 [INFO] Module: USER32.dll base=0x00007FFC0F4C0000 size=0x1C5000 path=C:\WINDOWS\System32\USER32.dll
+2026-08-17 23:47:41.830 [INFO] Module: SHLWAPI.dll base=0x00007FFC0F720000 size=0x67000 path=C:\WINDOWS\System32\SHLWAPI.dll
+2026-08-17 23:47:41.830 [INFO] Module: msvcrt.dll base=0x00007FFC0F790000 size=0xA9000 path=C:\WINDOWS\System32\msvcrt.dll
+2026-08-17 23:47:41.830 [INFO] Module: PSAPI.DLL base=0x00007FFC0F840000 size=0x8000 path=C:\WINDOWS\System32\PSAPI.DLL
+2026-08-17 23:47:41.832 [INFO] Module: shcore.dll base=0x00007FFC0F860000 size=0xF7000 path=C:\WINDOWS\System32\shcore.dll
+2026-08-17 23:47:41.832 [INFO] Module: KERNEL32.DLL base=0x00007FFC0F960000 size=0xC9000 path=C:\WINDOWS\System32\KERNEL32.DLL
+2026-08-17 23:47:41.832 [INFO] Module: OLEAUT32.dll base=0x00007FFC0FA30000 size=0xD7000 path=C:\WINDOWS\System32\OLEAUT32.dll
+2026-08-17 23:47:41.832 [INFO] Module: combase.dll base=0x00007FFC0FCF0000 size=0x382000 path=C:\WINDOWS\System32\combase.dll
+2026-08-17 23:47:41.832 [INFO] Module: GDI32.dll base=0x00007FFC10080000 size=0x2B000 path=C:\WINDOWS\System32\GDI32.dll
+2026-08-17 23:47:41.832 [INFO] Module: advapi32.dll base=0x00007FFC100B0000 size=0xBB000 path=C:\WINDOWS\System32\advapi32.dll
+2026-08-17 23:47:41.832 [INFO] Module: imagehlp.dll base=0x00007FFC10170000 size=0x20000 path=C:\WINDOWS\System32\imagehlp.dll
+2026-08-17 23:47:41.832 [INFO] Module: SHELL32.dll base=0x00007FFC101F0000 size=0x75F000 path=C:\WINDOWS\System32\SHELL32.dll
+2026-08-17 23:47:41.832 [INFO] Module: ole32.dll base=0x00007FFC10960000 size=0x195000 path=C:\WINDOWS\System32\ole32.dll
+2026-08-17 23:47:41.832 [INFO] Module: msctf.dll base=0x00007FFC10B00000 size=0x15D000 path=C:\WINDOWS\System32\msctf.dll
+2026-08-17 23:47:41.833 [INFO] Module: WLDAP32.dll base=0x00007FFC10C60000 size=0x72000 path=C:\WINDOWS\System32\WLDAP32.dll
+2026-08-17 23:47:41.833 [INFO] Module: WS2_32.dll base=0x00007FFC10CE0000 size=0x74000 path=C:\WINDOWS\System32\WS2_32.dll
+2026-08-17 23:47:41.833 [INFO] Module: NSI.dll base=0x00007FFC10D60000 size=0xA000 path=C:\WINDOWS\System32\NSI.dll
+2026-08-17 23:47:41.833 [INFO] Module: SETUPAPI.dll base=0x00007FFC10DD0000 size=0x487000 path=C:\WINDOWS\System32\SETUPAPI.dll
+2026-08-17 23:47:41.833 [INFO] Module: ntdll.dll base=0x00007FFC112A0000 size=0x267000 path=C:\WINDOWS\SYSTEM32\ntdll.dll
+2026-08-17 23:47:41.835 [INFO] Build fingerprint: fileLength=80346664 lastWriteUtc=2026-08-17T08:21:59Z
+2026-08-17 23:47:41.911 [INFO] Build fingerprint: SHA256=9BC401417A776C5244A1B0B3255DC3AF4A9D73E3F5C1BA96228FBE3FB1A43477
+2026-08-17 23:47:41.911 [INFO] Build profile fingerprint verified.
+2026-08-17 23:47:41.993 [INFO] GNames global=0x00007FF65B05AC78 table=0x000002588ACEFAF0 index0='None'
+2026-08-17 23:47:41.993 [INFO] Scanning readable pages of ShooterGame.exe for the configured GWorld signature...
+2026-08-17 23:47:42.190 [INFO] GWorld signature match: 0x00007FF65761F190 (matches collected: 1)
+2026-08-17 23:47:42.190 [INFO] Resolved GWorld global address: 0x00007FF65B02C2A8
+2026-08-17 23:47:42.190 [INFO] UWorld: 0x00000259F0C36600
+2026-08-17 23:47:42.331 [INFO] ESP overlay window created: exStyle=0x80901A0 clickThrough=True
+2026-08-17 23:47:42.341 [INFO] ESP overlay aligned to ShooterGame client: 2560x1440 at 0,0
+2026-08-17 23:47:42.347 [INFO] Shared radar/ESP snapshot: actors=2988 elapsedMs=66 intervalMs=100 overlay=True

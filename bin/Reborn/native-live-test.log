@@ -1,0 +1,8 @@
+2026-08-18 00:07:17.056 [INFO] ARK Tracker read-only diagnostic MVP
+2026-08-18 00:07:17.056 [INFO] Target: ARK: Survival Evolved / ShooterGame.exe / UE4 / x64
+2026-08-18 00:07:17.056 [INFO] Access mask: PROCESS_QUERY_INFORMATION | PROCESS_VM_READ (0x0410). No write/injection APIs are used.
+2026-08-18 00:07:17.080 [INFO] Process: name=ShooterGame.exe pid=14868 parentPid=28788 threads=132
+2026-08-18 00:07:17.081 [INFO] Read-only process handle opened successfully.
+2026-08-18 00:07:17.082 [WARN] Module snapshot failed with Win32 error 5; trying PSAPI through the same read-only handle.
+2026-08-18 00:07:17.082 [ERROR] Win32Exception: Could not enumerate target modules. Snapshot error=5, PSAPI error=5.
+2026-08-18 00:07:17.082 [ERROR] If ASE is elevated, run this diagnostic at the same elevation. Do not run it with BattlEye.

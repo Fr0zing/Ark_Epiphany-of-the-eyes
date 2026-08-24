@@ -1,0 +1,20 @@
+2026-08-19 04:29:50.981 [INFO] ARK Tracker read-only diagnostic MVP
+2026-08-19 04:29:50.982 [INFO] Target: ARK: Survival Evolved / ShooterGame.exe / UE4 / x64
+2026-08-19 04:29:50.982 [INFO] Access mask: PROCESS_QUERY_INFORMATION | PROCESS_VM_READ (0x0410). No write/injection APIs are used.
+2026-08-19 04:29:50.984 [INFO] Security context: elevated=False SeDebugPrivilege=unavailable (Win32 error 1300)
+2026-08-19 04:29:51.005 [INFO] Process: name=ShooterGame.exe pid=34172 parentPid=14996 threads=122
+2026-08-19 04:29:51.005 [INFO] Read-only process handle opened successfully.
+2026-08-19 04:29:51.006 [WARN] Module snapshot failed with Win32 error 5; trying PSAPI through the same read-only handle.
+2026-08-19 04:29:51.041 [INFO] Target module: ShooterGame.exe base=0x00007FF739130000 size=0x4DAB000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\ShooterGame.exe
+2026-08-19 04:29:51.042 [INFO] Build fingerprint: fileLength=80346664 lastWriteUtc=2026-08-17T08:21:59Z
+2026-08-19 04:29:51.119 [INFO] Build fingerprint: SHA256=9BC401417A776C5244A1B0B3255DC3AF4A9D73E3F5C1BA96228FBE3FB1A43477
+2026-08-19 04:29:51.119 [INFO] Build profile fingerprint verified.
+2026-08-19 04:29:51.200 [INFO] GNames global=0x00007FF73DB3AC78 table=0x00000295F598FAF0 index0='None'
+2026-08-19 04:29:51.201 [INFO] Scanning readable pages of ShooterGame.exe for the configured GWorld signature...
+2026-08-19 04:29:51.394 [INFO] GWorld signature match: 0x00007FF73A0FF190 (matches collected: 1)
+2026-08-19 04:29:51.394 [INFO] Resolved GWorld global address: 0x00007FF73DB0C2A8
+2026-08-19 04:29:51.394 [INFO] UWorld: 0x00000295FA46CC00
+2026-08-19 04:29:51.755 [INFO] Native Direct2D/DirectComposition overlay initialized.
+2026-08-19 04:29:51.921 [INFO] Hotkeys: Insert=False F10=False F6-F9/F11=registered
+2026-08-19 04:29:52.067 [INFO] Player skeleton mapped from the live skeletal mesh (94 bones).
+2026-08-19 04:29:52.105 [INFO] Low-latency pipeline: actors=3013 captureMs=4 intervalMs=50 viewHz=250 overlay=False

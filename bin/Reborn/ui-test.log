@@ -1,0 +1,16 @@
+2026-08-17 23:48:18.232 [INFO] ARK Tracker read-only diagnostic MVP
+2026-08-17 23:48:18.232 [INFO] Target: ARK: Survival Evolved / ShooterGame.exe / UE4 / x64
+2026-08-17 23:48:18.232 [INFO] Access mask: PROCESS_QUERY_INFORMATION | PROCESS_VM_READ (0x0410). No write/injection APIs are used.
+2026-08-17 23:48:18.247 [INFO] Process: name=ShooterGame.exe pid=10576 parentPid=18228 threads=124
+2026-08-17 23:48:18.247 [INFO] Read-only process handle opened successfully.
+2026-08-17 23:48:18.250 [INFO] Target module: ShooterGame.exe base=0x00007FF656650000 size=0x4DAB000 path=C:\Program Files (x86)\Steam\steamapps\common\ARK\ShooterGame\Binaries\Win64\ShooterGame.exe
+2026-08-17 23:48:18.251 [INFO] Build fingerprint: fileLength=80346664 lastWriteUtc=2026-08-17T08:21:59Z
+2026-08-17 23:48:18.323 [INFO] Build fingerprint: SHA256=9BC401417A776C5244A1B0B3255DC3AF4A9D73E3F5C1BA96228FBE3FB1A43477
+2026-08-17 23:48:18.323 [INFO] Build profile fingerprint verified.
+2026-08-17 23:48:18.406 [INFO] GNames global=0x00007FF65B05AC78 table=0x000002588ACEFAF0 index0='None'
+2026-08-17 23:48:18.408 [INFO] Scanning readable pages of ShooterGame.exe for the configured GWorld signature...
+2026-08-17 23:48:18.624 [INFO] GWorld signature match: 0x00007FF65761F190 (matches collected: 1)
+2026-08-17 23:48:18.624 [INFO] Resolved GWorld global address: 0x00007FF65B02C2A8
+2026-08-17 23:48:18.624 [INFO] UWorld: 0x00000259F0C36600
+2026-08-17 23:48:18.746 [INFO] ESP overlay window created: exStyle=0x80901A0 clickThrough=True
+2026-08-17 23:48:18.756 [INFO] Low-latency pipeline: actors=5 captureMs=13 intervalMs=100 viewHz=120 overlay=True
