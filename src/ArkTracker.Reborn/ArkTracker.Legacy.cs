@@ -521,6 +521,7 @@ namespace ArkTracker
 	}
 	internal sealed class NativeOverlayRenderer : IOverlayRenderer
 	{
+		private const int TurretColumnLabelFlag = 128;
 		[StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode, Pack = 8)]
 		private struct NativeActor
 		{
@@ -676,6 +677,13 @@ namespace ArkTracker
 			internal bool Pinned;
 		}
 
+		private sealed class MutagenRouteVisit
+		{
+			internal bool InsideCheckRadius;
+			internal DateTime HiddenUntilUtc;
+			internal DateTime LastSeenUtc;
+		}
+
 		private struct StructureCellKey : IEquatable<StructureCellKey>
 		{
 			internal int X;
@@ -778,6 +786,8 @@ namespace ArkTracker
 		private bool disposed;
 		private bool menuVisible;
 		private bool requestedEnabled = true;
+		private readonly Dictionary<ulong, MutagenRouteVisit> mutagenRouteVisits = new Dictionary<ulong, MutagenRouteVisit>();
+		private int lastMutagenRouteClearSerial = -1;
 
 		public bool IsDisposed { get { return disposed; } }
 
@@ -953,8 +963,12 @@ namespace ArkTracker
 					});
 				}
 			}
-			List<RenderEntry> regularEntries = entries.Where((RenderEntry entry) => entry.Actor.Kind != ActorKind.Structure)
+			// Route pins are deliberately excluded from MaxLabels: the cap is for
+			// readable actor labels, whereas these are tiny navigation dots.
+			List<RenderEntry> regularEntries = entries.Where((RenderEntry entry) => entry.Actor.Kind != ActorKind.Structure && entry.Actor.Kind != ActorKind.ResourceSpawn)
 				.OrderBy((RenderEntry entry) => TrackerFilter.Distance3D(entry.Position, origin)).Take(settings.MaxLabels).ToList();
+			regularEntries.AddRange(entries.Where((RenderEntry entry) => entry.Actor.Kind == ActorKind.ResourceSpawn)
+				.OrderBy((RenderEntry entry) => TrackerFilter.Distance3D(entry.Position, origin)).Take(128));
 			List<RenderEntry> structureEntries = entries.Where((RenderEntry entry) => entry.Actor.Kind == ActorKind.Structure)
 				.OrderByDescending((RenderEntry entry) => entry.Category == null ? 0 : entry.Category.Priority)
 				.ThenBy((RenderEntry entry) => TrackerFilter.Distance3D(entry.Position, origin)).Take(settings.MaxStructurePoints).ToList();
@@ -976,6 +990,33 @@ namespace ArkTracker
 			}
 			regularEntries.AddRange(structureEntries);
 			return regularEntries.ToArray();
+		}
+
+		private bool IsMutagenRouteSpawnVisible(ActorRecord actor, Vector3 origin, TrackerViewSettings settings)
+		{
+			if (actor.Kind != ActorKind.ResourceSpawn) return true;
+			if (!settings.HideVisitedMutagenSpawnPoints) return true;
+			if (lastMutagenRouteClearSerial != settings.MutagenRouteClearSerial)
+			{
+				mutagenRouteVisits.Clear();
+				lastMutagenRouteClearSerial = settings.MutagenRouteClearSerial;
+			}
+			DateTime now = DateTime.UtcNow;
+			MutagenRouteVisit visit;
+			if (!mutagenRouteVisits.TryGetValue(actor.Address, out visit))
+			{
+				visit = new MutagenRouteVisit();
+				mutagenRouteVisits.Add(actor.Address, visit);
+			}
+			float distance = TrackerFilter.Distance3D(actor.Position, origin);
+			bool withinRadius = distance <= settings.MutagenVisitRadiusCm;
+			// One pass through a point starts one cooldown. It is not restarted each
+			// scan while the player hovers there, so a point can return normally.
+			if (withinRadius && !visit.InsideCheckRadius)
+				visit.HiddenUntilUtc = now.AddSeconds(settings.MutagenVisitedHideSeconds);
+			visit.InsideCheckRadius = withinRadius;
+			visit.LastSeenUtc = now;
+			return now >= visit.HiddenUntilUtc;
 		}
 
 		internal static bool TryCreate(uint processId, out NativeOverlayRenderer renderer)
@@ -1055,7 +1096,13 @@ namespace ArkTracker
 			if (!settingsChanged && lastActors != null && (DateTime.UtcNow - lastDetailedUpdate).TotalMilliseconds < 100.0) return;
 
 			Vector3 origin = value.HasLocalPlayer ? value.LocalPosition : value.CameraLocation;
-			RenderEntry[] visible = BuildRenderEntries(value.Actors.Where((ActorRecord actor) => TrackerFilter.IsVisible(actor, value, viewSettings)), origin, viewSettings);
+			RenderEntry[] visible = BuildRenderEntries(value.Actors.Where((ActorRecord actor) =>
+				TrackerFilter.IsVisible(actor, value, viewSettings) &&
+				IsMutagenRouteSpawnVisible(actor, origin, viewSettings) &&
+				// Filter before grouping and point generation: a filtered turret leaves
+				// no label, world dot or radar dot.
+				(!viewSettings.HideEmptyTurrets || actor.Turret == null || !actor.Turret.IsConfirmedEmpty) &&
+				(!viewSettings.ShowOnlyFiringTurrets || actor.Turret == null || actor.Turret.IsTargeting)), origin, viewSettings);
 			int detailedCount = visible.Count((RenderEntry entry) => entry.Actor.Kind != ActorKind.Structure || entry.ShowLabel);
 			NativeActor[] nativeActors = new NativeActor[detailedCount];
 			NativeStructurePoint[] structurePoints = new NativeStructurePoint[visible.Length - detailedCount];
@@ -1132,8 +1179,12 @@ namespace ArkTracker
 				}
 				else
 				{
-					label = actor.Kind == ActorKind.Structure && !entry.ShowLabel ? string.Empty :
-						(actor.Kind == ActorKind.Structure && entry.Count > 1 && entry.Category != null ? entry.Category.Name : (actor.DisplayName ?? actor.ClassName ?? "Объект"));
+					if (actor.Kind == ActorKind.Structure && !entry.ShowLabel) label = string.Empty;
+					else if (actor.Kind == ActorKind.Resource) label = "Mutagen";
+					else if (actor.Kind == ActorKind.ResourceSpawn) label = string.Empty;
+					else if (actor.Kind == ActorKind.MissionTrack) label = "След миссии";
+					else if (actor.Kind == ActorKind.Structure && entry.Count > 1 && entry.Category != null) label = entry.Category.Name;
+					else label = actor.DisplayName ?? actor.ClassName ?? "Объект";
 					// Turret telemetry is read-only.  Keep the live magazine count in the
 					// world label as well as in the Turrets table, so it is useful without
 					// opening the dashboard.
@@ -1173,7 +1224,21 @@ namespace ArkTracker
 					if (actor.Kind == ActorKind.Dino && viewSettings.ShowTribeNames && !string.IsNullOrWhiteSpace(tribe) && tribe != "Без трайба" && tribe != "Неизвестный трайб") label += "  [" + tribe + "]";
 				}
 				if (label.Length > 95) label = label.Substring(0, 95);
+				bool turretColumnLabel = actor.Kind == ActorKind.Structure && entry.ShowLabel &&
+					actor.Turret != null && viewSettings.ShowTurretDetails;
 				string weapon = actor.WeaponName ?? string.Empty;
+				if (turretColumnLabel)
+				{
+					// The native structure actor has a spare Weapon field. Reuse it for
+					// three compact turret rows without changing the native ABI.
+					string modeName;
+					string mode = viewSettings.TurretModeNames.TryGetValue(actor.Turret.AISetting, out modeName) && !string.IsNullOrWhiteSpace(modeName)
+						? modeName : "Режим " + actor.Turret.AISetting.ToString(CultureInfo.InvariantCulture);
+					label = (actor.DisplayName ?? actor.ClassName ?? "Турель") + " [" + actor.Turret.ReadinessLabel + "]";
+					weapon = mode + "\n" + TurretRangeText(actor.Turret.RangeSetting) +
+						"\n" + actor.Turret.AmmoLabel;
+				}
+				if (label.Length > 95) label = label.Substring(0, 95);
 				if (weapon.Length > 63) weapon = weapon.Substring(0, 63);
 				float[] skeleton = new float[51];
 				int boneMask = 0;
@@ -1213,9 +1278,13 @@ namespace ArkTracker
 						// decided per actor here and packed into the existing Flags int
 						// instead of growing the native settings ABI.
 						((actor.Kind == ActorKind.Player && viewSettings.ShowPlayerHealth) || (actor.Kind == ActorKind.Dino && viewSettings.ShowDinoHealth && dinoShowsDetails) ? 32 : 0) |
-						(dinoShowsDetails ? 64 : 0),
+						(dinoShowsDetails ? 64 : 0) |
+						(turretColumnLabel ? TurretColumnLabelFlag : 0),
 					ClusterCount = Math.Max(1, entry.Count),
-					VisualColor = actor.Kind == ActorKind.Structure && entry.Category != null ? entry.Category.Color : -1,
+					VisualColor = actor.Kind == ActorKind.Resource ? 0x48E7D5 :
+						(actor.Kind == ActorKind.ResourceSpawn ? 0x5D6C8C :
+						(actor.Kind == ActorKind.MissionTrack ? 0xFFE36A :
+						(actor.Kind == ActorKind.Structure && entry.Category != null ? entry.Category.Color : -1))),
 					Health = actor.Health,
 					MaxHealth = actor.MaxHealth,
 					BoneMask = boneMask,
@@ -3644,12 +3713,16 @@ namespace ArkTracker
 					trackerViewSettings.StructureCategories[0].GroupingDistanceCm = 1234f;
 					trackerViewSettings.MaxStructurePoints = 1777;
 					trackerViewSettings.ShowWildDinos = false;
+					trackerViewSettings.HideEmptyTurrets = true;
+					trackerViewSettings.ShowOnlyFiringTurrets = true;
 					trackerViewSettings.Save(settingsTestPath);
 					TrackerViewSettings reloadedSettings = TrackerViewSettings.Load(settingsTestPath);
 					Require(reloadedSettings.StructureClassCategories.ContainsKey("ExactStructure_C"), "exact structure category persistence");
 					Require(Math.Abs(reloadedSettings.StructureCategories[0].GroupingDistanceCm - 1234f) < 0.01f, "category grouping distance persistence");
 					Require(reloadedSettings.MaxStructurePoints == 1777, "structure point budget persistence");
 					Require(!reloadedSettings.ShowWildDinos, "wild dino filter persistence");
+					Require(reloadedSettings.HideEmptyTurrets, "empty turret filter persistence");
+					Require(reloadedSettings.ShowOnlyFiringTurrets, "firing turret filter persistence");
 				}
 				finally
 				{
@@ -3693,6 +3766,9 @@ namespace ArkTracker
 				trackerViewSettings.Orientation = RadarOrientation.Movement;
 				Require(Math.Abs(TrackerFilter.Heading(trackerSnapshot, trackerViewSettings) - 77f) < 0.01f, "movement-relative radar heading");
 				trackerViewSettings.Orientation = RadarOrientation.Camera;
+				TurretInfo confirmedEmptyTurret = new TurretInfo { NumBullets = 0, HasAmmoData = true };
+				Require(confirmedEmptyTurret.IsConfirmedEmpty && confirmedEmptyTurret.ReadinessLabel == "ВЫКЛ", "confirmed empty turret state");
+				Require(!new TurretInfo { NumBullets = 0 }.IsConfirmedEmpty, "unknown turret ammo stays visible");
 				ActorRecord turretActor = new ActorRecord { Kind = ActorKind.Structure, TargetingTeam = 300, Turret = new TurretInfo(), Position = default(Vector3) };
 				Require(TrackerFilter.IsTurretVisible(turretActor, trackerSnapshot, trackerViewSettings), "enemy turret filter");
 				NotificationSystem notificationTest = new NotificationSystem();
@@ -7425,7 +7501,14 @@ namespace ArkTracker
 		Other,
 		Dino,
 		Structure,
-		Player
+		Player,
+		// Keep this at the end: values sent to the native renderer for existing
+		// actor kinds remain ABI-compatible.
+		Resource,
+		// A static possible Mutagen location.  Unlike Resource it is never an
+		// assertion that a bulb currently exists there.
+		ResourceSpawn,
+		MissionTrack
 	}
 	internal sealed class ActorRecord
 	{
@@ -7876,6 +7959,18 @@ namespace ArkTracker
 				return false;
 			}
 			ClassMetadata classMetadata = GetClassMetadata(pointer);
+			string actorObjectName = string.Empty;
+			if (classMetadata.Kind == ActorKind.Other && IsMissionTrackCarrierClass(classMetadata.Name))
+			{
+				// On some ASE builds HuntTracks is exposed as the class name, on
+				// others it is an instance of the generic Emitter class. Probe only
+				// effect carriers, never every unknown actor in the world.
+				names.TryReadObjectName(actor, out actorObjectName);
+				if (IsMissionTrackName(actorObjectName))
+				{
+					classMetadata = new ClassMetadata { Name = actorObjectName, Kind = ActorKind.MissionTrack };
+				}
+			}
 			if (classMetadata.Kind == ActorKind.Other)
 			{
 				return false;
@@ -7923,13 +8018,13 @@ namespace ArkTracker
 				Address = actor,
 				RootComponentAddress = pointer2,
 				ClassName = classMetadata.Name,
-				ObjectName = string.Empty,
-				DisplayName = FriendlyName(classMetadata.Name),
+				ObjectName = actorObjectName,
+				DisplayName = classMetadata.Kind == ActorKind.MissionTrack ? "След миссии" : FriendlyName(classMetadata.Name),
 				Kind = classMetadata.Kind,
 				TargetingTeam = value2,
 				Position = value
 			};
-			EnrichIdentity(actor, pointer, record);
+			if (classMetadata.Kind != ActorKind.MissionTrack) EnrichIdentity(actor, pointer, record);
 			if ((classMetadata.Kind == ActorKind.Player || classMetadata.Kind == ActorKind.Dino) && config.PrimalCharacterIsDead.HasValue)
 			{
 				byte state;
@@ -7997,6 +8092,9 @@ namespace ArkTracker
 			names.TryReadObjectName(classAddress, out name);
 			ActorKind actorKind = ActorKind.Other;
 			bool isTurret = false;
+			bool isActiveMutagen = IsActiveMutagenClassName(name);
+			bool isMutagenSpawn = IsMutagenSpawnClassName(name);
+			bool isMissionTrack = IsMissionTrackName(name);
 			ulong num = classAddress;
 			bool readFailed = false;
 			HashSet<ulong> hashSet = new HashSet<ulong>();
@@ -8012,6 +8110,9 @@ namespace ArkTracker
 				}
 				string name2;
 				names.TryReadObjectName(num, out name2);
+				if (IsActiveMutagenClassName(name2)) isActiveMutagen = true;
+				if (IsMutagenSpawnClassName(name2)) isMutagenSpawn = true;
+				if (IsMissionTrackName(name2)) isMissionTrack = true;
 				if (string.Equals(name2, "APrimalStructureTurret", StringComparison.OrdinalIgnoreCase) || string.Equals(name2, "PrimalStructureTurret", StringComparison.OrdinalIgnoreCase))
 				{
 					isTurret = true;
@@ -8040,6 +8141,14 @@ namespace ArkTracker
 				}
 				num = pointer;
 			}
+			// Ground pickups are normally Other and therefore excluded from the hot
+			// scan. Do not match every class containing "Mutagen": Gen 2 keeps
+			// persistent spawn controllers in the client as well, which would paint
+			// every possible location even when no bulb exists. Only the actual
+			// dropped/pickup actor is considered a live Mutagen bulb.
+			if (isActiveMutagen) actorKind = ActorKind.Resource;
+			else if (isMutagenSpawn) actorKind = ActorKind.ResourceSpawn;
+			else if (isMissionTrack) actorKind = ActorKind.MissionTrack;
 			ClassMetadata classMetadata = new ClassMetadata();
 			classMetadata.Name = name;
 			classMetadata.Kind = actorKind;
@@ -8050,6 +8159,39 @@ namespace ArkTracker
 				classCache[classAddress] = value;
 			}
 			return value;
+		}
+
+		private static bool IsActiveMutagenClassName(string className)
+		{
+			if (string.IsNullOrWhiteSpace(className)) return false;
+			return className.IndexOf("droppeditem_mutagen", StringComparison.OrdinalIgnoreCase) >= 0 ||
+				className.IndexOf("mutagenbulb", StringComparison.OrdinalIgnoreCase) >= 0 ||
+				className.IndexOf("mutagenpickup", StringComparison.OrdinalIgnoreCase) >= 0;
+		}
+
+		private static bool IsMutagenSpawnClassName(string className)
+		{
+			// The static route nodes share the Mutagen name, but they are not the
+			// live dropped pickup above. Keep this separate so the renderer can give
+			// the user a route without presenting it as loot that is definitely there.
+			return !string.IsNullOrWhiteSpace(className) &&
+				className.IndexOf("mutagen", StringComparison.OrdinalIgnoreCase) >= 0 &&
+				!IsActiveMutagenClassName(className);
+		}
+
+		private static bool IsMissionTrackName(string value)
+		{
+			return !string.IsNullOrWhiteSpace(value) &&
+				(value.IndexOf("hunttrack", StringComparison.OrdinalIgnoreCase) >= 0 ||
+				 value.IndexOf("biometrictracking", StringComparison.OrdinalIgnoreCase) >= 0);
+		}
+
+		private static bool IsMissionTrackCarrierClass(string className)
+		{
+			return !string.IsNullOrWhiteSpace(className) &&
+				(className.IndexOf("emitter", StringComparison.OrdinalIgnoreCase) >= 0 ||
+				 className.IndexOf("particle", StringComparison.OrdinalIgnoreCase) >= 0 ||
+				 IsMissionTrackName(className));
 		}
 
 		private void EnrichIdentity(ulong actor, ulong classAddress, ActorRecord record)
@@ -8357,7 +8499,11 @@ namespace ArkTracker
 			if (config.TurretAISetting.HasValue && reader.TryReadByte(actor + config.TurretAISetting.Value, out byteValue)) turret.AISetting = byteValue;
 			if (config.TurretWarningSetting.HasValue && reader.TryReadByte(actor + config.TurretWarningSetting.Value, out byteValue)) turret.WarningSetting = byteValue;
 			int intValue;
-			if (config.TurretNumBullets.HasValue && reader.TryReadInt32(actor + config.TurretNumBullets.Value, out intValue) && intValue >= 0 && intValue <= 10000000) turret.NumBullets = intValue;
+			if (config.TurretNumBullets.HasValue && reader.TryReadInt32(actor + config.TurretNumBullets.Value, out intValue) && intValue >= 0 && intValue <= 10000000)
+			{
+				turret.NumBullets = intValue;
+				turret.HasAmmoData = true;
+			}
 			if (config.TurretMagazineSize.HasValue && reader.TryReadInt32(actor + config.TurretMagazineSize.Value, out intValue) && intValue >= 0 && intValue <= 10000000) turret.MagazineSize = intValue;
 			if (config.TurretFlags.HasValue && reader.TryReadByte(actor + config.TurretFlags.Value, out byteValue))
 			{
@@ -8723,6 +8869,28 @@ namespace ArkTracker
 
 		internal bool ShowStructures = true;
 
+		// Gen 2 ground resource: independent from structures and their grouping.
+		internal bool ShowMutagel = true;
+
+		internal float MutagelMaxDistanceCm = 100000f;
+
+		// A separate, deliberately low-key route layer for possible bulb points.
+		// Active bulbs use ShowMutagel above and remain bright/labelled.
+		internal bool ShowMutagenSpawnPoints = true;
+
+		internal bool HideVisitedMutagenSpawnPoints = true;
+
+		internal float MutagenVisitRadiusCm = 4500f;
+
+		internal int MutagenVisitedHideSeconds = 30;
+
+		// Ephemeral command from the dashboard; intentionally not persisted.
+		internal int MutagenRouteClearSerial;
+
+		internal bool ShowMissionTracks = true;
+
+		internal float MissionTrackMaxDistanceCm = 30000f;
+
 		internal bool ShowPlayers = true;
 
 		internal bool ShowBoxes = true;
@@ -8881,6 +9049,15 @@ namespace ArkTracker
 
 		internal bool ShowTurretDetails = true;
 
+		// Hides only turrets with a successfully read magazine value of zero.
+		// Turrets with missing telemetry stay visible rather than being mistaken
+		// for an empty one.
+		internal bool HideEmptyTurrets;
+
+		// Uses the observed live targeting bit. It is deliberately not applied to
+		// non-turret structures or turret classes whose detailed telemetry is absent.
+		internal bool ShowOnlyFiringTurrets;
+
 		internal bool ShowStructureOwner = true;
 
 		internal bool ShowStructureTribeNames = true;
@@ -8974,6 +9151,14 @@ namespace ArkTracker
 			trackerViewSettings.ShowDinos = Bool(dictionary, "ShowDinos", trackerViewSettings.ShowDinos);
 			trackerViewSettings.ShowWildDinos = Bool(dictionary, "ShowWildDinos", trackerViewSettings.ShowWildDinos);
 			trackerViewSettings.ShowStructures = Bool(dictionary, "ShowStructures", trackerViewSettings.ShowStructures);
+			trackerViewSettings.ShowMutagel = Bool(dictionary, "ShowMutagel", trackerViewSettings.ShowMutagel);
+			trackerViewSettings.MutagelMaxDistanceCm = Float(dictionary, "MutagelMaxDistanceCm", trackerViewSettings.MutagelMaxDistanceCm, 1000f, 500000f);
+			trackerViewSettings.ShowMutagenSpawnPoints = Bool(dictionary, "ShowMutagenSpawnPoints", trackerViewSettings.ShowMutagenSpawnPoints);
+			trackerViewSettings.HideVisitedMutagenSpawnPoints = Bool(dictionary, "HideVisitedMutagenSpawnPoints", trackerViewSettings.HideVisitedMutagenSpawnPoints);
+			trackerViewSettings.MutagenVisitRadiusCm = Float(dictionary, "MutagenVisitRadiusCm", trackerViewSettings.MutagenVisitRadiusCm, 500f, 20000f);
+			trackerViewSettings.MutagenVisitedHideSeconds = Int(dictionary, "MutagenVisitedHideSeconds", trackerViewSettings.MutagenVisitedHideSeconds, 5, 60);
+			trackerViewSettings.ShowMissionTracks = Bool(dictionary, "ShowMissionTracks", trackerViewSettings.ShowMissionTracks);
+			trackerViewSettings.MissionTrackMaxDistanceCm = Float(dictionary, "MissionTrackMaxDistanceCm", trackerViewSettings.MissionTrackMaxDistanceCm, 1000f, 100000f);
 			trackerViewSettings.ShowPlayers = Bool(dictionary, "ShowPlayers", trackerViewSettings.ShowPlayers);
 			trackerViewSettings.ShowBoxes = Bool(dictionary, "ShowBoxes", trackerViewSettings.ShowBoxes);
 			trackerViewSettings.ShowLevel = Bool(dictionary, "ShowLevel", trackerViewSettings.ShowLevel);
@@ -9058,6 +9243,8 @@ namespace ArkTracker
 			trackerViewSettings.GroupStructures = Bool(dictionary, "GroupStructures", trackerViewSettings.GroupStructures);
 			trackerViewSettings.StructureLabelMode = Int(dictionary, "StructureLabelMode", trackerViewSettings.StructureLabelMode, 0, 2);
 			trackerViewSettings.ShowTurretDetails = Bool(dictionary, "ShowTurretDetails", trackerViewSettings.ShowTurretDetails);
+			trackerViewSettings.HideEmptyTurrets = Bool(dictionary, "HideEmptyTurrets", trackerViewSettings.HideEmptyTurrets);
+			trackerViewSettings.ShowOnlyFiringTurrets = Bool(dictionary, "ShowOnlyFiringTurrets", trackerViewSettings.ShowOnlyFiringTurrets);
 			trackerViewSettings.ShowStructureOwner = Bool(dictionary, "ShowStructureOwner", trackerViewSettings.ShowStructureOwner);
 			trackerViewSettings.ShowStructureTribeNames = Bool(dictionary, "ShowStructureTribeNames", trackerViewSettings.ShowStructureTribeNames);
 			trackerViewSettings.ShowDinoHealth = Bool(dictionary, "ShowDinoHealth", trackerViewSettings.ShowDinoHealth);
@@ -9149,6 +9336,14 @@ namespace ArkTracker
 				"ShowDinos=" + ShowDinos,
 				"ShowWildDinos=" + ShowWildDinos,
 				"ShowStructures=" + ShowStructures,
+				"ShowMutagel=" + ShowMutagel,
+				"MutagelMaxDistanceCm=" + MutagelMaxDistanceCm.ToString(CultureInfo.InvariantCulture),
+				"ShowMutagenSpawnPoints=" + ShowMutagenSpawnPoints,
+				"HideVisitedMutagenSpawnPoints=" + HideVisitedMutagenSpawnPoints,
+				"MutagenVisitRadiusCm=" + MutagenVisitRadiusCm.ToString(CultureInfo.InvariantCulture),
+				"MutagenVisitedHideSeconds=" + MutagenVisitedHideSeconds.ToString(CultureInfo.InvariantCulture),
+				"ShowMissionTracks=" + ShowMissionTracks,
+				"MissionTrackMaxDistanceCm=" + MissionTrackMaxDistanceCm.ToString(CultureInfo.InvariantCulture),
 				"ShowPlayers=" + ShowPlayers,
 				"ShowBoxes=" + ShowBoxes,
 				"ShowLevel=" + ShowLevel,
@@ -9224,6 +9419,8 @@ namespace ArkTracker
 				"GroupStructures=" + GroupStructures,
 				"StructureLabelMode=" + StructureLabelMode.ToString(CultureInfo.InvariantCulture),
 				"ShowTurretDetails=" + ShowTurretDetails,
+				"HideEmptyTurrets=" + HideEmptyTurrets,
+				"ShowOnlyFiringTurrets=" + ShowOnlyFiringTurrets,
 				"ShowStructureOwner=" + ShowStructureOwner,
 				"ShowStructureTribeNames=" + ShowStructureTribeNames,
 				"ShowDinoHealth=" + ShowDinoHealth,
@@ -9348,6 +9545,18 @@ namespace ArkTracker
 			{
 				return false;
 			}
+			if (actor.Kind == ActorKind.Resource)
+			{
+				return settings.ShowMutagel && distance <= settings.MutagelMaxDistanceCm;
+			}
+			if (actor.Kind == ActorKind.ResourceSpawn)
+			{
+				return settings.ShowMutagenSpawnPoints && distance <= settings.MutagelMaxDistanceCm;
+			}
+			if (actor.Kind == ActorKind.MissionTrack)
+			{
+				return settings.ShowMissionTracks && distance <= settings.MissionTrackMaxDistanceCm;
+			}
 			// A pinned class is always shown, regardless of its category's Enabled
 			// state or the class allow-list below - see BuildRenderEntries for the
 			// matching bypass on the rendering/grouping side.
@@ -9423,7 +9632,9 @@ namespace ArkTracker
 			}
 			float categoryDistance = actor.Kind == ActorKind.Player ? settings.PlayerMaxDistanceCm :
 				(actor.Kind == ActorKind.Dino ? settings.DinoMaxDistanceCm :
-				(actor.Kind == ActorKind.Structure ? settings.StructureMaxDistanceCm : settings.RadiusCm));
+				(actor.Kind == ActorKind.Structure ? settings.StructureMaxDistanceCm :
+				((actor.Kind == ActorKind.Resource || actor.Kind == ActorKind.ResourceSpawn) ? settings.MutagelMaxDistanceCm :
+				(actor.Kind == ActorKind.MissionTrack ? settings.MissionTrackMaxDistanceCm : settings.RadiusCm))));
 			return distance <= categoryDistance;
 		}
 

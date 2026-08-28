@@ -140,7 +140,10 @@ namespace
 	D2D1_COLOR_F ActorColor(std::int32_t kind, float alpha = 1.0f)
     {
         if (kind == 1) return D2D1::ColorF(75.0f / 255.0f, 230.0f / 255.0f, 157.0f / 255.0f, alpha);
-        if (kind == 2) return D2D1::ColorF(255.0f / 255.0f, 184.0f / 255.0f, 77.0f / 255.0f, alpha);
+		if (kind == 2) return D2D1::ColorF(255.0f / 255.0f, 184.0f / 255.0f, 77.0f / 255.0f, alpha);
+		if (kind == 4) return D2D1::ColorF(72.0f / 255.0f, 231.0f / 255.0f, 213.0f / 255.0f, alpha);
+		if (kind == 5) return D2D1::ColorF(93.0f / 255.0f, 108.0f / 255.0f, 140.0f / 255.0f, alpha);
+		if (kind == 6) return D2D1::ColorF(1.0f, 227.0f / 255.0f, 106.0f / 255.0f, alpha);
 		return D2D1::ColorF(88.0f / 255.0f, 199.0f / 255.0f, 255.0f / 255.0f, alpha);
 	}
 
@@ -155,7 +158,7 @@ namespace
 	D2D1_COLOR_F ActorVisualColor(const ArkNativeActor& actor, const ArkNativeSettings& settings, float alpha = 1.0f)
 	{
 		if ((actor.flags & 1) != 0) return PackedColor(settings.deadColor, alpha);
-		if (actor.kind == 2 && actor.visualColor >= 0) return PackedColor(static_cast<std::uint32_t>(actor.visualColor), alpha);
+		if (actor.visualColor >= 0) return PackedColor(static_cast<std::uint32_t>(actor.visualColor), alpha);
 		if (actor.relation == 1) return PackedColor(settings.ownColor, alpha);
 		if (actor.relation == 2) return PackedColor(settings.enemyColor, alpha);
 		if (actor.relation == 3) return PackedColor(settings.selectedColor, alpha);
@@ -887,7 +890,9 @@ namespace
         {
             if (!text || !*text) return;
             const UINT32 length = static_cast<UINT32>(wcsnlen_s(text, 512));
-			const D2D1_RECT_F area = D2D1::RectF(x, y, static_cast<float>(renderWidth), y + 48.0f * dpiScale);
+			// A turret may supply three compact detail rows.  A taller text layout
+			// preserves explicit newlines instead of clipping them after one line.
+			const D2D1_RECT_F area = D2D1::RectF(x, y, static_cast<float>(renderWidth), y + 96.0f * dpiScale);
 			const float edge = std::max(0.0f, outline) * dpiScale;
 			if (background)
 				d2dContext->FillRoundedRectangle(D2D1::RoundedRect(D2D1::RectF(x - 3.0f * dpiScale, y - 1.0f * dpiScale,
@@ -997,7 +1002,7 @@ namespace
 					boxHeight = box.bottom - box.top;
 				}
 			}
-			if (actor.kind == 2)
+			if (actor.kind == 2 || actor.kind == 4 || actor.kind == 5 || actor.kind == 6)
 			{
 				boxWidth = boxHeight = 12.0f * dpiScale;
 				box = D2D1::RectF(base.x - 6.0f * dpiScale, base.y - 6.0f * dpiScale,
@@ -1033,13 +1038,17 @@ namespace
 				d2dContext->DrawLine(anchor, base, actorBrush.Get(), 1.2f * dpiScale * lineScale);
 			}
 			const int boxStyle = isPlayer ? localSettings.playerBoxStyle : (localSettings.showBoxes ? 1 : 0);
-			if (actor.kind == 2)
+			if (actor.kind == 2 || actor.kind == 4 || actor.kind == 5 || actor.kind == 6)
 			{
 				const float marker = std::clamp(3.0f * dpiScale * lineScale, 2.5f * dpiScale, 5.0f * dpiScale);
 				d2dContext->FillEllipse({ base, marker, marker }, actorBrush.Get());
-				d2dContext->DrawEllipse({ base, marker + 1.5f * dpiScale, marker + 1.5f * dpiScale },
+				 d2dContext->DrawEllipse({ base, marker + 1.5f * dpiScale, marker + 1.5f * dpiScale },
 					shadowBrush.Get(), 1.0f * dpiScale);
 			}
+			// Possible spawn locations are navigation pins only. They deliberately
+			// have no label or distance line, otherwise a full route becomes text
+			// clutter and looks like confirmed loot.
+			if (actor.kind == 5) return;
 			else if (boxStyle == 2)
 			{
 				d2dContext->DrawRectangle(box, actorBrush.Get(), 1.5f * dpiScale * lineScale);
@@ -1132,7 +1141,8 @@ namespace
 			// without a native species list or a new ABI field.
 			if (actor.kind == 1 && (actor.flags & 64) == 0) return;
 			const float labelX = box.right + 6.0f * dpiScale;
-			const float estimatedLines = 2.0f + (isPlayer && localSettings.showWeapons && actor.weapon[0] ? 1.0f : 0.0f) +
+			const bool turretColumnLabel = (actor.flags & 128) != 0;
+			const float estimatedLines = turretColumnLabel ? 5.0f : 2.0f + (isPlayer && localSettings.showWeapons && actor.weapon[0] ? 1.0f : 0.0f) +
 				(showHealthForActor && actor.maxHealth > 0.0f ? 1.0f : 0.0f) + ((isPlayer || isDino) && localSettings.showStatuses ? 1.0f : 0.0f);
 			const float labelY = ResolveLabelY(labelX, box.top, 250.0f * dpiScale * textScale,
 				estimatedLines * 17.0f * dpiScale * textScale, localSettings);
@@ -1152,6 +1162,19 @@ namespace
 			D2D1_COLOR_F titleColor = color;
 			titleColor.a = opacity;
 			DrawText(title, labelFormat.Get(), labelX, labelY, titleColor, textScale, outline, textBackground);
+			if (turretColumnLabel)
+			{
+				// Weapon is repurposed for structures as a three-row telemetry block:
+				// mode, configured radius, and live magazine. Distance is always
+				// local to the player and completes the five-line turret label.
+				DrawText(actor.weapon, detailFormat.Get(), labelX, labelY + lineStep,
+					D2D1::ColorF(0.90f, 0.94f, 0.97f, opacity), textScale, outline, textBackground);
+				wchar_t turretDistance[64]{};
+				swprintf_s(turretDistance, L"%.0f м", distance);
+				DrawText(turretDistance, detailFormat.Get(), labelX, labelY + lineStep * 4.0f,
+					D2D1::ColorF(0.90f, 0.94f, 0.97f, opacity), textScale, outline, textBackground);
+				return;
+			}
             wchar_t detail[128]{};
             const float height = (actor.z - localCamera.originZ) / 100.0f;
             if (localSettings.showDistance && localSettings.showHeight)

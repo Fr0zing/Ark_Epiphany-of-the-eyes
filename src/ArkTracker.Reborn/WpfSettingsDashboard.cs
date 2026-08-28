@@ -25,6 +25,10 @@ namespace ArkTracker
 		private readonly TextBlock statusText = new TextBlock();
 		private readonly Button espButton = new Button();
 		private readonly Dictionary<string, Button> navigationButtons = new Dictionary<string, Button>(StringComparer.Ordinal);
+		// Structure categories have a lot of optional tuning. Keep them folded until
+		// the user explicitly asks for a category, otherwise the page is a wall of
+		// technical fields before the useful on/off controls can even be seen.
+		private readonly HashSet<string> expandedStructureCategories = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
 		private readonly Dictionary<int, string> knownTribes = new Dictionary<int, string>();
 		private readonly List<string[]> turretRows = new List<string[]>();
 		private readonly List<string[]> actorRows = new List<string[]>();
@@ -56,21 +60,23 @@ namespace ArkTracker
 
 		internal bool WantsTurretRows { get { return string.Equals(currentPage, "Турели", StringComparison.Ordinal); } }
 
-		private static readonly Brush AppBackground = Brush("#10121D");
-		private static readonly Brush Surface = Brush("#191B28");
-		private static readonly Brush CardBrush = Brush("#24283A");
-		private static readonly Brush CardHoverBrush = Brush("#30354A");
-		private static readonly Brush Border = Brush("#454A62");
-		private static readonly Brush Text = Brush("#F3F4FA");
-		private static readonly Brush Muted = Brush("#A3A8BF");
-		private static readonly Brush Accent = Brush("#EE7097");
-		private static readonly Brush AccentSoft = Brush("#703B57");
-		private static readonly Brush Live = Brush("#4BE69D");
+		private static readonly Brush AppBackground = Brush("#0B0E1A");
+		private static readonly Brush Surface = Brush("#14192A");
+		private static readonly Brush CardBrush = Brush("#20263A");
+		private static readonly Brush CardHoverBrush = Brush("#2A324A");
+		private static readonly Brush Border = Brush("#3B4661");
+		private static readonly Brush Text = Brush("#F7F8FC");
+		private static readonly Brush Muted = Brush("#9AA8C8");
+		private static readonly Brush Accent = Brush("#FF679F");
+		private static readonly Brush AccentSoft = Brush("#56314B");
+		private static readonly Brush Live = Brush("#49E7B4");
+		private static readonly Brush HeaderBrush = new LinearGradientBrush(Color.FromRgb(26, 31, 54), Color.FromRgb(15, 18, 34), 0.0);
+		private static readonly Brush SectionBrush = new LinearGradientBrush(Color.FromRgb(33, 40, 62), Color.FromRgb(23, 28, 46), 0.0);
 		private static readonly ControlTemplate RoundedButtonTemplate = (ControlTemplate)XamlReader.Parse(
 			"<ControlTemplate xmlns='http://schemas.microsoft.com/winfx/2006/xaml/presentation' xmlns:x='http://schemas.microsoft.com/winfx/2006/xaml' TargetType='{x:Type Button}'>" +
-			"<Border Background='{TemplateBinding Background}' BorderBrush='{TemplateBinding BorderBrush}' BorderThickness='{TemplateBinding BorderThickness}' CornerRadius='10'>" +
+			"<Border x:Name='surface' Background='{TemplateBinding Background}' BorderBrush='{TemplateBinding BorderBrush}' BorderThickness='{TemplateBinding BorderThickness}' CornerRadius='10'>" +
 			"<ContentPresenter HorizontalAlignment='{TemplateBinding HorizontalContentAlignment}' VerticalAlignment='{TemplateBinding VerticalContentAlignment}' Margin='{TemplateBinding Padding}'/>" +
-			"</Border></ControlTemplate>");
+			"</Border><ControlTemplate.Triggers><Trigger Property='IsMouseOver' Value='True'><Setter TargetName='surface' Property='Opacity' Value='0.86'/></Trigger><Trigger Property='IsPressed' Value='True'><Setter TargetName='surface' Property='Opacity' Value='0.68'/></Trigger><Trigger Property='IsEnabled' Value='False'><Setter TargetName='surface' Property='Opacity' Value='0.45'/></Trigger></ControlTemplate.Triggers></ControlTemplate>");
 
 		internal WpfSettingsDashboard(TrackerViewSettings viewSettings, Action applySettings, Func<string[]> knownStructureClasses, Func<string[]> knownDinoClasses)
 		{
@@ -247,17 +253,22 @@ namespace ArkTracker
 			body.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(214.0) });
 			body.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1.0, GridUnitType.Star) });
 			Border navigation = new Border { Background = Surface, BorderBrush = Border, BorderThickness = new Thickness(0, 0, 1, 0) };
-			StackPanel links = new StackPanel { Margin = new Thickness(12, 18, 12, 12) };
+			StackPanel links = new StackPanel { Margin = new Thickness(14, 18, 14, 12) };
 			links.Children.Add(new TextBlock { Text = "НАВИГАЦИЯ", Foreground = Muted, FontSize = 10, FontWeight = FontWeights.SemiBold, Margin = new Thickness(12, 0, 0, 10) });
+			AddNavSection(links, "ГЛАВНОЕ");
 			AddNav(links, "Обзор");
 			AddNav(links, "Игроки");
 			AddNav(links, "Существа");
 			AddNav(links, "Племена и цвета");
-			AddNav(links, "Визуал");
+			AddNavSection(links, "БАЗА И МИССИИ");
 			AddNav(links, "Постройки");
 			AddNav(links, "Турели");
+			AddNav(links, "Миссии");
+			AddNavSection(links, "ПОМОЩНИК");
 			AddNav(links, "Угрозы");
 			AddNav(links, "Оповещения");
+			AddNavSection(links, "ВИД И ПЛАВНОСТЬ");
+			AddNav(links, "Визуал");
 			AddNav(links, "Плавность");
 			AddNav(links, "Расширенно");
 			links.Children.Add(new Border { Height = 1, Background = Border, Margin = new Thickness(10, 16, 10, 12) });
@@ -266,7 +277,7 @@ namespace ArkTracker
 			Grid.SetColumn(navigation, 0);
 			body.Children.Add(navigation);
 
-			Border content = new Border { Background = AppBackground, Padding = new Thickness(26, 20, 26, 20) };
+			Border content = new Border { Background = AppBackground, Padding = new Thickness(28, 22, 28, 22) };
 			content.Child = pageHost;
 			Grid.SetColumn(content, 1);
 			body.Children.Add(content);
@@ -277,17 +288,17 @@ namespace ArkTracker
 
 		private UIElement BuildHeader()
 		{
-			Border header = new Border { Background = Surface, BorderBrush = Border, BorderThickness = new Thickness(0, 0, 0, 1) };
-			Grid grid = new Grid { Margin = new Thickness(22, 12, 22, 12) };
+			Border header = new Border { Background = HeaderBrush, BorderBrush = Border, BorderThickness = new Thickness(0, 0, 0, 1) };
+			Grid grid = new Grid { Margin = new Thickness(24, 12, 24, 12) };
 			grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(210.0) });
 			grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1.0, GridUnitType.Star) });
 			grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(142.0) });
 			StackPanel brand = new StackPanel { VerticalAlignment = VerticalAlignment.Center };
-			brand.Children.Add(new TextBlock { Text = "ARK VISION", Foreground = Accent, FontSize = 22, FontWeight = FontWeights.Bold });
+			brand.Children.Add(new TextBlock { Text = "ARK VISION", Foreground = Accent, FontSize = 23, FontWeight = FontWeights.Bold });
 			brand.Children.Add(new TextBlock { Text = "визуальный помощник", Foreground = Muted, FontSize = 11, Margin = new Thickness(1, -2, 0, 0) });
 			grid.Children.Add(brand);
 
-			Border livePill = new Border { Background = CardBrush, BorderBrush = Border, BorderThickness = new Thickness(1), CornerRadius = new CornerRadius(11), Height = 34, Margin = new Thickness(0, 6, 18, 6), VerticalAlignment = VerticalAlignment.Center };
+			Border livePill = new Border { Background = Brush("#182039"), BorderBrush = Brush("#4C597A"), BorderThickness = new Thickness(1), CornerRadius = new CornerRadius(12), Height = 36, Margin = new Thickness(0, 6, 18, 6), VerticalAlignment = VerticalAlignment.Center };
 			StackPanel liveLine = new StackPanel { Orientation = Orientation.Horizontal, VerticalAlignment = VerticalAlignment.Center, Margin = new Thickness(12, 0, 12, 0) };
 			liveLine.Children.Add(new Ellipse { Width = 8, Height = 8, Fill = Live, Margin = new Thickness(0, 0, 8, 0), VerticalAlignment = VerticalAlignment.Center });
 			statusText.Text = "Подключение к игре…";
@@ -317,11 +328,18 @@ namespace ArkTracker
 
 		private void AddNav(Panel parent, string title)
 		{
-			Button button = new Button { Content = title, Height = 44, Margin = new Thickness(0, 0, 0, 6), HorizontalContentAlignment = HorizontalAlignment.Left, Padding = new Thickness(16, 0, 0, 0), FontSize = 14, FontWeight = FontWeights.SemiBold };
-			ConfigureButton(button, 0, 44, false);
+			Button button = new Button { Content = title, Height = 42, Margin = new Thickness(0, 0, 0, 4), HorizontalContentAlignment = HorizontalAlignment.Left, Padding = new Thickness(14, 0, 0, 0), FontSize = 14, FontWeight = FontWeights.SemiBold };
+			ConfigureButton(button, 0, 42, false);
+			button.Background = Brushes.Transparent;
+			button.BorderBrush = Brushes.Transparent;
 			button.Click += delegate { ShowPage(title); };
 			navigationButtons[title] = button;
 			parent.Children.Add(button);
+		}
+
+		private void AddNavSection(Panel parent, string title)
+		{
+			parent.Children.Add(new TextBlock { Text = title, Foreground = Accent, FontSize = 10, FontWeight = FontWeights.SemiBold, Margin = new Thickness(12, 13, 0, 7) });
 		}
 
 		private void ShowPage(string title)
@@ -335,7 +353,7 @@ namespace ArkTracker
 			foreach (KeyValuePair<string, Button> item in navigationButtons)
 			{
 				bool selected = string.Equals(item.Key, title, StringComparison.Ordinal);
-				item.Value.Background = selected ? AccentSoft : Surface;
+				item.Value.Background = selected ? AccentSoft : Brushes.Transparent;
 				item.Value.Foreground = selected ? Brushes.White : Muted;
 			}
 			switch (title)
@@ -346,6 +364,7 @@ namespace ArkTracker
 				case "Визуал": pageHost.Content = PageVisual(); break;
 				case "Постройки": pageHost.Content = PageStructures(); break;
 				case "Турели": pageHost.Content = PageTurrets(); break;
+				case "Миссии": pageHost.Content = PageMissions(); break;
 				case "Угрозы": pageHost.Content = PageThreats(); break;
 				case "Оповещения": pageHost.Content = PageNotifications(); break;
 				case "Плавность": pageHost.Content = PagePerformance(); break;
@@ -357,12 +376,15 @@ namespace ArkTracker
 		private UIElement PageOverview()
 		{
 			WrapPanel cards = Page("Обзор", "Главные функции. Изменения применяются сразу.");
+			cards.Children.Add(SectionTitle("Быстрый доступ", "Включай только то, что хочешь видеть поверх игры"));
 			cards.Children.Add(ToggleCard("Экранная ESP", "Главный переключатель подсветки", delegate { return settings.OverlayEnabled; }, delegate(bool value) { settings.OverlayEnabled = value; }));
 			cards.Children.Add(ToggleCard("Мини-радар", "Компактная карта поверх игры", delegate { return settings.MiniRadarEnabled; }, delegate(bool value) { settings.MiniRadarEnabled = value; }));
 			cards.Children.Add(ToggleCard("Игроки", "Рамки, имена и здоровье", delegate { return settings.ShowPlayers; }, delegate(bool value) { settings.ShowPlayers = value; }));
 			cards.Children.Add(ToggleCard("Прирученные существа", "Показывать динозавров", delegate { return settings.ShowDinos; }, delegate(bool value) { settings.ShowDinos = value; }));
 			cards.Children.Add(ToggleCard("Дикие существа", "Не засорять экран дикими", delegate { return settings.ShowWildDinos; }, delegate(bool value) { settings.ShowWildDinos = value; }));
 			cards.Children.Add(ToggleCard("Постройки", "Точки и подписи базы", delegate { return settings.ShowStructures; }, delegate(bool value) { settings.ShowStructures = value; }));
+			cards.Children.Add(ToggleCard("Mutagen · Gen 2", "Отдельные бирюзовые метки наземного ресурса", delegate { return settings.ShowMutagel; }, delegate(bool value) { settings.ShowMutagel = value; }));
+			cards.Children.Add(SectionTitle("Сейчас в мире", "События и найденные объекты появляются здесь во время игры"));
 			cards.Children.Add(EventFeedCard());
 			cards.Children.Add(ActorTableCard());
 			return Scroll(cards);
@@ -371,6 +393,7 @@ namespace ArkTracker
 		private UIElement PagePlayers()
 		{
 			WrapPanel cards = Page("Игроки", "Всё, что видно рядом с персонажем.");
+			cards.Children.Add(SectionTitle("Основное", "Сначала выбери, кого показывать и как выглядит метка"));
 			cards.Children.Add(ToggleCard("Показывать игроков", "Главный переключатель меток игроков", delegate { return settings.ShowPlayers; }, delegate(bool value) { settings.ShowPlayers = value; }));
 			cards.Children.Add(ChoiceCard("Рамка", new string[] { "Без рамки", "Угловая рамка", "2D рамка" }, (int)settings.PlayerBox, delegate(int value) { settings.PlayerBox = (PlayerBoxStyle)value; }));
 			cards.Children.Add(ToggleCard("Скелет", "Контур позы внутри рамки", delegate { return settings.ShowPlayerSkeleton; }, delegate(bool value) { settings.ShowPlayerSkeleton = value; }));
@@ -381,6 +404,7 @@ namespace ArkTracker
 			cards.Children.Add(ToggleCard("Игнорировать спящих", "Не рисовать спящих", delegate { return settings.IgnoreSleeping; }, delegate(bool value) { settings.IgnoreSleeping = value; }));
 			cards.Children.Add(ToggleCard("Погибшие", "Отмечать тела отдельно", delegate { return settings.ShowCorpses; }, delegate(bool value) { settings.ShowCorpses = value; }));
 			cards.Children.Add(ToggleCard("Название племени", "Показывать племя вместо номера", delegate { return settings.ShowTribeNames; }, delegate(bool value) { settings.ShowTribeNames = value; }));
+			cards.Children.Add(SectionTitle("Фильтр и расстояние", "Скрывай лишнее, чтобы экран оставался читаемым"));
 			cards.Children.Add(ChoiceCard("Кого подсвечивать", new string[] { "Все вокруг", "Только враги", "Только свои", "Выбранные племена" }, TeamModeToChoice(settings.TeamMode), delegate(int value) { settings.TeamMode = ChoiceToTeamMode(value); }));
 			cards.Children.Add(NumberCard("Толщина HP", "Ширина шкалы здоровья, px", settings.HealthBarThickness, 1, 14, delegate(double value) { settings.HealthBarThickness = (float)value; }));
 			cards.Children.Add(NumberCard("Дальность игроков", "Максимальная дальность, м", settings.PlayerMaxDistanceCm / 100f, 10, 50000, delegate(double value) { settings.PlayerMaxDistanceCm = (float)value * 100f; }));
@@ -390,6 +414,7 @@ namespace ArkTracker
 		private UIElement PageCreatures()
 		{
 			WrapPanel cards = Page("Существа", "Всё про прирученных и диких — в одном месте.");
+			cards.Children.Add(SectionTitle("Что показывать", "Дикие и прирученные существа управляются независимо"));
 			cards.Children.Add(ToggleCard("Показывать прирученных", "Независимо от диких — своё и чужое приручённое", delegate { return settings.ShowDinos; }, delegate(bool value) { settings.ShowDinos = value; }));
 			cards.Children.Add(ToggleCard("Показывать диких", "Независимо от прирученных", delegate { return settings.ShowWildDinos; }, delegate(bool value) { settings.ShowWildDinos = value; }));
 			cards.Children.Add(ToggleCard("Здоровье", "HP-полоса и числа рядом с существом, отдельно от игроков", delegate { return settings.ShowDinoHealth; }, delegate(bool value) { settings.ShowDinoHealth = value; }));
@@ -397,6 +422,7 @@ namespace ArkTracker
 			cards.Children.Add(ToggleCard("Название племени", "У приручённых — то же самое, что и у игроков этого племени", delegate { return settings.ShowTribeNames; }, delegate(bool value) { settings.ShowTribeNames = value; }));
 			cards.Children.Add(ToggleCard("Статусы", "Спит / движется / неподвижен", delegate { return settings.ShowStatuses; }, delegate(bool value) { settings.ShowStatuses = value; }));
 			cards.Children.Add(NumberCard("Дальность существ", "Максимальная дальность, м", settings.DinoMaxDistanceCm / 100f, 10, 50000, delegate(double value) { settings.DinoMaxDistanceCm = (float)value * 100f; }));
+			cards.Children.Add(SectionTitle("Важные виды", "Оставь развёрнутую подпись только для нужных существ"));
 			cards.Children.Add(ToggleCard("Показывать только важные виды", "Остальные виды скрыты полностью, если список ниже не пуст", delegate { return settings.ShowOnlyPriorityDinos; }, delegate(bool value) { settings.ShowOnlyPriorityDinos = value; }));
 			cards.Children.Add(DinoSpeciesListCard());
 			cards.Children.Add(InfoCard("Седло — пока нет", "Требует поиска и живой проверки чтения инвентаря/экипировки существа (та же неподтверждённая цепочка, что и для брони игрока) — офсет не проверен, поэтому не гадаем и не показываем."));
@@ -476,8 +502,10 @@ namespace ArkTracker
 		private UIElement PageTeamsAndColors()
 		{
 			WrapPanel cards = Page("Племена и цвета", "Выбирай найденные племена по названию. ID можно сохранить вручную, даже если племя сейчас не прогружено.");
+			cards.Children.Add(SectionTitle("Отношение к игрокам", "Союзники и выбранные племена имеют собственные цвета"));
 			cards.Children.Add(ChoiceCard("Режим игроков", new string[] { "Все вокруг", "Только враги", "Только свои", "Выбранные племена" }, TeamModeToChoice(settings.TeamMode), delegate(int value) { settings.TeamMode = ChoiceToTeamMode(value); }));
 			cards.Children.Add(TribeSelectionCard());
+			cards.Children.Add(SectionTitle("Цвета", "Нажми на цвет, чтобы выбрать из палитры"));
 			cards.Children.Add(ColorCard("Здоровье", "Шкала и цифры HP", delegate { return settings.HealthColor; }, delegate(int value) { settings.HealthColor = value; }));
 			cards.Children.Add(ColorCard("Своё племя", "Игроки твоего племени", delegate { return settings.OwnColor; }, delegate(int value) { settings.OwnColor = value; }));
 			cards.Children.Add(ColorCard("Союзники", "Сохранённые союзные племена", delegate { return settings.AllyColor; }, delegate(int value) { settings.AllyColor = value; }));
@@ -492,6 +520,7 @@ namespace ArkTracker
 		private UIElement PageVisual()
 		{
 			WrapPanel cards = Page("Визуал", "Читаемость подписей и плавность overlay.");
+			cards.Children.Add(SectionTitle("Готовый вид", "Профиль быстро выставит удобные значения; далее можно изменить всё вручную"));
 			cards.Children.Add(ChoiceCard("Готовый профиль", new string[] { "Пользовательский", "PvP", "Пещеры", "База", "Минимальный" }, 0, ApplyVisualProfile));
 			cards.Children.Add(ToggleCard("Умное масштабирование", "Дальние подписи становятся компактнее", delegate { return settings.AutoScale; }, delegate(bool value) { settings.AutoScale = value; }));
 			cards.Children.Add(ToggleCard("Не перекрывать подписи", "Автоматически раздвигать текст", delegate { return settings.AvoidLabelOverlap; }, delegate(bool value) { settings.AvoidLabelOverlap = value; }));
@@ -500,6 +529,7 @@ namespace ArkTracker
 			cards.Children.Add(ToggleCard("Индикатор угрозы", "Враги и ближайшая дистанция", delegate { return settings.ThreatIndicator; }, delegate(bool value) { settings.ThreatIndicator = value; }));
 			cards.Children.Add(ToggleCard("Статусы игроков", "Спит, двигается, неподвижен", delegate { return settings.ShowStatuses; }, delegate(bool value) { settings.ShowStatuses = value; }));
 			cards.Children.Add(ToggleCard("Направление движения", "Короткая линия движения", delegate { return settings.ShowMovementDirection; }, delegate(bool value) { settings.ShowMovementDirection = value; }));
+			cards.Children.Add(SectionTitle("Читаемость и дальность", "Тонкая настройка размера, текста и плотности меток"));
 			cards.Children.Add(NumberCard("Размер текста", "Общий масштаб подписей", settings.TextSize, 7, 24, delegate(double value) { settings.TextSize = (float)value; }));
 			cards.Children.Add(NumberCard("Обводка", "Толщина тёмного контура", settings.TextOutline, 0, 5, delegate(double value) { settings.TextOutline = (float)value; }));
 			cards.Children.Add(NumberCard("Прозрачность текста", "От 20 до 100 процентов", settings.TextOpacity * 100f, 20, 100, delegate(double value) { settings.TextOpacity = (float)value / 100f; }));
@@ -513,6 +543,7 @@ namespace ArkTracker
 		private UIElement PageStructures()
 		{
 			WrapPanel cards = Page("Постройки", "Управляй плотностью точек и подписями базы.");
+			cards.Children.Add(SectionTitle("Быстрые настройки", "Главные параметры базы; применяются сразу"));
 			cards.Children.Add(ToggleCard("Показывать постройки", "Главный переключатель", delegate { return settings.ShowStructures; }, delegate(bool value) { settings.ShowStructures = value; }));
 			cards.Children.Add(ToggleCard("Показывать свои постройки", "Выключи, чтобы видеть только чужие/незнакомые базы", delegate { return settings.ShowOwnStructures; }, delegate(bool value) { settings.ShowOwnStructures = value; }));
 			cards.Children.Add(ToggleCard("Владелец в подписи", "Имя игрока, который поставил постройку (если известно и без группировки)", delegate { return settings.ShowStructureOwner; }, delegate(bool value) { settings.ShowStructureOwner = value; }));
@@ -522,6 +553,15 @@ namespace ArkTracker
 			cards.Children.Add(NumberCard("Общий радиус группировки", "Применить расстояние ко всем категориям, м", settings.StructureGroupingDistanceCm / 100f, 1, 100, SetAllCategoryDistance));
 			cards.Children.Add(NumberCard("Точек построек", "Ограничение для сложных баз", settings.MaxStructurePoints, 100, 10000, delegate(double value) { settings.MaxStructurePoints = (int)value; }));
 			cards.Children.Add(NumberCard("Дальность построек", "Максимальная дальность, м", settings.StructureMaxDistanceCm / 100f, 10, 50000, delegate(double value) { settings.StructureMaxDistanceCm = (float)value * 100f; }));
+			cards.Children.Add(SectionTitle("Mutagen · Genesis 2", "Маршрут возможных мест и отдельная метка найденного ресурса"));
+			cards.Children.Add(ToggleCard("Mutagen · Gen 2", "Бирюзовые метки ресурса на земле; не входит в группировку построек", delegate { return settings.ShowMutagel; }, delegate(bool value) { settings.ShowMutagel = value; }));
+			cards.Children.Add(NumberCard("Дальность Mutagen", "Максимальная дальность, м", settings.MutagelMaxDistanceCm / 100f, 10, 5000, delegate(double value) { settings.MutagelMaxDistanceCm = (float)value * 100f; }));
+			cards.Children.Add(ToggleCard("Маршрут Mutagen", "Тусклые точки возможных мест; яркая подпись остаётся только у найденной луковицы", delegate { return settings.ShowMutagenSpawnPoints; }, delegate(bool value) { settings.ShowMutagenSpawnPoints = value; }));
+			cards.Children.Add(ToggleCard("Скрывать проверенные точки", "После подлёта точка временно уходит с экрана, не мешая следующему кругу", delegate { return settings.HideVisitedMutagenSpawnPoints; }, delegate(bool value) { settings.HideVisitedMutagenSpawnPoints = value; }));
+			cards.Children.Add(NumberCard("Радиус проверки Mutagen", "Подлёт к точке, м", settings.MutagenVisitRadiusCm / 100f, 5, 200, delegate(double value) { settings.MutagenVisitRadiusCm = (float)value * 100f; }));
+			cards.Children.Add(NumberCard("Скрывать на", "Секунд после проверки; максимум 60", settings.MutagenVisitedHideSeconds, 5, 60, delegate(double value) { settings.MutagenVisitedHideSeconds = (int)value; }));
+			cards.Children.Add(ActionCard("Сбросить маршрут", "Снова показать все возможные точки в текущем запуске", "Показать все", delegate { settings.MutagenRouteClearSerial++; Commit(); }));
+			cards.Children.Add(SectionTitle("Категории построек", "Каждая группа свёрнута: включай, выключай или открывай только нужную"));
 			cards.Children.Add(StructureClassListCard());
 			for (int i = 0; i < settings.StructureCategories.Count; i++) cards.Children.Add(CategoryCard(settings.StructureCategories[i]));
 			return Scroll(cards);
@@ -531,12 +571,25 @@ namespace ArkTracker
 		{
 			WrapPanel cards = Page("Турели", "Все найденные турели рядом. Отношение к племени указано прямо в таблице.");
 			cards.Children.Add(TurretTableCard());
+			cards.Children.Add(SectionTitle("Отображение турелей", "Сначала выбери, какие турели оставлять на экране"));
 			StructureCategoryRule turrets = FindCategory("turrets");
 			if (turrets != null) cards.Children.Add(CategoryCard(turrets));
-			cards.Children.Add(ToggleCard("Дальность и режим на экране", "Подпись турели в игре: дальность и режим наведения, рядом с боезапасом", delegate { return settings.ShowTurretDetails; }, delegate(bool value) { settings.ShowTurretDetails = value; }));
+			cards.Children.Add(ToggleCard("Скрывать пустые турели", "Турель с подтверждённым нулём патронов исчезает целиком: без точки, подписи и метки на радаре", delegate { return settings.HideEmptyTurrets; }, delegate(bool value) { settings.HideEmptyTurrets = value; }));
+			cards.Children.Add(ToggleCard("Только стреляющие турели", "Оставлять только турели, которые сейчас наводятся на цель; обычные, неактивные турели скрываются целиком", delegate { return settings.ShowOnlyFiringTurrets; }, delegate(bool value) { settings.ShowOnlyFiringTurrets = value; }));
+			cards.Children.Add(ToggleCard("Подробная подпись на экране", "Название и готовность, затем отдельными строками: режим, радиус, патроны и дистанция", delegate { return settings.ShowTurretDetails; }, delegate(bool value) { settings.ShowTurretDetails = value; }));
 			cards.Children.Add(TurretModeNamesCard());
+			cards.Children.Add(SectionTitle("Предупреждения", "Уведомление появляется только при новой чужой турели рядом"));
 			cards.Children.Add(ToggleCard("Оповещать о турелях", "Только при появлении чужой турели рядом", delegate { return settings.NotifyEnemyTurrets; }, delegate(bool value) { settings.NotifyEnemyTurrets = value; }));
 			cards.Children.Add(NumberCard("Радиус турелей", "Дальность предупреждения, м", settings.TurretNoticeDistanceCm / 100f, 10, 5000, delegate(double value) { settings.TurretNoticeDistanceCm = (float)value * 100f; }));
+			return Scroll(cards);
+		}
+
+		private UIElement PageMissions()
+		{
+			WrapPanel cards = Page("Миссии", "Подсказки для Hunt-миссий Genesis без вмешательства в игру.");
+			cards.Children.Add(ToggleCard("Следы Hunt-миссий", "Яркая жёлтая метка над следующим следом, например в Velonasaur Stalk", delegate { return settings.ShowMissionTracks; }, delegate(bool value) { settings.ShowMissionTracks = value; }));
+			cards.Children.Add(NumberCard("Дальность следов", "Максимальная дальность, м", settings.MissionTrackMaxDistanceCm / 100f, 10, 1000, delegate(double value) { settings.MissionTrackMaxDistanceCm = (float)value * 100f; }));
+			cards.Children.Add(InfoCard("Как это работает", "Показываются только активные HuntTracks/BiometricTracking-эффекты, которые уже существуют в клиенте во время миссии. Миссию, цели и прогресс трекер не меняет."));
 			return Scroll(cards);
 		}
 
@@ -544,6 +597,7 @@ namespace ArkTracker
 		{
 			WrapPanel cards = Page("Угрозы", "Только вражеский приручённый Ноглин в выбранном радиусе.");
 			cards.Children.Add(NoglinStateCard());
+			cards.Children.Add(SectionTitle("Защита от Ноглина", "Проверка активна только в игре и не трогает управление меню"));
 			cards.Children.Add(ToggleCard("Защита от Ноглина", "Следить за угрозой", delegate { return settings.NoglinProtection; }, delegate(bool value) { settings.NoglinProtection = value; }));
 			cards.Children.Add(ToggleCard("Автоматически пить антидот", "Нажать слот, только когда ARK в фокусе", delegate { return settings.AutoUseAntidote; }, delegate(bool value) { settings.AutoUseAntidote = value; }));
 			cards.Children.Add(ToggleCard("Звуковая тревога", "Сигнал при угрозе или отсутствии антидота", delegate { return settings.NoglinSound; }, delegate(bool value) { settings.NoglinSound = value; }));
@@ -556,6 +610,7 @@ namespace ArkTracker
 		private UIElement PageNotifications()
 		{
 			WrapPanel cards = Page("Оповещения", "Уведомления появляются поверх игры и не мешают управлению.");
+			cards.Children.Add(SectionTitle("Кого отслеживать", "Выбери отношения, для которых нужны сообщения"));
 			cards.Children.Add(ToggleCard("Оповещения", "Главный переключатель", delegate { return settings.NotificationsEnabled; }, delegate(bool value) { settings.NotificationsEnabled = value; }));
 			cards.Children.Add(ToggleCard("Вражеские игроки", "Появление и исчезновение врагов", delegate { return settings.NotifyEnemyPlayers; }, delegate(bool value) { settings.NotifyEnemyPlayers = value; }));
 			cards.Children.Add(ToggleCard("Своё племя", "События у игроков своего племени", delegate { return settings.NotifyOwnPlayers; }, delegate(bool value) { settings.NotifyOwnPlayers = value; }));
@@ -567,6 +622,7 @@ namespace ArkTracker
 			cards.Children.Add(ToggleCard("Игрок возродился", "Отдельное сообщение о возвращении", delegate { return settings.NotifyPlayerRevived; }, delegate(bool value) { settings.NotifyPlayerRevived = value; }));
 			cards.Children.Add(ToggleCard("Игрок уснул", "Отдельно сообщить о сне", delegate { return settings.NotifyPlayerSlept; }, delegate(bool value) { settings.NotifyPlayerSlept = value; }));
 			cards.Children.Add(ToggleCard("Игрок проснулся", "Отдельно сообщить о пробуждении", delegate { return settings.NotifyPlayerWoke; }, delegate(bool value) { settings.NotifyPlayerWoke = value; }));
+			cards.Children.Add(SectionTitle("События и вид ленты", "Дистанции, повторы и положение уведомлений"));
 			cards.Children.Add(ToggleCard("Близкий враг", "Предупредить при сближении", delegate { return settings.NotifyEnemyApproach; }, delegate(bool value) { settings.NotifyEnemyApproach = value; }));
 			cards.Children.Add(ToggleCard("Опасная дистанция", "Отдельное тревожное предупреждение", delegate { return settings.NotifyEnemyDanger; }, delegate(bool value) { settings.NotifyEnemyDanger = value; }));
 			cards.Children.Add(NumberCard("Радиус оповещения", "Дальность появления игрока, м", settings.EnemyNoticeDistanceCm / 100f, 10, 5000, delegate(double value) { settings.EnemyNoticeDistanceCm = (float)value * 100f; }));
@@ -588,6 +644,7 @@ namespace ArkTracker
 		private UIElement PagePerformance()
 		{
 			WrapPanel cards = Page("Плавность", "Настройки, которые сильнее всего влияют на FPS и задержку.");
+			cards.Children.Add(SectionTitle("Скорость работы", "Сначала меняй только эти значения и смотри на диагностику"));
 			cards.Children.Add(NumberCard("Полное сканирование", "Новые объекты и данные, мс", settings.RefreshIntervalMs, 50, 60000, delegate(double value) { settings.RefreshIntervalMs = (int)value; }));
 			cards.Children.Add(NumberCard("Метки игроков и существ", "Ограничение текста на экране", settings.MaxLabels, 10, 1000, delegate(double value) { settings.MaxLabels = (int)value; }));
 			cards.Children.Add(NumberCard("Размер мини-радара", "Ширина и высота, px", settings.MiniRadarSize, 140, 500, delegate(double value) { settings.MiniRadarSize = (int)value; }));
@@ -601,6 +658,7 @@ namespace ArkTracker
 		private UIElement PageAdvanced()
 		{
 			WrapPanel cards = Page("Расширенно", "Остальные настройки считывания и overlay. Оставлены здесь, чтобы главный экран не был перегружен.");
+			cards.Children.Add(SectionTitle("Редкие настройки", "Здесь параметры, которые обычно не нужно менять каждый день"));
 			cards.Children.Add(TextCard("Фильтр объектов", "Часть имени или класса; пусто — без фильтра", settings.Search, delegate(string value) { settings.Search = value; }));
 			cards.Children.Add(ToggleCard("Рамки существ", "Показывать рамки у объектов", delegate { return settings.ShowBoxes; }, delegate(bool value) { settings.ShowBoxes = value; }));
 			cards.Children.Add(ToggleCard("Уровни", "Показывать уровень существа", delegate { return settings.ShowLevel; }, delegate(bool value) { settings.ShowLevel = value; }));
@@ -659,11 +717,20 @@ namespace ArkTracker
 		private WrapPanel Page(string title, string subtitle)
 		{
 			Grid shell = new Grid();
-			shell.RowDefinitions.Add(new RowDefinition { Height = new GridLength(72.0) });
+			shell.RowDefinitions.Add(new RowDefinition { Height = new GridLength(82.0) });
 			shell.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1.0, GridUnitType.Star) });
-			StackPanel heading = new StackPanel { Margin = new Thickness(0, 0, 0, 12) };
-			heading.Children.Add(new TextBlock { Text = title, Foreground = Text, FontSize = 28, FontWeight = FontWeights.Bold });
-			heading.Children.Add(new TextBlock { Text = subtitle, Foreground = Muted, FontSize = 13, Margin = new Thickness(1, 2, 0, 0) });
+			Border heading = new Border { Background = SectionBrush, BorderBrush = Border, BorderThickness = new Thickness(1), CornerRadius = new CornerRadius(15), Padding = new Thickness(20, 12, 20, 12), Margin = new Thickness(0, 0, 0, 12) };
+			Grid headingLayout = new Grid();
+			headingLayout.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
+			headingLayout.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto });
+			StackPanel headingWords = new StackPanel { VerticalAlignment = VerticalAlignment.Center };
+			headingWords.Children.Add(new TextBlock { Text = title, Foreground = Text, FontSize = 28, FontWeight = FontWeights.Bold });
+			headingWords.Children.Add(new TextBlock { Text = subtitle, Foreground = Muted, FontSize = 12, Margin = new Thickness(1, 1, 0, 0), TextTrimming = TextTrimming.CharacterEllipsis });
+			headingLayout.Children.Add(headingWords);
+			Border instant = new Border { Background = Brush("#243654"), CornerRadius = new CornerRadius(10), Padding = new Thickness(10, 5, 10, 5), VerticalAlignment = VerticalAlignment.Center };
+			instant.Child = new TextBlock { Text = "ПРИМЕНЯЕТСЯ СРАЗУ", Foreground = Live, FontSize = 10, FontWeight = FontWeights.SemiBold };
+			Grid.SetColumn(instant, 1); headingLayout.Children.Add(instant);
+			heading.Child = headingLayout;
 			shell.Children.Add(heading);
 			WrapPanel cards = new WrapPanel { Margin = new Thickness(-6, 0, 0, 0) };
 			Grid.SetRow(cards, 1);
@@ -751,7 +818,7 @@ namespace ArkTracker
 
 		private UIElement Card(string title, string subtitle, UIElement value)
 		{
-			Border card = new Border { Width = 316, Height = 108, Margin = new Thickness(6), Background = CardBrush, BorderBrush = Border, BorderThickness = new Thickness(1), CornerRadius = new CornerRadius(12), Padding = new Thickness(16, 12, 14, 12) };
+			Border card = new Border { Width = 316, Height = 108, Margin = new Thickness(6), Background = CardBrush, BorderBrush = Border, BorderThickness = new Thickness(1), CornerRadius = new CornerRadius(14), Padding = new Thickness(17, 13, 15, 13) };
 			Grid layout = new Grid();
 			layout.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1.0, GridUnitType.Star) });
 			layout.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto });
@@ -769,12 +836,31 @@ namespace ArkTracker
 
 		private UIElement InfoCard(string title, string text)
 		{
-			Border card = new Border { Width = 646, Height = 108, Margin = new Thickness(6), Background = CardBrush, BorderBrush = Border, BorderThickness = new Thickness(1), CornerRadius = new CornerRadius(12), Padding = new Thickness(16, 12, 16, 12) };
+			Border card = new Border { Width = 646, Height = 108, Margin = new Thickness(6), Background = CardBrush, BorderBrush = Border, BorderThickness = new Thickness(1), CornerRadius = new CornerRadius(14), Padding = new Thickness(17, 13, 17, 13) };
 			StackPanel panel = new StackPanel();
 			panel.Children.Add(new TextBlock { Text = title, Foreground = Text, FontSize = 14, FontWeight = FontWeights.SemiBold });
 			panel.Children.Add(new TextBlock { Text = text, Foreground = Muted, FontSize = 11, TextWrapping = TextWrapping.Wrap, Margin = new Thickness(0, 7, 0, 0) });
 			card.Child = panel;
 			return card;
+		}
+
+		// Full-width signposts make long pages understandable at a glance. The
+		// controls below are still the same immediate settings; they are merely
+		// arranged into small, human-readable sections.
+		private UIElement SectionTitle(string title, string subtitle)
+		{
+			Border section = new Border { Width = 976, Height = 52, Margin = new Thickness(6, 14, 6, 4), Background = SectionBrush, BorderBrush = Border, BorderThickness = new Thickness(1), CornerRadius = new CornerRadius(12), Padding = new Thickness(0) };
+			Grid layout = new Grid();
+			layout.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(5) });
+			layout.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(210) });
+			layout.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
+			layout.Children.Add(new Border { Background = Accent, CornerRadius = new CornerRadius(12, 0, 0, 12) });
+			TextBlock titleBlock = new TextBlock { Text = title.ToUpperInvariant(), Foreground = Text, FontSize = 12, FontWeight = FontWeights.SemiBold, VerticalAlignment = VerticalAlignment.Center, Margin = new Thickness(14, 0, 8, 0) };
+			Grid.SetColumn(titleBlock, 1); layout.Children.Add(titleBlock);
+			TextBlock hint = new TextBlock { Text = subtitle, Foreground = Muted, FontSize = 11, VerticalAlignment = VerticalAlignment.Center, TextTrimming = TextTrimming.CharacterEllipsis, Margin = new Thickness(0, 0, 14, 0) };
+			Grid.SetColumn(hint, 2); layout.Children.Add(hint);
+			section.Child = layout;
+			return section;
 		}
 
 		private UIElement DiagnosticsCard()
@@ -1080,7 +1166,7 @@ namespace ArkTracker
 
 		private Border LargeCard(double width, double height)
 		{
-			return new Border { Width = width, Height = height, Margin = new Thickness(6), Background = CardBrush, BorderBrush = Border, BorderThickness = new Thickness(1), CornerRadius = new CornerRadius(12), Padding = new Thickness(16, 12, 16, 12) };
+			return new Border { Width = width, Height = height, Margin = new Thickness(6), Background = CardBrush, BorderBrush = Border, BorderThickness = new Thickness(1), CornerRadius = new CornerRadius(14), Padding = new Thickness(17, 13, 17, 13) };
 		}
 
 		private UIElement TableRow(string[] cells, double[] widths, bool header, int rowIndex)
@@ -1413,22 +1499,67 @@ namespace ArkTracker
 
 		private UIElement CategoryCard(StructureCategoryRule category)
 		{
-			Border card = LargeCard(646, 348);
+			bool expanded = expandedStructureCategories.Contains(category.Id);
+			Border card = LargeCard(646, expanded ? 348 : 70);
 			Grid layout = new Grid();
-			layout.RowDefinitions.Add(new RowDefinition { Height = new GridLength(34) });
-			layout.RowDefinitions.Add(new RowDefinition { Height = new GridLength(68) });
-			layout.RowDefinitions.Add(new RowDefinition { Height = new GridLength(58) });
-			layout.RowDefinitions.Add(new RowDefinition { Height = new GridLength(58) });
 			layout.RowDefinitions.Add(new RowDefinition { Height = new GridLength(42) });
-			layout.RowDefinitions.Add(new RowDefinition { Height = new GridLength(38) });
-			TextBlock title = new TextBlock { Text = category.Name, Foreground = Text, FontSize = 14, FontWeight = FontWeights.SemiBold, VerticalAlignment = VerticalAlignment.Center };
-			layout.Children.Add(title);
-			Button enabled = new Button { Width = 53, Height = 25, HorizontalAlignment = HorizontalAlignment.Right };
+			layout.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
+
+			Grid header = new Grid();
+			header.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
+			header.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(62) });
+			Grid details = null;
+			TextBlock heading = new TextBlock { Text = category.Name, Foreground = Text, FontSize = 15, FontWeight = FontWeights.SemiBold, TextTrimming = TextTrimming.CharacterEllipsis };
+			TextBlock summary = new TextBlock { Foreground = Muted, FontSize = 10, Margin = new Thickness(0, 3, 0, 0), TextTrimming = TextTrimming.CharacterEllipsis };
+			TextBlock disclosure = new TextBlock { Foreground = Accent, FontSize = 11, Margin = new Thickness(9, 0, 0, 0), VerticalAlignment = VerticalAlignment.Center };
+			StackPanel headerWords = new StackPanel { VerticalAlignment = VerticalAlignment.Center };
+			headerWords.Children.Add(heading); headerWords.Children.Add(summary);
+			Grid headerContent = new Grid();
+			headerContent.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
+			headerContent.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto });
+			headerContent.Children.Add(headerWords); Grid.SetColumn(disclosure, 1); headerContent.Children.Add(disclosure);
+			Button expand = new Button { Height = 40, HorizontalContentAlignment = HorizontalAlignment.Stretch, Padding = new Thickness(0, 0, 6, 0), Content = headerContent };
+			ConfigureButton(expand, 0, 40, false);
+			expand.Background = Brushes.Transparent; expand.BorderBrush = Brushes.Transparent;
+			Action refreshHeader = delegate
+			{
+				bool open = expandedStructureCategories.Contains(category.Id);
+				summary.Text = category.Enabled
+					? (category.Group ? "Группы · " : "Каждый элемент · ") + (category.ShowNames ? "с названиями" : "только точки")
+					: "Скрыта";
+				disclosure.Text = open ? "Свернуть  ▴" : "Настроить  ▾";
+			};
+			expand.Click += delegate
+			{
+				if (!expandedStructureCategories.Add(category.Id)) expandedStructureCategories.Remove(category.Id);
+				bool open = expandedStructureCategories.Contains(category.Id);
+				card.Height = open ? 348 : 70;
+				details.Visibility = open ? Visibility.Visible : Visibility.Collapsed;
+				refreshHeader();
+			};
+			refreshHeader();
+			header.Children.Add(expand);
+
+			Button enabled = new Button { Width = 53, Height = 25, HorizontalAlignment = HorizontalAlignment.Right, VerticalAlignment = VerticalAlignment.Center };
 			ConfigureButton(enabled, 53, 25, false);
-			Action refreshEnabled = delegate { enabled.Content = category.Enabled ? "ВКЛ" : "ВЫКЛ"; enabled.Background = category.Enabled ? Accent : CardHoverBrush; enabled.Foreground = category.Enabled ? Brushes.White : Muted; };
-			enabled.Click += delegate { category.Enabled = !category.Enabled; refreshEnabled(); Commit(); };
+			Action refreshEnabled = delegate
+			{
+				enabled.Content = category.Enabled ? "ВКЛ" : "ВЫКЛ";
+				enabled.Background = category.Enabled ? Accent : CardHoverBrush;
+				enabled.Foreground = category.Enabled ? Brushes.White : Muted;
+				refreshHeader();
+			};
+			enabled.Click += delegate { category.Enabled = !category.Enabled; Commit(); refreshEnabled(); };
 			refreshEnabled();
-			layout.Children.Add(enabled);
+			Grid.SetColumn(enabled, 1); header.Children.Add(enabled);
+			layout.Children.Add(header);
+
+			details = new Grid { Visibility = expanded ? Visibility.Visible : Visibility.Collapsed, Margin = new Thickness(0, 4, 0, 0) };
+			details.RowDefinitions.Add(new RowDefinition { Height = new GridLength(68) });
+			details.RowDefinitions.Add(new RowDefinition { Height = new GridLength(58) });
+			details.RowDefinitions.Add(new RowDefinition { Height = new GridLength(58) });
+			details.RowDefinitions.Add(new RowDefinition { Height = new GridLength(42) });
+			details.RowDefinitions.Add(new RowDefinition { Height = new GridLength(38) });
 			Grid modes = new Grid();
 			modes.ColumnDefinitions.Add(new ColumnDefinition()); modes.ColumnDefinitions.Add(new ColumnDefinition());
 			modes.RowDefinitions.Add(new RowDefinition { Height = new GridLength(28) }); modes.RowDefinitions.Add(new RowDefinition { Height = new GridLength(28) });
@@ -1452,25 +1583,25 @@ namespace ArkTracker
 			own.Content = category.ShowOwn ? "Свои: показывать" : "Свои: скрыты";
 			own.Click += delegate { category.ShowOwn = !category.ShowOwn; own.Content = category.ShowOwn ? "Свои: показывать" : "Свои: скрыты"; Commit(); };
 			Grid.SetRow(own, 1); Grid.SetColumn(own, 1); modes.Children.Add(own);
-			Grid.SetRow(modes, 1); layout.Children.Add(modes);
+			details.Children.Add(modes);
 
 			Grid metrics = new Grid(); for (int i = 0; i < 4; i++) metrics.ColumnDefinitions.Add(new ColumnDefinition());
 			metrics.Children.Add(SmallField("Группа, м", (category.GroupingDistanceCm / 100f).ToString("0.#", CultureInfo.InvariantCulture), delegate(string text) { double value; if (TryNumber(text, out value)) category.GroupingDistanceCm = (float)Math.Max(1, Math.Min(500, value)) * 100f; }));
 			UIElement nameDistance = SmallField("Подпись до, м", (category.NameDistanceCm / 100f).ToString("0.#", CultureInfo.InvariantCulture), delegate(string text) { double value; if (TryNumber(text, out value)) category.NameDistanceCm = (float)Math.Max(0, Math.Min(50000, value)) * 100f; }); Grid.SetColumn(nameDistance, 1); metrics.Children.Add(nameDistance);
 			UIElement limit = SmallField("Лимит подписей", category.MaxLabels.ToString(CultureInfo.InvariantCulture), delegate(string text) { int value; if (int.TryParse(text, out value)) category.MaxLabels = Math.Max(0, Math.Min(1000, value)); }); Grid.SetColumn(limit, 2); metrics.Children.Add(limit);
 			UIElement priority = SmallField("Приоритет", category.Priority.ToString(CultureInfo.InvariantCulture), delegate(string text) { int value; if (int.TryParse(text, out value)) category.Priority = Math.Max(0, Math.Min(1000, value)); }); Grid.SetColumn(priority, 3); metrics.Children.Add(priority);
-			Grid.SetRow(metrics, 2); layout.Children.Add(metrics);
+			Grid.SetRow(metrics, 1); details.Children.Add(metrics);
 
 			Grid rules = new Grid(); rules.ColumnDefinitions.Add(new ColumnDefinition()); rules.ColumnDefinitions.Add(new ColumnDefinition());
 			bool fallback = string.Equals(category.Id, "other", StringComparison.OrdinalIgnoreCase);
 			rules.Children.Add(SmallField("Включать слова (через |)", fallback ? "Все прочие" : string.Join("|", category.Includes.ToArray()), delegate(string text) { if (!fallback) category.Includes = StructureCategoryRule.SplitKeywords(text).ToList(); }, fallback));
 			UIElement excludes = SmallField("Исключать слова (через |)", string.Join("|", category.Excludes.ToArray()), delegate(string text) { category.Excludes = StructureCategoryRule.SplitKeywords(text).ToList(); }); Grid.SetColumn(excludes, 1); rules.Children.Add(excludes);
-			Grid.SetRow(rules, 3); layout.Children.Add(rules);
+			Grid.SetRow(rules, 2); details.Children.Add(rules);
 
 			Grid colorRow = new Grid(); colorRow.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(120) }); colorRow.ColumnDefinitions.Add(new ColumnDefinition());
 			UIElement colorPicker = ColorPicker(delegate { return category.Color; }, delegate(int value) { category.Color = value; }, 108);
 			colorRow.Children.Add(colorPicker); TextBlock hint = new TextBlock { Text = "Цвет точек и подписей группы", Foreground = Muted, FontSize = 11, VerticalAlignment = VerticalAlignment.Center }; Grid.SetColumn(hint, 1); colorRow.Children.Add(hint);
-			Grid.SetRow(colorRow, 4); layout.Children.Add(colorRow);
+			Grid.SetRow(colorRow, 3); details.Children.Add(colorRow);
 
 			// Jumps to the flat class list pre-filtered to just this category, so
 			// "add/remove structures to a category" happens in the same place instead
@@ -1490,8 +1621,9 @@ namespace ArkTracker
 			classesButton.Content = "Классы в категории (" + classCount.ToString(CultureInfo.InvariantCulture) + ")   →";
 			classesButton.Click += delegate { structureClassCategoryFilter = category.Id; ShowPage("Постройки"); };
 			Grid classesRow = new Grid(); classesRow.Children.Add(classesButton);
-			Grid.SetRow(classesRow, 5); layout.Children.Add(classesRow);
+			Grid.SetRow(classesRow, 4); details.Children.Add(classesRow);
 
+			Grid.SetRow(details, 1); layout.Children.Add(details);
 			card.Child = layout;
 			return card;
 		}
