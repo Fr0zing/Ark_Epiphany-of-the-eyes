@@ -420,6 +420,7 @@ namespace ArkTracker
 			cards.Children.Add(ToggleCard("Здоровье", "HP-полоса и числа рядом с существом, отдельно от игроков", delegate { return settings.ShowDinoHealth; }, delegate(bool value) { settings.ShowDinoHealth = value; }));
 			cards.Children.Add(ToggleCard("Уровень", "Число уровня рядом с именем", delegate { return settings.ShowLevel; }, delegate(bool value) { settings.ShowLevel = value; }));
 			cards.Children.Add(ToggleCard("Название племени", "У приручённых — то же самое, что и у игроков этого племени", delegate { return settings.ShowTribeNames; }, delegate(bool value) { settings.ShowTribeNames = value; }));
+			cards.Children.Add(ToggleCard("Риги Tek Stryder", "Отдельная строка с двумя установленными модулями: добыча, притягиватель, щиты и другие", delegate { return settings.ShowStriderModules; }, delegate(bool value) { settings.ShowStriderModules = value; }));
 			cards.Children.Add(ToggleCard("Статусы", "Спит / движется / неподвижен", delegate { return settings.ShowStatuses; }, delegate(bool value) { settings.ShowStatuses = value; }));
 			cards.Children.Add(NumberCard("Дальность существ", "Максимальная дальность, м", settings.DinoMaxDistanceCm / 100f, 10, 50000, delegate(double value) { settings.DinoMaxDistanceCm = (float)value * 100f; }));
 			cards.Children.Add(SectionTitle("Важные виды", "Оставь развёрнутую подпись только для нужных существ"));

@@ -189,6 +189,8 @@ namespace ArkTracker
 
 		internal ulong? PrimalInventoryItemSlots { get; private set; }
 
+		internal ulong? PrimalInventoryEquippedItems { get; private set; }
+
 		internal ulong? PrimalItemQuantity { get; private set; }
 
 		internal ulong? ShooterCharacterPlayerName { get; private set; }
@@ -334,6 +336,7 @@ namespace ArkTracker
 			trackerConfiguration.PrimalCharacterBasedMovementActor = ParseOptionalHex(Get(values, "Offsets.APrimalCharacter.BasedMovementActor", string.Empty), "Offsets.APrimalCharacter.BasedMovementActor");
 			trackerConfiguration.PrimalCharacterInventory = ParseOptionalHex(Get(values, "Offsets.APrimalCharacter.MyInventoryComponent", string.Empty), "Offsets.APrimalCharacter.MyInventoryComponent");
 			trackerConfiguration.PrimalInventoryItemSlots = ParseOptionalHex(Get(values, "Offsets.PrimalInventory.ItemSlots", string.Empty), "Offsets.PrimalInventory.ItemSlots");
+			trackerConfiguration.PrimalInventoryEquippedItems = ParseOptionalHex(Get(values, "Offsets.PrimalInventory.EquippedItems", "0x128"), "Offsets.PrimalInventory.EquippedItems");
 			trackerConfiguration.PrimalItemQuantity = ParseOptionalHex(Get(values, "Offsets.PrimalItem.ItemQuantity", string.Empty), "Offsets.PrimalItem.ItemQuantity");
 			trackerConfiguration.ShooterCharacterPlayerName = ParseOptionalHex(Get(values, "Offsets.AShooterCharacter.PlayerName", string.Empty), "Offsets.AShooterCharacter.PlayerName");
 			trackerConfiguration.PawnPlayerState = ParseOptionalHex(Get(values, "Offsets.Pawn.PlayerState", string.Empty), "Offsets.Pawn.PlayerState");
@@ -522,6 +525,7 @@ namespace ArkTracker
 	internal sealed class NativeOverlayRenderer : IOverlayRenderer
 	{
 		private const int TurretColumnLabelFlag = 128;
+		private const int StriderModuleLabelFlag = 256;
 		[StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode, Pack = 8)]
 		private struct NativeActor
 		{
@@ -1257,7 +1261,17 @@ namespace ArkTracker
 				// list has entries, only species on it stay detailed; the rest still
 				// render (native draws just a box/dot for them via Flags bit 64) unless
 				// ShowOnlyPriorityDinos also hides them outright upstream in IsVisible.
-				bool dinoShowsDetails = actor.Kind != ActorKind.Dino || viewSettings.PriorityDinoClasses.Count == 0 ||
+				bool striderModuleLabel = actor.Kind == ActorKind.Dino && viewSettings.ShowStriderModules &&
+					!string.IsNullOrWhiteSpace(actor.StriderModules);
+				string striderModules = actor.StriderModules ?? string.Empty;
+				// NativeActor.Weapon is a fixed 64-character UTF-16 buffer. Keep a
+				// complete, safe string at the managed boundary instead of relying on
+				// marshalling to truncate the label unpredictably.
+				if (striderModules.Length > 63)
+				{
+					striderModules = striderModules.Substring(0, 60) + "…";
+				}
+				bool dinoShowsDetails = actor.Kind != ActorKind.Dino || striderModuleLabel || viewSettings.PriorityDinoClasses.Count == 0 ||
 					viewSettings.PriorityDinoClasses.Contains(actor.ClassName ?? string.Empty);
 					nativeActors[detailedIndex++] = new NativeActor
 				{
@@ -1279,7 +1293,8 @@ namespace ArkTracker
 						// instead of growing the native settings ABI.
 						((actor.Kind == ActorKind.Player && viewSettings.ShowPlayerHealth) || (actor.Kind == ActorKind.Dino && viewSettings.ShowDinoHealth && dinoShowsDetails) ? 32 : 0) |
 						(dinoShowsDetails ? 64 : 0) |
-						(turretColumnLabel ? TurretColumnLabelFlag : 0),
+						(turretColumnLabel ? TurretColumnLabelFlag : 0) |
+						(striderModuleLabel ? StriderModuleLabelFlag : 0),
 					ClusterCount = Math.Max(1, entry.Count),
 					VisualColor = actor.Kind == ActorKind.Resource ? 0x48E7D5 :
 						(actor.Kind == ActorKind.ResourceSpawn ? 0x5D6C8C :
@@ -1290,7 +1305,7 @@ namespace ArkTracker
 					BoneMask = boneMask,
 					Skeleton = skeleton,
 					Label = label,
-					Weapon = weapon
+					Weapon = striderModuleLabel ? striderModules : weapon
 				};
 			}
 			NativeSettings nativeSettings = new NativeSettings
@@ -3713,6 +3728,7 @@ namespace ArkTracker
 					trackerViewSettings.StructureCategories[0].GroupingDistanceCm = 1234f;
 					trackerViewSettings.MaxStructurePoints = 1777;
 					trackerViewSettings.ShowWildDinos = false;
+					trackerViewSettings.ShowStriderModules = false;
 					trackerViewSettings.HideEmptyTurrets = true;
 					trackerViewSettings.ShowOnlyFiringTurrets = true;
 					trackerViewSettings.Save(settingsTestPath);
@@ -3721,6 +3737,7 @@ namespace ArkTracker
 					Require(Math.Abs(reloadedSettings.StructureCategories[0].GroupingDistanceCm - 1234f) < 0.01f, "category grouping distance persistence");
 					Require(reloadedSettings.MaxStructurePoints == 1777, "structure point budget persistence");
 					Require(!reloadedSettings.ShowWildDinos, "wild dino filter persistence");
+					Require(!reloadedSettings.ShowStriderModules, "strider module label persistence");
 					Require(reloadedSettings.HideEmptyTurrets, "empty turret filter persistence");
 					Require(reloadedSettings.ShowOnlyFiringTurrets, "firing turret filter persistence");
 				}
@@ -7530,6 +7547,8 @@ namespace ArkTracker
 
 		internal string WeaponName;
 
+		internal string StriderModules;
+
 		internal ActorKind Kind;
 
 		internal int TargetingTeam;
@@ -7649,6 +7668,13 @@ namespace ArkTracker
 			internal int RefreshAfter;
 		}
 
+		private sealed class StriderModuleCache
+		{
+			internal string ClassName;
+			internal string Modules;
+			internal int RefreshAfter;
+		}
+
 		private readonly MemoryReader reader;
 
 		private readonly TrackerConfiguration config;
@@ -7666,6 +7692,8 @@ namespace ArkTracker
 		private readonly Dictionary<ulong, ActorHeaderCache> actorHeaderCache = new Dictionary<ulong, ActorHeaderCache>();
 
 		private readonly Dictionary<ulong, StaticPositionCache> staticPositionCache = new Dictionary<ulong, StaticPositionCache>();
+
+		private readonly Dictionary<ulong, StriderModuleCache> striderModuleCache = new Dictionary<ulong, StriderModuleCache>();
 
 		private readonly Dictionary<int, string> teamNameCache = new Dictionary<int, string>();
 
@@ -7778,6 +7806,7 @@ namespace ArkTracker
 					actorHeaderCache.Remove(stale[i]);
 					staticPositionCache.Remove(stale[i]);
 					identityCache.Remove(stale[i]);
+					striderModuleCache.Remove(stale[i]);
 				}
 			}
 			trackerSnapshot.TeamNames = new Dictionary<int, string>(teamNameCache);
@@ -8413,6 +8442,90 @@ namespace ArkTracker
 			{
 				record.Level = value2 + value3;
 			}
+			if (IsTekStrider(record.ClassName))
+			{
+				record.StriderModules = ReadTekStriderModules(actor, record.ClassName);
+			}
+		}
+
+		private static bool IsTekStrider(string className)
+		{
+			return !string.IsNullOrWhiteSpace(className) &&
+				className.IndexOf("tekstrider", StringComparison.OrdinalIgnoreCase) >= 0;
+		}
+
+		// Stryder rigs are equipped PrimalItem entries, not regular inventory items.
+		// UPrimalInventoryComponent.EquippedItems (0x128 in the verified ASE profile)
+		// contains the two permanent head/body rigs. ItemSlots is kept as a fallback
+		// for server/mod variants that replicate a rig differently. This runs only for
+		// Stryders and is cached briefly, so it cannot turn an optional label into a
+		// scan-rate regression in a crowded base.
+		private string ReadTekStriderModules(ulong actor, string actorClassName)
+		{
+			StriderModuleCache cached;
+			if (striderModuleCache.TryGetValue(actor, out cached) &&
+				cached.RefreshAfter > captureSerial && string.Equals(cached.ClassName, actorClassName, StringComparison.OrdinalIgnoreCase))
+			{
+				return cached.Modules ?? string.Empty;
+			}
+
+			string modules = string.Empty;
+			if (config.PrimalCharacterInventory.HasValue && config.UObjectClass.HasValue)
+			{
+				ulong inventory;
+				if (reader.TryReadPointer(actor + config.PrimalCharacterInventory.Value, out inventory) && AddressGuard.IsPointerValid(inventory))
+				{
+					List<string> found = new List<string>();
+					if (config.PrimalInventoryEquippedItems.HasValue)
+					{
+						AppendStriderModulesFromArray(inventory + config.PrimalInventoryEquippedItems.Value, found);
+					}
+					if (config.PrimalInventoryItemSlots.HasValue)
+					{
+						AppendStriderModulesFromArray(inventory + config.PrimalInventoryItemSlots.Value, found);
+					}
+					modules = string.Join(" + ", found.ToArray());
+				}
+			}
+			striderModuleCache[actor] = new StriderModuleCache
+			{
+				ClassName = actorClassName,
+				Modules = modules,
+				RefreshAfter = captureSerial + 90 + (int)(actor % 19uL)
+			};
+			return modules;
+		}
+
+		private void AppendStriderModulesFromArray(ulong arrayAddress, List<string> found)
+		{
+			ulong items;
+			int count;
+			if (!reader.TryReadPointer(arrayAddress, out items) || !reader.TryReadInt32(arrayAddress + 8, out count) ||
+				count < 0 || count > 400 || (count > 0 && !AddressGuard.IsPointerValid(items)))
+			{
+				return;
+			}
+			for (int index = 0; index < count; index++)
+			{
+				ulong item;
+				if (!reader.TryReadPointer(items + (ulong)(index * 8), out item) || !AddressGuard.IsPointerValid(item)) continue;
+				string module = FriendlyStriderModule(ReadRawObjectClassName(item));
+				if (!string.IsNullOrWhiteSpace(module) && !found.Contains(module, StringComparer.OrdinalIgnoreCase)) found.Add(module);
+			}
+		}
+
+		private static string FriendlyStriderModule(string className)
+		{
+			if (string.IsNullOrWhiteSpace(className)) return string.Empty;
+			if (className.IndexOf("tekstriderharvester", StringComparison.OrdinalIgnoreCase) >= 0) return "Добыча";
+			if (className.IndexOf("tekstridersaddlebags", StringComparison.OrdinalIgnoreCase) >= 0) return "Притягиватель ресурсов";
+			if (className.IndexOf("tekstriderlargecannon", StringComparison.OrdinalIgnoreCase) >= 0) return "Фазовая пушка";
+			if (className.IndexOf("tekstridermachinegun", StringComparison.OrdinalIgnoreCase) >= 0) return "Импульсная пушка";
+			if (className.IndexOf("tekstriderradar", StringComparison.OrdinalIgnoreCase) >= 0) return "Радар";
+			if (className.IndexOf("tekstridersilencecannon", StringComparison.OrdinalIgnoreCase) >= 0) return "Глушитель";
+			if (className.IndexOf("tekstrideronesidedshield", StringComparison.OrdinalIgnoreCase) >= 0) return "Направленный щит";
+			if (className.IndexOf("tekstridershield", StringComparison.OrdinalIgnoreCase) >= 0) return "Генератор щита";
+			return string.Empty;
 		}
 
 		private void ReadLocalPlayer(TrackerSnapshot snapshot)
@@ -9064,6 +9177,9 @@ namespace ArkTracker
 
 		internal bool ShowDinoHealth = true;
 
+		// Prints installed head/body rigs beneath a Tek Stryder's regular label.
+		internal bool ShowStriderModules = true;
+
 		// Species picked here keep full detail (name, level, distance, HP, status).
 		// Everything else still renders (position awareness kept) but as a plain
 		// box/dot - or, if ShowOnlyPriorityDinos is also on, is hidden outright.
@@ -9248,6 +9364,7 @@ namespace ArkTracker
 			trackerViewSettings.ShowStructureOwner = Bool(dictionary, "ShowStructureOwner", trackerViewSettings.ShowStructureOwner);
 			trackerViewSettings.ShowStructureTribeNames = Bool(dictionary, "ShowStructureTribeNames", trackerViewSettings.ShowStructureTribeNames);
 			trackerViewSettings.ShowDinoHealth = Bool(dictionary, "ShowDinoHealth", trackerViewSettings.ShowDinoHealth);
+			trackerViewSettings.ShowStriderModules = Bool(dictionary, "ShowStriderModules", trackerViewSettings.ShowStriderModules);
 			trackerViewSettings.ShowOnlyPriorityDinos = Bool(dictionary, "ShowOnlyPriorityDinos", trackerViewSettings.ShowOnlyPriorityDinos);
 			string priorityDinoText = Text(dictionary, "PriorityDinoClasses", string.Empty);
 			foreach (string priorityDinoEntry in priorityDinoText.Split(new char[1] { '|' }, StringSplitOptions.RemoveEmptyEntries))
@@ -9424,6 +9541,7 @@ namespace ArkTracker
 				"ShowStructureOwner=" + ShowStructureOwner,
 				"ShowStructureTribeNames=" + ShowStructureTribeNames,
 				"ShowDinoHealth=" + ShowDinoHealth,
+				"ShowStriderModules=" + ShowStriderModules,
 				"ShowOnlyPriorityDinos=" + ShowOnlyPriorityDinos,
 				"PriorityDinoClasses=" + string.Join("|", PriorityDinoClasses.OrderBy((string value) => value).ToArray()),
 				"ShowOwnStructures=" + ShowOwnStructures,

@@ -1142,7 +1142,9 @@ namespace
 			if (actor.kind == 1 && (actor.flags & 64) == 0) return;
 			const float labelX = box.right + 6.0f * dpiScale;
 			const bool turretColumnLabel = (actor.flags & 128) != 0;
+			const bool striderModuleLabel = (actor.flags & 256) != 0;
 			const float estimatedLines = turretColumnLabel ? 5.0f : 2.0f + (isPlayer && localSettings.showWeapons && actor.weapon[0] ? 1.0f : 0.0f) +
+				(striderModuleLabel && actor.weapon[0] ? 1.0f : 0.0f) +
 				(showHealthForActor && actor.maxHealth > 0.0f ? 1.0f : 0.0f) + ((isPlayer || isDino) && localSettings.showStatuses ? 1.0f : 0.0f);
 			const float labelY = ResolveLabelY(labelX, box.top, 250.0f * dpiScale * textScale,
 				estimatedLines * 17.0f * dpiScale * textScale, localSettings);
@@ -1190,6 +1192,14 @@ namespace
 			{
 				DrawText(actor.weapon, detailFormat.Get(), labelX, nextLine,
 					D2D1::ColorF(0.73f, 0.78f, 0.86f, opacity), textScale, outline, textBackground);
+				nextLine += lineStep;
+			}
+			if (striderModuleLabel && actor.weapon[0])
+			{
+				wchar_t modules[96]{};
+				swprintf_s(modules, L"Риги: %s", actor.weapon);
+				DrawText(modules, detailFormat.Get(), labelX, nextLine,
+					D2D1::ColorF(0.37f, 0.86f, 1.0f, opacity), textScale, outline, textBackground);
 				nextLine += lineStep;
 			}
 			if (showHealthForActor && actor.maxHealth > 0.0f)
