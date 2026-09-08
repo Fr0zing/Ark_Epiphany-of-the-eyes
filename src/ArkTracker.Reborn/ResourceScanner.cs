@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 
 namespace ArkTracker
@@ -32,6 +33,14 @@ namespace ArkTracker
 
     internal sealed partial class TrackerEngine
     {
+        // Resource foliage is split into hundreds of components on dense maps.
+        // Work through several small chunks per world tick, but stop at a strict
+        // time budget so player/camera updates never wait behind the scanner.
+        private const int ResourceDiscoveryOwnersPerCapture = 4;
+        private const int ResourceInstancesPerBatch = 1024;
+        private const int ResourceBatchesPerCapture = 8;
+        private const double ResourceWorkBudgetMilliseconds = 3.0;
+
         // Layouts from the local ShooterGame.pdb matching the verified ASE build.
         // Never interpret a foliage controller's origin as a resource position.
         private readonly HashSet<ulong> foliageActors = new HashSet<ulong>();
@@ -43,6 +52,7 @@ namespace ArkTracker
         private DateTime nextResourceDiscovery;
         private DateTime nextResourceLog;
         private int resourceOwnersRead, resourcePointersSeen, resourceInstanceComponents, resourceAttachedClasses, resourceHarvestClasses, resourceHarvestDefinitions;
+        private int resourceBatchesProcessed, resourceInstancesProcessed;
         private string resourceDiscoverySample = string.Empty;
         private Queue<ulong> foliageDiscovery = new Queue<ulong>();
         private int componentCursor;
@@ -207,7 +217,7 @@ namespace ArkTracker
                 foliageDiscovery = new Queue<ulong>(foliageActors);
                 nextResourceDiscovery = now.AddSeconds(2);
             }
-            if (foliageDiscovery.Count > 0)
+            for (int discovered = 0; discovered < ResourceDiscoveryOwnersPerCapture && foliageDiscovery.Count > 0; discovered++)
             {
                 ulong owner = foliageDiscovery.Dequeue();
                 if (foliageActors.Contains(owner)) DiscoverResourceComponents(owner);
@@ -215,13 +225,19 @@ namespace ArkTracker
             ResourceComponent[] components = resourceComponents.Values.ToArray();
             if (components.Length > 0)
             {
-                // One 512-instance batch per world capture; never a full-map blocking pass.
-                for (int attempt = 0; attempt < components.Length; attempt++)
+                long resourceWorkStarted = Stopwatch.GetTimestamp();
+                int processed = 0;
+                int attempts = 0;
+                int maxAttempts = Math.Max(components.Length, components.Length * 2);
+                while (processed < ResourceBatchesPerCapture && attempts < maxAttempts)
                 {
                     ResourceComponent component = components[(componentCursor++ & int.MaxValue) % components.Length];
+                    attempts++;
                     if (!foliageActors.Contains(component.Owner) || component.NextScan > now || !component.Resources.Any(options.Selected.Contains)) continue;
                     ReadResourceBatch(component, snapshot.LocalPosition, options);
-                    break;
+                    processed++;
+                    resourceBatchesProcessed++;
+                    if ((Stopwatch.GetTimestamp() - resourceWorkStarted) * 1000.0 / Stopwatch.Frequency >= ResourceWorkBudgetMilliseconds) break;
                 }
             }
             snapshot.Actors.AddRange(components.Where(c => foliageActors.Contains(c.Owner) && c.Resources.Any(options.Selected.Contains))
@@ -232,8 +248,10 @@ namespace ArkTracker
                 Log.Info("Resources: foliage=" + foliageActors.Count + " components=" + components.Length + " points=" + components.Sum(c => c.Points.Count) +
                     " discovery=" + resourceOwnersRead + "/" + resourcePointersSeen + "/" + resourceInstanceComponents +
                     " attached=" + resourceAttachedClasses + " harvest=" + resourceHarvestClasses + "/" + resourceHarvestDefinitions +
+                    " scan=" + resourceBatchesProcessed + "/" + resourceInstancesProcessed +
                     (resourceDiscoverySample.Length == 0 ? string.Empty : " sample=\"" + resourceDiscoverySample + "\""));
                 resourceOwnersRead = resourcePointersSeen = resourceInstanceComponents = resourceAttachedClasses = resourceHarvestClasses = resourceHarvestDefinitions = 0;
+                resourceBatchesProcessed = resourceInstancesProcessed = 0;
                 resourceDiscoverySample = string.Empty;
                 nextResourceLog = now.AddSeconds(15);
             }
@@ -261,10 +279,11 @@ namespace ArkTracker
                     for (int i = 0; i < removedCount; i++) component.Removed.Add(BitConverter.ToInt32(removedBytes, i * 4));
                 }
             }
-            int batch = Math.Min(512, count - component.Cursor);
+            int batch = Math.Min(ResourceInstancesPerBatch, count - component.Cursor);
             byte[] matrices;
             if (batch > 0 && ResourceBytes(data + (ulong)(component.Cursor * 0x50), batch * 0x50, out matrices))
             {
+                resourceInstancesProcessed += batch;
                 for (int i = 0; i < batch; i++)
                 {
                     if (component.Removed.Contains(component.Cursor + i)) continue;
@@ -280,6 +299,12 @@ namespace ArkTracker
             }
             else if (batch > 0) { component.Points.Clear(); component.Pending.Clear(); component.Cursor = 0; component.NextScan = DateTime.UtcNow.AddSeconds(2); return; }
             component.Cursor += batch;
+            // Make the first useful results visible immediately. Previously a
+            // large foliage component stayed invisible until every instance had
+            // been read, which looked like a several-second processing delay.
+            if (component.Cursor < count && component.Pending.Count > component.Points.Count &&
+                (component.Points.Count == 0 || component.Cursor % (ResourceInstancesPerBatch * 4) == 0))
+                component.Points = component.Pending.Take(1500).ToList();
             if (component.Cursor >= count)
             {
                 component.Points = component.Pending.OrderBy(p => TrackerFilter.Distance3D(p.Position, origin)).Take(1500).ToList();
