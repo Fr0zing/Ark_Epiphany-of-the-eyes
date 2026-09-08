@@ -21,6 +21,7 @@ namespace ArkTracker
 		private readonly Action apply;
 		private readonly Func<string[]> getKnownStructureClasses;
 		private readonly Func<string[]> getKnownDinoClasses;
+		private readonly Func<string[]> getResourceCatalog;
 		private readonly ContentControl pageHost = new ContentControl();
 		private readonly TextBlock statusText = new TextBlock();
 		private readonly Button espButton = new Button();
@@ -78,12 +79,13 @@ namespace ArkTracker
 			"<ContentPresenter HorizontalAlignment='{TemplateBinding HorizontalContentAlignment}' VerticalAlignment='{TemplateBinding VerticalContentAlignment}' Margin='{TemplateBinding Padding}'/>" +
 			"</Border><ControlTemplate.Triggers><Trigger Property='IsMouseOver' Value='True'><Setter TargetName='surface' Property='Opacity' Value='0.86'/></Trigger><Trigger Property='IsPressed' Value='True'><Setter TargetName='surface' Property='Opacity' Value='0.68'/></Trigger><Trigger Property='IsEnabled' Value='False'><Setter TargetName='surface' Property='Opacity' Value='0.45'/></Trigger></ControlTemplate.Triggers></ControlTemplate>");
 
-		internal WpfSettingsDashboard(TrackerViewSettings viewSettings, Action applySettings, Func<string[]> knownStructureClasses, Func<string[]> knownDinoClasses)
+		internal WpfSettingsDashboard(TrackerViewSettings viewSettings, Action applySettings, Func<string[]> knownStructureClasses, Func<string[]> knownDinoClasses, Func<string[]> resourceCatalog)
 		{
 			settings = viewSettings;
 			apply = applySettings;
 			getKnownStructureClasses = knownStructureClasses;
 			getKnownDinoClasses = knownDinoClasses;
+			getResourceCatalog = resourceCatalog;
 			Background = AppBackground;
 			Content = BuildRoot();
 			ShowPage("Обзор");
@@ -262,6 +264,7 @@ namespace ArkTracker
 			AddNav(links, "Племена и цвета");
 			AddNavSection(links, "БАЗА И МИССИИ");
 			AddNav(links, "Постройки");
+			AddNav(links, "Ресурсы");
 			AddNav(links, "Турели");
 			AddNav(links, "Миссии");
 			AddNavSection(links, "ПОМОЩНИК");
@@ -363,6 +366,7 @@ namespace ArkTracker
 				case "Племена и цвета": pageHost.Content = PageTeamsAndColors(); break;
 				case "Визуал": pageHost.Content = PageVisual(); break;
 				case "Постройки": pageHost.Content = PageStructures(); break;
+				case "Ресурсы": pageHost.Content = PageResources(); break;
 				case "Турели": pageHost.Content = PageTurrets(); break;
 				case "Миссии": pageHost.Content = PageMissions(); break;
 				case "Угрозы": pageHost.Content = PageThreats(); break;
@@ -538,6 +542,42 @@ namespace ArkTracker
 			cards.Children.Add(NumberCard("Дальность построек", "Максимальная дальность, м", settings.StructureMaxDistanceCm / 100f, 10, 50000, delegate(double value) { settings.StructureMaxDistanceCm = (float)value * 100f; }));
 			cards.Children.Add(NumberCard("Лимит FPS overlay", "0 — без ограничения", settings.OverlayFpsLimit, 0, 360, delegate(double value) { settings.OverlayFpsLimit = (int)value; }));
 			cards.Children.Add(NumberCard("Компенсация движения", "Обычно достаточно 8–12 мс", settings.PositionPredictionMs, 0, 50, delegate(double value) { settings.PositionPredictionMs = (float)value; }));
+			return Scroll(cards);
+		}
+
+		private UIElement PageResources()
+		{
+			WrapPanel cards = Page("Ресурсы", "Выбери, что искать рядом. Жемчуг включён по умолчанию.");
+			cards.Children.Add(ToggleCard("Подсветка ресурсов", "Природные залежи и растения", () => settings.ShowResources, value => settings.ShowResources = value));
+			cards.Children.Add(NumberCard("Дальность поиска", "Метры от персонажа; только загруженная область", settings.ResourceMaxDistanceCm / 100f, 10, 5000, value => settings.ResourceMaxDistanceCm = (float)value * 100f));
+			cards.Children.Add(ActionCard("Только жемчуг", "Обычный и чёрный жемчуг", "Выбрать", delegate { settings.SelectedResources.Clear(); settings.SelectedResources.Add("Silicon"); settings.SelectedResources.Add("BlackPearl"); settings.ShowResources = true; Commit(); ShowPage("Ресурсы"); }));
+			cards.Children.Add(ToggleCard("Мутагeн", "Отдельная подсветка луковиц Genesis 2", () => settings.ShowMutagel, value => settings.ShowMutagel = value));
+			Border card = LargeCard(976, 520);
+			Grid layout = new Grid();
+			layout.RowDefinitions.Add(new RowDefinition { Height = new GridLength(44) });
+			layout.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
+			TextBox search = new TextBox { Background = CardHoverBrush, Foreground = Text, BorderBrush = Border, Padding = new Thickness(10, 6, 10, 6), Height = 32, ToolTip = "Поиск ресурсов: жемчуг, металл, камень…" };
+			layout.Children.Add(search);
+			ListBox list = new ListBox { Background = Brushes.Transparent, BorderThickness = new Thickness(0), Foreground = Text };
+			Grid.SetRow(list, 1); layout.Children.Add(list);
+			Action rebuild = delegate {
+				list.Items.Clear();
+				string[] entries = getResourceCatalog == null ? new string[0] : getResourceCatalog();
+				foreach (string entry in entries)
+				{
+					string[] parts = entry.Split(new[] { '\t' }, 2); if (parts.Length != 2) continue;
+					string name = parts[0], id = parts[1];
+					if (search.Text.Length > 0 && name.IndexOf(search.Text.Trim(), StringComparison.OrdinalIgnoreCase) < 0 && id.IndexOf(search.Text.Trim(), StringComparison.OrdinalIgnoreCase) < 0) continue;
+					CheckBox choice = new CheckBox { Content = name, IsChecked = settings.SelectedResources.Contains(id), Foreground = Text, FontSize = 15, Margin = new Thickness(10, 9, 10, 9), ToolTip = name };
+					choice.Checked += delegate { settings.SelectedResources.Add(id); Commit(); };
+					choice.Unchecked += delegate { settings.SelectedResources.Remove(id); Commit(); };
+					list.Items.Add(choice);
+				}
+			};
+			search.TextChanged += delegate { rebuild(); }; rebuild(); card.Child = layout; cards.Children.Add(card);
+			cards.Children.Add(ActionCard("Обновить список", "Добавить виды из новых загруженных залежей", "Обновить", () => ShowPage("Ресурсы")));
+			cards.Children.Add(ActionCard("Снять выбор", "Выключить все выбранные виды", "Снять все", delegate { settings.SelectedResources.Clear(); Commit(); ShowPage("Ресурсы"); }));
+			cards.Children.Add(InfoCard("Как работает поиск", "Новые виды добавляются по мере загрузки карты. Показываются ближайшие 1500 точек; обновление залежей постепенное. Наличие ресурса и исчезновение после сбора ещё требуют проверки в игре."));
 			return Scroll(cards);
 		}
 

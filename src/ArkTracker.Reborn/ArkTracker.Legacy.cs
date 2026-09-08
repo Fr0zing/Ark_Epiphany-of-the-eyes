@@ -1184,7 +1184,7 @@ namespace ArkTracker
 				else
 				{
 					if (actor.Kind == ActorKind.Structure && !entry.ShowLabel) label = string.Empty;
-					else if (actor.Kind == ActorKind.Resource) label = "Mutagen";
+					else if (actor.Kind == ActorKind.Resource) label = actor.ResourceIds == null ? "Mutagen" : string.Join(" / ", actor.ResourceIds.Where(id => viewSettings.SelectedResources.Contains(id)).Select(ResourceCatalog.Label).ToArray());
 					else if (actor.Kind == ActorKind.ResourceSpawn) label = string.Empty;
 					else if (actor.Kind == ActorKind.MissionTrack) label = "След миссии";
 					else if (actor.Kind == ActorKind.Structure && entry.Count > 1 && entry.Category != null) label = entry.Category.Name;
@@ -3729,6 +3729,9 @@ namespace ArkTracker
 					trackerViewSettings.MaxStructurePoints = 1777;
 					trackerViewSettings.ShowWildDinos = false;
 					trackerViewSettings.ShowStriderModules = false;
+					trackerViewSettings.SelectedResources.Clear();
+					trackerViewSettings.SelectedResources.Add("Silicon");
+					trackerViewSettings.ResourceMaxDistanceCm = 32100f;
 					trackerViewSettings.HideEmptyTurrets = true;
 					trackerViewSettings.ShowOnlyFiringTurrets = true;
 					trackerViewSettings.Save(settingsTestPath);
@@ -3738,6 +3741,21 @@ namespace ArkTracker
 					Require(reloadedSettings.MaxStructurePoints == 1777, "structure point budget persistence");
 					Require(!reloadedSettings.ShowWildDinos, "wild dino filter persistence");
 					Require(!reloadedSettings.ShowStriderModules, "strider module label persistence");
+					Require(reloadedSettings.SelectedResources.SetEquals(new[] { "Silicon" }) && reloadedSettings.ResourceMaxDistanceCm == 32100f, "resource selection and range persistence");
+					ActorRecord pearl = new ActorRecord { Kind = ActorKind.Resource, ResourceIds = new[] { "Silicon", "Stone" }, Position = new Vector3 { X = 500f } };
+					TrackerSnapshot resourceSnapshot = new TrackerSnapshot { HasLocalPlayer = true };
+					Require(TrackerFilter.IsVisible(pearl, resourceSnapshot, reloadedSettings), "multi-output resource matches selected output");
+					reloadedSettings.SelectedResources.Clear();
+					Require(!TrackerFilter.IsVisible(pearl, resourceSnapshot, reloadedSettings), "empty resource selection hides all deposits");
+					Require(ResourceCatalog.Id("PrimalItemResource_Silicon_C") == "Silicon", "pearl resource identity");
+					byte[] resourceMatrix = new byte[80];
+					Vector3 resourcePosition;
+					Require(!TrackerEngine.DecodeResourceInstance(resourceMatrix, 0, out resourcePosition), "zero-scale depleted instance rejected");
+					foreach (int matrixOffset in new[] { 0, 20, 40, 60 }) Array.Copy(BitConverter.GetBytes(1f), 0, resourceMatrix, matrixOffset, 4);
+					Array.Copy(BitConverter.GetBytes(123f), 0, resourceMatrix, 48, 4);
+					Require(TrackerEngine.DecodeResourceInstance(resourceMatrix, 0, out resourcePosition) && resourcePosition.X == 123f, "instance matrix translation");
+					Array.Copy(BitConverter.GetBytes(float.NaN), 0, resourceMatrix, 52, 4);
+					Require(!TrackerEngine.DecodeResourceInstance(resourceMatrix, 0, out resourcePosition), "invalid instance position rejected");
 					Require(reloadedSettings.HideEmptyTurrets, "empty turret filter persistence");
 					Require(reloadedSettings.ShowOnlyFiringTurrets, "firing turret filter persistence");
 				}
@@ -5012,6 +5030,7 @@ namespace ArkTracker
 			engine = trackerEngine;
 			gameProcessId = processId;
 			settings = viewSettings;
+			engine.SetResourceOptions(settings);
 			settingsPath = viewSettingsPath;
 			overlay = OverlayFactory.Create(processId);
 			snapshotPump = new SnapshotPump(engine, () => settings.RefreshIntervalMs, overlay.UpdateMotion, overlay.UpdateSkeletons,
@@ -5111,7 +5130,7 @@ namespace ArkTracker
 			LoadControlsFromSettings();
 			HookSettingsEvents();
 			canvas.Settings = settings;
-			wpfDashboard = new WpfSettingsDashboard(settings, ApplyWpfSettings, GetKnownStructureClasses, GetKnownDinoClasses);
+			wpfDashboard = new WpfSettingsDashboard(settings, ApplyWpfSettings, GetKnownStructureClasses, GetKnownDinoClasses, engine.GetResourceCatalog);
 			wpfDashboard.NotificationTestRequested += delegate
 			{
 				notificationSystem.PushTest();
@@ -6398,6 +6417,7 @@ namespace ArkTracker
 
 		private void ApplyWpfSettings()
 		{
+			engine.SetResourceOptions(settings);
 			// The legacy controls stay alive for hotkeys and the read-only engine.
 			// Keep their hidden values in sync, otherwise a later F-key could restore
 			// a stale setting that was changed in the WPF dashboard.
@@ -7548,6 +7568,7 @@ namespace ArkTracker
 		internal string WeaponName;
 
 		internal string StriderModules;
+		internal string[] ResourceIds;
 
 		internal ActorKind Kind;
 
@@ -7632,8 +7653,9 @@ namespace ArkTracker
 		internal ActorKind Kind;
 
 		internal bool IsTurret;
+		internal bool IsFoliage;
 	}
-	internal sealed class TrackerEngine
+	internal sealed partial class TrackerEngine
 	{
 		private sealed class ActorIdentity
 		{
@@ -7745,6 +7767,7 @@ namespace ArkTracker
 			TrackerSnapshot trackerSnapshot = new TrackerSnapshot();
 			ReadLocalPlayer(trackerSnapshot);
 			captureSerial++;
+			foliageActors.Clear();
 			EnrichLocalIdentity(trackerSnapshot);
 			ReadLocalQuickSlots(trackerSnapshot);
 			List<ulong> list = ReadLevels(trackerSnapshot);
@@ -7790,6 +7813,7 @@ namespace ArkTracker
 					}
 				}
 			}
+			CaptureResources(trackerSnapshot);
 			foreach (ActorRecord actor in trackerSnapshot.Actors)
 			{
 				string tribe;
@@ -7983,11 +8007,13 @@ namespace ArkTracker
 					};
 				}
 			}
-			if (!AddressGuard.IsPointerValid(pointer) || !AddressGuard.IsPointerValid(pointer2))
+			if (!AddressGuard.IsPointerValid(pointer))
 			{
 				return false;
 			}
 			ClassMetadata classMetadata = GetClassMetadata(pointer);
+			if (classMetadata.IsFoliage) { foliageActors.Add(actor); return false; }
+			if (!AddressGuard.IsPointerValid(pointer2)) return false;
 			string actorObjectName = string.Empty;
 			if (classMetadata.Kind == ActorKind.Other && IsMissionTrackCarrierClass(classMetadata.Name))
 			{
@@ -8124,6 +8150,7 @@ namespace ArkTracker
 			bool isActiveMutagen = IsActiveMutagenClassName(name);
 			bool isMutagenSpawn = IsMutagenSpawnClassName(name);
 			bool isMissionTrack = IsMissionTrackName(name);
+			bool isFoliage = false;
 			ulong num = classAddress;
 			bool readFailed = false;
 			HashSet<ulong> hashSet = new HashSet<ulong>();
@@ -8139,6 +8166,7 @@ namespace ArkTracker
 				}
 				string name2;
 				names.TryReadObjectName(num, out name2);
+				if (string.Equals(name2, "InstancedFoliageActor", StringComparison.OrdinalIgnoreCase) || string.Equals(name2, "AInstancedFoliageActor", StringComparison.OrdinalIgnoreCase)) isFoliage = true;
 				if (IsActiveMutagenClassName(name2)) isActiveMutagen = true;
 				if (IsMutagenSpawnClassName(name2)) isMutagenSpawn = true;
 				if (IsMissionTrackName(name2)) isMissionTrack = true;
@@ -8182,6 +8210,7 @@ namespace ArkTracker
 			classMetadata.Name = name;
 			classMetadata.Kind = actorKind;
 			classMetadata.IsTurret = isTurret;
+			classMetadata.IsFoliage = isFoliage;
 			value = classMetadata;
 			if (!readFailed)
 			{
@@ -8984,6 +9013,9 @@ namespace ArkTracker
 
 		// Gen 2 ground resource: independent from structures and their grouping.
 		internal bool ShowMutagel = true;
+		internal bool ShowResources = true;
+		internal float ResourceMaxDistanceCm = 100000f;
+		internal HashSet<string> SelectedResources = new HashSet<string>(new[] { "Silicon", "BlackPearl" }, StringComparer.OrdinalIgnoreCase);
 
 		internal float MutagelMaxDistanceCm = 100000f;
 
@@ -9268,6 +9300,9 @@ namespace ArkTracker
 			trackerViewSettings.ShowWildDinos = Bool(dictionary, "ShowWildDinos", trackerViewSettings.ShowWildDinos);
 			trackerViewSettings.ShowStructures = Bool(dictionary, "ShowStructures", trackerViewSettings.ShowStructures);
 			trackerViewSettings.ShowMutagel = Bool(dictionary, "ShowMutagel", trackerViewSettings.ShowMutagel);
+			trackerViewSettings.ShowResources = Bool(dictionary, "ShowResources", true);
+			trackerViewSettings.ResourceMaxDistanceCm = Float(dictionary, "ResourceMaxDistanceCm", 100000f, 1000f, 500000f);
+			trackerViewSettings.SelectedResources = new HashSet<string>(Text(dictionary, "SelectedResources", "Silicon|BlackPearl").Split(new[] { '|' }, StringSplitOptions.RemoveEmptyEntries), StringComparer.OrdinalIgnoreCase);
 			trackerViewSettings.MutagelMaxDistanceCm = Float(dictionary, "MutagelMaxDistanceCm", trackerViewSettings.MutagelMaxDistanceCm, 1000f, 500000f);
 			trackerViewSettings.ShowMutagenSpawnPoints = Bool(dictionary, "ShowMutagenSpawnPoints", trackerViewSettings.ShowMutagenSpawnPoints);
 			trackerViewSettings.HideVisitedMutagenSpawnPoints = Bool(dictionary, "HideVisitedMutagenSpawnPoints", trackerViewSettings.HideVisitedMutagenSpawnPoints);
@@ -9454,6 +9489,9 @@ namespace ArkTracker
 				"ShowWildDinos=" + ShowWildDinos,
 				"ShowStructures=" + ShowStructures,
 				"ShowMutagel=" + ShowMutagel,
+				"ShowResources=" + ShowResources,
+				"ResourceMaxDistanceCm=" + ResourceMaxDistanceCm.ToString(CultureInfo.InvariantCulture),
+				"SelectedResources=" + string.Join("|", SelectedResources.OrderBy(id => id).ToArray()),
 				"MutagelMaxDistanceCm=" + MutagelMaxDistanceCm.ToString(CultureInfo.InvariantCulture),
 				"ShowMutagenSpawnPoints=" + ShowMutagenSpawnPoints,
 				"HideVisitedMutagenSpawnPoints=" + HideVisitedMutagenSpawnPoints,
@@ -9665,6 +9703,7 @@ namespace ArkTracker
 			}
 			if (actor.Kind == ActorKind.Resource)
 			{
+				if (actor.ResourceIds != null) return settings.ShowResources && distance <= settings.ResourceMaxDistanceCm && actor.ResourceIds.Any(settings.SelectedResources.Contains);
 				return settings.ShowMutagel && distance <= settings.MutagelMaxDistanceCm;
 			}
 			if (actor.Kind == ActorKind.ResourceSpawn)

@@ -15,8 +15,10 @@ static std::wstring NameOf(IDiaSymbol* symbol)
     return result;
 }
 
+static bool dumpAllFields = false;
 static bool Interesting(const std::wstring& value)
 {
+    if (dumpAllFields) return true;
     std::wstring lower = value;
     std::transform(lower.begin(), lower.end(), lower.begin(), towlower);
 	return lower.find(L"name") != std::wstring::npos ||
@@ -68,9 +70,11 @@ static void DumpType(IDiaSymbol* type, int depth = 0)
             {
                 IDiaSymbol* fieldType{};
                 ULONGLONG fieldLength{};
+                std::wstring fieldTypeName;
                 if (SUCCEEDED(field->get_type(&fieldType)) && fieldType)
                 {
                     fieldType->get_length(&fieldLength);
+                    fieldTypeName = NameOf(fieldType);
                     fieldType->Release();
                 }
 				std::wcout << std::wstring(depth * 2 + 2, L' ') << name
@@ -79,6 +83,7 @@ static void DumpType(IDiaSymbol* type, int depth = 0)
 					<< L" kind=" << kind << L" loc=" << location;
 				if (SUCCEEDED(field->get_bitPosition(&bitPosition)))
 					std::wcout << L" bit=" << bitPosition;
+				if (dumpAllFields) std::wcout << L" type=" << fieldTypeName;
 				std::wcout << L"\n";
             }
             field->Release();
@@ -189,8 +194,16 @@ int wmain(int argc, wchar_t** argv)
 		L"AShooterWeapon", L"UPrimalItem", L"USkeletalMeshComponent",
 		L"USkeletalMesh", L"FReferenceSkeleton", L"FMeshBoneInfo"
     };
-    for (const auto name : requested)
+    std::vector<std::wstring> selected;
+    if (argc > 3) {
+        dumpAllFields = true;
+        for (int i = 3; i < argc; ++i) selected.push_back(argv[i]);
+    } else {
+        for (const auto name : requested) selected.push_back(name);
+    }
+    for (const auto& selectedName : selected)
     {
+        const wchar_t* name = selectedName.c_str();
         IDiaEnumSymbols* matches{};
         if (SUCCEEDED(global->findChildren(SymTagUDT, name, nsCaseInsensitive, &matches)) && matches)
         {
