@@ -2,7 +2,8 @@ param(
     [ValidateSet('Debug', 'Release')]
     [string]$Configuration = 'Release',
     [string]$Destination = 'bin\Reborn',
-    [switch]$SkipNative
+    [switch]$SkipNative,
+    [string]$NativeBuildDirectory = 'native\ArkOverlayNative\build'
 )
 
 $ErrorActionPreference = 'Stop'
@@ -22,7 +23,7 @@ $outputDirectory = Join-Path $projectRoot $Destination
 $output = Join-Path $outputDirectory 'ArkTracker.Reborn.exe'
 
 if (-not $SkipNative) {
-    & (Join-Path $projectRoot 'build-native.ps1') -Configuration $Configuration
+    & (Join-Path $projectRoot 'build-native.ps1') -Configuration $Configuration -Destination $Destination -BuildDirectory $NativeBuildDirectory
     if ($LASTEXITCODE -ne 0) {
         throw "Native overlay compilation failed with exit code $LASTEXITCODE."
     }

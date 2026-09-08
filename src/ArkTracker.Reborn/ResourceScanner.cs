@@ -42,6 +42,8 @@ namespace ArkTracker
         private ulong resourceWorld;
         private DateTime nextResourceDiscovery;
         private DateTime nextResourceLog;
+        private int resourceOwnersRead, resourcePointersSeen, resourceInstanceComponents, resourceAttachedClasses, resourceHarvestClasses, resourceHarvestDefinitions;
+        private string resourceDiscoverySample = string.Empty;
         private Queue<ulong> foliageDiscovery = new Queue<ulong>();
         private int componentCursor;
         private readonly Dictionary<ulong, int> foliageDiscoveryOffsets = new Dictionary<ulong, int>();
@@ -100,9 +102,11 @@ namespace ArkTracker
         {
             ulong cls;
             if (!reader.TryReadPointer(component + 0x760, out cls) || !AddressGuard.IsPointerValid(cls)) return new string[0];
+            resourceAttachedClasses++;
             string[] cached;
             if (harvestResources.TryGetValue(cls, out cached)) return cached;
             if (!ResourceSubclass(cls, "PrimalHarvestingComponent")) return new string[0];
+            resourceHarvestClasses++;
             ulong cdo;
             if (!reader.TryReadPointer(cls + 0xF8, out cdo) || !AddressGuard.IsPointerValid(cdo)) return new string[0];
             var found = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
@@ -123,13 +127,33 @@ namespace ArkTracker
             }
             cached = found.ToArray();
             // Retry empty/unloaded definitions on the next discovery cycle.
-            if (cached.Length > 0) harvestResources[cls] = cached;
+            if (cached.Length > 0) { harvestResources[cls] = cached; resourceHarvestDefinitions++; }
             return cached;
+        }
+        private ulong[] ReadFoliageComponents(ulong owner)
+        {
+            // InstancedStaticMeshComponent is editor-facing and may be empty in a
+            // cooked client. OwnedComponents/SerializedComponents remain populated.
+            var result = new HashSet<ulong>();
+            foreach (ulong offset in new ulong[] { 0x488, 0x438, 0x448 })
+            {
+                ulong data; int count; byte[] pointers;
+                if (!ResourceArray(owner + offset, 16384, out data, out count) || count == 0 ||
+                    !ResourceBytes(data, count * 8, out pointers)) continue;
+                for (int i = 0; i < count; i++)
+                {
+                    ulong component = BitConverter.ToUInt64(pointers, i * 8);
+                    if (AddressGuard.IsPointerValid(component)) result.Add(component);
+                }
+            }
+            if (result.Count > 0) resourceOwnersRead++;
+            return result.ToArray();
         }
         private void DiscoverResourceComponents(ulong owner)
         {
-            ulong data; int count; byte[] pointers;
-            if (!ResourceArray(owner + 0x488, 16384, out data, out count) || count == 0 || !ResourceBytes(data, count * 8, out pointers)) return;
+            ulong[] pointers = ReadFoliageComponents(owner);
+            int count = pointers.Length;
+            if (count == 0) return;
             // Bound work per controller. The list is revisited with a rotating window.
             int start;
             foliageDiscoveryOffsets.TryGetValue(owner, out start);
@@ -137,9 +161,21 @@ namespace ArkTracker
             foliageDiscoveryOffsets[owner] = start + 64;
             for (int i = start; i < Math.Min(count, start + 64); i++)
             {
-                ulong component = BitConverter.ToUInt64(pointers, i * 8), mesh, cls;
-                if (!AddressGuard.IsPointerValid(component) || !reader.TryReadPointer(component + config.UObjectClass.Value, out cls) ||
+                ulong component = pointers[i], mesh, cls;
+                if (!AddressGuard.IsPointerValid(component)) continue;
+                resourcePointersSeen++;
+                if (!reader.TryReadPointer(component + config.UObjectClass.Value, out cls) ||
                     !ResourceSubclass(cls, "InstancedStaticMeshComponent") || !reader.TryReadPointer(component + 0x688, out mesh)) continue;
+                resourceInstanceComponents++;
+                if (resourceDiscoverySample.Length == 0)
+                {
+                    string componentName = string.Empty, className = string.Empty, attachedName = string.Empty;
+                    ulong attached;
+                    names.TryReadObjectName(component, out componentName);
+                    names.TryReadObjectName(cls, out className);
+                    if (reader.TryReadPointer(component + 0x760, out attached) && AddressGuard.IsPointerValid(attached)) names.TryReadObjectName(attached, out attachedName);
+                    resourceDiscoverySample = componentName + "/" + className + "/" + attachedName;
+                }
                 ResourceComponent existing;
                 if (resourceComponents.TryGetValue(component, out existing) && existing.Mesh == mesh && existing.Owner == owner) continue;
                 string[] resources = ReadHarvestResources(component);
@@ -193,7 +229,12 @@ namespace ArkTracker
                 .OrderBy(p => TrackerFilter.Distance3D(p.Position, snapshot.LocalPosition)).Take(1500));
             if (now >= nextResourceLog)
             {
-                Log.Info("Resources: foliage=" + foliageActors.Count + " components=" + components.Length + " points=" + components.Sum(c => c.Points.Count));
+                Log.Info("Resources: foliage=" + foliageActors.Count + " components=" + components.Length + " points=" + components.Sum(c => c.Points.Count) +
+                    " discovery=" + resourceOwnersRead + "/" + resourcePointersSeen + "/" + resourceInstanceComponents +
+                    " attached=" + resourceAttachedClasses + " harvest=" + resourceHarvestClasses + "/" + resourceHarvestDefinitions +
+                    (resourceDiscoverySample.Length == 0 ? string.Empty : " sample=\"" + resourceDiscoverySample + "\""));
+                resourceOwnersRead = resourcePointersSeen = resourceInstanceComponents = resourceAttachedClasses = resourceHarvestClasses = resourceHarvestDefinitions = 0;
+                resourceDiscoverySample = string.Empty;
                 nextResourceLog = now.AddSeconds(15);
             }
         }

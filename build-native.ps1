@@ -1,6 +1,8 @@
 param(
     [ValidateSet('Debug', 'Release')]
-    [string]$Configuration = 'Release'
+    [string]$Configuration = 'Release',
+    [string]$Destination = 'bin\Reborn',
+    [string]$BuildDirectory = 'native\ArkOverlayNative\build'
 )
 
 $ErrorActionPreference = 'Stop'
@@ -17,8 +19,8 @@ if (-not $visualStudio) {
 
 $cmake = Join-Path $visualStudio 'Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe'
 $source = Join-Path $projectRoot 'native\ArkOverlayNative'
-$build = Join-Path $projectRoot 'native\ArkOverlayNative\build'
-$destination = Join-Path $projectRoot 'bin\Reborn'
+$build = Join-Path $projectRoot $BuildDirectory
+$destination = Join-Path $projectRoot $Destination
 
 & $cmake -S $source -B $build -A x64
 if ($LASTEXITCODE -ne 0) { throw 'Native CMake configure failed.' }

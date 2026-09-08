@@ -1,0 +1,4 @@
+bin/BuildAndRun-*/
+bin/ResourceDebug*/
+native/ArkOverlayNative/build-*/
+tools/PdbFieldDump-current.exe

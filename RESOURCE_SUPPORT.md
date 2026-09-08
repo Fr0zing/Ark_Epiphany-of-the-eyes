@@ -13,6 +13,9 @@ HarvestResourceEntries/BaseHarvestResourceEntries при загрузке кар
 9BC401417A776C5244A1B0B3255DC3AF4A9D73E3F5C1BA96228FBE3FB1A43477.
 
 - AInstancedFoliageActor +0x488: TArray<UHierarchicalInstancedStaticMeshComponent*>.
+- AActor +0x438 / +0x448: OwnedComponents / SerializedComponents. В cooked-клиенте
+  специализированный массив foliage может быть пустым, поэтому эти массивы
+  используются как основной резервный путь к HISM-компонентам.
 - UInstancedStaticMeshComponent +0x708: PerInstanceSMData.
 - FInstancedStaticMeshInstanceData: stride 0x50; FMatrix начинается с 0, translation +0x30.
 - UInstancedStaticMeshComponent +0x748: RemovedInstances, TArray<int>.
@@ -30,10 +33,11 @@ HarvestResourceEntries/BaseHarvestResourceEntries при загрузке кар
 
 ## Ограничения и проверка
 
-Это реализация для живой проверки: компиляция и self-test пройдены, но игра
-во время разработки не была запущена. Самопроверка не доказывает фактическое
-заполнение массивов на сервере. Нужны проверки рядом с белым/чёрным жемчугом,
-затем после его сбора и после телепорта/смены карты.
+Путь чтения проверен на живой игре 2026-09-08: специализированный массив foliage
+оказался пустым, резервный обход OwnedComponents/SerializedComponents нашёл
+215 harvesting-компонентов и начал публиковать реальные точки ресурсов.
+Поведение конкретной точки после добычи всё ещё стоит отдельно проверять рядом
+с белым/чёрным жемчугом и после телепорта/смены карты.
 
 Читаются только загруженные foliage-контейнеры с harvesting-компонентами.
 Ресурсы, реализованные модом отдельными акторами или иным контейнером,
